@@ -1,6 +1,0 @@
-framework module Pods_IRSMobileUITests {
-  umbrella header "Pods-IRSMobileUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
