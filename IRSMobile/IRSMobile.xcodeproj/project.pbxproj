@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3F30D84B3D2022532DB4A403 /* Pods_IRSMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514F1BE97C8A4A8B2EB4C71B /* Pods_IRSMobile.framework */; };
 		77CE3DE3FB4296742FCC573C /* Pods_IRSMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96656CD41CF2DE892614D4E4 /* Pods_IRSMobileUITests.framework */; };
-		9809FFF71F6F61590000F0C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9809FFF51F6F61590000F0C4 /* LoginViewController.swift */; };
-		9809FFF81F6F61590000F0C4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9809FFF61F6F61590000F0C4 /* LoginViewController.xib */; };
 		984DACC81F6BC03800336E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DACC71F6BC03800336E99 /* AppDelegate.swift */; };
 		984DACCA1F6BC03800336E99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DACC91F6BC03800336E99 /* ViewController.swift */; };
 		984DACCD1F6BC03800336E99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984DACCB1F6BC03800336E99 /* Main.storyboard */; };
@@ -19,10 +17,8 @@
 		984DACD51F6BC03800336E99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984DACD31F6BC03800336E99 /* LaunchScreen.storyboard */; };
 		984DACE01F6BC03800336E99 /* IRSMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DACDF1F6BC03800336E99 /* IRSMobileTests.swift */; };
 		984DACEB1F6BC03800336E99 /* IRSMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DACEA1F6BC03800336E99 /* IRSMobileUITests.swift */; };
-		985805621F6BC3570019ECC5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985805601F6BC3570019ECC5 /* MainViewController.swift */; };
-		985805631F6BC3570019ECC5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 985805611F6BC3570019ECC5 /* MainViewController.xib */; };
-		985805661F6BCB0F0019ECC5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985805641F6BCB0F0019ECC5 /* TestViewController.swift */; };
-		985805671F6BCB0F0019ECC5 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 985805651F6BCB0F0019ECC5 /* TestViewController.xib */; };
+		985805621F6BC3570019ECC5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985805601F6BC3570019ECC5 /* LoginViewController.swift */; };
+		985805631F6BC3570019ECC5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 985805611F6BC3570019ECC5 /* LoginViewController.xib */; };
 		E0ACE801795A411D8061C31B /* Pods_IRSMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5730EB6EB1AA2FA5374ABA63 /* Pods_IRSMobileTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +45,6 @@
 		8442D88BA12A0E198748C333 /* Pods-IRSMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobileTests/Pods-IRSMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9465FBF89889AFD2F058E0DB /* Pods-IRSMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobileUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobileUITests/Pods-IRSMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
 		96656CD41CF2DE892614D4E4 /* Pods_IRSMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IRSMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9809FFF51F6F61590000F0C4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		9809FFF61F6F61590000F0C4 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		984DACC41F6BC03800336E99 /* IRSMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRSMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		984DACC71F6BC03800336E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		984DACC91F6BC03800336E99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,10 +59,8 @@
 		984DACE61F6BC03800336E99 /* IRSMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRSMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		984DACEA1F6BC03800336E99 /* IRSMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRSMobileUITests.swift; sourceTree = "<group>"; };
 		984DACEC1F6BC03800336E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		985805601F6BC3570019ECC5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		985805611F6BC3570019ECC5 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		985805641F6BCB0F0019ECC5 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		985805651F6BCB0F0019ECC5 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		985805601F6BC3570019ECC5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		985805611F6BC3570019ECC5 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		B96D3B92B7DA5E0BE83EC458 /* Pods-IRSMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile.release.xcconfig"; sourceTree = "<group>"; };
 		C4A35342AEC946846A295CB4 /* Pods-IRSMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobileUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobileUITests/Pods-IRSMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D1DC311A7A5EA4D73F9263F9 /* Pods-IRSMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobileTests/Pods-IRSMobileTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,8 +98,8 @@
 		9809FFF41F6F61300000F0C4 /* Acounts */ = {
 			isa = PBXGroup;
 			children = (
-				9809FFF51F6F61590000F0C4 /* LoginViewController.swift */,
-				9809FFF61F6F61590000F0C4 /* LoginViewController.xib */,
+				985805601F6BC3570019ECC5 /* LoginViewController.swift */,
+				985805611F6BC3570019ECC5 /* LoginViewController.xib */,
 			);
 			name = Acounts;
 			sourceTree = "<group>";
@@ -145,10 +137,6 @@
 				984DACD31F6BC03800336E99 /* LaunchScreen.storyboard */,
 				984DACD61F6BC03800336E99 /* Info.plist */,
 				984DACCE1F6BC03800336E99 /* IRSMobile.xcdatamodeld */,
-				985805601F6BC3570019ECC5 /* MainViewController.swift */,
-				985805611F6BC3570019ECC5 /* MainViewController.xib */,
-				985805641F6BCB0F0019ECC5 /* TestViewController.swift */,
-				985805651F6BCB0F0019ECC5 /* TestViewController.xib */,
 			);
 			path = IRSMobile;
 			sourceTree = "<group>";
@@ -311,11 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				984DACD51F6BC03800336E99 /* LaunchScreen.storyboard in Resources */,
-				985805671F6BCB0F0019ECC5 /* TestViewController.xib in Resources */,
-				9809FFF81F6F61590000F0C4 /* LoginViewController.xib in Resources */,
 				984DACD21F6BC03800336E99 /* Assets.xcassets in Resources */,
 				984DACCD1F6BC03800336E99 /* Main.storyboard in Resources */,
-				985805631F6BC3570019ECC5 /* MainViewController.xib in Resources */,
+				985805631F6BC3570019ECC5 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,12 +478,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9809FFF71F6F61590000F0C4 /* LoginViewController.swift in Sources */,
-				985805661F6BCB0F0019ECC5 /* TestViewController.swift in Sources */,
 				984DACD01F6BC03800336E99 /* IRSMobile.xcdatamodeld in Sources */,
 				984DACCA1F6BC03800336E99 /* ViewController.swift in Sources */,
 				984DACC81F6BC03800336E99 /* AppDelegate.swift in Sources */,
-				985805621F6BC3570019ECC5 /* MainViewController.swift in Sources */,
+				985805621F6BC3570019ECC5 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,14 +1,30 @@
 //
-//  LoginViewController.swift
+//  MainViewController.swift
 //  IRSMobile
 //
-//  Created by Doan Ngoc Hung on 9/17/17.
+//  Created by Doan Ngoc Hung on 9/15/17.
 //  Copyright © 2017 Doan Ngoc Hung. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class MainViewController: UIViewController {
+    
+    
+    @IBOutlet weak var ed_username: UITextField!
+    
+    
+    @IBOutlet weak var ed_password: UITextField!
+    
+    
+    @IBAction func login_switch(_ sender: UISwitch) {
+    }
+    
+    
+    @IBAction func bt_login(_ sender: UIButton) {
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
