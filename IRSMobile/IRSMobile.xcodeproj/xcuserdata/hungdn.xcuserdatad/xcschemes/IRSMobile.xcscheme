@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "984DACC31F6BC03800336E99"
+               BlueprintIdentifier = "984E1D701F6F830B00D0630E"
                BuildableName = "IRSMobile.app"
                BlueprintName = "IRSMobile"
                ReferencedContainer = "container:IRSMobile.xcodeproj">
@@ -28,31 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "984DACDA1F6BC03800336E99"
-               BuildableName = "IRSMobileTests.xctest"
-               BlueprintName = "IRSMobileTests"
-               ReferencedContainer = "container:IRSMobile.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "984DACE51F6BC03800336E99"
-               BuildableName = "IRSMobileUITests.xctest"
-               BlueprintName = "IRSMobileUITests"
-               ReferencedContainer = "container:IRSMobile.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "984DACC31F6BC03800336E99"
+            BlueprintIdentifier = "984E1D701F6F830B00D0630E"
             BuildableName = "IRSMobile.app"
             BlueprintName = "IRSMobile"
             ReferencedContainer = "container:IRSMobile.xcodeproj">
@@ -75,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "984DACC31F6BC03800336E99"
+            BlueprintIdentifier = "984E1D701F6F830B00D0630E"
             BuildableName = "IRSMobile.app"
             BlueprintName = "IRSMobile"
             ReferencedContainer = "container:IRSMobile.xcodeproj">
@@ -94,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "984DACC31F6BC03800336E99"
+            BlueprintIdentifier = "984E1D701F6F830B00D0630E"
             BuildableName = "IRSMobile.app"
             BlueprintName = "IRSMobile"
             ReferencedContainer = "container:IRSMobile.xcodeproj">

@@ -7,194 +7,123 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F30D84B3D2022532DB4A403 /* Pods_IRSMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514F1BE97C8A4A8B2EB4C71B /* Pods_IRSMobile.framework */; };
-		77CE3DE3FB4296742FCC573C /* Pods_IRSMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96656CD41CF2DE892614D4E4 /* Pods_IRSMobileUITests.framework */; };
-		984DACC81F6BC03800336E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DACC71F6BC03800336E99 /* AppDelegate.swift */; };
-		984DACCA1F6BC03800336E99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DACC91F6BC03800336E99 /* ViewController.swift */; };
-		984DACCD1F6BC03800336E99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984DACCB1F6BC03800336E99 /* Main.storyboard */; };
-		984DACD01F6BC03800336E99 /* IRSMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 984DACCE1F6BC03800336E99 /* IRSMobile.xcdatamodeld */; };
-		984DACD21F6BC03800336E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984DACD11F6BC03800336E99 /* Assets.xcassets */; };
-		984DACD51F6BC03800336E99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984DACD31F6BC03800336E99 /* LaunchScreen.storyboard */; };
-		984DACE01F6BC03800336E99 /* IRSMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DACDF1F6BC03800336E99 /* IRSMobileTests.swift */; };
-		984DACEB1F6BC03800336E99 /* IRSMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DACEA1F6BC03800336E99 /* IRSMobileUITests.swift */; };
-		985805621F6BC3570019ECC5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985805601F6BC3570019ECC5 /* LoginViewController.swift */; };
-		985805631F6BC3570019ECC5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 985805611F6BC3570019ECC5 /* LoginViewController.xib */; };
-		E0ACE801795A411D8061C31B /* Pods_IRSMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5730EB6EB1AA2FA5374ABA63 /* Pods_IRSMobileTests.framework */; };
+		1CF2E2BDF3FED1B5D6419393 /* Pods_IRSMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DEA9526943A8784546A418 /* Pods_IRSMobile.framework */; };
+		984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D741F6F830C00D0630E /* AppDelegate.swift */; };
+		984E1D771F6F830C00D0630E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D761F6F830C00D0630E /* ViewController.swift */; };
+		984E1D7A1F6F830C00D0630E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D781F6F830C00D0630E /* Main.storyboard */; };
+		984E1D7D1F6F830C00D0630E /* IRSMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D7B1F6F830C00D0630E /* IRSMobile.xcdatamodeld */; };
+		984E1D7F1F6F830C00D0630E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D7E1F6F830C00D0630E /* Assets.xcassets */; };
+		984E1D821F6F830C00D0630E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D801F6F830C00D0630E /* LaunchScreen.storyboard */; };
+		984E1D8C1F6F847100D0630E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D8A1F6F847100D0630E /* LoginViewController.swift */; };
+		984E1D8D1F6F847100D0630E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8B1F6F847100D0630E /* LoginViewController.xib */; };
+		984E1D901F6F848300D0630E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D8E1F6F848300D0630E /* MainViewController.swift */; };
+		984E1D911F6F848300D0630E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8F1F6F848300D0630E /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		984DACDC1F6BC03800336E99 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 984DACBC1F6BC03800336E99 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 984DACC31F6BC03800336E99;
-			remoteInfo = IRSMobile;
-		};
-		984DACE71F6BC03800336E99 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 984DACBC1F6BC03800336E99 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 984DACC31F6BC03800336E99;
-			remoteInfo = IRSMobile;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		514F1BE97C8A4A8B2EB4C71B /* Pods_IRSMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IRSMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5730EB6EB1AA2FA5374ABA63 /* Pods_IRSMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IRSMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8442D88BA12A0E198748C333 /* Pods-IRSMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobileTests/Pods-IRSMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9465FBF89889AFD2F058E0DB /* Pods-IRSMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobileUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobileUITests/Pods-IRSMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
-		96656CD41CF2DE892614D4E4 /* Pods_IRSMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IRSMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		984DACC41F6BC03800336E99 /* IRSMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRSMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		984DACC71F6BC03800336E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		984DACC91F6BC03800336E99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		984DACCC1F6BC03800336E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		984DACCF1F6BC03800336E99 /* IRSMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IRSMobile.xcdatamodel; sourceTree = "<group>"; };
-		984DACD11F6BC03800336E99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		984DACD41F6BC03800336E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		984DACD61F6BC03800336E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		984DACDB1F6BC03800336E99 /* IRSMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRSMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		984DACDF1F6BC03800336E99 /* IRSMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRSMobileTests.swift; sourceTree = "<group>"; };
-		984DACE11F6BC03800336E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		984DACE61F6BC03800336E99 /* IRSMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRSMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		984DACEA1F6BC03800336E99 /* IRSMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRSMobileUITests.swift; sourceTree = "<group>"; };
-		984DACEC1F6BC03800336E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		985805601F6BC3570019ECC5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		985805611F6BC3570019ECC5 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		B96D3B92B7DA5E0BE83EC458 /* Pods-IRSMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile.release.xcconfig"; sourceTree = "<group>"; };
-		C4A35342AEC946846A295CB4 /* Pods-IRSMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobileUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobileUITests/Pods-IRSMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D1DC311A7A5EA4D73F9263F9 /* Pods-IRSMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobileTests/Pods-IRSMobileTests.release.xcconfig"; sourceTree = "<group>"; };
-		E63771FAED556AE78890C868 /* Pods-IRSMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		26DEA9526943A8784546A418 /* Pods_IRSMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IRSMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D7FFFA9A79A74C318F27D7A /* Pods-IRSMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile.release.xcconfig"; sourceTree = "<group>"; };
+		984E1D711F6F830B00D0630E /* IRSMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRSMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		984E1D741F6F830C00D0630E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		984E1D761F6F830C00D0630E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		984E1D791F6F830C00D0630E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		984E1D7C1F6F830C00D0630E /* IRSMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IRSMobile.xcdatamodel; sourceTree = "<group>"; };
+		984E1D7E1F6F830C00D0630E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		984E1D811F6F830C00D0630E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		984E1D831F6F830C00D0630E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		984E1D8A1F6F847100D0630E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		984E1D8B1F6F847100D0630E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		984E1D8E1F6F848300D0630E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		984E1D8F1F6F848300D0630E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		C789DD3DC913C2D4D9CC5890 /* Pods-IRSMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		984DACC11F6BC03800336E99 /* Frameworks */ = {
+		984E1D6E1F6F830B00D0630E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F30D84B3D2022532DB4A403 /* Pods_IRSMobile.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		984DACD81F6BC03800336E99 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E0ACE801795A411D8061C31B /* Pods_IRSMobileTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		984DACE31F6BC03800336E99 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				77CE3DE3FB4296742FCC573C /* Pods_IRSMobileUITests.framework in Frameworks */,
+				1CF2E2BDF3FED1B5D6419393 /* Pods_IRSMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9809FFF41F6F61300000F0C4 /* Acounts */ = {
+		20138DC17069169FE3565D91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				985805601F6BC3570019ECC5 /* LoginViewController.swift */,
-				985805611F6BC3570019ECC5 /* LoginViewController.xib */,
+				C789DD3DC913C2D4D9CC5890 /* Pods-IRSMobile.debug.xcconfig */,
+				5D7FFFA9A79A74C318F27D7A /* Pods-IRSMobile.release.xcconfig */,
 			);
-			name = Acounts;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		984DACBB1F6BC03800336E99 = {
+		984E1D681F6F830B00D0630E = {
 			isa = PBXGroup;
 			children = (
-				984DACC61F6BC03800336E99 /* IRSMobile */,
-				984DACDE1F6BC03800336E99 /* IRSMobileTests */,
-				984DACE91F6BC03800336E99 /* IRSMobileUITests */,
-				984DACC51F6BC03800336E99 /* Products */,
-				F2BBAB58FA386FC3BF0FFCE4 /* Pods */,
-				EFFA22EC4AB012B98EC9D79D /* Frameworks */,
+				984E1D731F6F830B00D0630E /* IRSMobile */,
+				984E1D721F6F830B00D0630E /* Products */,
+				20138DC17069169FE3565D91 /* Pods */,
+				AEAF7F8DD0577458C8E9C58E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		984DACC51F6BC03800336E99 /* Products */ = {
+		984E1D721F6F830B00D0630E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				984DACC41F6BC03800336E99 /* IRSMobile.app */,
-				984DACDB1F6BC03800336E99 /* IRSMobileTests.xctest */,
-				984DACE61F6BC03800336E99 /* IRSMobileUITests.xctest */,
+				984E1D711F6F830B00D0630E /* IRSMobile.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		984DACC61F6BC03800336E99 /* IRSMobile */ = {
+		984E1D731F6F830B00D0630E /* IRSMobile */ = {
 			isa = PBXGroup;
 			children = (
-				9809FFF41F6F61300000F0C4 /* Acounts */,
-				984DACC71F6BC03800336E99 /* AppDelegate.swift */,
-				984DACC91F6BC03800336E99 /* ViewController.swift */,
-				984DACCB1F6BC03800336E99 /* Main.storyboard */,
-				984DACD11F6BC03800336E99 /* Assets.xcassets */,
-				984DACD31F6BC03800336E99 /* LaunchScreen.storyboard */,
-				984DACD61F6BC03800336E99 /* Info.plist */,
-				984DACCE1F6BC03800336E99 /* IRSMobile.xcdatamodeld */,
+				984E1D891F6F845500D0630E /* Acounts */,
+				984E1D741F6F830C00D0630E /* AppDelegate.swift */,
+				984E1D761F6F830C00D0630E /* ViewController.swift */,
+				984E1D781F6F830C00D0630E /* Main.storyboard */,
+				984E1D7E1F6F830C00D0630E /* Assets.xcassets */,
+				984E1D801F6F830C00D0630E /* LaunchScreen.storyboard */,
+				984E1D831F6F830C00D0630E /* Info.plist */,
+				984E1D7B1F6F830C00D0630E /* IRSMobile.xcdatamodeld */,
 			);
 			path = IRSMobile;
 			sourceTree = "<group>";
 		};
-		984DACDE1F6BC03800336E99 /* IRSMobileTests */ = {
+		984E1D891F6F845500D0630E /* Acounts */ = {
 			isa = PBXGroup;
 			children = (
-				984DACDF1F6BC03800336E99 /* IRSMobileTests.swift */,
-				984DACE11F6BC03800336E99 /* Info.plist */,
+				984E1D8A1F6F847100D0630E /* LoginViewController.swift */,
+				984E1D8B1F6F847100D0630E /* LoginViewController.xib */,
+				984E1D8E1F6F848300D0630E /* MainViewController.swift */,
+				984E1D8F1F6F848300D0630E /* MainViewController.xib */,
 			);
-			path = IRSMobileTests;
+			name = Acounts;
 			sourceTree = "<group>";
 		};
-		984DACE91F6BC03800336E99 /* IRSMobileUITests */ = {
+		AEAF7F8DD0577458C8E9C58E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				984DACEA1F6BC03800336E99 /* IRSMobileUITests.swift */,
-				984DACEC1F6BC03800336E99 /* Info.plist */,
-			);
-			path = IRSMobileUITests;
-			sourceTree = "<group>";
-		};
-		EFFA22EC4AB012B98EC9D79D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				514F1BE97C8A4A8B2EB4C71B /* Pods_IRSMobile.framework */,
-				5730EB6EB1AA2FA5374ABA63 /* Pods_IRSMobileTests.framework */,
-				96656CD41CF2DE892614D4E4 /* Pods_IRSMobileUITests.framework */,
+				26DEA9526943A8784546A418 /* Pods_IRSMobile.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F2BBAB58FA386FC3BF0FFCE4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E63771FAED556AE78890C868 /* Pods-IRSMobile.debug.xcconfig */,
-				B96D3B92B7DA5E0BE83EC458 /* Pods-IRSMobile.release.xcconfig */,
-				8442D88BA12A0E198748C333 /* Pods-IRSMobileTests.debug.xcconfig */,
-				D1DC311A7A5EA4D73F9263F9 /* Pods-IRSMobileTests.release.xcconfig */,
-				C4A35342AEC946846A295CB4 /* Pods-IRSMobileUITests.debug.xcconfig */,
-				9465FBF89889AFD2F058E0DB /* Pods-IRSMobileUITests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		984DACC31F6BC03800336E99 /* IRSMobile */ = {
+		984E1D701F6F830B00D0630E /* IRSMobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 984DACEF1F6BC03800336E99 /* Build configuration list for PBXNativeTarget "IRSMobile" */;
+			buildConfigurationList = 984E1D861F6F830C00D0630E /* Build configuration list for PBXNativeTarget "IRSMobile" */;
 			buildPhases = (
-				9FE58BBE115C32D38C6D6D34 /* [CP] Check Pods Manifest.lock */,
-				984DACC01F6BC03800336E99 /* Sources */,
-				984DACC11F6BC03800336E99 /* Frameworks */,
-				984DACC21F6BC03800336E99 /* Resources */,
-				8DA5A5A7EA2921420CF4BD09 /* [CP] Embed Pods Frameworks */,
-				F4E984C0BAAFC5F1C12D45C6 /* [CP] Copy Pods Resources */,
+				36851FD4FFAB4EFBC4923330 /* [CP] Check Pods Manifest.lock */,
+				984E1D6D1F6F830B00D0630E /* Sources */,
+				984E1D6E1F6F830B00D0630E /* Frameworks */,
+				984E1D6F1F6F830B00D0630E /* Resources */,
+				75F1DFF623FC8BF04355657C /* [CP] Embed Pods Frameworks */,
+				87AECCA68F3889CE8A8731DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,78 +131,26 @@
 			);
 			name = IRSMobile;
 			productName = IRSMobile;
-			productReference = 984DACC41F6BC03800336E99 /* IRSMobile.app */;
+			productReference = 984E1D711F6F830B00D0630E /* IRSMobile.app */;
 			productType = "com.apple.product-type.application";
-		};
-		984DACDA1F6BC03800336E99 /* IRSMobileTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 984DACF21F6BC03800336E99 /* Build configuration list for PBXNativeTarget "IRSMobileTests" */;
-			buildPhases = (
-				93BF2BA0F3D21DE6FC007EF1 /* [CP] Check Pods Manifest.lock */,
-				984DACD71F6BC03800336E99 /* Sources */,
-				984DACD81F6BC03800336E99 /* Frameworks */,
-				984DACD91F6BC03800336E99 /* Resources */,
-				63BA0F7317DDB394F4BA710B /* [CP] Embed Pods Frameworks */,
-				76033E7C31228B5293571B53 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				984DACDD1F6BC03800336E99 /* PBXTargetDependency */,
-			);
-			name = IRSMobileTests;
-			productName = IRSMobileTests;
-			productReference = 984DACDB1F6BC03800336E99 /* IRSMobileTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		984DACE51F6BC03800336E99 /* IRSMobileUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 984DACF51F6BC03800336E99 /* Build configuration list for PBXNativeTarget "IRSMobileUITests" */;
-			buildPhases = (
-				686E493BBDD72614B1C4A1C8 /* [CP] Check Pods Manifest.lock */,
-				984DACE21F6BC03800336E99 /* Sources */,
-				984DACE31F6BC03800336E99 /* Frameworks */,
-				984DACE41F6BC03800336E99 /* Resources */,
-				8D60023C00DFFC31AEA25364 /* [CP] Embed Pods Frameworks */,
-				57EBB168643B513455DE730A /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				984DACE81F6BC03800336E99 /* PBXTargetDependency */,
-			);
-			name = IRSMobileUITests;
-			productName = IRSMobileUITests;
-			productReference = 984DACE61F6BC03800336E99 /* IRSMobileUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		984DACBC1F6BC03800336E99 /* Project object */ = {
+		984E1D691F6F830B00D0630E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Doan Ngoc Hung";
 				TargetAttributes = {
-					984DACC31F6BC03800336E99 = {
+					984E1D701F6F830B00D0630E = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
-					};
-					984DACDA1F6BC03800336E99 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 984DACC31F6BC03800336E99;
-					};
-					984DACE51F6BC03800336E99 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 984DACC31F6BC03800336E99;
 					};
 				};
 			};
-			buildConfigurationList = 984DACBF1F6BC03800336E99 /* Build configuration list for PBXProject "IRSMobile" */;
+			buildConfigurationList = 984E1D6C1F6F830B00D0630E /* Build configuration list for PBXProject "IRSMobile" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -281,164 +158,33 @@
 				en,
 				Base,
 			);
-			mainGroup = 984DACBB1F6BC03800336E99;
-			productRefGroup = 984DACC51F6BC03800336E99 /* Products */;
+			mainGroup = 984E1D681F6F830B00D0630E;
+			productRefGroup = 984E1D721F6F830B00D0630E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				984DACC31F6BC03800336E99 /* IRSMobile */,
-				984DACDA1F6BC03800336E99 /* IRSMobileTests */,
-				984DACE51F6BC03800336E99 /* IRSMobileUITests */,
+				984E1D701F6F830B00D0630E /* IRSMobile */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		984DACC21F6BC03800336E99 /* Resources */ = {
+		984E1D6F1F6F830B00D0630E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				984DACD51F6BC03800336E99 /* LaunchScreen.storyboard in Resources */,
-				984DACD21F6BC03800336E99 /* Assets.xcassets in Resources */,
-				984DACCD1F6BC03800336E99 /* Main.storyboard in Resources */,
-				985805631F6BC3570019ECC5 /* LoginViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		984DACD91F6BC03800336E99 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		984DACE41F6BC03800336E99 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				984E1D8D1F6F847100D0630E /* LoginViewController.xib in Resources */,
+				984E1D821F6F830C00D0630E /* LaunchScreen.storyboard in Resources */,
+				984E1D911F6F848300D0630E /* MainViewController.xib in Resources */,
+				984E1D7F1F6F830C00D0630E /* Assets.xcassets in Resources */,
+				984E1D7A1F6F830C00D0630E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		57EBB168643B513455DE730A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRSMobileUITests/Pods-IRSMobileUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63BA0F7317DDB394F4BA710B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRSMobileTests/Pods-IRSMobileTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		686E493BBDD72614B1C4A1C8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-IRSMobileUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		76033E7C31228B5293571B53 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRSMobileTests/Pods-IRSMobileTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D60023C00DFFC31AEA25364 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRSMobileUITests/Pods-IRSMobileUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DA5A5A7EA2921420CF4BD09 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		93BF2BA0F3D21DE6FC007EF1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-IRSMobileTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9FE58BBE115C32D38C6D6D34 /* [CP] Check Pods Manifest.lock */ = {
+		36851FD4FFAB4EFBC4923330 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -456,7 +202,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F4E984C0BAAFC5F1C12D45C6 /* [CP] Copy Pods Resources */ = {
+		75F1DFF623FC8BF04355657C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87AECCA68F3889CE8A8731DA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -474,61 +238,33 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		984DACC01F6BC03800336E99 /* Sources */ = {
+		984E1D6D1F6F830B00D0630E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				984DACD01F6BC03800336E99 /* IRSMobile.xcdatamodeld in Sources */,
-				984DACCA1F6BC03800336E99 /* ViewController.swift in Sources */,
-				984DACC81F6BC03800336E99 /* AppDelegate.swift in Sources */,
-				985805621F6BC3570019ECC5 /* LoginViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		984DACD71F6BC03800336E99 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				984DACE01F6BC03800336E99 /* IRSMobileTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		984DACE21F6BC03800336E99 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				984DACEB1F6BC03800336E99 /* IRSMobileUITests.swift in Sources */,
+				984E1D8C1F6F847100D0630E /* LoginViewController.swift in Sources */,
+				984E1D7D1F6F830C00D0630E /* IRSMobile.xcdatamodeld in Sources */,
+				984E1D771F6F830C00D0630E /* ViewController.swift in Sources */,
+				984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */,
+				984E1D901F6F848300D0630E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		984DACDD1F6BC03800336E99 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 984DACC31F6BC03800336E99 /* IRSMobile */;
-			targetProxy = 984DACDC1F6BC03800336E99 /* PBXContainerItemProxy */;
-		};
-		984DACE81F6BC03800336E99 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 984DACC31F6BC03800336E99 /* IRSMobile */;
-			targetProxy = 984DACE71F6BC03800336E99 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		984DACCB1F6BC03800336E99 /* Main.storyboard */ = {
+		984E1D781F6F830C00D0630E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				984DACCC1F6BC03800336E99 /* Base */,
+				984E1D791F6F830C00D0630E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		984DACD31F6BC03800336E99 /* LaunchScreen.storyboard */ = {
+		984E1D801F6F830C00D0630E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				984DACD41F6BC03800336E99 /* Base */,
+				984E1D811F6F830C00D0630E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -536,7 +272,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		984DACED1F6BC03800336E99 /* Debug */ = {
+		984E1D841F6F830C00D0630E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -586,7 +322,7 @@
 			};
 			name = Debug;
 		};
-		984DACEE1F6BC03800336E99 /* Release */ = {
+		984E1D851F6F830C00D0630E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -629,9 +365,9 @@
 			};
 			name = Release;
 		};
-		984DACF01F6BC03800336E99 /* Debug */ = {
+		984E1D871F6F830C00D0630E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E63771FAED556AE78890C868 /* Pods-IRSMobile.debug.xcconfig */;
+			baseConfigurationReference = C789DD3DC913C2D4D9CC5890 /* Pods-IRSMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IRSMobile/Info.plist;
@@ -642,9 +378,9 @@
 			};
 			name = Debug;
 		};
-		984DACF11F6BC03800336E99 /* Release */ = {
+		984E1D881F6F830C00D0630E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B96D3B92B7DA5E0BE83EC458 /* Pods-IRSMobile.release.xcconfig */;
+			baseConfigurationReference = 5D7FFFA9A79A74C318F27D7A /* Pods-IRSMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IRSMobile/Info.plist;
@@ -652,102 +388,26 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hungdn.IRSMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		984DACF31F6BC03800336E99 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8442D88BA12A0E198748C333 /* Pods-IRSMobileTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = IRSMobileTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hungdn.IRSMobileTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRSMobile.app/IRSMobile";
-			};
-			name = Debug;
-		};
-		984DACF41F6BC03800336E99 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1DC311A7A5EA4D73F9263F9 /* Pods-IRSMobileTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = IRSMobileTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hungdn.IRSMobileTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRSMobile.app/IRSMobile";
-			};
-			name = Release;
-		};
-		984DACF61F6BC03800336E99 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4A35342AEC946846A295CB4 /* Pods-IRSMobileUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = IRSMobileUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hungdn.IRSMobileUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = IRSMobile;
-			};
-			name = Debug;
-		};
-		984DACF71F6BC03800336E99 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9465FBF89889AFD2F058E0DB /* Pods-IRSMobileUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = IRSMobileUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hungdn.IRSMobileUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = IRSMobile;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		984DACBF1F6BC03800336E99 /* Build configuration list for PBXProject "IRSMobile" */ = {
+		984E1D6C1F6F830B00D0630E /* Build configuration list for PBXProject "IRSMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				984DACED1F6BC03800336E99 /* Debug */,
-				984DACEE1F6BC03800336E99 /* Release */,
+				984E1D841F6F830C00D0630E /* Debug */,
+				984E1D851F6F830C00D0630E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		984DACEF1F6BC03800336E99 /* Build configuration list for PBXNativeTarget "IRSMobile" */ = {
+		984E1D861F6F830C00D0630E /* Build configuration list for PBXNativeTarget "IRSMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				984DACF01F6BC03800336E99 /* Debug */,
-				984DACF11F6BC03800336E99 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		984DACF21F6BC03800336E99 /* Build configuration list for PBXNativeTarget "IRSMobileTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				984DACF31F6BC03800336E99 /* Debug */,
-				984DACF41F6BC03800336E99 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		984DACF51F6BC03800336E99 /* Build configuration list for PBXNativeTarget "IRSMobileUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				984DACF61F6BC03800336E99 /* Debug */,
-				984DACF71F6BC03800336E99 /* Release */,
+				984E1D871F6F830C00D0630E /* Debug */,
+				984E1D881F6F830C00D0630E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -755,17 +415,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		984DACCE1F6BC03800336E99 /* IRSMobile.xcdatamodeld */ = {
+		984E1D7B1F6F830C00D0630E /* IRSMobile.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				984DACCF1F6BC03800336E99 /* IRSMobile.xcdatamodel */,
+				984E1D7C1F6F830C00D0630E /* IRSMobile.xcdatamodel */,
 			);
-			currentVersion = 984DACCF1F6BC03800336E99 /* IRSMobile.xcdatamodel */;
+			currentVersion = 984E1D7C1F6F830C00D0630E /* IRSMobile.xcdatamodel */;
 			path = IRSMobile.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 984DACBC1F6BC03800336E99 /* Project object */;
+	rootObject = 984E1D691F6F830B00D0630E /* Project object */;
 }

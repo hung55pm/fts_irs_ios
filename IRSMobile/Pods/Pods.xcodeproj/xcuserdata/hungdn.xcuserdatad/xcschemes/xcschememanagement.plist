@@ -14,45 +14,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-IRSMobileTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-IRSMobileUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SlideMenuControllerSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>672DEDA5CCDC3160594EB6E70A108605</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C475F0519206967FF850A120111A0E41</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C65F670BE2129F619FB68AD7313C4EEC</key>
+		<key>B8462970EA55C22F80076CB42514F92F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F33B4C0666E5A9361F425274CF9F0409</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FEA0F8BF7778EF7AC0D80CB4C929F6EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

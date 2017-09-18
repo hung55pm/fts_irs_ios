@@ -9,10 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="IRSMobile" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="IRSMobile" customModuleProvider="target">
             <connections>
-                <outlet property="ed_password" destination="JF3-yb-cYq" id="Afj-9r-teu"/>
-                <outlet property="ed_username" destination="hxI-Uf-a61" id="9lk-wZ-kY9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,72 +18,7 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investers Reporting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm4-zz-SYS">
-                    <rect key="frame" x="81" y="150" width="158" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxI-Uf-a61">
-                    <rect key="frame" x="36" y="191" width="250" height="30"/>
-                    <accessibility key="accessibilityConfiguration" hint="Username">
-                        <bool key="isElement" value="YES"/>
-                    </accessibility>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JF3-yb-cYq">
-                    <rect key="frame" x="36" y="248" width="250" height="30"/>
-                    <accessibility key="accessibilityConfiguration" hint="Password"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGp-sq-ytT">
-                    <rect key="frame" x="237" y="296" width="51" height="31"/>
-                    <connections>
-                        <action selector="login_switch:" destination="-1" eventType="valueChanged" id="LyG-rW-jsr"/>
-                    </connections>
-                </switch>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOq-41-R8B">
-                    <rect key="frame" x="36" y="340" width="250" height="30"/>
-                    <state key="normal" title="Login"/>
-                    <connections>
-                        <action selector="bt_login:" destination="-1" eventType="touchUpInside" id="7er-PA-5sU"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEED HELP?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibO-az-Eow">
-                    <rect key="frame" x="183" y="389" width="98.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <accessibility key="accessibilityConfiguration" hint="Username"/>
-            <constraints>
-                <constraint firstItem="GGp-sq-ytT" firstAttribute="top" secondItem="JF3-yb-cYq" secondAttribute="bottom" constant="18" id="0pv-G8-0tS"/>
-                <constraint firstItem="oOq-41-R8B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="2K1-gE-JjV"/>
-                <constraint firstItem="JF3-yb-cYq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="4f9-O5-91G"/>
-                <constraint firstAttribute="trailing" secondItem="ibO-az-Eow" secondAttribute="trailing" constant="38.5" id="5h7-g1-VFX"/>
-                <constraint firstAttribute="trailing" secondItem="Qm4-zz-SYS" secondAttribute="trailing" constant="81" id="9zr-v9-HcN"/>
-                <constraint firstItem="ibO-az-Eow" firstAttribute="top" secondItem="oOq-41-R8B" secondAttribute="bottom" constant="19" id="DfS-TT-H7U"/>
-                <constraint firstAttribute="trailing" secondItem="JF3-yb-cYq" secondAttribute="trailing" constant="34" id="LaQ-56-ecY"/>
-                <constraint firstItem="hxI-Uf-a61" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="NDS-Cx-MLp"/>
-                <constraint firstItem="GGp-sq-ytT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="237" id="Ohf-7S-aOl"/>
-                <constraint firstItem="hxI-Uf-a61" firstAttribute="top" secondItem="Qm4-zz-SYS" secondAttribute="bottom" constant="20" id="PzK-fx-qXZ"/>
-                <constraint firstItem="oOq-41-R8B" firstAttribute="top" secondItem="GGp-sq-ytT" secondAttribute="bottom" constant="13" id="R0l-QR-Qp6"/>
-                <constraint firstItem="JF3-yb-cYq" firstAttribute="top" secondItem="hxI-Uf-a61" secondAttribute="bottom" constant="27" id="Upa-UJ-axi"/>
-                <constraint firstItem="Qm4-zz-SYS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="Yjy-Go-P2c"/>
-                <constraint firstAttribute="trailing" secondItem="GGp-sq-ytT" secondAttribute="trailing" constant="34" id="b47-YS-e9N"/>
-                <constraint firstItem="ibO-az-Eow" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="183" id="bdL-1P-YgR"/>
-                <constraint firstAttribute="trailing" secondItem="oOq-41-R8B" secondAttribute="trailing" constant="34" id="fSY-Cx-rMd"/>
-                <constraint firstItem="Qm4-zz-SYS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="81" id="jo8-iW-K7P"/>
-                <constraint firstAttribute="trailing" secondItem="hxI-Uf-a61" secondAttribute="trailing" constant="34" id="nJy-ab-2OM"/>
-            </constraints>
-            <point key="canvasLocation" x="25" y="50"/>
         </view>
     </objects>
 </document>

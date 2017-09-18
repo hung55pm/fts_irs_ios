@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  IRSMobile
 //
-//  Created by Doan Ngoc Hung on 9/15/17.
+//  Created by Doan Ngoc Hung on 9/17/17.
 //  Copyright © 2017 Doan Ngoc Hung. All rights reserved.
 //
 
@@ -17,14 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-        
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
         return true
     }
 
