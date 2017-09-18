@@ -14,10 +14,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Toaster.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>B8462970EA55C22F80076CB42514F92F</key>
+		<key>92E8DE4C0B36FBA26CF1DA4A828D62C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AAB05C6E5FFDA55C59BF0A61AD8EB5AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

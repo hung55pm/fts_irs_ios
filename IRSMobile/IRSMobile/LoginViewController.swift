@@ -7,8 +7,36 @@
 //
 
 import UIKit
+import Toaster
+
 
 class LoginViewController: UIViewController {
+    var ed_user,ed_pass: String?
+    
+    @IBOutlet weak var ed_username: UITextField!
+    
+    
+    @IBOutlet weak var ed_password: UITextField!
+    
+    @IBAction func switch_remember(_ sender: UISwitch) {
+    }
+    @IBAction func bt_login(_ sender: UIButton) {
+        ed_user=ed_username.text
+        ed_pass=ed_password.text
+        
+        if(ed_user=="" || ed_pass==""){
+            Toast(text: "Ban phai nhap day du thong tin").show()
+        }else if(ed_user=="hungdn" && ed_pass=="abc123"){
+            
+            let secondViewController:MainViewController = MainViewController()
+            
+            self.present(secondViewController, animated: true, completion: nil)
+            
+        }else{
+            Toast(text: "Username hoac password sai").show()
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
