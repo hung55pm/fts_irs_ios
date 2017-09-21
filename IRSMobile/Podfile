@@ -6,6 +6,7 @@ target 'IRSMobile' do
   use_frameworks!
 pod 'AFNetworking', '0.9.1'
 pod 'Toaster'
+pod 'SharkORM'
 # Pods for IRSMobile
 
 end

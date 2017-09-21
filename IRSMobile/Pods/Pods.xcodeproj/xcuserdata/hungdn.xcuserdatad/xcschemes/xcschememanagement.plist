@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SharkORM.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Toaster.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>92E8DE4C0B36FBA26CF1DA4A828D62C3</key>
+		<key>0B4FD1AFA2FBCBDC9E5D40C868F75D03</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AAB05C6E5FFDA55C59BF0A61AD8EB5AE</key>
+		<key>2E3130C885FF18C266312A6B5F498FD5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>54D710E2A6C8DA3ABFF31C48897D22A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,123 +7,282 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02F6CA16B755E4F77A88FE0691929665 /* AFNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC8596EA1202F072B9360A67DC830461 /* AFNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00B15CF01E5867E687B5C24683B9E196 /* Toaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 093CCD08EB535CCAD7E9300F709EFA96 /* Toaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02F6CA16B755E4F77A88FE0691929665 /* AFNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 549AB207CC7727838C18A4C59D69BF2C /* AFNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		040AEF5D54D02F932A63B4F5E0CF1768 /* SRKJoinObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 66133BAF0F092D9AC48CFB5E8B371EAC /* SRKJoinObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		05F9B706C9DF7153BC353CBC58CEB7EF /* SharkORM-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CF982B9C2A68E6405D963125EA28C4 /* SharkORM-dummy.m */; };
+		062854CB88D9EFDA7C783DFE70D53BEE /* SRKSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F8045DE399507C467954125B7E455D4F /* SRKSettings.m */; };
+		0752D2CBAFDDA64866E487569A1ACB2B /* SRKEventBlockHolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CA813FA8EF51045C35120636800A25 /* SRKEventBlockHolder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		08412705752CF6DF0C6A49436421F326 /* SharkORM+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 2256957EAFCA04D99C2A3B0DD3E98CC4 /* SharkORM+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0874CF1F79E43728E73DA8B215371394 /* Pods-IRSMobile-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D1075C489EA3BBC8D4D5239F494BB5E /* Pods-IRSMobile-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09930E7F5F869E0B4198924D4B9067BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582EA4D8BE7CB33EA2115446731AE2EA /* Foundation.framework */; };
-		0C47F77A29460547F6AD6E6D39806254 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB998FA819F7F83132EA6023DD8521F /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		0E4228AA87FEC2FAF9FB501617D8A1AD /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1A3E60C417508804FD7F0272BA86C /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		11BAB70C7D3A63C0DFE611BAC1E91454 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C09FBA17ACFFB9759E36DD142B58A2 /* AFJSONUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		14DC989BC36E736221757FEF823841AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42390F0803F64EE0FDFA5584C6958584 /* UIKit.framework */; };
-		1D14DC8A7E0D7341E23C7E3D837EE734 /* Pods-IRSMobile-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D1075C489EA3BBC8D4D5239F494BB5E /* Pods-IRSMobile-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F0FAB3C5B22CC9E103A76781D028508 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A7BCF8FEA45EE1F6AD103A78B4562C5 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3558558F83B9D7731CDE2D977FD1C58D /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D44523BE02E3A0185C421987A97D9582 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3A4E8C0058AAA5E4658BDE34B01E9385 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A085328F0F4303E0FEF1421EB851506 /* AFHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4933458D521610EBF52D38CF19900EF0 /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ECAB5D6A8DDFAE09BA3FA97A8D399C1 /* AFHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B47596E5E7DFFD1AD597D6F732DF4AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582EA4D8BE7CB33EA2115446731AE2EA /* Foundation.framework */; };
-		63DF8313A0B6E0BB8EE963A532087F52 /* Toaster-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5AEC5ED2F108D4DC3E873A93721981 /* Toaster-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		728265032C2B84F0A5D577EB5E035834 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CEF41F5049C5E02F42232AC9F26F9E /* QuartzCore.framework */; };
-		7B1D21E9AAB29096CC43E9CC8B08DD75 /* AFPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F90DDA831C5DA22A002A9EA9DFC02C8C /* AFPropertyListRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8328778AA2ADC1C2B599C2AEA64EB67A /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963AB05BB33E8480C704A2FB010B457C /* Toast.swift */; };
-		8A8C0CA617FC2D51FB03ED4F3E9073C4 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A0B3AB2E909118C28B459CF3D5C475A3 /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91D37737D0BC4A85ED0190C7382AA6A8 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF79B7491FF9E79EE046E765B297827 /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9A0A52B26ECFB2C7918D9D01A4F70A3F /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE53B33EA62E5B006F07748D6EB6F87 /* AFNetworking-dummy.m */; };
-		A02CFBA499FCBB6C06DE4A2CEB43393B /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0A28B76A0EA64A1E93DA9818008BD /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A491584BBC5F4375711005ACEFB087C8 /* AFImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E541E6E592D58F548060BE8C2C95CE6F /* AFImageRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A940DADF9B16C32081F8C205F75146D4 /* AFJSONUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B03BDF2D7251BDD440F90218FDD468E /* AFJSONUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA92CA17922D86B9B9F3EED5787DB0F4 /* AFJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 304CE913D5BD99D56A1A8DE9EF60C480 /* AFJSONRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE62412358A537F92014C1A978D8EB38 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E5E4D866129CA13CF24E290A0415E /* ToastView.swift */; };
-		BBF0C452B5C3EC9ED794D7A9BC849520 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C34BB62B1A64B01287872D1956265374 /* AFURLConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC0206319A9A10A521FA0661FC7601E6 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 999755E9CDFE7BE4F36F59395E168075 /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0A74B965DD1A9A2EC906257D3418AFBB /* SRKIndexDefinition+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 43060CEA4ACBA16C220F49FFBCAD0085 /* SRKIndexDefinition+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0C47F77A29460547F6AD6E6D39806254 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A182CBBADB4BA3DAF1C5C034E6E3DED /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0CC0B12159B75372853BDE6451727F43 /* SRKDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2DAFDF7E74CA7705C71C785D7E7265 /* SRKDefinitions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0E4228AA87FEC2FAF9FB501617D8A1AD /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DADF57D35A8F70FD6A87258D057A2A7 /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		117BA08C5E0FF138E2BC6A3A302BA99A /* SRKQueryAsyncHandler+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A3E07B7333D31C74ABD6693829094F55 /* SRKQueryAsyncHandler+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		11BAB70C7D3A63C0DFE611BAC1E91454 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5F0646FF415401CE4C1F458E31E8F5 /* AFJSONUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		121B2341CD9D8E3033C75944E1C09C81 /* SRKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB94A3CDF9B7609D505537BFADF282 /* SRKContext.m */; };
+		17172D45695D25AF348116AE429F317C /* SRKCommitOptions+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F0C5456E5459074579E8353C2FAF4565 /* SRKCommitOptions+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1B09F133EFEF21BFD540CCDD07FEFC1B /* SRKQueryProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A477B860AE04CDC41174664CD4ADDD /* SRKQueryProfile.m */; };
+		1B9FC2676AED2A32BCFD3F9FFF494621 /* SRKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BBC25463941514AA5156B847DC2DC1 /* SRKUtilities.m */; };
+		1BF7C804A6400D0B0ED3366462710EC5 /* SharkORM.m in Sources */ = {isa = PBXBuildFile; fileRef = D920A43B45FE28152D82CB3BBF1E44E3 /* SharkORM.m */; };
+		1EF03380D94D7E4F0E2C0D5540FFD127 /* SRKSQLiteHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21D55E14282F1D56F166F435377AF5 /* SRKSQLiteHandle.m */; };
+		1F0FAB3C5B22CC9E103A76781D028508 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EDD989F640AC92336C9701FEBBC797A /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2013F6028D84ED5EA6BF673F86010DA0 /* SRKContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C72FEB097B21D01F21EA8B269165CCA /* SRKContext.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2264989A6B79B004B6FBB84EC37DC49E /* SRKRegistryEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = F1E49DAA4D3D22ABC2BAA43890E84645 /* SRKRegistryEntry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		231A38AD989294A0E5B1DD59E6D7213C /* SRKObject+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F87E29F82B658B45CC81A6F6CAC3A67 /* SRKObject+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		256D34001C7741A35AE5AF7EDC5CF428 /* SRKEncryptedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C389AD3B60C04FCA2C91FF84CFFF371 /* SRKEncryptedObject.m */; };
+		291FB3DD4D4CA34EBA652F3CF9F6D9B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582EA4D8BE7CB33EA2115446731AE2EA /* Foundation.framework */; };
+		29981CC1363C2B4F85C8A9F7543745A3 /* SRKFuzzyStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E346DAC553DD76202EAE29AB9886C44 /* SRKFuzzyStore.m */; };
+		2C9B8488CDEA44F7A3F0D76837D46335 /* SRKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 50469FC8D52FFD7C75106ABC64B36944 /* SRKGlobals.m */; };
+		2E38241289883DAF29CBD7F3F754FAF8 /* FTSRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = B7BACA205BCE7034B9340482D299CBB4 /* FTSRegistry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3558558F83B9D7731CDE2D977FD1C58D /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F60F6D42A7347CE5B3BBE94C7CDAF5 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		39DAF6110E1502BD3BFD944303CB9A4C /* SRKAES256Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C76E479C2993CE2DB24171AA7B7275 /* SRKAES256Extension.m */; };
+		39E0876D834BFD9C6E65EFBE519E3710 /* SRKTransactionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18212578CF44CCD673907A3A1D531DF7 /* SRKTransactionInfo.m */; };
+		3A16C9692DAB25F312F74DE6B0E879DE /* SharkORM.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8D068B64A0560352E0A0316ED3781F /* SharkORM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A4E8C0058AAA5E4658BDE34B01E9385 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7274D914D684AF774F08E0B4AC1294C1 /* AFHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CAAA0318F2D2409179EB7E7899060EE /* SRKRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6935C0544BDF055024126B27527570 /* SRKRegistry.m */; };
+		3F7305B923A1F6128E41934A59E2A4F6 /* SRKEventBlockHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C024FBE51EB940C72ECA2B9EB0C13A12 /* SRKEventBlockHolder.m */; };
+		4933458D521610EBF52D38CF19900EF0 /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514AC824EE59DE5EF40AB8599F2D31E /* AFHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54C47EA9D10850564F586E9B859FF888 /* SRKStringObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB114C5A9A33B87CBCF70806360D8C /* SRKStringObject.m */; };
+		55CAFA3F4CEF99020E0DAE42824B6AEB /* DBAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AAEF29C58227CAC5063227F968E641D /* DBAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		561325E092F73638631046E2293C415B /* SRKCommitOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C1800E8FADC08C5255541F855399B1 /* SRKCommitOptions.m */; };
+		577C30B998FB248140EE63BE14475A9E /* SRKObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F97CDA0DB1302BC98E4199A059A45144 /* SRKObject.m */; };
+		5D0D9CECB7710C77FCD07668E308F051 /* SRKUnsupportedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 393641D48F830892633DCD506B5350B6 /* SRKUnsupportedObject.m */; };
+		61E53FC16F9CF862D73602125EC7DAA5 /* SRKResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B2C9360677AD8E3962E308B83D0496 /* SRKResultSet.m */; };
+		61E794C31F232CC548A95B11F955E0DD /* SRKLazyLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = F3DB919302FCD854E20104547B1C56D4 /* SRKLazyLoader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		65DEFAECDDB9A8E43A9693A57A4A2E02 /* SRKEventRegistryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F165E77C5B991241016A1A26326F1C4 /* SRKEventRegistryObject.m */; };
+		71D42A52F708EEF101DCF33E7405FCE8 /* SRKQueryAsyncHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E3D7DAAA6481F4B5943718FF87130D /* SRKQueryAsyncHandler.m */; };
+		73E12A5D004AA736594E0D4D6C7DD5F7 /* SRKRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = D512106B4723DCDA67365DE5363D364E /* SRKRelationship.m */; };
+		7556AA5A4805D92F7575795952BB5091 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42390F0803F64EE0FDFA5584C6958584 /* UIKit.framework */; };
+		7851133E96A54AD5466836279C48123F /* Toaster-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58165B5E63B488061062DAD3B0AAAE48 /* Toaster-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		794C930D49A63318AFA15C4516FB05C4 /* SRKFuzzyStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 656C1B5EFFC46EA8F246BF673394B857 /* SRKFuzzyStore.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7A8F73C441A7AFE6AD080720BDBF30E3 /* SRKQuery+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A9EF1FA57FF0B1ADD60211523EF40A82 /* SRKQuery+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7AA3D423F5D0C6B21BE25666A68BE981 /* SRKEventHandler+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B5BA5A7F1DFFD5E67B46C7B255833A42 /* SRKEventHandler+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7B1D21E9AAB29096CC43E9CC8B08DD75 /* AFPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F063378C3C6E9EF27DA020CE8581DFED /* AFPropertyListRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B79309AC2A96244B67C1C4FAE28D574 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582EA4D8BE7CB33EA2115446731AE2EA /* Foundation.framework */; };
+		7D4B21D0762ECA762DE8DB7CBAB15EEE /* SRKTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A5AD19BEB4EE3D0A7D571CDC0D14AC /* SRKTransaction.m */; };
+		8608DC2D8FE42C9EAAEFCB2834CBC180 /* SRKEncryptedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 4019EBC7713CACA35EB0E1ED14E6162C /* SRKEncryptedObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		87097180D4FF4B2387BDDCB78DAFC6B7 /* ToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FC4A75513602C403DFAE460AA86BF /* ToastWindow.swift */; };
+		8A8C0CA617FC2D51FB03ED4F3E9073C4 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C953E339AC355C6239289063946B09D /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C6461234D012E5AD69FFFD5A2D20237 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA1703F59A6D5D1816FF427C16DD28 /* Toast.swift */; };
+		8D39996D98102F233FA7E93E7F30CF72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582EA4D8BE7CB33EA2115446731AE2EA /* Foundation.framework */; };
+		8DACECFCF5E83A0AD44DD9BE313B2FCE /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = F50B931D2B06EE68879662B3C9BD37F2 /* sqlite3.c */; };
+		8E0A50927EF9A3BE3250A43AA0F7A6DC /* SRKJoinObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A3C1D99775DC1827AD784C689E332 /* SRKJoinObject.m */; };
+		90D5FDF91CD26F75BF9716364D143899 /* SRKEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B26A9A91C490E90BB7B6BC16ACDF2E83 /* SRKEventHandler.m */; };
+		91D37737D0BC4A85ED0190C7382AA6A8 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118BB759E4EF88191009B9CEB57922E /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9494DCE4293F56082FD81D498DF46BA5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CEF41F5049C5E02F42232AC9F26F9E /* QuartzCore.framework */; };
+		967B1A4A6391AD116BC8399DDD5DFEFB /* SRKAES256Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4704E714CEDB33832448350CBFA0C344 /* SRKAES256Extension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		96C9129F8F3BF5CED3AF6F4935D89B60 /* ToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF038BC404A993D5AC9957F38AA8BCC /* ToastCenter.swift */; };
+		9736287DE45B05DEE44BEFD2563F0B55 /* sqlite3ext.h in Headers */ = {isa = PBXBuildFile; fileRef = A98FDB4A80FA2D277907A3E46FA9D047 /* sqlite3ext.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9A0A52B26ECFB2C7918D9D01A4F70A3F /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5787D91847D573224CA123CECA6A68F /* AFNetworking-dummy.m */; };
+		9E2972D41D09236900D8DE39DCF72715 /* Toaster-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0959C239E5790AA3C5AF37FCF9B04D28 /* Toaster-dummy.m */; };
+		9E3AE3126B29B962477EDCB78D15AE20 /* SRKUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = ABF85D8412EAC6F99AE9F25406BE0801 /* SRKUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9F2AD80B06E3FCE077D5EDAF53509E06 /* SRKObjectChain.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CCDB8A7C2B7D31B3A2D38C8556CD0 /* SRKObjectChain.m */; };
+		A02CFBA499FCBB6C06DE4A2CEB43393B /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 511E79CA0A58094703BA6B138D386E41 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A1F483E98B7C0C5B3C9B6E1DB5FBF02D /* SRKUnsupportedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = ACBD6DEB4064EDB858F322ECBA34DF41 /* SRKUnsupportedObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A491584BBC5F4375711005ACEFB087C8 /* AFImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 493D438C608A3AA53BEE6EECADC6FA58 /* AFImageRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A75067CD36C3D9728E698E11DD2CD63F /* SRKLazyLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FE108E4B5E8DBC140977774D4F1E03DA /* SRKLazyLoader.m */; };
+		A844BE6070FB2E4E52804243DFD05344 /* SRKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFFB36D14CA35FD5CDAEBF1AF7D731 /* SRKEvent.m */; };
+		A940DADF9B16C32081F8C205F75146D4 /* AFJSONUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B167A50FE9909B4B9E94CCAB979FD67 /* AFJSONUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA92CA17922D86B9B9F3EED5787DB0F4 /* AFJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F0B71962498A130A469A1D5420B56E59 /* AFJSONRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABC832E2DF39CB6D467C9E961A283D9C /* SRKTransaction+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 66B8DA15981E0C8A9FEE233DE582E532 /* SRKTransaction+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B1DD35028ADBED01423A252830FCF1EC /* SRKRegistryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE70C415D965C5DCBFA77201A738C /* SRKRegistryEntry.m */; };
+		B21D73B312AFDE4EA5386ACA7A061D95 /* SRKResultSet+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9D1D8153BFF372C7A17103EAC7CB0D /* SRKResultSet+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B31C70A76CE371D77BCDD55AFE0D179D /* SRKEventRegistryObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 087A7C4EB66B9AFE264F66A448A0B218 /* SRKEventRegistryObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B3DB3713CC578F1E972F5FE2C3E44D28 /* FTSRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 0178262700D8E43BF52660EFE30FAC53 /* FTSRegistry.m */; };
+		B92E7AF0CBA0B4098D72AE827AB851D3 /* SRKSQLiteHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 443924A965CB4EEDC5431F91E29AF521 /* SRKSQLiteHandle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B942CBF72732DFFBCDB9E9428E973082 /* SRKObjectChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BD8D9DFE9B525295FCA287B3E5ED76B /* SRKObjectChain.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BBF0C452B5C3EC9ED794D7A9BC849520 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F2DB2C414CBE195FBB50F32E344BC8 /* AFURLConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC0206319A9A10A521FA0661FC7601E6 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF2CB8476FBCFF634185202F3B1D722 /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD3680A19F98F9C3F90E8729E5788720 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA5E12254FE7DC337F14BE29C3A6D9D /* ToastView.swift */; };
 		BE6C1F4FE08EB28A66EE8287D473CDBC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2347B074D78530E86E8CFD1121C05BB0 /* SystemConfiguration.framework */; };
-		C4B125FCB72F4628E52137E8E006E2C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582EA4D8BE7CB33EA2115446731AE2EA /* Foundation.framework */; };
-		C7B95679FD3C80740829E028628C7211 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 794A0BA0367586ABA14F819FA6127E61 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CAF85CC64B57F701AE6322C1E6560F18 /* AFXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F91C49C4D88D81F0341AC6DF939F10 /* AFXMLRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3081D88C57F816665CCA94E6637FB15 /* ToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240288AAED447B56A6F874BDB2E62D4 /* ToastCenter.swift */; };
-		DEBAB26B7870B4DDD66076568132F500 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FF74EEA1C10CF437640C934F03A63292 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E689B62E276DB079D37C430791168430 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BD2ECEC254228F40A40F450DF7422C /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EC4A7BA15C0F5D5798A8B2241168E894 /* Toaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 549E015EA909841FD90A1E9CD644C779 /* Toaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFF86DD9CC15B085D6D0D8A6F59E3602 /* Toaster-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE26A1EDB2672D1960CA95748FD7106 /* Toaster-dummy.m */; };
-		F1FA2B28A2DAD3AB48B81291387D35B4 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC8FCF85D233012537C5603CE9394F8 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F71F4B68CB42889CAAD77F57268B0CAC /* ToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC7CBC7A6FD3AD4A632FD1ADC368A2 /* ToastWindow.swift */; };
-		FB2A693E95CFB806EFA3DA8EC40E2F5C /* Pods-IRSMobile-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C820D0BE84FE5A6C2FF5C4860E17DDDE /* Pods-IRSMobile-dummy.m */; };
+		C7B95679FD3C80740829E028628C7211 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D40BF630DE98C8C04E12C4EAA0151B /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CA286E083880A808962709F9E69F89E8 /* SRKIndexDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D936E84EA51521A17183FAE185CC45F /* SRKIndexDefinition.m */; };
+		CAF85CC64B57F701AE6322C1E6560F18 /* AFXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D74F7ED53ECE0EB992B2D52A043AACA /* AFXMLRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC6B5816F6C15D7294D7DEB50EB91F41 /* SRKRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B79307188A3FC24B943C5EDAE5E3BBA /* SRKRegistry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D3151B8BE618DF80CEB22972E9BC2343 /* SRKFTSQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1197C0CF98DE13AB68B5C14CD3E5B1 /* SRKFTSQuery.m */; };
+		DE55F05E6B58E3A80E2F0431F026E8EC /* Pods-IRSMobile-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C820D0BE84FE5A6C2FF5C4860E17DDDE /* Pods-IRSMobile-dummy.m */; };
+		DEBAB26B7870B4DDD66076568132F500 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 732E970D878DDBD80A726296FC090D1B /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DFE18C041AC66CE9A2E8AADA56D4CC9D /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 315664D0320FB19E24F078E209601BF2 /* sqlite3.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E18A166B39C1B2AA6F53470A87170A6F /* SRKRawResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D84B595F15FF969093B9545E9FD74 /* SRKRawResults.m */; };
+		E3B6A1B7BCAA91F58825A114B060360D /* SRKQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 58965A7A9783AA8DA804E07C94235789 /* SRKQuery.m */; };
+		E689B62E276DB079D37C430791168430 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 666D8FEC148AEA2F2788F28A8E797FAF /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ECF80DCEA811816FEBCC670CCD9334E5 /* SRKError.m in Sources */ = {isa = PBXBuildFile; fileRef = 48ED186E789F5C309FD1DAB872AE1516 /* SRKError.m */; };
+		ED4845D314663C8C26034E917EE4B277 /* SharkORM-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA85B50556EC24F32A7FB5CBA0F4A8B9 /* SharkORM-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF80F05A34E7C366E7AFACC3224A5961 /* SRKRelationship.h in Headers */ = {isa = PBXBuildFile; fileRef = B7AD0DC287A36BC37E5F638D13521D2F /* SRKRelationship.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F0D9211B9BA188EAB63B22F53AC4ED9C /* SRKTransactionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 64162EFFDCAC76756297FB23CD59D9F1 /* SRKTransactionInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F1FA2B28A2DAD3AB48B81291387D35B4 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E690458DA22608953AB635D6D8BC8709 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF6880421CF1BB262FA51F462713D1A5 /* SRKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D8BFCEA0A583C44B22F5A11DD9CB133 /* SRKGlobals.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		295991C4BDFAA1FA2461D27746A8FF43 /* PBXContainerItemProxy */ = {
+		0C2DC408136C6D6E5BD024DA82E6D9C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54D710E2A6C8DA3ABFF31C48897D22A2;
+			remoteInfo = Toaster;
+		};
+		3373EC6E0EAEEA8B5054C608C30B9727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E3130C885FF18C266312A6B5F498FD5;
+			remoteInfo = SharkORM;
+		};
+		729A5FFDE54FAAA499E9E3FB7694324D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F33B4C0666E5A9361F425274CF9F0409;
 			remoteInfo = AFNetworking;
 		};
-		A57406D9A50A8741CACAB1B258835CBB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92E8DE4C0B36FBA26CF1DA4A828D62C3;
-			remoteInfo = Toaster;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03E1394F68B958E8690DFC6C5A999EEE /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFNetworking.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		056E5E4D866129CA13CF24E290A0415E /* ToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastView.swift; path = Sources/ToastView.swift; sourceTree = "<group>"; };
-		090A49ADCE757771F32596F1D35815B2 /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AFNetworking.modulemap; sourceTree = "<group>"; };
+		0077D3E575560E5A1885ABA39F4CAF2F /* SharkORM.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SharkORM.xcconfig; sourceTree = "<group>"; };
+		0118BB759E4EF88191009B9CEB57922E /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFPropertyListRequestOperation.m; path = AFNetworking/AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		0178262700D8E43BF52660EFE30FAC53 /* FTSRegistry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTSRegistry.m; path = SharkORM/Core/FTS/FTSRegistry.m; sourceTree = "<group>"; };
+		06FB94A3CDF9B7609D505537BFADF282 /* SRKContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKContext.m; path = SharkORM/Core/Transactions/SRKContext.m; sourceTree = "<group>"; };
+		07CA813FA8EF51045C35120636800A25 /* SRKEventBlockHolder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKEventBlockHolder.h; path = SharkORM/Core/Events/SRKEventBlockHolder.h; sourceTree = "<group>"; };
+		087A7C4EB66B9AFE264F66A448A0B218 /* SRKEventRegistryObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKEventRegistryObject.h; path = SharkORM/Core/Events/SRKEventRegistryObject.h; sourceTree = "<group>"; };
+		091F25D8639F60A84CF500331C22F700 /* Pods_IRSMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IRSMobile.framework; path = "Pods-IRSMobile.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		093156C55E4CE59E86B0739B795F1ECE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		093CCD08EB535CCAD7E9300F709EFA96 /* Toaster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Toaster.h; path = Sources/Toaster.h; sourceTree = "<group>"; };
+		0959C239E5790AA3C5AF37FCF9B04D28 /* Toaster-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toaster-dummy.m"; sourceTree = "<group>"; };
 		0D1075C489EA3BBC8D4D5239F494BB5E /* Pods-IRSMobile-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IRSMobile-umbrella.h"; sourceTree = "<group>"; };
-		192EEE0BB04E17DD79CB10DAB79D683F /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
-		1DF1A3E60C417508804FD7F0272BA86C /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFJSONRequestOperation.m; path = AFNetworking/AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		0D74F7ED53ECE0EB992B2D52A043AACA /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFXMLRequestOperation.h; path = AFNetworking/AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		0D9E546E81E0CF39F9ABC1E94DE2CF1F /* Toaster-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-prefix.pch"; sourceTree = "<group>"; };
+		1390B4CEA94BCE16EE9D9FE8382CB0E8 /* Toaster.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toaster.xcconfig; sourceTree = "<group>"; };
+		18212578CF44CCD673907A3A1D531DF7 /* SRKTransactionInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKTransactionInfo.m; path = SharkORM/Core/Transactions/SRKTransactionInfo.m; sourceTree = "<group>"; };
+		1ABFFB36D14CA35FD5CDAEBF1AF7D731 /* SRKEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEvent.m; path = SharkORM/Core/Events/SRKEvent.m; sourceTree = "<group>"; };
+		1D5D84B595F15FF969093B9545E9FD74 /* SRKRawResults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKRawResults.m; path = "SharkORM/Core/Persistable Objects/SRKRawResults.m"; sourceTree = "<group>"; };
+		2224BCC66F84423DDFB8EFD28A9BFAA2 /* SharkORM-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SharkORM-prefix.pch"; sourceTree = "<group>"; };
+		2256957EAFCA04D99C2A3B0DD3E98CC4 /* SharkORM+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SharkORM+Private.h"; path = "SharkORM/Core/SharkORM+Private.h"; sourceTree = "<group>"; };
 		2347B074D78530E86E8CFD1121C05BB0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		29BD2ECEC254228F40A40F450DF7422C /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
-		2A7BCF8FEA45EE1F6AD103A78B4562C5 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		304CE913D5BD99D56A1A8DE9EF60C480 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFJSONRequestOperation.h; path = AFNetworking/AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		261E54357912AE401AF368F865FB4EBE /* SharkORM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SharkORM.framework; path = SharkORM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		299636EF20FE0DAFFD963534E5D6E8BE /* Toaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toaster.framework; path = Toaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B1FC4A75513602C403DFAE460AA86BF /* ToastWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastWindow.swift; path = Sources/ToastWindow.swift; sourceTree = "<group>"; };
+		315664D0320FB19E24F078E209601BF2 /* sqlite3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = SharkORM/SQLite/sqlite3.h; sourceTree = "<group>"; };
+		3514AC824EE59DE5EF40AB8599F2D31E /* AFHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = AFNetworking/AFHTTPClient.h; sourceTree = "<group>"; };
+		36CF982B9C2A68E6405D963125EA28C4 /* SharkORM-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SharkORM-dummy.m"; sourceTree = "<group>"; };
+		393641D48F830892633DCD506B5350B6 /* SRKUnsupportedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKUnsupportedObject.m; path = "SharkORM/Core/Persistable Objects/SRKUnsupportedObject.m"; sourceTree = "<group>"; };
+		3BD8D9DFE9B525295FCA287B3E5ED76B /* SRKObjectChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKObjectChain.h; path = "SharkORM/Core/Persistable Objects/SRKObjectChain.h"; sourceTree = "<group>"; };
+		4019EBC7713CACA35EB0E1ED14E6162C /* SRKEncryptedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKEncryptedObject.h; path = "SharkORM/Core/Persistable Objects/SRKEncryptedObject.h"; sourceTree = "<group>"; };
+		41A5AD19BEB4EE3D0A7D571CDC0D14AC /* SRKTransaction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKTransaction.m; path = SharkORM/Core/Transactions/SRKTransaction.m; sourceTree = "<group>"; };
+		41DB114C5A9A33B87CBCF70806360D8C /* SRKStringObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKStringObject.m; path = "SharkORM/Core/Persistable Objects/SRKStringObject.m"; sourceTree = "<group>"; };
 		42390F0803F64EE0FDFA5584C6958584 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		43060CEA4ACBA16C220F49FFBCAD0085 /* SRKIndexDefinition+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKIndexDefinition+Private.h"; path = "SharkORM/Core/Indexing/SRKIndexDefinition+Private.h"; sourceTree = "<group>"; };
+		443924A965CB4EEDC5431F91E29AF521 /* SRKSQLiteHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKSQLiteHandle.h; path = SharkORM/Core/SRKSQLiteHandle.h; sourceTree = "<group>"; };
 		4491B628AA62EC8FCFF5165B638A5D9A /* Pods-IRSMobile.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-IRSMobile.modulemap"; sourceTree = "<group>"; };
+		4704E714CEDB33832448350CBFA0C344 /* SRKAES256Extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKAES256Extension.h; path = "SharkORM/Core/Persistable Objects/SRKAES256Extension.h"; sourceTree = "<group>"; };
 		48CAE3BF57ED53969165E84DD633AFC8 /* Pods-IRSMobile-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IRSMobile-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4ECAB5D6A8DDFAE09BA3FA97A8D399C1 /* AFHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = AFNetworking/AFHTTPClient.h; sourceTree = "<group>"; };
-		5240288AAED447B56A6F874BDB2E62D4 /* ToastCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastCenter.swift; path = Sources/ToastCenter.swift; sourceTree = "<group>"; };
+		48ED186E789F5C309FD1DAB872AE1516 /* SRKError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKError.m; path = SharkORM/Core/SRKError.m; sourceTree = "<group>"; };
+		493D438C608A3AA53BEE6EECADC6FA58 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageRequestOperation.h; path = AFNetworking/AFImageRequestOperation.h; sourceTree = "<group>"; };
+		4B20D7ECBC8525732F8924F561C1BC73 /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
+		4C72FEB097B21D01F21EA8B269165CCA /* SRKContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKContext.h; path = SharkORM/Core/Transactions/SRKContext.h; sourceTree = "<group>"; };
+		4DADF57D35A8F70FD6A87258D057A2A7 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFJSONRequestOperation.m; path = AFNetworking/AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		4E346DAC553DD76202EAE29AB9886C44 /* SRKFuzzyStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKFuzzyStore.m; path = SharkORM/Core/FuzzyStore/SRKFuzzyStore.m; sourceTree = "<group>"; };
+		4EA5E12254FE7DC337F14BE29C3A6D9D /* ToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastView.swift; path = Sources/ToastView.swift; sourceTree = "<group>"; };
+		4EDD989F640AC92336C9701FEBBC797A /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		50469FC8D52FFD7C75106ABC64B36944 /* SRKGlobals.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKGlobals.m; path = SharkORM/Core/SRKGlobals.m; sourceTree = "<group>"; };
+		50E3D7DAAA6481F4B5943718FF87130D /* SRKQueryAsyncHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKQueryAsyncHandler.m; path = SharkORM/Core/Queries/SRKQueryAsyncHandler.m; sourceTree = "<group>"; };
+		511E79CA0A58094703BA6B138D386E41 /* AFHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPClient.m; path = AFNetworking/AFHTTPClient.m; sourceTree = "<group>"; };
 		52C1C8742CEFBD9E112E6530A35F8BD6 /* Pods-IRSMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IRSMobile.debug.xcconfig"; sourceTree = "<group>"; };
-		549E015EA909841FD90A1E9CD644C779 /* Toaster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Toaster.h; path = Sources/Toaster.h; sourceTree = "<group>"; };
+		549AB207CC7727838C18A4C59D69BF2C /* AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-umbrella.h"; sourceTree = "<group>"; };
+		55BA1703F59A6D5D1816FF427C16DD28 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Sources/Toast.swift; sourceTree = "<group>"; };
+		58165B5E63B488061062DAD3B0AAAE48 /* Toaster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-umbrella.h"; sourceTree = "<group>"; };
 		582EA4D8BE7CB33EA2115446731AE2EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5A5AEC5ED2F108D4DC3E873A93721981 /* Toaster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-umbrella.h"; sourceTree = "<group>"; };
+		58965A7A9783AA8DA804E07C94235789 /* SRKQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKQuery.m; path = SharkORM/Core/Queries/SRKQuery.m; sourceTree = "<group>"; };
+		5C953E339AC355C6239289063946B09D /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
 		606C788616168D2F86B34BD1397BA319 /* Pods-IRSMobile-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IRSMobile-acknowledgements.plist"; sourceTree = "<group>"; };
 		61CEF41F5049C5E02F42232AC9F26F9E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		6B03BDF2D7251BDD440F90218FDD468E /* AFJSONUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFJSONUtilities.h; path = AFNetworking/AFJSONUtilities.h; sourceTree = "<group>"; };
-		6EC8FCF85D233012537C5603CE9394F8 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = AFNetworking/AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		630A3C1D99775DC1827AD784C689E332 /* SRKJoinObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKJoinObject.m; path = SharkORM/Core/Queries/SRKJoinObject.m; sourceTree = "<group>"; };
+		64162EFFDCAC76756297FB23CD59D9F1 /* SRKTransactionInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKTransactionInfo.h; path = SharkORM/Core/Transactions/SRKTransactionInfo.h; sourceTree = "<group>"; };
+		656C1B5EFFC46EA8F246BF673394B857 /* SRKFuzzyStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKFuzzyStore.h; path = SharkORM/Core/FuzzyStore/SRKFuzzyStore.h; sourceTree = "<group>"; };
+		66133BAF0F092D9AC48CFB5E8B371EAC /* SRKJoinObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKJoinObject.h; path = SharkORM/Core/Queries/SRKJoinObject.h; sourceTree = "<group>"; };
+		666D8FEC148AEA2F2788F28A8E797FAF /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		66B8DA15981E0C8A9FEE233DE582E532 /* SRKTransaction+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKTransaction+Private.h"; path = "SharkORM/Core/Transactions/SRKTransaction+Private.h"; sourceTree = "<group>"; };
+		6D936E84EA51521A17183FAE185CC45F /* SRKIndexDefinition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKIndexDefinition.m; path = SharkORM/Core/Indexing/SRKIndexDefinition.m; sourceTree = "<group>"; };
+		6F165E77C5B991241016A1A26326F1C4 /* SRKEventRegistryObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEventRegistryObject.m; path = SharkORM/Core/Events/SRKEventRegistryObject.m; sourceTree = "<group>"; };
+		7274D914D684AF774F08E0B4AC1294C1 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		732E970D878DDBD80A726296FC090D1B /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		73BBC25463941514AA5156B847DC2DC1 /* SRKUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKUtilities.m; path = SharkORM/Core/SRKUtilities.m; sourceTree = "<group>"; };
+		73D40BF630DE98C8C04E12C4EAA0151B /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		74B2C9360677AD8E3962E308B83D0496 /* SRKResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKResultSet.m; path = "SharkORM/Core/Persistable Objects/SRKResultSet.m"; sourceTree = "<group>"; };
 		78ECE5A448E27B96C29EA621F744A8F2 /* Pods-IRSMobile-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IRSMobile-resources.sh"; sourceTree = "<group>"; };
-		794A0BA0367586ABA14F819FA6127E61 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		7D607C04F8BCF35AB004937AA724E70C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E0FACED3BE521EC252FB7AC672C993A /* Toaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toaster.framework; path = Toaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FF79B7491FF9E79EE046E765B297827 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFPropertyListRequestOperation.m; path = AFNetworking/AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
-		80F91C49C4D88D81F0341AC6DF939F10 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFXMLRequestOperation.h; path = AFNetworking/AFXMLRequestOperation.h; sourceTree = "<group>"; };
-		8A085328F0F4303E0FEF1421EB851506 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		92CC620E3056F795E8ADC99872119181 /* Toaster-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-prefix.pch"; sourceTree = "<group>"; };
+		79298897D92C1D530CDFFE4964914EB5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A182CBBADB4BA3DAF1C5C034E6E3DED /* AFImageRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageRequestOperation.m; path = AFNetworking/AFImageRequestOperation.m; sourceTree = "<group>"; };
+		7AAEF29C58227CAC5063227F968E641D /* DBAccess.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBAccess.h; path = SharkORM/Core/DBAccess.h; sourceTree = "<group>"; };
+		85C1800E8FADC08C5255541F855399B1 /* SRKCommitOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKCommitOptions.m; path = "SharkORM/Core/Persistable Objects/SRKCommitOptions.m"; sourceTree = "<group>"; };
+		86B92C7EA082EB2A77864C859A21A2F7 /* Toaster.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Toaster.modulemap; sourceTree = "<group>"; };
+		8B167A50FE9909B4B9E94CCAB979FD67 /* AFJSONUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFJSONUtilities.h; path = AFNetworking/AFJSONUtilities.h; sourceTree = "<group>"; };
+		8B79307188A3FC24B943C5EDAE5E3BBA /* SRKRegistry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKRegistry.h; path = SharkORM/Core/Registry/SRKRegistry.h; sourceTree = "<group>"; };
+		8C389AD3B60C04FCA2C91FF84CFFF371 /* SRKEncryptedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEncryptedObject.m; path = "SharkORM/Core/Persistable Objects/SRKEncryptedObject.m"; sourceTree = "<group>"; };
+		8F87E29F82B658B45CC81A6F6CAC3A67 /* SRKObject+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKObject+Private.h"; path = "SharkORM/Core/Persistable Objects/SRKObject+Private.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94FC7CBC7A6FD3AD4A632FD1ADC368A2 /* ToastWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastWindow.swift; path = Sources/ToastWindow.swift; sourceTree = "<group>"; };
-		963AB05BB33E8480C704A2FB010B457C /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Sources/Toast.swift; sourceTree = "<group>"; };
-		999755E9CDFE7BE4F36F59395E168075 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = AFNetworking/AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
-		99B0A28B76A0EA64A1E93DA9818008BD /* AFHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPClient.m; path = AFNetworking/AFHTTPClient.m; sourceTree = "<group>"; };
-		9FF50C9CA064709352F41CC6DFB526BC /* Toaster.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Toaster.modulemap; sourceTree = "<group>"; };
-		A0B3AB2E909118C28B459CF3D5C475A3 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		947500CDB38F6C9F96935BC011BAC9F9 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		958F8B2892252FBB966726707A98D172 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFNetworking.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D8BFCEA0A583C44B22F5A11DD9CB133 /* SRKGlobals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKGlobals.h; path = SharkORM/Core/SRKGlobals.h; sourceTree = "<group>"; };
+		A3E07B7333D31C74ABD6693829094F55 /* SRKQueryAsyncHandler+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKQueryAsyncHandler+Private.h"; path = "SharkORM/Core/Queries/SRKQueryAsyncHandler+Private.h"; sourceTree = "<group>"; };
+		A3F2DB2C414CBE195FBB50F32E344BC8 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		A945CD4D80E4F480921C32E16F9050F7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A98FDB4A80FA2D277907A3E46FA9D047 /* sqlite3ext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sqlite3ext.h; path = SharkORM/SQLite/sqlite3ext.h; sourceTree = "<group>"; };
+		A9EF1FA57FF0B1ADD60211523EF40A82 /* SRKQuery+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKQuery+Private.h"; path = "SharkORM/Core/Queries/SRKQuery+Private.h"; sourceTree = "<group>"; };
+		AB9D1D8153BFF372C7A17103EAC7CB0D /* SRKResultSet+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKResultSet+Private.h"; path = "SharkORM/Core/Persistable Objects/SRKResultSet+Private.h"; sourceTree = "<group>"; };
+		ABF85D8412EAC6F99AE9F25406BE0801 /* SRKUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKUtilities.h; path = SharkORM/Core/SRKUtilities.h; sourceTree = "<group>"; };
+		ACBD6DEB4064EDB858F322ECBA34DF41 /* SRKUnsupportedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKUnsupportedObject.h; path = "SharkORM/Core/Persistable Objects/SRKUnsupportedObject.h"; sourceTree = "<group>"; };
+		ACF2CB8476FBCFF634185202F3B1D722 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = AFNetworking/AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		AD6935C0544BDF055024126B27527570 /* SRKRegistry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKRegistry.m; path = SharkORM/Core/Registry/SRKRegistry.m; sourceTree = "<group>"; };
 		AD6F9C553A92C7D6ED35A48161EC0110 /* Pods-IRSMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IRSMobile.release.xcconfig"; sourceTree = "<group>"; };
-		B4DEC6B77747B16269453D461AB0DCEA /* Toaster.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toaster.xcconfig; sourceTree = "<group>"; };
-		BC5FCCD4EF95B791C76D00E71A329886 /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
-		C2B45D8849344BF520023CA45F17B284 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C34BB62B1A64B01287872D1956265374 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		AF8D068B64A0560352E0A0316ED3781F /* SharkORM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SharkORM.h; path = SharkORM/Core/SharkORM.h; sourceTree = "<group>"; };
+		B26A9A91C490E90BB7B6BC16ACDF2E83 /* SRKEventHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEventHandler.m; path = SharkORM/Core/Events/SRKEventHandler.m; sourceTree = "<group>"; };
+		B5BA5A7F1DFFD5E67B46C7B255833A42 /* SRKEventHandler+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKEventHandler+Private.h"; path = "SharkORM/Core/Events/SRKEventHandler+Private.h"; sourceTree = "<group>"; };
+		B7AD0DC287A36BC37E5F638D13521D2F /* SRKRelationship.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKRelationship.h; path = SharkORM/Core/SRKRelationship.h; sourceTree = "<group>"; };
+		B7BACA205BCE7034B9340482D299CBB4 /* FTSRegistry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTSRegistry.h; path = SharkORM/Core/FTS/FTSRegistry.h; sourceTree = "<group>"; };
+		BA85B50556EC24F32A7FB5CBA0F4A8B9 /* SharkORM-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SharkORM-umbrella.h"; sourceTree = "<group>"; };
+		BB3BE70C415D965C5DCBFA77201A738C /* SRKRegistryEntry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKRegistryEntry.m; path = SharkORM/Core/Registry/SRKRegistryEntry.m; sourceTree = "<group>"; };
+		C024FBE51EB940C72ECA2B9EB0C13A12 /* SRKEventBlockHolder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEventBlockHolder.m; path = SharkORM/Core/Events/SRKEventBlockHolder.m; sourceTree = "<group>"; };
 		C70796A89D05EFA049C4691A05B3C3C7 /* Pods-IRSMobile-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IRSMobile-frameworks.sh"; sourceTree = "<group>"; };
-		C7C09FBA17ACFFB9759E36DD142B58A2 /* AFJSONUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFJSONUtilities.m; path = AFNetworking/AFJSONUtilities.m; sourceTree = "<group>"; };
-		C7D4841E1F3AFFA91AE0B4EA1A4B08DC /* Pods_IRSMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IRSMobile.framework; path = "Pods-IRSMobile.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C820D0BE84FE5A6C2FF5C4860E17DDDE /* Pods-IRSMobile-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IRSMobile-dummy.m"; sourceTree = "<group>"; };
-		CAE26A1EDB2672D1960CA95748FD7106 /* Toaster-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toaster-dummy.m"; sourceTree = "<group>"; };
-		D44523BE02E3A0185C421987A97D9582 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFXMLRequestOperation.m; path = AFNetworking/AFXMLRequestOperation.m; sourceTree = "<group>"; };
-		DC8596EA1202F072B9360A67DC830461 /* AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-umbrella.h"; sourceTree = "<group>"; };
-		DFE53B33EA62E5B006F07748D6EB6F87 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
-		E541E6E592D58F548060BE8C2C95CE6F /* AFImageRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageRequestOperation.h; path = AFNetworking/AFImageRequestOperation.h; sourceTree = "<group>"; };
-		EEB998FA819F7F83132EA6023DD8521F /* AFImageRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageRequestOperation.m; path = AFNetworking/AFImageRequestOperation.m; sourceTree = "<group>"; };
-		F90DDA831C5DA22A002A9EA9DFC02C8C /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFPropertyListRequestOperation.h; path = AFNetworking/AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
-		FF74EEA1C10CF437640C934F03A63292 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		D512106B4723DCDA67365DE5363D364E /* SRKRelationship.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKRelationship.m; path = SharkORM/Core/SRKRelationship.m; sourceTree = "<group>"; };
+		D6C76E479C2993CE2DB24171AA7B7275 /* SRKAES256Extension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKAES256Extension.m; path = "SharkORM/Core/Persistable Objects/SRKAES256Extension.m"; sourceTree = "<group>"; };
+		D920A43B45FE28152D82CB3BBF1E44E3 /* SharkORM.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SharkORM.m; path = SharkORM/Core/SharkORM.m; sourceTree = "<group>"; };
+		DC5F0646FF415401CE4C1F458E31E8F5 /* AFJSONUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFJSONUtilities.m; path = AFNetworking/AFJSONUtilities.m; sourceTree = "<group>"; };
+		DE7F5FC3DBC229802B88C8A0EF7A2E46 /* SharkORM.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SharkORM.modulemap; sourceTree = "<group>"; };
+		DFD36F581A60762A2811AA689ECC5D45 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49CCDB8A7C2B7D31B3A2D38C8556CD0 /* SRKObjectChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKObjectChain.m; path = "SharkORM/Core/Persistable Objects/SRKObjectChain.m"; sourceTree = "<group>"; };
+		E5787D91847D573224CA123CECA6A68F /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		E690458DA22608953AB635D6D8BC8709 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = AFNetworking/AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		EA2DAFDF7E74CA7705C71C785D7E7265 /* SRKDefinitions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKDefinitions.h; path = SharkORM/Core/SRKDefinitions.h; sourceTree = "<group>"; };
+		EEF038BC404A993D5AC9957F38AA8BCC /* ToastCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastCenter.swift; path = Sources/ToastCenter.swift; sourceTree = "<group>"; };
+		F063378C3C6E9EF27DA020CE8581DFED /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFPropertyListRequestOperation.h; path = AFNetworking/AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		F0B71962498A130A469A1D5420B56E59 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFJSONRequestOperation.h; path = AFNetworking/AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		F0C5456E5459074579E8353C2FAF4565 /* SRKCommitOptions+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKCommitOptions+Private.h"; path = "SharkORM/Core/Persistable Objects/SRKCommitOptions+Private.h"; sourceTree = "<group>"; };
+		F1E49DAA4D3D22ABC2BAA43890E84645 /* SRKRegistryEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKRegistryEntry.h; path = SharkORM/Core/Registry/SRKRegistryEntry.h; sourceTree = "<group>"; };
+		F2A477B860AE04CDC41174664CD4ADDD /* SRKQueryProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKQueryProfile.m; path = SharkORM/Core/Queries/SRKQueryProfile.m; sourceTree = "<group>"; };
+		F3DB919302FCD854E20104547B1C56D4 /* SRKLazyLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKLazyLoader.h; path = SharkORM/Core/SRKLazyLoader.h; sourceTree = "<group>"; };
+		F50B931D2B06EE68879662B3C9BD37F2 /* sqlite3.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sqlite3.c; path = SharkORM/SQLite/sqlite3.c; sourceTree = "<group>"; };
+		F6F60F6D42A7347CE5B3BBE94C7CDAF5 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFXMLRequestOperation.m; path = AFNetworking/AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		F8045DE399507C467954125B7E455D4F /* SRKSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKSettings.m; path = SharkORM/Core/SRKSettings.m; sourceTree = "<group>"; };
+		F97CDA0DB1302BC98E4199A059A45144 /* SRKObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKObject.m; path = "SharkORM/Core/Persistable Objects/SRKObject.m"; sourceTree = "<group>"; };
+		FD1197C0CF98DE13AB68B5C14CD3E5B1 /* SRKFTSQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKFTSQuery.m; path = SharkORM/Core/Queries/SRKFTSQuery.m; sourceTree = "<group>"; };
+		FE108E4B5E8DBC140977774D4F1E03DA /* SRKLazyLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKLazyLoader.m; path = SharkORM/Core/SRKLazyLoader.m; sourceTree = "<group>"; };
+		FE1D6775E72C943DFB9B0153CF368FC9 /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AFNetworking.modulemap; sourceTree = "<group>"; };
+		FF21D55E14282F1D56F166F435377AF5 /* SRKSQLiteHandle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKSQLiteHandle.m; path = SharkORM/Core/SRKSQLiteHandle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		28970CE1A7E845A9A488E6C002822382 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B79309AC2A96244B67C1C4FAE28D574 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3842B93BD7D0CBE25266286996664F98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,64 +292,112 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83E786C267981797293509ADF1840DAF /* Frameworks */ = {
+		C9FF92D63475635051D5472153537FF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B47596E5E7DFFD1AD597D6F732DF4AD /* Foundation.framework in Frameworks */,
+				291FB3DD4D4CA34EBA652F3CF9F6D9B3 /* Foundation.framework in Frameworks */,
+				9494DCE4293F56082FD81D498DF46BA5 /* QuartzCore.framework in Frameworks */,
+				7556AA5A4805D92F7575795952BB5091 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A54BCADB7418820339B874A16141AA38 /* Frameworks */ = {
+		D2CFD32D56E55E6AC472D53BEC9C1E6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4B125FCB72F4628E52137E8E006E2C6 /* Foundation.framework in Frameworks */,
-				728265032C2B84F0A5D577EB5E035834 /* QuartzCore.framework in Frameworks */,
-				14DC989BC36E736221757FEF823841AD /* UIKit.framework in Frameworks */,
+				8D39996D98102F233FA7E93E7F30CF72 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00C78D3420D9CD06ACD03EE44A473BCF /* AFNetworking */ = {
+		00124E53DC5F148394587903B9AA175C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4ECAB5D6A8DDFAE09BA3FA97A8D399C1 /* AFHTTPClient.h */,
-				99B0A28B76A0EA64A1E93DA9818008BD /* AFHTTPClient.m */,
-				8A085328F0F4303E0FEF1421EB851506 /* AFHTTPRequestOperation.h */,
-				29BD2ECEC254228F40A40F450DF7422C /* AFHTTPRequestOperation.m */,
-				E541E6E592D58F548060BE8C2C95CE6F /* AFImageRequestOperation.h */,
-				EEB998FA819F7F83132EA6023DD8521F /* AFImageRequestOperation.m */,
-				304CE913D5BD99D56A1A8DE9EF60C480 /* AFJSONRequestOperation.h */,
-				1DF1A3E60C417508804FD7F0272BA86C /* AFJSONRequestOperation.m */,
-				6B03BDF2D7251BDD440F90218FDD468E /* AFJSONUtilities.h */,
-				C7C09FBA17ACFFB9759E36DD142B58A2 /* AFJSONUtilities.m */,
-				6EC8FCF85D233012537C5603CE9394F8 /* AFNetworkActivityIndicatorManager.h */,
-				999755E9CDFE7BE4F36F59395E168075 /* AFNetworkActivityIndicatorManager.m */,
-				A0B3AB2E909118C28B459CF3D5C475A3 /* AFNetworking.h */,
-				F90DDA831C5DA22A002A9EA9DFC02C8C /* AFPropertyListRequestOperation.h */,
-				7FF79B7491FF9E79EE046E765B297827 /* AFPropertyListRequestOperation.m */,
-				C34BB62B1A64B01287872D1956265374 /* AFURLConnectionOperation.h */,
-				FF74EEA1C10CF437640C934F03A63292 /* AFURLConnectionOperation.m */,
-				80F91C49C4D88D81F0341AC6DF939F10 /* AFXMLRequestOperation.h */,
-				D44523BE02E3A0185C421987A97D9582 /* AFXMLRequestOperation.m */,
-				2A7BCF8FEA45EE1F6AD103A78B4562C5 /* UIImageView+AFNetworking.h */,
-				794A0BA0367586ABA14F819FA6127E61 /* UIImageView+AFNetworking.m */,
-				CA8DBD2FDEC7477CB5990DE4B096EF82 /* Support Files */,
+				958F8B2892252FBB966726707A98D172 /* AFNetworking.framework */,
+				091F25D8639F60A84CF500331C22F700 /* Pods_IRSMobile.framework */,
+				261E54357912AE401AF368F865FB4EBE /* SharkORM.framework */,
+				299636EF20FE0DAFFD963534E5D6E8BE /* Toaster.framework */,
 			);
-			name = AFNetworking;
-			path = AFNetworking;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		118E42C173FC1D495A6CF0C8D8AA7A97 /* Pods */ = {
+		09CE8C87AA3439A6D2883FF8D09E978D /* SharkORM */ = {
 			isa = PBXGroup;
 			children = (
-				00C78D3420D9CD06ACD03EE44A473BCF /* AFNetworking */,
-				F416174955FB7994C0A70BF7980C646C /* Toaster */,
+				7AAEF29C58227CAC5063227F968E641D /* DBAccess.h */,
+				B7BACA205BCE7034B9340482D299CBB4 /* FTSRegistry.h */,
+				0178262700D8E43BF52660EFE30FAC53 /* FTSRegistry.m */,
+				AF8D068B64A0560352E0A0316ED3781F /* SharkORM.h */,
+				D920A43B45FE28152D82CB3BBF1E44E3 /* SharkORM.m */,
+				2256957EAFCA04D99C2A3B0DD3E98CC4 /* SharkORM+Private.h */,
+				F50B931D2B06EE68879662B3C9BD37F2 /* sqlite3.c */,
+				315664D0320FB19E24F078E209601BF2 /* sqlite3.h */,
+				A98FDB4A80FA2D277907A3E46FA9D047 /* sqlite3ext.h */,
+				4704E714CEDB33832448350CBFA0C344 /* SRKAES256Extension.h */,
+				D6C76E479C2993CE2DB24171AA7B7275 /* SRKAES256Extension.m */,
+				85C1800E8FADC08C5255541F855399B1 /* SRKCommitOptions.m */,
+				F0C5456E5459074579E8353C2FAF4565 /* SRKCommitOptions+Private.h */,
+				4C72FEB097B21D01F21EA8B269165CCA /* SRKContext.h */,
+				06FB94A3CDF9B7609D505537BFADF282 /* SRKContext.m */,
+				EA2DAFDF7E74CA7705C71C785D7E7265 /* SRKDefinitions.h */,
+				4019EBC7713CACA35EB0E1ED14E6162C /* SRKEncryptedObject.h */,
+				8C389AD3B60C04FCA2C91FF84CFFF371 /* SRKEncryptedObject.m */,
+				48ED186E789F5C309FD1DAB872AE1516 /* SRKError.m */,
+				1ABFFB36D14CA35FD5CDAEBF1AF7D731 /* SRKEvent.m */,
+				07CA813FA8EF51045C35120636800A25 /* SRKEventBlockHolder.h */,
+				C024FBE51EB940C72ECA2B9EB0C13A12 /* SRKEventBlockHolder.m */,
+				B26A9A91C490E90BB7B6BC16ACDF2E83 /* SRKEventHandler.m */,
+				B5BA5A7F1DFFD5E67B46C7B255833A42 /* SRKEventHandler+Private.h */,
+				087A7C4EB66B9AFE264F66A448A0B218 /* SRKEventRegistryObject.h */,
+				6F165E77C5B991241016A1A26326F1C4 /* SRKEventRegistryObject.m */,
+				FD1197C0CF98DE13AB68B5C14CD3E5B1 /* SRKFTSQuery.m */,
+				656C1B5EFFC46EA8F246BF673394B857 /* SRKFuzzyStore.h */,
+				4E346DAC553DD76202EAE29AB9886C44 /* SRKFuzzyStore.m */,
+				9D8BFCEA0A583C44B22F5A11DD9CB133 /* SRKGlobals.h */,
+				50469FC8D52FFD7C75106ABC64B36944 /* SRKGlobals.m */,
+				6D936E84EA51521A17183FAE185CC45F /* SRKIndexDefinition.m */,
+				43060CEA4ACBA16C220F49FFBCAD0085 /* SRKIndexDefinition+Private.h */,
+				66133BAF0F092D9AC48CFB5E8B371EAC /* SRKJoinObject.h */,
+				630A3C1D99775DC1827AD784C689E332 /* SRKJoinObject.m */,
+				F3DB919302FCD854E20104547B1C56D4 /* SRKLazyLoader.h */,
+				FE108E4B5E8DBC140977774D4F1E03DA /* SRKLazyLoader.m */,
+				F97CDA0DB1302BC98E4199A059A45144 /* SRKObject.m */,
+				8F87E29F82B658B45CC81A6F6CAC3A67 /* SRKObject+Private.h */,
+				3BD8D9DFE9B525295FCA287B3E5ED76B /* SRKObjectChain.h */,
+				E49CCDB8A7C2B7D31B3A2D38C8556CD0 /* SRKObjectChain.m */,
+				58965A7A9783AA8DA804E07C94235789 /* SRKQuery.m */,
+				A9EF1FA57FF0B1ADD60211523EF40A82 /* SRKQuery+Private.h */,
+				50E3D7DAAA6481F4B5943718FF87130D /* SRKQueryAsyncHandler.m */,
+				A3E07B7333D31C74ABD6693829094F55 /* SRKQueryAsyncHandler+Private.h */,
+				F2A477B860AE04CDC41174664CD4ADDD /* SRKQueryProfile.m */,
+				1D5D84B595F15FF969093B9545E9FD74 /* SRKRawResults.m */,
+				8B79307188A3FC24B943C5EDAE5E3BBA /* SRKRegistry.h */,
+				AD6935C0544BDF055024126B27527570 /* SRKRegistry.m */,
+				F1E49DAA4D3D22ABC2BAA43890E84645 /* SRKRegistryEntry.h */,
+				BB3BE70C415D965C5DCBFA77201A738C /* SRKRegistryEntry.m */,
+				B7AD0DC287A36BC37E5F638D13521D2F /* SRKRelationship.h */,
+				D512106B4723DCDA67365DE5363D364E /* SRKRelationship.m */,
+				74B2C9360677AD8E3962E308B83D0496 /* SRKResultSet.m */,
+				AB9D1D8153BFF372C7A17103EAC7CB0D /* SRKResultSet+Private.h */,
+				F8045DE399507C467954125B7E455D4F /* SRKSettings.m */,
+				443924A965CB4EEDC5431F91E29AF521 /* SRKSQLiteHandle.h */,
+				FF21D55E14282F1D56F166F435377AF5 /* SRKSQLiteHandle.m */,
+				41DB114C5A9A33B87CBCF70806360D8C /* SRKStringObject.m */,
+				41A5AD19BEB4EE3D0A7D571CDC0D14AC /* SRKTransaction.m */,
+				66B8DA15981E0C8A9FEE233DE582E532 /* SRKTransaction+Private.h */,
+				64162EFFDCAC76756297FB23CD59D9F1 /* SRKTransactionInfo.h */,
+				18212578CF44CCD673907A3A1D531DF7 /* SRKTransactionInfo.m */,
+				ACBD6DEB4064EDB858F322ECBA34DF41 /* SRKUnsupportedObject.h */,
+				393641D48F830892633DCD506B5350B6 /* SRKUnsupportedObject.m */,
+				ABF85D8412EAC6F99AE9F25406BE0801 /* SRKUtilities.h */,
+				73BBC25463941514AA5156B847DC2DC1 /* SRKUtilities.m */,
+				9222E2E77F4887F6F5A81A6F651568E8 /* Support Files */,
 			);
-			name = Pods;
+			name = SharkORM;
+			path = SharkORM;
 			sourceTree = "<group>";
 		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
@@ -210,16 +417,6 @@
 				42390F0803F64EE0FDFA5584C6958584 /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		3F80AB4677F10743BD4E01EF60903611 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				03E1394F68B958E8690DFC6C5A999EEE /* AFNetworking.framework */,
-				C7D4841E1F3AFFA91AE0B4EA1A4B08DC /* Pods_IRSMobile.framework */,
-				7E0FACED3BE521EC252FB7AC672C993A /* Toaster.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6607D2642F48F62FBE58BF3E4325D10B /* Pods-IRSMobile */ = {
@@ -245,24 +442,48 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				118E42C173FC1D495A6CF0C8D8AA7A97 /* Pods */,
-				3F80AB4677F10743BD4E01EF60903611 /* Products */,
+				9411335FE2A22B576CD7F9169101C3D2 /* Pods */,
+				00124E53DC5F148394587903B9AA175C /* Products */,
 				94F5E0EF6470BC5CE68E602C1CF2435C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		888F2781A2D5BF6AA3C4427C0A5A67D6 /* Support Files */ = {
+		83E980E39D66065573289797D91E2AA2 /* Toaster */ = {
 			isa = PBXGroup;
 			children = (
-				C2B45D8849344BF520023CA45F17B284 /* Info.plist */,
-				9FF50C9CA064709352F41CC6DFB526BC /* Toaster.modulemap */,
-				B4DEC6B77747B16269453D461AB0DCEA /* Toaster.xcconfig */,
-				CAE26A1EDB2672D1960CA95748FD7106 /* Toaster-dummy.m */,
-				92CC620E3056F795E8ADC99872119181 /* Toaster-prefix.pch */,
-				5A5AEC5ED2F108D4DC3E873A93721981 /* Toaster-umbrella.h */,
+				55BA1703F59A6D5D1816FF427C16DD28 /* Toast.swift */,
+				EEF038BC404A993D5AC9957F38AA8BCC /* ToastCenter.swift */,
+				093CCD08EB535CCAD7E9300F709EFA96 /* Toaster.h */,
+				4EA5E12254FE7DC337F14BE29C3A6D9D /* ToastView.swift */,
+				2B1FC4A75513602C403DFAE460AA86BF /* ToastWindow.swift */,
+				A3CEFE99A795C4E9094E80E667C0B344 /* Support Files */,
+			);
+			name = Toaster;
+			path = Toaster;
+			sourceTree = "<group>";
+		};
+		9222E2E77F4887F6F5A81A6F651568E8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFD36F581A60762A2811AA689ECC5D45 /* Info.plist */,
+				DE7F5FC3DBC229802B88C8A0EF7A2E46 /* SharkORM.modulemap */,
+				0077D3E575560E5A1885ABA39F4CAF2F /* SharkORM.xcconfig */,
+				36CF982B9C2A68E6405D963125EA28C4 /* SharkORM-dummy.m */,
+				2224BCC66F84423DDFB8EFD28A9BFAA2 /* SharkORM-prefix.pch */,
+				BA85B50556EC24F32A7FB5CBA0F4A8B9 /* SharkORM-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Toaster";
+			path = "../Target Support Files/SharkORM";
+			sourceTree = "<group>";
+		};
+		9411335FE2A22B576CD7F9169101C3D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C29E00DCD1DB171DCF167F6D0B762936 /* AFNetworking */,
+				09CE8C87AA3439A6D2883FF8D09E978D /* SharkORM */,
+				83E980E39D66065573289797D91E2AA2 /* Toaster */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		94F5E0EF6470BC5CE68E602C1CF2435C /* Targets Support Files */ = {
@@ -273,51 +494,81 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		CA8DBD2FDEC7477CB5990DE4B096EF82 /* Support Files */ = {
+		A3CEFE99A795C4E9094E80E667C0B344 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				090A49ADCE757771F32596F1D35815B2 /* AFNetworking.modulemap */,
-				BC5FCCD4EF95B791C76D00E71A329886 /* AFNetworking.xcconfig */,
-				DFE53B33EA62E5B006F07748D6EB6F87 /* AFNetworking-dummy.m */,
-				192EEE0BB04E17DD79CB10DAB79D683F /* AFNetworking-prefix.pch */,
-				DC8596EA1202F072B9360A67DC830461 /* AFNetworking-umbrella.h */,
-				7D607C04F8BCF35AB004937AA724E70C /* Info.plist */,
+				79298897D92C1D530CDFFE4964914EB5 /* Info.plist */,
+				86B92C7EA082EB2A77864C859A21A2F7 /* Toaster.modulemap */,
+				1390B4CEA94BCE16EE9D9FE8382CB0E8 /* Toaster.xcconfig */,
+				0959C239E5790AA3C5AF37FCF9B04D28 /* Toaster-dummy.m */,
+				0D9E546E81E0CF39F9ABC1E94DE2CF1F /* Toaster-prefix.pch */,
+				58165B5E63B488061062DAD3B0AAAE48 /* Toaster-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Toaster";
+			sourceTree = "<group>";
+		};
+		C29E00DCD1DB171DCF167F6D0B762936 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				3514AC824EE59DE5EF40AB8599F2D31E /* AFHTTPClient.h */,
+				511E79CA0A58094703BA6B138D386E41 /* AFHTTPClient.m */,
+				7274D914D684AF774F08E0B4AC1294C1 /* AFHTTPRequestOperation.h */,
+				666D8FEC148AEA2F2788F28A8E797FAF /* AFHTTPRequestOperation.m */,
+				493D438C608A3AA53BEE6EECADC6FA58 /* AFImageRequestOperation.h */,
+				7A182CBBADB4BA3DAF1C5C034E6E3DED /* AFImageRequestOperation.m */,
+				F0B71962498A130A469A1D5420B56E59 /* AFJSONRequestOperation.h */,
+				4DADF57D35A8F70FD6A87258D057A2A7 /* AFJSONRequestOperation.m */,
+				8B167A50FE9909B4B9E94CCAB979FD67 /* AFJSONUtilities.h */,
+				DC5F0646FF415401CE4C1F458E31E8F5 /* AFJSONUtilities.m */,
+				E690458DA22608953AB635D6D8BC8709 /* AFNetworkActivityIndicatorManager.h */,
+				ACF2CB8476FBCFF634185202F3B1D722 /* AFNetworkActivityIndicatorManager.m */,
+				5C953E339AC355C6239289063946B09D /* AFNetworking.h */,
+				F063378C3C6E9EF27DA020CE8581DFED /* AFPropertyListRequestOperation.h */,
+				0118BB759E4EF88191009B9CEB57922E /* AFPropertyListRequestOperation.m */,
+				A3F2DB2C414CBE195FBB50F32E344BC8 /* AFURLConnectionOperation.h */,
+				732E970D878DDBD80A726296FC090D1B /* AFURLConnectionOperation.m */,
+				0D74F7ED53ECE0EB992B2D52A043AACA /* AFXMLRequestOperation.h */,
+				F6F60F6D42A7347CE5B3BBE94C7CDAF5 /* AFXMLRequestOperation.m */,
+				4EDD989F640AC92336C9701FEBBC797A /* UIImageView+AFNetworking.h */,
+				73D40BF630DE98C8C04E12C4EAA0151B /* UIImageView+AFNetworking.m */,
+				CDD85D70C579BA1661D951E9785B2B23 /* Support Files */,
+			);
+			name = AFNetworking;
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		CDD85D70C579BA1661D951E9785B2B23 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE1D6775E72C943DFB9B0153CF368FC9 /* AFNetworking.modulemap */,
+				4B20D7ECBC8525732F8924F561C1BC73 /* AFNetworking.xcconfig */,
+				E5787D91847D573224CA123CECA6A68F /* AFNetworking-dummy.m */,
+				947500CDB38F6C9F96935BC011BAC9F9 /* AFNetworking-prefix.pch */,
+				549AB207CC7727838C18A4C59D69BF2C /* AFNetworking-umbrella.h */,
+				A945CD4D80E4F480921C32E16F9050F7 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/AFNetworking";
 			sourceTree = "<group>";
 		};
-		F416174955FB7994C0A70BF7980C646C /* Toaster */ = {
-			isa = PBXGroup;
-			children = (
-				963AB05BB33E8480C704A2FB010B457C /* Toast.swift */,
-				5240288AAED447B56A6F874BDB2E62D4 /* ToastCenter.swift */,
-				549E015EA909841FD90A1E9CD644C779 /* Toaster.h */,
-				056E5E4D866129CA13CF24E290A0415E /* ToastView.swift */,
-				94FC7CBC7A6FD3AD4A632FD1ADC368A2 /* ToastWindow.swift */,
-				888F2781A2D5BF6AA3C4427C0A5A67D6 /* Support Files */,
-			);
-			name = Toaster;
-			path = Toaster;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5C57D16FC47DABAA24E9267FB1699574 /* Headers */ = {
+		0AC747131551E6B0D8AA3A78D7547A43 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D14DC8A7E0D7341E23C7E3D837EE734 /* Pods-IRSMobile-umbrella.h in Headers */,
+				7851133E96A54AD5466836279C48123F /* Toaster-umbrella.h in Headers */,
+				00B15CF01E5867E687B5C24683B9E196 /* Toaster.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		926EC039BEBA19E265CF18AD6B4EB2FA /* Headers */ = {
+		4837A8ABAAF0A360EDB35E3C3F4CD2AD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DF8313A0B6E0BB8EE963A532087F52 /* Toaster-umbrella.h in Headers */,
-				EC4A7BA15C0F5D5798A8B2241168E894 /* Toaster.h in Headers */,
+				0874CF1F79E43728E73DA8B215371394 /* Pods-IRSMobile-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,16 +591,93 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F378D42A6349A8A12FF610A809F254C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55CAFA3F4CEF99020E0DAE42824B6AEB /* DBAccess.h in Headers */,
+				2E38241289883DAF29CBD7F3F754FAF8 /* FTSRegistry.h in Headers */,
+				08412705752CF6DF0C6A49436421F326 /* SharkORM+Private.h in Headers */,
+				ED4845D314663C8C26034E917EE4B277 /* SharkORM-umbrella.h in Headers */,
+				3A16C9692DAB25F312F74DE6B0E879DE /* SharkORM.h in Headers */,
+				DFE18C041AC66CE9A2E8AADA56D4CC9D /* sqlite3.h in Headers */,
+				9736287DE45B05DEE44BEFD2563F0B55 /* sqlite3ext.h in Headers */,
+				967B1A4A6391AD116BC8399DDD5DFEFB /* SRKAES256Extension.h in Headers */,
+				17172D45695D25AF348116AE429F317C /* SRKCommitOptions+Private.h in Headers */,
+				2013F6028D84ED5EA6BF673F86010DA0 /* SRKContext.h in Headers */,
+				0CC0B12159B75372853BDE6451727F43 /* SRKDefinitions.h in Headers */,
+				8608DC2D8FE42C9EAAEFCB2834CBC180 /* SRKEncryptedObject.h in Headers */,
+				0752D2CBAFDDA64866E487569A1ACB2B /* SRKEventBlockHolder.h in Headers */,
+				7AA3D423F5D0C6B21BE25666A68BE981 /* SRKEventHandler+Private.h in Headers */,
+				B31C70A76CE371D77BCDD55AFE0D179D /* SRKEventRegistryObject.h in Headers */,
+				794C930D49A63318AFA15C4516FB05C4 /* SRKFuzzyStore.h in Headers */,
+				FF6880421CF1BB262FA51F462713D1A5 /* SRKGlobals.h in Headers */,
+				0A74B965DD1A9A2EC906257D3418AFBB /* SRKIndexDefinition+Private.h in Headers */,
+				040AEF5D54D02F932A63B4F5E0CF1768 /* SRKJoinObject.h in Headers */,
+				61E794C31F232CC548A95B11F955E0DD /* SRKLazyLoader.h in Headers */,
+				231A38AD989294A0E5B1DD59E6D7213C /* SRKObject+Private.h in Headers */,
+				B942CBF72732DFFBCDB9E9428E973082 /* SRKObjectChain.h in Headers */,
+				7A8F73C441A7AFE6AD080720BDBF30E3 /* SRKQuery+Private.h in Headers */,
+				117BA08C5E0FF138E2BC6A3A302BA99A /* SRKQueryAsyncHandler+Private.h in Headers */,
+				CC6B5816F6C15D7294D7DEB50EB91F41 /* SRKRegistry.h in Headers */,
+				2264989A6B79B004B6FBB84EC37DC49E /* SRKRegistryEntry.h in Headers */,
+				EF80F05A34E7C366E7AFACC3224A5961 /* SRKRelationship.h in Headers */,
+				B21D73B312AFDE4EA5386ACA7A061D95 /* SRKResultSet+Private.h in Headers */,
+				B92E7AF0CBA0B4098D72AE827AB851D3 /* SRKSQLiteHandle.h in Headers */,
+				ABC832E2DF39CB6D467C9E961A283D9C /* SRKTransaction+Private.h in Headers */,
+				F0D9211B9BA188EAB63B22F53AC4ED9C /* SRKTransactionInfo.h in Headers */,
+				A1F483E98B7C0C5B3C9B6E1DB5FBF02D /* SRKUnsupportedObject.h in Headers */,
+				9E3AE3126B29B962477EDCB78D15AE20 /* SRKUtilities.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		92E8DE4C0B36FBA26CF1DA4A828D62C3 /* Toaster */ = {
+		0B4FD1AFA2FBCBDC9E5D40C868F75D03 /* Pods-IRSMobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D57E9065D876DFF3D66E86031050CE62 /* Build configuration list for PBXNativeTarget "Toaster" */;
+			buildConfigurationList = 95CC2B68123498EA4225DB3E7D6B3580 /* Build configuration list for PBXNativeTarget "Pods-IRSMobile" */;
 			buildPhases = (
-				EA40AC83B251FC421211218F3F0D7EB9 /* Sources */,
-				A54BCADB7418820339B874A16141AA38 /* Frameworks */,
-				926EC039BEBA19E265CF18AD6B4EB2FA /* Headers */,
+				40FEF0DBE0CA108D1E7CC358D334EA64 /* Sources */,
+				D2CFD32D56E55E6AC472D53BEC9C1E6F /* Frameworks */,
+				4837A8ABAAF0A360EDB35E3C3F4CD2AD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F882E25592DB7F36C7919F731C754C97 /* PBXTargetDependency */,
+				0194F6869EBB686FD7C4B6400F019190 /* PBXTargetDependency */,
+				9B551E538B7ED1883A124F010A37DC07 /* PBXTargetDependency */,
+			);
+			name = "Pods-IRSMobile";
+			productName = "Pods-IRSMobile";
+			productReference = 091F25D8639F60A84CF500331C22F700 /* Pods_IRSMobile.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2E3130C885FF18C266312A6B5F498FD5 /* SharkORM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB070FBA4E11A7DBCAD9929FB75F6DBE /* Build configuration list for PBXNativeTarget "SharkORM" */;
+			buildPhases = (
+				98F806FD535FE96A11862F6B5D785DBA /* Sources */,
+				28970CE1A7E845A9A488E6C002822382 /* Frameworks */,
+				F378D42A6349A8A12FF610A809F254C4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharkORM;
+			productName = SharkORM;
+			productReference = 261E54357912AE401AF368F865FB4EBE /* SharkORM.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		54D710E2A6C8DA3ABFF31C48897D22A2 /* Toaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA8D1815C53F0389E316C0947691CA7A /* Build configuration list for PBXNativeTarget "Toaster" */;
+			buildPhases = (
+				2B70D0D6C5A5861D3082B16038AAECD4 /* Sources */,
+				C9FF92D63475635051D5472153537FF0 /* Frameworks */,
+				0AC747131551E6B0D8AA3A78D7547A43 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -357,26 +685,7 @@
 			);
 			name = Toaster;
 			productName = Toaster;
-			productReference = 7E0FACED3BE521EC252FB7AC672C993A /* Toaster.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		AAB05C6E5FFDA55C59BF0A61AD8EB5AE /* Pods-IRSMobile */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9680CDEA050A800D0E1BB0ADFD90CF40 /* Build configuration list for PBXNativeTarget "Pods-IRSMobile" */;
-			buildPhases = (
-				92A42C4E0EFFB63EC38590B4D680040A /* Sources */,
-				83E786C267981797293509ADF1840DAF /* Frameworks */,
-				5C57D16FC47DABAA24E9267FB1699574 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ED0C9E5C725401E4840E75DE419381FE /* PBXTargetDependency */,
-				85A157A3013456AA878B21874FA1B0DC /* PBXTargetDependency */,
-			);
-			name = "Pods-IRSMobile";
-			productName = "Pods-IRSMobile";
-			productReference = C7D4841E1F3AFFA91AE0B4EA1A4B08DC /* Pods_IRSMobile.framework */;
+			productReference = 299636EF20FE0DAFFD963534E5D6E8BE /* Toaster.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F33B4C0666E5A9361F425274CF9F0409 /* AFNetworking */ = {
@@ -393,7 +702,7 @@
 			);
 			name = AFNetworking;
 			productName = AFNetworking;
-			productReference = 03E1394F68B958E8690DFC6C5A999EEE /* AFNetworking.framework */;
+			productReference = 958F8B2892252FBB966726707A98D172 /* AFNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -413,18 +722,39 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3F80AB4677F10743BD4E01EF60903611 /* Products */;
+			productRefGroup = 00124E53DC5F148394587903B9AA175C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F33B4C0666E5A9361F425274CF9F0409 /* AFNetworking */,
-				AAB05C6E5FFDA55C59BF0A61AD8EB5AE /* Pods-IRSMobile */,
-				92E8DE4C0B36FBA26CF1DA4A828D62C3 /* Toaster */,
+				0B4FD1AFA2FBCBDC9E5D40C868F75D03 /* Pods-IRSMobile */,
+				2E3130C885FF18C266312A6B5F498FD5 /* SharkORM */,
+				54D710E2A6C8DA3ABFF31C48897D22A2 /* Toaster */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B70D0D6C5A5861D3082B16038AAECD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C6461234D012E5AD69FFFD5A2D20237 /* Toast.swift in Sources */,
+				96C9129F8F3BF5CED3AF6F4935D89B60 /* ToastCenter.swift in Sources */,
+				9E2972D41D09236900D8DE39DCF72715 /* Toaster-dummy.m in Sources */,
+				BD3680A19F98F9C3F90E8729E5788720 /* ToastView.swift in Sources */,
+				87097180D4FF4B2387BDDCB78DAFC6B7 /* ToastWindow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40FEF0DBE0CA108D1E7CC358D334EA64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE55F05E6B58E3A80E2F0431F026E8EC /* Pods-IRSMobile-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B6A2E7111E493C67C4237300685C9DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,47 +773,76 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92A42C4E0EFFB63EC38590B4D680040A /* Sources */ = {
+		98F806FD535FE96A11862F6B5D785DBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB2A693E95CFB806EFA3DA8EC40E2F5C /* Pods-IRSMobile-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA40AC83B251FC421211218F3F0D7EB9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8328778AA2ADC1C2B599C2AEA64EB67A /* Toast.swift in Sources */,
-				D3081D88C57F816665CCA94E6637FB15 /* ToastCenter.swift in Sources */,
-				EFF86DD9CC15B085D6D0D8A6F59E3602 /* Toaster-dummy.m in Sources */,
-				AE62412358A537F92014C1A978D8EB38 /* ToastView.swift in Sources */,
-				F71F4B68CB42889CAAD77F57268B0CAC /* ToastWindow.swift in Sources */,
+				B3DB3713CC578F1E972F5FE2C3E44D28 /* FTSRegistry.m in Sources */,
+				05F9B706C9DF7153BC353CBC58CEB7EF /* SharkORM-dummy.m in Sources */,
+				1BF7C804A6400D0B0ED3366462710EC5 /* SharkORM.m in Sources */,
+				8DACECFCF5E83A0AD44DD9BE313B2FCE /* sqlite3.c in Sources */,
+				39DAF6110E1502BD3BFD944303CB9A4C /* SRKAES256Extension.m in Sources */,
+				561325E092F73638631046E2293C415B /* SRKCommitOptions.m in Sources */,
+				121B2341CD9D8E3033C75944E1C09C81 /* SRKContext.m in Sources */,
+				256D34001C7741A35AE5AF7EDC5CF428 /* SRKEncryptedObject.m in Sources */,
+				ECF80DCEA811816FEBCC670CCD9334E5 /* SRKError.m in Sources */,
+				A844BE6070FB2E4E52804243DFD05344 /* SRKEvent.m in Sources */,
+				3F7305B923A1F6128E41934A59E2A4F6 /* SRKEventBlockHolder.m in Sources */,
+				90D5FDF91CD26F75BF9716364D143899 /* SRKEventHandler.m in Sources */,
+				65DEFAECDDB9A8E43A9693A57A4A2E02 /* SRKEventRegistryObject.m in Sources */,
+				D3151B8BE618DF80CEB22972E9BC2343 /* SRKFTSQuery.m in Sources */,
+				29981CC1363C2B4F85C8A9F7543745A3 /* SRKFuzzyStore.m in Sources */,
+				2C9B8488CDEA44F7A3F0D76837D46335 /* SRKGlobals.m in Sources */,
+				CA286E083880A808962709F9E69F89E8 /* SRKIndexDefinition.m in Sources */,
+				8E0A50927EF9A3BE3250A43AA0F7A6DC /* SRKJoinObject.m in Sources */,
+				A75067CD36C3D9728E698E11DD2CD63F /* SRKLazyLoader.m in Sources */,
+				577C30B998FB248140EE63BE14475A9E /* SRKObject.m in Sources */,
+				9F2AD80B06E3FCE077D5EDAF53509E06 /* SRKObjectChain.m in Sources */,
+				E3B6A1B7BCAA91F58825A114B060360D /* SRKQuery.m in Sources */,
+				71D42A52F708EEF101DCF33E7405FCE8 /* SRKQueryAsyncHandler.m in Sources */,
+				1B09F133EFEF21BFD540CCDD07FEFC1B /* SRKQueryProfile.m in Sources */,
+				E18A166B39C1B2AA6F53470A87170A6F /* SRKRawResults.m in Sources */,
+				3CAAA0318F2D2409179EB7E7899060EE /* SRKRegistry.m in Sources */,
+				B1DD35028ADBED01423A252830FCF1EC /* SRKRegistryEntry.m in Sources */,
+				73E12A5D004AA736594E0D4D6C7DD5F7 /* SRKRelationship.m in Sources */,
+				61E53FC16F9CF862D73602125EC7DAA5 /* SRKResultSet.m in Sources */,
+				062854CB88D9EFDA7C783DFE70D53BEE /* SRKSettings.m in Sources */,
+				1EF03380D94D7E4F0E2C0D5540FFD127 /* SRKSQLiteHandle.m in Sources */,
+				54C47EA9D10850564F586E9B859FF888 /* SRKStringObject.m in Sources */,
+				7D4B21D0762ECA762DE8DB7CBAB15EEE /* SRKTransaction.m in Sources */,
+				39E0876D834BFD9C6E65EFBE519E3710 /* SRKTransactionInfo.m in Sources */,
+				5D0D9CECB7710C77FCD07668E308F051 /* SRKUnsupportedObject.m in Sources */,
+				1B9FC2676AED2A32BCFD3F9FFF494621 /* SRKUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		85A157A3013456AA878B21874FA1B0DC /* PBXTargetDependency */ = {
+		0194F6869EBB686FD7C4B6400F019190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SharkORM;
+			target = 2E3130C885FF18C266312A6B5F498FD5 /* SharkORM */;
+			targetProxy = 3373EC6E0EAEEA8B5054C608C30B9727 /* PBXContainerItemProxy */;
+		};
+		9B551E538B7ED1883A124F010A37DC07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Toaster;
-			target = 92E8DE4C0B36FBA26CF1DA4A828D62C3 /* Toaster */;
-			targetProxy = A57406D9A50A8741CACAB1B258835CBB /* PBXContainerItemProxy */;
+			target = 54D710E2A6C8DA3ABFF31C48897D22A2 /* Toaster */;
+			targetProxy = 0C2DC408136C6D6E5BD024DA82E6D9C3 /* PBXContainerItemProxy */;
 		};
-		ED0C9E5C725401E4840E75DE419381FE /* PBXTargetDependency */ = {
+		F882E25592DB7F36C7919F731C754C97 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFNetworking;
 			target = F33B4C0666E5A9361F425274CF9F0409 /* AFNetworking */;
-			targetProxy = 295991C4BDFAA1FA2461D27746A8FF43 /* PBXContainerItemProxy */;
+			targetProxy = 729A5FFDE54FAAA499E9E3FB7694324D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		12A696B93C5FB7F796A9994572EC2542 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC5FCCD4EF95B791C76D00E71A329886 /* AFNetworking.xcconfig */;
+			baseConfigurationReference = 4B20D7ECBC8525732F8924F561C1BC73 /* AFNetworking.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -515,9 +874,9 @@
 			};
 			name = Debug;
 		};
-		4046E36FDB0CE86EFFBA0A731989FD31 /* Debug */ = {
+		3E40759C25024B3779F63FADD5A0E225 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4DEC6B77747B16269453D461AB0DCEA /* Toaster.xcconfig */;
+			baseConfigurationReference = 1390B4CEA94BCE16EE9D9FE8382CB0E8 /* Toaster.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -550,47 +909,43 @@
 			};
 			name = Debug;
 		};
-		75C428015F290FCAF87F945AC37B495B /* Release */ = {
+		42DE22AFDE563995CF9B234D1DAECC66 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD6F9C553A92C7D6ED35A48161EC0110 /* Pods-IRSMobile.release.xcconfig */;
+			baseConfigurationReference = 0077D3E575560E5A1885ABA39F4CAF2F /* SharkORM.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-IRSMobile/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SharkORM/SharkORM-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SharkORM/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-IRSMobile/Pods-IRSMobile.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_IRSMobile;
+				MODULEMAP_FILE = "Target Support Files/SharkORM/SharkORM.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SharkORM;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		7A3319F98024047EAFA5F6EC5389FBA9 /* Release */ = {
+		49BF6DBDBEF1A8EDF84255E1B436AB3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4DEC6B77747B16269453D461AB0DCEA /* Toaster.xcconfig */;
+			baseConfigurationReference = 1390B4CEA94BCE16EE9D9FE8382CB0E8 /* Toaster.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -623,9 +978,43 @@
 			};
 			name = Release;
 		};
+		4FD63213D4AA4D6DB2FD135699621F44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0077D3E575560E5A1885ABA39F4CAF2F /* SharkORM.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SharkORM/SharkORM-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SharkORM/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SharkORM/SharkORM.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SharkORM;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		84844AFE0F718E8D2EFACA632B07C051 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC5FCCD4EF95B791C76D00E71A329886 /* AFNetworking.xcconfig */;
+			baseConfigurationReference = 4B20D7ECBC8525732F8924F561C1BC73 /* AFNetworking.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -706,6 +1095,45 @@
 			};
 			name = Debug;
 		};
+		B57D47468E2A8B9BB4B8FC5D031F12F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52C1C8742CEFBD9E112E6530A35F8BD6 /* Pods-IRSMobile.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-IRSMobile/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-IRSMobile/Pods-IRSMobile.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_IRSMobile;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -750,16 +1178,16 @@
 			};
 			name = Release;
 		};
-		DBA361C522D5DD40854F3BEA87CD7479 /* Debug */ = {
+		DC808F1470DD6A34118E181F23C3386E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52C1C8742CEFBD9E112E6530A35F8BD6 /* Pods-IRSMobile.debug.xcconfig */;
+			baseConfigurationReference = AD6F9C553A92C7D6ED35A48161EC0110 /* Pods-IRSMobile.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -772,7 +1200,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-IRSMobile/Pods-IRSMobile.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -780,14 +1208,13 @@
 				PRODUCT_NAME = Pods_IRSMobile;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -810,20 +1237,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9680CDEA050A800D0E1BB0ADFD90CF40 /* Build configuration list for PBXNativeTarget "Pods-IRSMobile" */ = {
+		95CC2B68123498EA4225DB3E7D6B3580 /* Build configuration list for PBXNativeTarget "Pods-IRSMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBA361C522D5DD40854F3BEA87CD7479 /* Debug */,
-				75C428015F290FCAF87F945AC37B495B /* Release */,
+				B57D47468E2A8B9BB4B8FC5D031F12F9 /* Debug */,
+				DC808F1470DD6A34118E181F23C3386E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D57E9065D876DFF3D66E86031050CE62 /* Build configuration list for PBXNativeTarget "Toaster" */ = {
+		AB070FBA4E11A7DBCAD9929FB75F6DBE /* Build configuration list for PBXNativeTarget "SharkORM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4046E36FDB0CE86EFFBA0A731989FD31 /* Debug */,
-				7A3319F98024047EAFA5F6EC5389FBA9 /* Release */,
+				42DE22AFDE563995CF9B234D1DAECC66 /* Debug */,
+				4FD63213D4AA4D6DB2FD135699621F44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA8D1815C53F0389E316C0947691CA7A /* Build configuration list for PBXNativeTarget "Toaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E40759C25024B3779F63FADD5A0E225 /* Debug */,
+				49BF6DBDBEF1A8EDF84255E1B436AB3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
