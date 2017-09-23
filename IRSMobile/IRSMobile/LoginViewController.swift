@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var ed_password: UITextField!
     
+    @IBOutlet weak var bt_login_out: UIButton!
     @IBAction func switch_remember(_ sender: UISwitch) {
     }
     @IBAction func bt_login(_ sender: UIButton) {
@@ -40,6 +41,8 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    bt_login_out.layer.cornerRadius = 5
 
         // Do any additional setup after loading the view.
     }
