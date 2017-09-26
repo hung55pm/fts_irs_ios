@@ -12,6 +12,7 @@ import Toaster
 
 class LoginViewController: UIViewController {
     var ed_user,ed_pass: String?
+    let connect = ConnectSv()
     
     @IBOutlet weak var ed_username: UITextField!
     
@@ -26,15 +27,14 @@ class LoginViewController: UIViewController {
         ed_pass=ed_password.text
         
         if(ed_user=="" || ed_pass==""){
-            Toast(text: "Ban phai nhap day du thong tin").show()
-        }else if(ed_user=="hungdn" && ed_pass=="abc123"){
+            Toast(text: "You must enter full enough information").show()
+        }else{
+            connect.login(user: ed_user!, pass: ed_pass!)
             
             let secondViewController:MainViewController = MainViewController()
             
             self.present(secondViewController, animated: true, completion: nil)
             
-        }else{
-            Toast(text: "Username hoac password sai").show()
         }
         
     }

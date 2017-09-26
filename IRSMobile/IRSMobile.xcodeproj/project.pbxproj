@@ -18,6 +18,8 @@
 		984E1D8D1F6F847100D0630E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8B1F6F847100D0630E /* LoginViewController.xib */; };
 		984E1D901F6F848300D0630E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D8E1F6F848300D0630E /* MainViewController.swift */; };
 		984E1D911F6F848300D0630E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8F1F6F848300D0630E /* MainViewController.xib */; };
+		98973FFC1F7A503600137751 /* ConnectSv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98973FFB1F7A503600137751 /* ConnectSv.swift */; };
+		98973FFF1F7A518300137751 /* Model_Invertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98973FFE1F7A518300137751 /* Model_Invertor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		984E1D8B1F6F847100D0630E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		984E1D8E1F6F848300D0630E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		984E1D8F1F6F848300D0630E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		98973FFB1F7A503600137751 /* ConnectSv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectSv.swift; sourceTree = "<group>"; };
+		98973FFE1F7A518300137751 /* Model_Invertor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_Invertor.swift; sourceTree = "<group>"; };
 		C789DD3DC913C2D4D9CC5890 /* Pods-IRSMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +84,8 @@
 		984E1D731F6F830B00D0630E /* IRSMobile */ = {
 			isa = PBXGroup;
 			children = (
+				98973FFD1F7A515800137751 /* Models */,
+				98973FFA1F7A501700137751 /* Connect */,
 				984E1D891F6F845500D0630E /* Acounts */,
 				984E1D741F6F830C00D0630E /* AppDelegate.swift */,
 				984E1D761F6F830C00D0630E /* ViewController.swift */,
@@ -101,6 +107,22 @@
 				984E1D8F1F6F848300D0630E /* MainViewController.xib */,
 			);
 			name = Acounts;
+			sourceTree = "<group>";
+		};
+		98973FFA1F7A501700137751 /* Connect */ = {
+			isa = PBXGroup;
+			children = (
+				98973FFB1F7A503600137751 /* ConnectSv.swift */,
+			);
+			name = Connect;
+			sourceTree = "<group>";
+		};
+		98973FFD1F7A515800137751 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				98973FFE1F7A518300137751 /* Model_Invertor.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		AEAF7F8DD0577458C8E9C58E /* Frameworks */ = {
@@ -247,6 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				984E1D8C1F6F847100D0630E /* LoginViewController.swift in Sources */,
+				98973FFF1F7A518300137751 /* Model_Invertor.swift in Sources */,
+				98973FFC1F7A503600137751 /* ConnectSv.swift in Sources */,
 				984E1D7D1F6F830C00D0630E /* IRSMobile.xcdatamodeld in Sources */,
 				984E1D771F6F830C00D0630E /* ViewController.swift in Sources */,
 				984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */,
