@@ -29,11 +29,23 @@ class LoginViewController: UIViewController {
         if(ed_user=="" || ed_pass==""){
             Toast(text: "You must enter full enough information").show()
         }else{
-            connect.login(user: ed_user!, pass: ed_pass!)
+            connect.login(user: ed_user!, pass: ed_pass!,completionHandler: {(result) in
+                if(result == 200){
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        let secondViewController:MainViewController = MainViewController()
+                        
+                        self.present(secondViewController, animated: true, completion: nil)
+                    }
+                   
+                }else if(result == 300){
+                     Toast(text: "wrong account or password").show()
+                }else{
+                    Toast(text: "login fail").show()
+                }
             
-            let secondViewController:MainViewController = MainViewController()
+            })
             
-            self.present(secondViewController, animated: true, completion: nil)
+            
             
         }
         

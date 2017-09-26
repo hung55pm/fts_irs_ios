@@ -10,10 +10,9 @@ import Foundation
 import Toaster
 class ConnectSv {
     
-    func login(user : String , pass : String ){
+    func login(user : String , pass : String, completionHandler: @escaping (Int64?) -> () ){
         let invetor = Model_Invertor()
         let userDefaults = UserDefaults.standard
-        var result: Int64? = 0
         let urls = "http://117.0.38.37:8259/api/Login/checkLogin?investorId=" + user + "&password=" + pass
         
         var request = URLRequest(url : URL(string: urls)!)
@@ -26,7 +25,7 @@ class ConnectSv {
             if error != nil
             {
                 print("error=\(String(describing: error))")
-               Toast(text: "Login fail").show()
+                completionHandler(400)
                 return
             }
             
@@ -36,8 +35,7 @@ class ConnectSv {
             
             
             if( (json?.count)! == 0){
-                
-               Toast(text: "wrong account or password").show()
+                completionHandler(300)
                 
             }else{
                 for dayData in json!{// get object trong jsonarray tra ve
@@ -81,7 +79,7 @@ class ConnectSv {
                     
                     
                    
-                    
+                    completionHandler(200)
                     
                     
                     

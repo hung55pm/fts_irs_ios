@@ -12,6 +12,10 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var s = UserDefaults.standard
+        
+        print(s.string(forKey: "INVESTOR_ID"))
 
         // Do any additional setup after loading the view.
     }
