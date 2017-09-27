@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SlideMenuControllerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Toaster.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,17 +32,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B4FD1AFA2FBCBDC9E5D40C868F75D03</key>
+		<key>08466D73C4F5024E315F4C64051CD1A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E3130C885FF18C266312A6B5F498FD5</key>
+		<key>3C66164CFE7ED57104D77978F35A0FE6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54D710E2A6C8DA3ABFF31C48897D22A2</key>
+		<key>DAD65DF8309B2209369B37C547F68F05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC1D950970EF8B5DBBAF286CF5D89E96</key>
 		<dict>
 			<key>primary</key>
 			<true/>

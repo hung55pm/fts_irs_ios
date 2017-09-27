@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1CF2E2BDF3FED1B5D6419393 /* Pods_IRSMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DEA9526943A8784546A418 /* Pods_IRSMobile.framework */; };
+		9801CAA91F7B8163001488E1 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAA51F7B8163001488E1 /* BaseTableViewCell.swift */; };
+		9801CAAA1F7B8163001488E1 /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAA61F7B8163001488E1 /* DataTableViewCell.swift */; };
+		9801CAAB1F7B8163001488E1 /* DataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9801CAA71F7B8163001488E1 /* DataTableViewCell.xib */; };
+		9801CAAC1F7B8163001488E1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAA81F7B8163001488E1 /* String.swift */; };
+		9801CAB01F7B81BD001488E1 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAAE1F7B81BD001488E1 /* LeftViewController.swift */; };
+		9801CAB11F7B81BD001488E1 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9801CAAF1F7B81BD001488E1 /* LeftViewController.xib */; };
+		9801CAB51F7B8273001488E1 /* AllTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAB31F7B8273001488E1 /* AllTransactionViewController.swift */; };
+		9801CAB61F7B8273001488E1 /* AllTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9801CAB41F7B8273001488E1 /* AllTransactionViewController.xib */; };
+		9801CABA1F7B984B001488E1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAB91F7B984B001488E1 /* UIViewController.swift */; };
 		984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D741F6F830C00D0630E /* AppDelegate.swift */; };
 		984E1D771F6F830C00D0630E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D761F6F830C00D0630E /* ViewController.swift */; };
 		984E1D7A1F6F830C00D0630E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D781F6F830C00D0630E /* Main.storyboard */; };
@@ -25,6 +34,15 @@
 /* Begin PBXFileReference section */
 		26DEA9526943A8784546A418 /* Pods_IRSMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IRSMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7FFFA9A79A74C318F27D7A /* Pods-IRSMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile.release.xcconfig"; sourceTree = "<group>"; };
+		9801CAA51F7B8163001488E1 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		9801CAA61F7B8163001488E1 /* DataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
+		9801CAA71F7B8163001488E1 /* DataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataTableViewCell.xib; sourceTree = "<group>"; };
+		9801CAA81F7B8163001488E1 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		9801CAAE1F7B81BD001488E1 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		9801CAAF1F7B81BD001488E1 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
+		9801CAB31F7B8273001488E1 /* AllTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTransactionViewController.swift; sourceTree = "<group>"; };
+		9801CAB41F7B8273001488E1 /* AllTransactionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllTransactionViewController.xib; sourceTree = "<group>"; };
+		9801CAB91F7B984B001488E1 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		984E1D711F6F830B00D0630E /* IRSMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRSMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		984E1D741F6F830C00D0630E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		984E1D761F6F830C00D0630E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +81,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9801CAAD1F7B8172001488E1 /* Slideleft */ = {
+			isa = PBXGroup;
+			children = (
+				9801CAB91F7B984B001488E1 /* UIViewController.swift */,
+				9801CAA81F7B8163001488E1 /* String.swift */,
+				9801CAA51F7B8163001488E1 /* BaseTableViewCell.swift */,
+				9801CAA61F7B8163001488E1 /* DataTableViewCell.swift */,
+				9801CAA71F7B8163001488E1 /* DataTableViewCell.xib */,
+			);
+			name = Slideleft;
+			sourceTree = "<group>";
+		};
+		9801CAB21F7B8241001488E1 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				9801CAB31F7B8273001488E1 /* AllTransactionViewController.swift */,
+				9801CAB41F7B8273001488E1 /* AllTransactionViewController.xib */,
+			);
+			name = Transaction;
+			sourceTree = "<group>";
+		};
 		984E1D681F6F830B00D0630E = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +123,8 @@
 		984E1D731F6F830B00D0630E /* IRSMobile */ = {
 			isa = PBXGroup;
 			children = (
+				9801CAB21F7B8241001488E1 /* Transaction */,
+				9801CAAD1F7B8172001488E1 /* Slideleft */,
 				98973FFD1F7A515800137751 /* Models */,
 				98973FFA1F7A501700137751 /* Connect */,
 				984E1D891F6F845500D0630E /* Acounts */,
@@ -105,6 +146,8 @@
 				984E1D8B1F6F847100D0630E /* LoginViewController.xib */,
 				984E1D8E1F6F848300D0630E /* MainViewController.swift */,
 				984E1D8F1F6F848300D0630E /* MainViewController.xib */,
+				9801CAAE1F7B81BD001488E1 /* LeftViewController.swift */,
+				9801CAAF1F7B81BD001488E1 /* LeftViewController.xib */,
 			);
 			name = Acounts;
 			sourceTree = "<group>";
@@ -196,9 +239,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				984E1D8D1F6F847100D0630E /* LoginViewController.xib in Resources */,
+				9801CAB11F7B81BD001488E1 /* LeftViewController.xib in Resources */,
+				9801CAAB1F7B8163001488E1 /* DataTableViewCell.xib in Resources */,
 				984E1D821F6F830C00D0630E /* LaunchScreen.storyboard in Resources */,
 				984E1D911F6F848300D0630E /* MainViewController.xib in Resources */,
 				984E1D7F1F6F830C00D0630E /* Assets.xcassets in Resources */,
+				9801CAB61F7B8273001488E1 /* AllTransactionViewController.xib in Resources */,
 				984E1D7A1F6F830C00D0630E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,12 +279,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/SharkORM/SharkORM.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SharkORM.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,9 +316,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9801CAA91F7B8163001488E1 /* BaseTableViewCell.swift in Sources */,
 				984E1D8C1F6F847100D0630E /* LoginViewController.swift in Sources */,
+				9801CAAC1F7B8163001488E1 /* String.swift in Sources */,
 				98973FFF1F7A518300137751 /* Model_Invertor.swift in Sources */,
 				98973FFC1F7A503600137751 /* ConnectSv.swift in Sources */,
+				9801CAB01F7B81BD001488E1 /* LeftViewController.swift in Sources */,
+				9801CAAA1F7B8163001488E1 /* DataTableViewCell.swift in Sources */,
+				9801CABA1F7B984B001488E1 /* UIViewController.swift in Sources */,
+				9801CAB51F7B8273001488E1 /* AllTransactionViewController.swift in Sources */,
 				984E1D7D1F6F830C00D0630E /* IRSMobile.xcdatamodeld in Sources */,
 				984E1D771F6F830C00D0630E /* ViewController.swift in Sources */,
 				984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */,

@@ -8,16 +8,21 @@
 
 import UIKit
 import CoreData
-
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var main = MainViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Override point for customization after application launch
+        
+        let slideMenuController = SlideMenuController(mainViewController: MainViewController(), leftMenuViewController: LeftViewController())
+        // navigate to next view
+        main.present(slideMenuController, animated: false, completion: nil)
+        
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let homeViewController = LoginViewController()

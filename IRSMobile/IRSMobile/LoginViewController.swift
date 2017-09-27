@@ -25,29 +25,33 @@ class LoginViewController: UIViewController {
     @IBAction func bt_login(_ sender: UIButton) {
         ed_user=ed_username.text
         ed_pass=ed_password.text
+        let secondViewController:MainViewController = MainViewController()
+        self.present(secondViewController, animated: true, completion: nil)
         
-        if(ed_user=="" || ed_pass==""){
-            Toast(text: "You must enter full enough information").show()
-        }else{
-            connect.login(user: ed_user!, pass: ed_pass!,completionHandler: {(result) in
-                if(result == 200){
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                        let secondViewController:MainViewController = MainViewController()
-                        
-                        self.present(secondViewController, animated: true, completion: nil)
-                    }
-                   
-                }else if(result == 300){
-                     Toast(text: "wrong account or password").show()
-                }else{
-                    Toast(text: "login fail").show()
-                }
-            
-            })
-            
-            
-            
-        }
+        
+        
+//        if(ed_user=="" || ed_pass==""){
+//            Toast(text: "You must enter full enough information").show()
+//        }else{
+//            connect.login(user: ed_user!, pass: ed_pass!,completionHandler: {(result) in
+//                if(result == 200){
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//                        let secondViewController:ViewController = ViewController()
+//                        
+//                        self.present(secondViewController, animated: true, completion: nil)
+//                    }
+//                   
+//                }else if(result == 300){
+//                     Toast(text: "wrong account or password").show()
+//                }else{
+//                    Toast(text: "login fail").show()
+//                }
+//            
+//            })
+//            
+//            
+//            
+//        }
         
     }
 

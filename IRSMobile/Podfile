@@ -7,6 +7,7 @@ target 'IRSMobile' do
 pod 'AFNetworking', '0.9.1'
 pod 'Toaster'
 pod 'SharkORM'
+pod 'SlideMenuControllerSwift'
 # Pods for IRSMobile
 
 end
