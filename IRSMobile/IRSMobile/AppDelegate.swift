@@ -14,23 +14,30 @@ import SlideMenuControllerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var main = MainViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        var navigationBarAppearace = UINavigationBar.appearance()
+        
+        navigationBarAppearace.tintColor = UIColor.white
+        navigationBarAppearace.barTintColor = UIColor.blue
+        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         // Override point for customization after application launch
-        
-        let slideMenuController = SlideMenuController(mainViewController: MainViewController(), leftMenuViewController: LeftViewController())
-        // navigate to next view
-        main.present(slideMenuController, animated: false, completion: nil)
-        
-        
         window = UIWindow(frame: UIScreen.main.bounds)
         let homeViewController = LoginViewController()
         window!.rootViewController = homeViewController
         window!.makeKeyAndVisible()
         return true
     }
-
+    
+    func createmenuleft() {
+        
+        let mainViewController = MainViewController()
+        let leftViewController = LeftViewController()
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        let slideMenuController = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController)
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

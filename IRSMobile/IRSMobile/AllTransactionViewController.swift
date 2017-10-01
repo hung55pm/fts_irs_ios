@@ -7,16 +7,18 @@
 //
 
 import UIKit
-
+import SlideMenuControllerSwift
 class AllTransactionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        // Do any additional setup after loading the view.
+                // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationBarItem()
+        self.setNavigationBar(title: "All Transaction")
+        self.setNavigationBarItem(title: "All Transaction")
+        
     }
 }
