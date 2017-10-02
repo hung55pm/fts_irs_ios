@@ -9,35 +9,66 @@
 import UIKit
 
 import SlideMenuControllerSwift
-enum LeftMenu: Int {
-    case main = 0
-    case swift
-    case java
-    case go
-    case nonMenu
-}
-protocol LeftMenuProtocol : class {
-    func changeViewController(_ menu: LeftMenu)
-}
-class LeftViewController: UIViewController , LeftMenuProtocol{
+
+
+class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
-  
+    @IBOutlet weak var investorname: UILabel!
+    
     @IBOutlet weak var tableview: UITableView!
-    var menus = ["Main", "Swift", "Java", "Go", "NonMenu"]
-    func changeViewController(_ menu: LeftMenu) {
-        print(menu)
-        switch menu {
-        case .main:
-            self.slideMenuController()?.changeMainViewController(MainViewController(), close: true)
-            break
-        case .swift: break
-        //self.slideMenuController()?.changeMainViewController(self.swiftViewController, close: true)
-        case .java:
-            self.slideMenuController()?.changeMainViewController(AllTransactionViewController(), close: true)
-        case .go: break
-        // self.slideMenuController()?.changeMainViewController(self.goViewController, close: true)
-        case .nonMenu: break
-            // self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
+    
+    var menus = ["Investor profile", "Transaction History", ""]
+    var menuinfo = ["Investor Information", "Contact Information", "Bank Account", "Change Password"]
+    var menutran = ["All Transactions", "Subscription", "Redemption"]
+    var menuorther = ["Portfolio", "Logout"]
+    func changeViewController(section: Int, row: Int) {
+        
+        switch section {
+        case 0:
+            switch row {
+            case 0:
+                self.slideMenuController()?.changeMainViewController(InvestorInfomationViewController(), close: true)
+                break
+            case 1:
+                self.slideMenuController()?.changeMainViewController(ContactInformationViewController(), close: true)
+                break
+            case 2:
+                self.slideMenuController()?.changeMainViewController(BankAcountViewController(), close: true)
+                break
+            case 3:
+                self.slideMenuController()?.changeMainViewController(ChangePasswordViewController(), close: true)
+                break
+            default:
+                break
+            }
+        case 1:
+            switch row {
+            case 0:
+                self.slideMenuController()?.changeMainViewController(AllTransactionViewController(), close: true)
+                break
+            case 1:
+                self.slideMenuController()?.changeMainViewController(SubcriptionViewController(), close: true)
+                break
+            case 2:
+                self.slideMenuController()?.changeMainViewController(RedemptionViewController(), close: true)
+                break
+            default:
+                break
+            }
+        case 2:
+            switch row {
+            case 0:
+                self.slideMenuController()?.changeMainViewController(PortfolioViewController(), close: true)
+                break
+            case 1:
+                self.slideMenuController()?.changeMainViewController(LogoutViewController(), close: true)
+                break
+            default:
+                break
+            }
+           
+            
+        default: break
         }
         
     }
@@ -56,27 +87,51 @@ class LeftViewController: UIViewController , LeftMenuProtocol{
         self.tableview.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
         tableview.dataSource = self
         tableview.delegate = self
- //       self.slideMenuController()
-        // Do any additional setup after loading the view.
+        let investor = UserDefaults()
+        
+        investorname.text = investor.string(forKey: "INVESTOR_NAME")
     }
     
-}
-extension LeftViewController : UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if let menu = LeftMenu(rawValue: indexPath.row) {
-            switch menu {
-            case .main, .swift, .java, .go, .nonMenu:
-                return BaseTableViewCell.height()
-            }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(section==0){
+            return menuinfo.count
+        }else if(section==1){
+            return menutran.count
+        }else if(section==2){
+            return menuorther.count
         }
         return 0
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let menu = LeftMenu(rawValue: indexPath.row ) {
-            print("row" + String(indexPath.row))
-            self.changeViewController(menu)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        
+        let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
+        if(indexPath.section==0){
+            cell.setData(menuinfo[indexPath.row])
+        }else if(indexPath.section==1){
+            cell.setData(menutran[indexPath.row])
+            
+        }else if (indexPath.section==2){
+            cell.setData(menuorther[indexPath.row])
         }
+        
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.changeViewController(section: indexPath.section, row: indexPath.row)
+    }
+    
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return menus.count
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return menus[section]
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -84,27 +139,5 @@ extension LeftViewController : UITableViewDelegate {
             
         }
     }
-}
-
-extension LeftViewController : UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menus.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if let menu = LeftMenu(rawValue: indexPath.row) {
-            switch menu {
-            case .main, .swift, .java, .go, .nonMenu:
-                //let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-                let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
-                cell.setData(menus[indexPath.row])
-                return cell
-            }
-        }
-        return UITableViewCell()
-    }
-    
     
 }

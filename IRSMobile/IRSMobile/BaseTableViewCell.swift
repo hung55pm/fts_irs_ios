@@ -31,7 +31,7 @@ open class BaseTableViewCell : UITableViewCell {
     }
     
     open func setData(_ data: Any?) {
-        self.textLabel?.font = UIFont.italicSystemFont(ofSize: 18)
+        self.textLabel?.font = UIFont.systemFont(ofSize: 14)
         self.textLabel?.textColor = UIColor.black
         if let menuText = data as? String {
             self.textLabel?.text = menuText
@@ -49,5 +49,21 @@ open class BaseTableViewCell : UITableViewCell {
     // ignore the default handling
     override open func setSelected(_ selected: Bool, animated: Bool) {
     }
-  
+    
 }
+
+extension NSMutableAttributedString {
+    @discardableResult func bold(_ text:String) -> NSMutableAttributedString {
+        let attrs:[String:AnyObject] = [NSFontAttributeName : UIFont(name: "AvenirNext-Medium", size: 12)!]
+        let boldString = NSMutableAttributedString(string:"\(text)", attributes:attrs)
+        self.append(boldString)
+        return self
+    }
+    
+    @discardableResult func normal(_ text:String)->NSMutableAttributedString {
+        let normal =  NSAttributedString(string: text)
+        self.append(normal)
+        return self
+    }
+}
+

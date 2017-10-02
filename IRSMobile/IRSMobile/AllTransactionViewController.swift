@@ -17,8 +17,8 @@ class AllTransactionViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationBar(title: "All Transaction")
-        self.setNavigationBarItem(title: "All Transaction")
+        self.setNavigationBar(title: "All Transactions")
+        self.setNavigationBarItem(title: "All Transactions")
         
     }
 }
