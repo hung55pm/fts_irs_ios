@@ -10,6 +10,16 @@ import UIKit
 
 class BankAcountViewController: UIViewController {
 
+    
+    @IBOutlet weak var ben_bank: UITextField!
+    @IBOutlet weak var bank_address: UITextField!
+    
+    @IBOutlet weak var bank_swift: UITextField!
+    
+    @IBOutlet weak var acount_name: UITextField!
+    
+    @IBOutlet weak var acount_number: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

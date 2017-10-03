@@ -9,6 +9,15 @@
 import UIKit
 
 class ContactInformationViewController: UIViewController {
+    
+    @IBOutlet weak var mail_address: UITextField!
+    @IBOutlet weak var phone: UITextField!
+    @IBOutlet weak var fax: UITextField!
+    
+    @IBOutlet weak var email: UITextField!
+    
+    @IBAction func bt_update_contact(_ sender: UIButton) {
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

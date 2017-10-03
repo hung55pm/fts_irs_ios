@@ -10,9 +10,24 @@ import UIKit
 
 class InvestorInfomationViewController: UIViewController {
 
+    @IBOutlet weak var name: UITextField!
+    
+    @IBOutlet weak var register_address: UITextField!
+    
+    @IBOutlet weak var date_of_co: UITextField!
+    
+    @IBOutlet weak var gender: UITextField!
+    
+    @IBOutlet weak var passport_number: UITextField!
+    
+    @IBOutlet weak var passport_expridate: UITextField!
+    
+    @IBOutlet weak var counttry: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     
         // Do any additional setup after loading the view.
     }
 
@@ -22,5 +37,5 @@ class InvestorInfomationViewController: UIViewController {
         self.setNavigationBarItem(title: "Investor Information")
         
     }
-
+ 
 }
