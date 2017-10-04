@@ -27,36 +27,32 @@ class LoginViewController: UIViewController {
         ed_pass=ed_password.text
         
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.createmenuleft()
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.createmenuleft()
         //UIApplication.shared.delegate?.window??.rootViewController = slideMenuController
         
-//        if(ed_user=="" || ed_pass==""){
-//            Toast(text: "You must enter full enough information").show()
-//        }else{
-//            connect.login(user: ed_user!, pass: ed_pass!,completionHandler: {(result) in
-//                if(result == 200){
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//                        
-//                        let mainViewController = MainViewController()
-//                        let leftViewController = LeftViewController()
-//                        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
-//                        
-//                        let slideMenuController = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController)
-//                        UIApplication.shared.delegate?.window??.rootViewController = slideMenuController
-//                    }
-//                    
-//                }else if(result == 300){
-//                    Toast(text: "wrong account or password").show()
-//                }else{
-//                    Toast(text: "login fail").show()
-//                }
-//                
-//            })
-//            
-//            
-//            
-//        }
+        if(ed_user=="" || ed_pass==""){
+            Toast(text: "You must enter full enough information").show()
+        }else{
+            connect.login(user: ed_user!, pass: ed_pass!,completionHandler: {(result) in
+                if(result == 200){
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        appDelegate.createmenuleft()
+                    }
+                    
+                }else if(result == 300){
+                    Toast(text: "wrong account or password").show()
+                }else{
+                    Toast(text: "login fail").show()
+                }
+                
+            })
+            
+            
+            
+        }
         
     }
     

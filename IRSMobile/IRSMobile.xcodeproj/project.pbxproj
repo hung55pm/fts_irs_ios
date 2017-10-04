@@ -17,6 +17,7 @@
 		9801CAB51F7B8273001488E1 /* AllTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAB31F7B8273001488E1 /* AllTransactionViewController.swift */; };
 		9801CAB61F7B8273001488E1 /* AllTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9801CAB41F7B8273001488E1 /* AllTransactionViewController.xib */; };
 		9801CABA1F7B984B001488E1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAB91F7B984B001488E1 /* UIViewController.swift */; };
+		984B3D511F852B1100ECA24D /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984B3D501F852B1100ECA24D /* Format.swift */; };
 		984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D741F6F830C00D0630E /* AppDelegate.swift */; };
 		984E1D771F6F830C00D0630E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D761F6F830C00D0630E /* ViewController.swift */; };
 		984E1D7A1F6F830C00D0630E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D781F6F830C00D0630E /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		9801CAB31F7B8273001488E1 /* AllTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTransactionViewController.swift; sourceTree = "<group>"; };
 		9801CAB41F7B8273001488E1 /* AllTransactionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllTransactionViewController.xib; sourceTree = "<group>"; };
 		9801CAB91F7B984B001488E1 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		984B3D501F852B1100ECA24D /* Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		984E1D711F6F830B00D0630E /* IRSMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRSMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		984E1D741F6F830C00D0630E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		984E1D761F6F830C00D0630E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 			name = Transaction;
 			sourceTree = "<group>";
 		};
+		984B3D4F1F852A7700ECA24D /* Untils */ = {
+			isa = PBXGroup;
+			children = (
+				984B3D501F852B1100ECA24D /* Format.swift */,
+			);
+			name = Untils;
+			sourceTree = "<group>";
+		};
 		984E1D681F6F830B00D0630E = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 		984E1D731F6F830B00D0630E /* IRSMobile */ = {
 			isa = PBXGroup;
 			children = (
+				984B3D4F1F852A7700ECA24D /* Untils */,
 				98E74B911F8281CD0038BA91 /* InvestorProfile */,
 				9801CAB21F7B8241001488E1 /* Transaction */,
 				9801CAAD1F7B8172001488E1 /* Slideleft */,
@@ -382,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984B3D511F852B1100ECA24D /* Format.swift in Sources */,
 				9801CAA91F7B8163001488E1 /* BaseTableViewCell.swift in Sources */,
 				984E1D8C1F6F847100D0630E /* LoginViewController.swift in Sources */,
 				9801CAAC1F7B8163001488E1 /* String.swift in Sources */,

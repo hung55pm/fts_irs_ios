@@ -75,6 +75,9 @@ class ConnectSv {
                     userDefaults.set(dayData["REGISTERED_ADDRESS"] as? String, forKey : "REGISTERED_ADDRESS")
                     userDefaults.set(dayData["SWIFT_CODE"] as? String, forKey : "SWIFT_CODE")
                     userDefaults.set(dayData["TEL"] as? String, forKey : "TEL")
+                    userDefaults.set(dayData["PASSPORT_ID"] as? String, forKey : "PASSPORT_ID")
+              
+                    
                     
                     
                     

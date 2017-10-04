@@ -27,7 +27,15 @@ class InvestorInfomationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        let investor = UserDefaults()
+        let format = Format()
+        name.text = investor.string(forKey: "INVESTOR_NAME")
+        register_address.text = investor.string(forKey: "REGISTERED_ADDRESS")
+         date_of_co.text = format.formatdatetoddMMMyyyy(str: investor.string(forKey: "DATE_OF_BIRTH")!)
+         gender.text = investor.string(forKey: "GENDER_ID")
+         passport_number.text = investor.string(forKey: "PASSPORT_ID")
+         passport_expridate.text = format.formatdatetoddMMMyyyy(str: investor.string(forKey: "EXPIRY_DATE")!)
+         counttry.text = investor.string(forKey: "NATIONALITY_ID")
         // Do any additional setup after loading the view.
     }
 

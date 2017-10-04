@@ -15,13 +15,20 @@ class ContactInformationViewController: UIViewController {
     @IBOutlet weak var fax: UITextField!
     
     @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var bt_update: UIButton!
     
     @IBAction func bt_update_contact(_ sender: UIButton) {
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let investor = UserDefaults()
+        mail_address.text = investor.string(forKey: "MAILLING_ADDRESS")
+        phone.text = investor.string(forKey: "TEL")
+        fax.text = investor.string(forKey: "FACSIMILE")
+        email.text = investor.string(forKey: "EMAIL")
+        bt_update.layer.cornerRadius = 5
+        
         // Do any additional setup after loading the view.
     }
 

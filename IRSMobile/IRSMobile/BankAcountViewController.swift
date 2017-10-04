@@ -22,7 +22,12 @@ class BankAcountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let investor = UserDefaults()
+        ben_bank.text = investor.string(forKey: "BENEFICIARY_BANK")
+        bank_address.text = investor.string(forKey: "BANK_ADDRESS")
+        bank_swift.text = investor.string(forKey: "SWIFT_CODE")
+        acount_name.text = investor.string(forKey: "ACCOUNT_NAME")
+        acount_number.text = investor.string(forKey: "ACCOUNT_NUMBER")
         // Do any additional setup after loading the view.
     }
 

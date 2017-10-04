@@ -12,8 +12,8 @@ import SlideMenuControllerSwift
 
 
 class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
-    
-    @IBOutlet weak var investorname: UILabel!
+ 
+    @IBOutlet weak var investor_name: UILabel!
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -89,7 +89,8 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
         tableview.delegate = self
         let investor = UserDefaults()
         
-        investorname.text = investor.string(forKey: "INVESTOR_NAME")
+        investor_name.text = investor.string(forKey: "INVESTOR_NAME")
+        print("ssssssssssssss" + investor.string(forKey: "INVESTOR_NAME")!)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

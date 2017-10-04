@@ -13,8 +13,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //viewController.addLeftBarButtonWithImage(UIImage(named: "hoge")!)
+               //viewController.addLeftBarButtonWithImage(UIImage(named: "hoge")!)
       
     }
     override func viewWillAppear(_ animated: Bool) {
