@@ -21,4 +21,5 @@ class Format{
         let dateString = dateFormatter.string(from: date)
         return dateString
     }
+    
 }

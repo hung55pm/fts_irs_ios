@@ -12,7 +12,8 @@ class InvestorInfomationViewController: UIViewController {
 
     @IBOutlet weak var name: UITextField!
     
-    @IBOutlet weak var register_address: UITextField!
+    @IBOutlet weak var adress_register: UILabel!
+  
     
     @IBOutlet weak var date_of_co: UITextField!
     
@@ -30,12 +31,17 @@ class InvestorInfomationViewController: UIViewController {
         let investor = UserDefaults()
         let format = Format()
         name.text = investor.string(forKey: "INVESTOR_NAME")
-        register_address.text = investor.string(forKey: "REGISTERED_ADDRESS")
-         date_of_co.text = format.formatdatetoddMMMyyyy(str: investor.string(forKey: "DATE_OF_BIRTH")!)
+        date_of_co.text = format.formatdatetoddMMMyyyy(str: investor.string(forKey: "DATE_OF_BIRTH")!)
          gender.text = investor.string(forKey: "GENDER_ID")
          passport_number.text = investor.string(forKey: "PASSPORT_ID")
          passport_expridate.text = format.formatdatetoddMMMyyyy(str: investor.string(forKey: "EXPIRY_DATE")!)
-         counttry.text = investor.string(forKey: "NATIONALITY_ID")
+        counttry.text = investor.string(forKey: "NATIONALITY_ID")
+        adress_register.layer.borderWidth = 1
+        let colormy = UIColor.black
+        adress_register.layer.borderColor = colormy.cgColor
+        adress_register.layer.cornerRadius = 3
+        adress_register.numberOfLines = 0
+        adress_register.text = investor.string(forKey: "REGISTERED_ADDRESS")
         // Do any additional setup after loading the view.
     }
 
@@ -43,6 +49,7 @@ class InvestorInfomationViewController: UIViewController {
         super.viewWillAppear(animated)
          self.setNavigationBar(title: "Investor Information")
         self.setNavigationBarItem(title: "Investor Information")
+    
         
     }
  

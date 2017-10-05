@@ -133,6 +133,7 @@
                 <constraint firstAttribute="trailing" secondItem="mjZ-6Z-vGv" secondAttribute="trailing" constant="176" id="y29-he-cnL"/>
                 <constraint firstItem="FRY-2b-E60" firstAttribute="top" secondItem="W6X-DG-LhA" secondAttribute="bottom" constant="8" id="yFO-Qx-xvp"/>
             </constraints>
+            <point key="canvasLocation" x="33.5" y="80.5"/>
         </view>
     </objects>
 </document>
