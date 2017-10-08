@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -147,6 +147,7 @@
                 <constraint firstItem="s73-uN-iH7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="9eD-22-67U"/>
                 <constraint firstItem="HPO-Li-FDK" firstAttribute="top" secondItem="HS4-AO-SFA" secondAttribute="bottom" constant="8" id="Avs-fC-r1J"/>
                 <constraint firstItem="HPO-Li-FDK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="B9i-ja-FXi"/>
+                <constraint firstItem="Trk-0G-KEo" firstAttribute="top" secondItem="D8z-ef-ljT" secondAttribute="bottom" constant="13" id="CBW-9d-3n6"/>
                 <constraint firstAttribute="trailing" secondItem="Qdf-KX-naX" secondAttribute="trailing" constant="156" id="G2O-yU-WlC"/>
                 <constraint firstItem="DqS-M7-N8S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="GfP-CR-aDO"/>
                 <constraint firstItem="K9O-g6-qQi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="Gjy-14-HOR" userLabel="Name.top = top + 60"/>
@@ -167,7 +168,6 @@
                 <constraint firstItem="HS4-AO-SFA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="bcq-p2-b2l"/>
                 <constraint firstAttribute="trailing" secondItem="HPO-Li-FDK" secondAttribute="trailing" constant="16" id="dbD-8N-tHa"/>
                 <constraint firstAttribute="trailing" secondItem="edz-6l-iak" secondAttribute="trailing" constant="16" id="g4I-Yc-WAb"/>
-                <constraint firstItem="Trk-0G-KEo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="191" id="hKX-Ms-Zpb"/>
                 <constraint firstAttribute="trailing" secondItem="hl8-6n-a8E" secondAttribute="trailing" constant="16" id="haF-ae-J6v"/>
                 <constraint firstAttribute="trailing" secondItem="A2y-fp-2YE" secondAttribute="trailing" constant="85" id="hnM-eL-LOn"/>
                 <constraint firstItem="A2y-fp-2YE" firstAttribute="top" secondItem="DqS-M7-N8S" secondAttribute="bottom" constant="8" id="hzQ-D9-bbR"/>

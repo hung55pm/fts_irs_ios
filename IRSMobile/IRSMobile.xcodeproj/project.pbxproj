@@ -30,6 +30,11 @@
 		984E1D911F6F848300D0630E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8F1F6F848300D0630E /* MainViewController.xib */; };
 		98973FFC1F7A503600137751 /* ConnectSv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98973FFB1F7A503600137751 /* ConnectSv.swift */; };
 		98973FFF1F7A518300137751 /* Model_Invertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98973FFE1F7A518300137751 /* Model_Invertor.swift */; };
+		98CB90EA1F89B4E900748A23 /* SubcriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB90E81F89B4E900748A23 /* SubcriptionTableViewCell.swift */; };
+		98CB90EB1F89B4E900748A23 /* SubcriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98CB90E91F89B4E900748A23 /* SubcriptionTableViewCell.xib */; };
+		98CB90ED1F89CF5F00748A23 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB90EC1F89CF5F00748A23 /* Constant.swift */; };
+		98CB90EF1F89D24B00748A23 /* Model_Subcription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB90EE1F89D24B00748A23 /* Model_Subcription.swift */; };
+		98CB90F11F89D38B00748A23 /* Model_Redemption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB90F01F89D38B00748A23 /* Model_Redemption.swift */; };
 		98E74B871F82818F0038BA91 /* SubcriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E74B851F82818F0038BA91 /* SubcriptionViewController.swift */; };
 		98E74B881F82818F0038BA91 /* SubcriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98E74B861F82818F0038BA91 /* SubcriptionViewController.xib */; };
 		98E74B8B1F8281A40038BA91 /* RedemptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E74B891F8281A40038BA91 /* RedemptionViewController.swift */; };
@@ -75,6 +80,11 @@
 		984E1D8F1F6F848300D0630E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		98973FFB1F7A503600137751 /* ConnectSv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectSv.swift; sourceTree = "<group>"; };
 		98973FFE1F7A518300137751 /* Model_Invertor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_Invertor.swift; sourceTree = "<group>"; };
+		98CB90E81F89B4E900748A23 /* SubcriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubcriptionTableViewCell.swift; sourceTree = "<group>"; };
+		98CB90E91F89B4E900748A23 /* SubcriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubcriptionTableViewCell.xib; sourceTree = "<group>"; };
+		98CB90EC1F89CF5F00748A23 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		98CB90EE1F89D24B00748A23 /* Model_Subcription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_Subcription.swift; sourceTree = "<group>"; };
+		98CB90F01F89D38B00748A23 /* Model_Redemption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_Redemption.swift; sourceTree = "<group>"; };
 		98E74B851F82818F0038BA91 /* SubcriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubcriptionViewController.swift; sourceTree = "<group>"; };
 		98E74B861F82818F0038BA91 /* SubcriptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubcriptionViewController.xib; sourceTree = "<group>"; };
 		98E74B891F8281A40038BA91 /* RedemptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemptionViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				984B3D501F852B1100ECA24D /* Format.swift */,
+				98CB90EC1F89CF5F00748A23 /* Constant.swift */,
 			);
 			name = Untils;
 			sourceTree = "<group>";
@@ -173,6 +184,7 @@
 		984E1D731F6F830B00D0630E /* IRSMobile */ = {
 			isa = PBXGroup;
 			children = (
+				98CB90E71F89B49900748A23 /* Tableviewcellxib */,
 				984B3D4F1F852A7700ECA24D /* Untils */,
 				98E74B911F8281CD0038BA91 /* InvestorProfile */,
 				9801CAB21F7B8241001488E1 /* Transaction */,
@@ -218,8 +230,19 @@
 			isa = PBXGroup;
 			children = (
 				98973FFE1F7A518300137751 /* Model_Invertor.swift */,
+				98CB90EE1F89D24B00748A23 /* Model_Subcription.swift */,
+				98CB90F01F89D38B00748A23 /* Model_Redemption.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		98CB90E71F89B49900748A23 /* Tableviewcellxib */ = {
+			isa = PBXGroup;
+			children = (
+				98CB90E81F89B4E900748A23 /* SubcriptionTableViewCell.swift */,
+				98CB90E91F89B4E900748A23 /* SubcriptionTableViewCell.xib */,
+			);
+			name = Tableviewcellxib;
 			sourceTree = "<group>";
 		};
 		98E74B911F8281CD0038BA91 /* InvestorProfile */ = {
@@ -317,6 +340,7 @@
 				98E74B8C1F8281A40038BA91 /* RedemptionViewController.xib in Resources */,
 				98E74BA11F8282420038BA91 /* ChangePasswordViewController.xib in Resources */,
 				984E1D821F6F830C00D0630E /* LaunchScreen.storyboard in Resources */,
+				98CB90EB1F89B4E900748A23 /* SubcriptionTableViewCell.xib in Resources */,
 				984E1D911F6F848300D0630E /* MainViewController.xib in Resources */,
 				98E74B991F82820B0038BA91 /* BankAcountViewController.xib in Resources */,
 				984E1D7F1F6F830C00D0630E /* Assets.xcassets in Resources */,
@@ -394,15 +418,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				984B3D511F852B1100ECA24D /* Format.swift in Sources */,
+				98CB90EF1F89D24B00748A23 /* Model_Subcription.swift in Sources */,
 				9801CAA91F7B8163001488E1 /* BaseTableViewCell.swift in Sources */,
 				984E1D8C1F6F847100D0630E /* LoginViewController.swift in Sources */,
 				9801CAAC1F7B8163001488E1 /* String.swift in Sources */,
+				98CB90EA1F89B4E900748A23 /* SubcriptionTableViewCell.swift in Sources */,
 				98973FFF1F7A518300137751 /* Model_Invertor.swift in Sources */,
 				98E74BA41F829C370038BA91 /* LogoutViewController.swift in Sources */,
 				98973FFC1F7A503600137751 /* ConnectSv.swift in Sources */,
 				98E74B8F1F8281B60038BA91 /* PortfolioViewController.swift in Sources */,
 				98E74B871F82818F0038BA91 /* SubcriptionViewController.swift in Sources */,
 				9801CAB01F7B81BD001488E1 /* LeftViewController.swift in Sources */,
+				98CB90F11F89D38B00748A23 /* Model_Redemption.swift in Sources */,
+				98CB90ED1F89CF5F00748A23 /* Constant.swift in Sources */,
 				98E74B8B1F8281A40038BA91 /* RedemptionViewController.swift in Sources */,
 				9801CAAA1F7B8163001488E1 /* DataTableViewCell.swift in Sources */,
 				98E74B9C1F8282300038BA91 /* ContactInformationViewController.swift in Sources */,
