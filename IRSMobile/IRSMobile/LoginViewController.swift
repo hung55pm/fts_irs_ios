@@ -27,8 +27,8 @@ class LoginViewController: UIViewController {
         ed_pass=ed_password.text
         
         
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        appDelegate.createmenuleft()
+        //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //        appDelegate.createmenuleft()
         //UIApplication.shared.delegate?.window??.rootViewController = slideMenuController
         
         if(ed_user=="" || ed_pass==""){
@@ -60,6 +60,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         bt_login_out.layer.cornerRadius = 5
+        
+        
         
         // Do any additional setup after loading the view.
     }
