@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubcriptionViewController" customModule="IRSMobile" customModuleProvider="target">
             <connections>
+                <outlet property="bt_txt_search" destination="Kjq-dg-Zm5" id="ehW-Rf-Kgg"/>
                 <outlet property="tableview" destination="Dp5-u3-6PU" id="vB9-Id-Szh"/>
                 <outlet property="tf_to" destination="7Qa-DW-ZeV" id="jIu-bW-G3o"/>
                 <outlet property="total_sgd" destination="oQ1-pO-0Fu" id="ckc-LG-nC4"/>
                 <outlet property="total_usd" destination="eon-k9-32n" id="SuS-zP-ibO"/>
+                <outlet property="txt_txt" destination="1Wj-PZ-f9k" id="ywe-Td-gIA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,6 +42,9 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="txt_from:" destination="-1" eventType="touchDown" id="7cR-E1-iqH"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,6 +72,9 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="txt_to:" destination="-1" eventType="touchDown" id="JCd-Ye-CwC"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -101,28 +109,28 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eon-k9-32n">
-                            <rect key="frame" x="212" y="8" width="100" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eon-k9-32n">
+                            <rect key="frame" x="162" y="8" width="150" height="21"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="100" id="Fbh-OI-Uah"/>
-                                <constraint firstAttribute="height" constant="21" id="HEU-1U-ndi"/>
+                                <constraint firstAttribute="width" constant="150" id="Fbh-OI-Uah"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="HEU-1U-ndi"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgi-nh-4RK">
-                            <rect key="frame" x="8" y="46" width="51" height="21"/>
+                            <rect key="frame" x="8" y="32" width="51" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQ1-pO-0Fu">
-                            <rect key="frame" x="212" y="45" width="100" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SGD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQ1-pO-0Fu">
+                            <rect key="frame" x="162" y="37" width="150" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="6vG-2n-HTI"/>
-                                <constraint firstAttribute="width" constant="100" id="WCG-ox-sqI"/>
+                                <constraint firstAttribute="width" constant="150" id="WCG-ox-sqI"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="textColor"/>
@@ -139,14 +147,14 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dp5-u3-6PU">
-                    <rect key="frame" x="10" y="181" width="310" height="312"/>
+                    <rect key="frame" x="0.0" y="181" width="320" height="312"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Dp5-u3-6PU" firstAttribute="top" secondItem="Kjq-dg-Zm5" secondAttribute="bottom" constant="24" id="6cL-Lj-ro9"/>
-                <constraint firstItem="Dp5-u3-6PU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="7uH-N6-8Ft"/>
+                <constraint firstItem="Dp5-u3-6PU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7uH-N6-8Ft"/>
                 <constraint firstAttribute="trailing" secondItem="Dp5-u3-6PU" secondAttribute="trailing" id="7ya-QP-Kv7"/>
                 <constraint firstAttribute="bottom" secondItem="lex-xR-fED" secondAttribute="bottom" id="8Np-sN-k5c"/>
                 <constraint firstItem="lex-xR-fED" firstAttribute="top" secondItem="Dp5-u3-6PU" secondAttribute="bottom" id="FTj-hU-nqd"/>

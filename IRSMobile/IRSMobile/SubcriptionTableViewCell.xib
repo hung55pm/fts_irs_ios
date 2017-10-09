@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,8 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="49"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwM-50-cnC">
-                        <rect key="frame" x="0.0" y="0.0" width="70" height="49"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwM-50-cnC">
+                        <rect key="frame" x="10" y="0.0" width="70" height="49"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="49" id="A2Z-Qn-foK"/>
                             <constraint firstAttribute="width" constant="70" id="q8x-go-ERy"/>
@@ -28,7 +28,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIN-zE-sag">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIN-zE-sag">
                         <rect key="frame" x="153" y="0.0" width="55" height="49"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="55" id="mrT-NS-K9C"/>
@@ -38,7 +38,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emt-j2-dxY">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emt-j2-dxY">
                         <rect key="frame" x="208" y="0.0" width="85" height="49"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="49" id="Pgc-3q-Gi9"/>
@@ -48,7 +48,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3Q-zV-MMV">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3Q-zV-MMV">
                         <rect key="frame" x="293" y="0.0" width="85" height="49"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="49" id="Bb0-XZ-yIb"/>
@@ -58,8 +58,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classes/Series" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPo-rs-A3Q">
-                        <rect key="frame" x="78" y="0.0" width="75" height="49"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classes/Series" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPo-rs-A3Q">
+                        <rect key="frame" x="88" y="0.0" width="65" height="49"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="49" id="Pa7-v6-xcQ"/>
                         </constraints>
@@ -74,12 +74,12 @@
                     <constraint firstItem="dIN-zE-sag" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8BY-Jo-kPS"/>
                     <constraint firstItem="P3Q-zV-MMV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="JLO-zE-gYS"/>
                     <constraint firstItem="P3Q-zV-MMV" firstAttribute="leading" secondItem="emt-j2-dxY" secondAttribute="trailing" id="L5a-2n-Hw7"/>
+                    <constraint firstItem="NwM-50-cnC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="VDU-f8-Jwj"/>
                     <constraint firstAttribute="trailing" secondItem="P3Q-zV-MMV" secondAttribute="trailing" id="jmJ-2e-HhH"/>
                     <constraint firstItem="GPo-rs-A3Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lHl-fE-SCZ"/>
                     <constraint firstItem="emt-j2-dxY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lJF-wD-E6k"/>
                     <constraint firstItem="emt-j2-dxY" firstAttribute="leading" secondItem="dIN-zE-sag" secondAttribute="trailing" id="pqB-90-mvo"/>
                     <constraint firstItem="GPo-rs-A3Q" firstAttribute="leading" secondItem="NwM-50-cnC" secondAttribute="trailing" constant="8" id="qEk-rX-c2K"/>
-                    <constraint firstItem="NwM-50-cnC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qgb-az-RCm"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

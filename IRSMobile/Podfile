@@ -8,6 +8,7 @@ pod 'AFNetworking', '0.9.1'
 pod 'Toaster'
 pod 'SharkORM'
 pod 'SlideMenuControllerSwift'
+pod 'DatePickerDialog'
 # Pods for IRSMobile
 
 end

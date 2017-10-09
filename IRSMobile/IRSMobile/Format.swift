@@ -21,6 +21,34 @@ class Format{
         let dateString = dateFormatter.string(from: date)
         return dateString
     }
+    func formatdatefromyyyyMMdd(str: String) -> String {
+        let dateFormatter = DateFormatter()
+        let tempLocale = dateFormatter.locale
+        
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+        let date = dateFormatter.date(from: str)!
+        
+        dateFormatter.dateFormat = "dd-MMM-yy"
+        dateFormatter.locale = tempLocale // reset the locale
+        let dateString = dateFormatter.string(from: date)
+        return dateString
+    }
+    func formatdatetoMMddyyyy(str: String) -> String {
+        let dateFormatter = DateFormatter()
+        let tempLocale = dateFormatter.locale
+        
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "dd-MMM-yyyy"
+        let date = dateFormatter.date(from: str)!
+        
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        dateFormatter.locale = tempLocale // reset the locale
+        let dateString = dateFormatter.string(from: date)
+        return dateString
+    }
+    
+    
     func formatpricetocurrency(string1 : String) -> String {
         var str : String = ""
         let index1 = string1.index(string1.endIndex, offsetBy: -3)
