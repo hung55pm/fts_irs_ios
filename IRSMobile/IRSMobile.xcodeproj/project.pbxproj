@@ -30,6 +30,7 @@
 		984E1D911F6F848300D0630E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8F1F6F848300D0630E /* MainViewController.xib */; };
 		98973FFC1F7A503600137751 /* ConnectSv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98973FFB1F7A503600137751 /* ConnectSv.swift */; };
 		98973FFF1F7A518300137751 /* Model_Invertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98973FFE1F7A518300137751 /* Model_Invertor.swift */; };
+		98A2DD991F91A5A1005F03B5 /* RedemptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A2DD981F91A5A1005F03B5 /* RedemptionTableViewCell.swift */; };
 		98CB90EA1F89B4E900748A23 /* SubcriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB90E81F89B4E900748A23 /* SubcriptionTableViewCell.swift */; };
 		98CB90EB1F89B4E900748A23 /* SubcriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98CB90E91F89B4E900748A23 /* SubcriptionTableViewCell.xib */; };
 		98CB90ED1F89CF5F00748A23 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB90EC1F89CF5F00748A23 /* Constant.swift */; };
@@ -80,6 +81,7 @@
 		984E1D8F1F6F848300D0630E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		98973FFB1F7A503600137751 /* ConnectSv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectSv.swift; sourceTree = "<group>"; };
 		98973FFE1F7A518300137751 /* Model_Invertor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_Invertor.swift; sourceTree = "<group>"; };
+		98A2DD981F91A5A1005F03B5 /* RedemptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemptionTableViewCell.swift; sourceTree = "<group>"; };
 		98CB90E81F89B4E900748A23 /* SubcriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubcriptionTableViewCell.swift; sourceTree = "<group>"; };
 		98CB90E91F89B4E900748A23 /* SubcriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubcriptionTableViewCell.xib; sourceTree = "<group>"; };
 		98CB90EC1F89CF5F00748A23 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				98CB90E81F89B4E900748A23 /* SubcriptionTableViewCell.swift */,
 				98CB90E91F89B4E900748A23 /* SubcriptionTableViewCell.xib */,
+				98A2DD981F91A5A1005F03B5 /* RedemptionTableViewCell.swift */,
 			);
 			name = Tableviewcellxib;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				9801CAA91F7B8163001488E1 /* BaseTableViewCell.swift in Sources */,
 				984E1D8C1F6F847100D0630E /* LoginViewController.swift in Sources */,
 				9801CAAC1F7B8163001488E1 /* String.swift in Sources */,
+				98A2DD991F91A5A1005F03B5 /* RedemptionTableViewCell.swift in Sources */,
 				98CB90EA1F89B4E900748A23 /* SubcriptionTableViewCell.swift in Sources */,
 				98973FFF1F7A518300137751 /* Model_Invertor.swift in Sources */,
 				98E74BA41F829C370038BA91 /* LogoutViewController.swift in Sources */,

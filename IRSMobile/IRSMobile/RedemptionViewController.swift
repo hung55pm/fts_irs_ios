@@ -8,7 +8,13 @@
 
 import UIKit
 
-class RedemptionViewController: UIViewController {
+class RedemptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    
+    
+    @IBOutlet weak var tableview: UITableView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +27,13 @@ class RedemptionViewController: UIViewController {
         self.setNavigationBarItem(title: "Redemption")
          self.setNavigationBar(title: "Redemption")
         
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       let cell = Bundle.main.loadNibNamed("RedemptionTableViewCell", owner: self, options: nil)?.first as! RedemptionTableViewCell
+        return cell
     }
 
 }
