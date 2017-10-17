@@ -11,14 +11,18 @@ import UIKit
 class RedemptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     
-    
+    var profile: ProfileView!
     @IBOutlet weak var tableview: UITableView!
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        profile = ProfileView(frame: CGRect.zero)
+        self.view.addSubview(profile)
+        
+        // AutoLayout
+        profile.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
         // Do any additional setup after loading the view.
     }
 

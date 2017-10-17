@@ -85,5 +85,4 @@ class Format{
 
         return str
     }
-    
 }
