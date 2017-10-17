@@ -21,9 +21,9 @@ class Model_Redemption: AnyObject {
     var SHARE_SERIES_ID : String?
     var SHARE_SERIES_NAME : String?
     var CURRENCY_ID : String?
-    var UNIT_PRICE : String?
-    var QUANTITY : String?
-    var AMOUNT : String?
+    var UNIT_PRICE : Float?
+    var QUANTITY : Float?
+    var AMOUNT : Float?
     var EQUALISATION_CONTINGENT_AMOUNT : String?
     var NET_REDEMPTION_AMOUNT : String?
 }

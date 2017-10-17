@@ -28,6 +28,7 @@
 		984E1D8D1F6F847100D0630E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8B1F6F847100D0630E /* LoginViewController.xib */; };
 		984E1D901F6F848300D0630E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D8E1F6F848300D0630E /* MainViewController.swift */; };
 		984E1D911F6F848300D0630E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8F1F6F848300D0630E /* MainViewController.xib */; };
+		98969CBF1F966BAC009F60A5 /* subcriptionview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98969CBE1F966BAC009F60A5 /* subcriptionview.swift */; };
 		98973FFC1F7A503600137751 /* ConnectSv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98973FFB1F7A503600137751 /* ConnectSv.swift */; };
 		98973FFF1F7A518300137751 /* Model_Invertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98973FFE1F7A518300137751 /* Model_Invertor.swift */; };
 		98A2DD991F91A5A1005F03B5 /* RedemptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A2DD981F91A5A1005F03B5 /* RedemptionTableViewCell.swift */; };
@@ -80,6 +81,7 @@
 		984E1D8B1F6F847100D0630E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		984E1D8E1F6F848300D0630E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		984E1D8F1F6F848300D0630E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		98969CBE1F966BAC009F60A5 /* subcriptionview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = subcriptionview.swift; sourceTree = "<group>"; };
 		98973FFB1F7A503600137751 /* ConnectSv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectSv.swift; sourceTree = "<group>"; };
 		98973FFE1F7A518300137751 /* Model_Invertor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_Invertor.swift; sourceTree = "<group>"; };
 		98A2DD981F91A5A1005F03B5 /* RedemptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		984E1D731F6F830B00D0630E /* IRSMobile */ = {
 			isa = PBXGroup;
 			children = (
+				98969CBD1F966B11009F60A5 /* Views */,
 				98CB90E71F89B49900748A23 /* Tableviewcellxib */,
 				984B3D4F1F852A7700ECA24D /* Untils */,
 				98E74B911F8281CD0038BA91 /* InvestorProfile */,
@@ -222,6 +225,15 @@
 			name = Acounts;
 			sourceTree = "<group>";
 		};
+		98969CBD1F966B11009F60A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98F195C51F95E7AE00386AA5 /* ProfileView.swift */,
+				98969CBE1F966BAC009F60A5 /* subcriptionview.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		98973FFA1F7A501700137751 /* Connect */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,7 +258,6 @@
 				98CB90E81F89B4E900748A23 /* SubcriptionTableViewCell.swift */,
 				98CB90E91F89B4E900748A23 /* SubcriptionTableViewCell.xib */,
 				98A2DD981F91A5A1005F03B5 /* RedemptionTableViewCell.swift */,
-				98F195C51F95E7AE00386AA5 /* ProfileView.swift */,
 			);
 			name = Tableviewcellxib;
 			sourceTree = "<group>";
@@ -454,6 +465,7 @@
 				984E1D7D1F6F830C00D0630E /* IRSMobile.xcdatamodeld in Sources */,
 				984E1D771F6F830C00D0630E /* ViewController.swift in Sources */,
 				984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */,
+				98969CBF1F966BAC009F60A5 /* subcriptionview.swift in Sources */,
 				984E1D901F6F848300D0630E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

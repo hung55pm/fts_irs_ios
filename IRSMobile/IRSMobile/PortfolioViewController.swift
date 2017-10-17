@@ -9,9 +9,16 @@
 import UIKit
 
 class PortfolioViewController: UIViewController {
-
+    var sub: subcriptionview!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        sub = subcriptionview(frame: CGRect.zero)
+                self.view.addSubview(sub)
+        
+                // AutoLayout
+                sub.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
+        // Do any additional setup after loading the view.
 
         // Do any additional setup after loading the view.
     }

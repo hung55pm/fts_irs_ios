@@ -144,5 +144,55 @@ class ConnectSv {
         
 
     }
+    func getredemption(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_Redemption]?) -> () ){
+        var array = [Model_Redemption]()
+        let urls = contant.HOST + "/api/Redemption/getTransaction?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
+        
+        var request = URLRequest(url : URL(string: urls)!)
+        
+        request.httpMethod = "GET"// phuong thuc truyen
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error != nil
+            {
+                print("error=\(String(describing: error))")
+                completionHandler(nil)
+                return
+            }
+            
+            // You can print out response object
+            print("response = \(String(describing: response))")
+            let json = try! JSONSerialization.jsonObject(with: data!, options: []) as? [[String:Any]]// get data tar ve dang jsonarray
+            
+            
+            if( (json?.count)! == 0){
+                completionHandler(nil)
+                
+            }else{
+                for dayData in json!{// get object trong jsonarray tra ve
+                    print(dayData)
+                    let model = Model_Redemption()
+                    
+                    model.DATE = dayData["DATE"] as? String
+                    model.SHARE_SERIES_NAME = dayData["SHARE_SERIES_NAME"] as? String
+                    model.UNIT_PRICE = dayData["UNIT_PRICE"] as? Float
+                    model.QUANTITY = dayData["QUANTITY"] as? Float
+                    model.AMOUNT = dayData["AMOUNT"] as? Float
+                    model.CURRENCY_ID = dayData["CURRENCY_ID"] as? String
+                    array.append(model)
+                }
+                print(array)
+                completionHandler(array)
+            }
+            //            let responseString = String(data: data!, encoding: .utf8)// get data tra ve dang string
+            //            print("responseString = \(responseString)")
+        }
+        task.resume()
+        
+        
+    }
+
     
 }
