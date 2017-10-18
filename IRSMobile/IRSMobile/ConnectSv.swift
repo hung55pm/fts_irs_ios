@@ -109,7 +109,7 @@ class ConnectSv {
             if error != nil
             {
                 print("error=\(String(describing: error))")
-                completionHandler(nil)
+                completionHandler(array)
                 return
             }
             
@@ -119,7 +119,7 @@ class ConnectSv {
             
             
             if( (json?.count)! == 0){
-                completionHandler(nil)
+                completionHandler(array)
                 
             }else{
                 for dayData in json!{// get object trong jsonarray tra ve
@@ -158,7 +158,7 @@ class ConnectSv {
             if error != nil
             {
                 print("error=\(String(describing: error))")
-                completionHandler(nil)
+                completionHandler(array)
                 return
             }
             
@@ -168,7 +168,7 @@ class ConnectSv {
             
             
             if( (json?.count)! == 0){
-                completionHandler(nil)
+                completionHandler(array)
                 
             }else{
                 for dayData in json!{// get object trong jsonarray tra ve

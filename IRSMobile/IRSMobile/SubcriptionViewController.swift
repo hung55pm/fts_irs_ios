@@ -45,34 +45,8 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
         let investor = UserDefaults()
         let start = formats.formatdatetoMMddyyyy(str: txt_txt.text!)
         let end = formats.formatdatetoMMddyyyy(str: tf_to.text!)
-        connect.getsubcription(investorID: investor.string(forKey: "INVESTOR_ID")!, stratdate: start, enddate: end, completionHandler: {(result) in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.array = result!
-                //            self.tableview.reloadData()
-                print("aaaaa" + String(self.array.count))
-                
-                var total_usd : Float = 0
-                var total_sgd :Float = 0
-                for item in result!{
-                    if(item.CURRENCY_ID == "USD"){
-                        total_usd = total_usd + item.AMOUNT!
-                    }else if(item.CURRENCY_ID == "SGD"){
-                        total_sgd = total_sgd + item.AMOUNT!
-                    }
-                }
-                print(total_usd)
-                
-                self.total_sgd.text = "SGD " + self.formats.formatpricetocurrency(string1: String(format:"%3.2f", total_sgd))
-                self.total_usd.text = "USD " + self.formats.formatpricetocurrency(string1: String(format:"%3.2f", total_usd))
-                self.tableview.reloadData()
-                alertController.dismiss(animated: true, completion: nil);
-
-                
-            }
-
-            
-        })
-
+        getdata(start: start, end: end, investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
+        
     }
  
     
@@ -85,7 +59,22 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableview.delegate = self
         bt_txt_search.layer.cornerRadius = 7
         
+        txt_txt.text = formats.getfirstdayofmounth();
+        tf_to.text = formats.getdaynow();
         
+        let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
+        
+        let spinnerIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        
+        spinnerIndicator.center = CGPoint(x: 135.0, y: 65.5)
+        spinnerIndicator.color = UIColor.black
+        spinnerIndicator.startAnimating()
+        
+        alertController.view.addSubview(spinnerIndicator)
+        self.present(alertController, animated: false, completion: nil)
+        
+        let investor = UserDefaults()
+        getdata(start: formats.getfirstdayofmounth(), end: formats.getdaynow(), investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
         // Do any additional setup after loading the view.
     }
     
@@ -142,4 +131,37 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
             }
         }
     }
+    func getdata(start: String, end: String, investorId: String, alertController : UIAlertController) {
+        connect.getsubcription(investorID: investorId, stratdate: start, enddate: end, completionHandler: {(result) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.array = result!
+                //            self.tableview.reloadData()
+                print("aaaaa" + String(self.array.count))
+                
+                var total_usd : Float = 0
+                var total_sgd :Float = 0
+                if(result?.count != 0){
+                    for item in result!{
+                        if(item.CURRENCY_ID == "USD"){
+                            total_usd = total_usd + item.AMOUNT!
+                        }else if(item.CURRENCY_ID == "SGD"){
+                            total_sgd = total_sgd + item.AMOUNT!
+                        }
+                    }
+                    print(total_usd)
+                }
+                
+                self.total_sgd.text = "SGD " + self.formats.formatpricetocurrency(string1: String(format:"%3.2f", total_sgd))
+                self.total_usd.text = "USD " + self.formats.formatpricetocurrency(string1: String(format:"%3.2f", total_usd))
+                self.tableview.reloadData()
+                alertController.dismiss(animated: true, completion: nil);
+                
+                
+            }
+            
+            
+        })
+
+    }
+
 }

@@ -83,7 +83,7 @@ class RedemptionTableViewCell: UITableViewCell {
         addSubview(labprice)
         addSubview(labamount)
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-5-[v0]-5-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0" : labdate]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-5-[v1]-5-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v1" : labseries]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[v1]-0-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v1" : labseries]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-5-[v2]-5-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v2" : labunit]))
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-5-[v3]-5-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v3" : labprice]))

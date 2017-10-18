@@ -85,4 +85,19 @@ class Format{
 
         return str
     }
+    func getfirstdayofmounth() -> String{
+        let dateFormatter = DateFormatter()
+        let date = Date()
+        let comp: DateComponents = Calendar.current.dateComponents([.year, .month], from: date)
+        let startOfMonth = Calendar.current.date(from: comp)!
+        dateFormatter.dateFormat = "dd-MMM-yy"
+        return dateFormatter.string(from: startOfMonth)
+    }
+    func getdaynow() -> String{
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MMM-yy"
+        return formatter.string(from: date)
+    }
+
 }
