@@ -34,7 +34,6 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
         alertController.view.addSubview(spinnerIndicator)
         self.present(alertController, animated: false, completion: nil)
         
-        let investor = UserDefaults()
         let start = formats.formatdatetoMMddyyyy(str: txt_from.text!)
         let end = formats.formatdatetoMMddyyyy(str: txt_to.text!)
         getdata(start: start, end: end, InvestorID: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
@@ -50,11 +49,13 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
     var array = [Model_Redemption]()
     let connect = ConnectSv()
     let formats = Format()
-    
+    let investor = UserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableview.dataSource = self
         self.tableview.delegate = self
+        tableview.estimatedRowHeight = 30
+        tableview.rowHeight = UITableViewAutomaticDimension
         tableview.register(RedemptionTableViewCell.self, forCellReuseIdentifier: "redempcell")
         txt_search.layer.cornerRadius = 7
         txt_from.text = formats.getfirstdayofmounth()
@@ -70,7 +71,7 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
         alertController.view.addSubview(spinnerIndicator)
         self.present(alertController, animated: false, completion: nil)
         
-        let investor = UserDefaults()
+   
         let start = formats.formatdatetoMMddyyyy(str: formats.getfirstdayofmounth())
         let end = formats.formatdatetoMMddyyyy(str: formats.getdaynow())
         getdata(start: start, end: end, InvestorID: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
@@ -92,15 +93,13 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
         if(indexPath.row == 0){
             
             
-            cells.labdate.font = cells.labdate.font.withSize(15)
-            cells.labseries.font = cells.labseries.font.withSize(15)
-            cells.labunit.font = cells.labunit.font.withSize(15)
-            cells.labprice.font = cells.labprice.font.withSize(15)
-            cells.labamount.font = cells.labamount.font.withSize(15)
+            cells.labdate.font = cells.labdate.font.withSize(13)
+            cells.labseries.font = cells.labseries.font.withSize(13)
+            cells.labunit.font = cells.labunit.font.withSize(13)
+            cells.labprice.font = cells.labprice.font.withSize(13)
+            cells.labamount.font = cells.labamount.font.withSize(13)
             cells.labdate.text = "Date"
             cells.labseries.text = "Classes/Series"
-            cells.labseries.numberOfLines = 0
-            cells.labseries.lineBreakMode = .byWordWrapping
             cells.labunit.text = "Unit"
             cells.labprice.text = "Price"
             cells.labamount.text = "Amount"
@@ -120,9 +119,9 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
             cells.labamount.font = cells.labamount.font.withSize(13)
             cells.labdate.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row - 1].DATE!)
            cells.labseries.text = array[indexPath.row - 1].SHARE_SERIES_NAME
-            cells.labunit.text = formats.formatpricetocurrency(string1: String(format:"%3.2f", array[indexPath.row - 1].UNIT_PRICE!))
-            cells.labprice.text = formats.formatpricetocurrency(string1:String(format:"%3.2f", array[indexPath.row - 1].QUANTITY!))
-            cells.labamount.text = formats.formatpricetocurrency(string1:String(format:"%3.2f", array[indexPath.row - 1].AMOUNT!))
+            cells.labunit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row - 1].UNIT_PRICE!))
+            cells.labprice.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].QUANTITY!))
+            cells.labamount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].AMOUNT!))
             
         }
         
@@ -157,18 +156,16 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
                     }
                     print(total_usd)
                     
-                    self.lbl_sgd.text = "SGD " + self.formats.formatpricetocurrency(string1: String(format:"%3.2f", total_sgd))
-                    self.lbl_usd.text = "USD " + self.formats.formatpricetocurrency(string1: String(format:"%3.2f", total_usd))
+                    self.lbl_sgd.text = "SGD " + self.formats.formatpricetocurrency(string1: String(format:"%3." + self.investor.string(forKey: "PRICE_ROUNDING")! + "f", total_sgd))
+                    self.lbl_usd.text = "USD " + self.formats.formatpricetocurrency(string1: String(format:"%3." + self.investor.string(forKey: "PRICE_ROUNDING")! + "f", total_usd))
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                     
                     
                 }else{
                     self.array = result!
-                    var total_usd : Float = 0
-                    var total_sgd :Float = 0
-                    self.lbl_sgd.text = "SGD " + self.formats.formatpricetocurrency(string1: String(format:"%3.2f", total_sgd))
-                    self.lbl_usd.text = "USD " + self.formats.formatpricetocurrency(string1: String(format:"%3.2f", total_usd))
+                    self.lbl_sgd.text = "SGD 0"
+                    self.lbl_usd.text = "USD 0"
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                     

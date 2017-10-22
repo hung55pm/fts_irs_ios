@@ -48,8 +48,8 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
         getdata(start: start, end: end, investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
         
     }
- 
-    
+    var cells : SubcriptionTableViewCell!
+    let investor = UserDefaults()
     var array = [Model_Sucription]()
     let connect = ConnectSv()
     let formats = Format()
@@ -57,6 +57,10 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         self.tableview.dataSource = self
         self.tableview.delegate = self
+        tableview.estimatedRowHeight = 30
+        tableview.rowHeight = UITableViewAutomaticDimension
+        tableview.register(SubcriptionTableViewCell.self, forCellReuseIdentifier: "sub")
+
         bt_txt_search.layer.cornerRadius = 7
         
         txt_txt.text = formats.getfirstdayofmounth();
@@ -73,7 +77,7 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
         alertController.view.addSubview(spinnerIndicator)
         self.present(alertController, animated: false, completion: nil)
         
-        let investor = UserDefaults()
+
         getdata(start: formats.getfirstdayofmounth(), end: formats.getdaynow(), investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
         // Do any additional setup after loading the view.
     }
@@ -88,35 +92,41 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = Bundle.main.loadNibNamed("SubcriptionTableViewCell", owner: self, options: nil)?.first as! SubcriptionTableViewCell
+        cells = tableview.dequeueReusableCell(withIdentifier: "sub", for: indexPath) as! SubcriptionTableViewCell
         if(indexPath.row == 0){
             
-            cell.date.font = cell.date.font.withSize(15)
-            cell.series.font = cell.series.font.withSize(15)
-            cell.unit.font = cell.unit.font.withSize(15)
-            cell.price.font = cell.price.font.withSize(15)
-            cell.amount.font = cell.amount.font.withSize(15)
-            cell.date.text = "Date"
-            cell.series.text = "Classes/Series"
-            cell.unit.text = "Unit"
-            cell.price.text = "Price"
-            cell.amount.text = "Amount"
-            cell.backgroundColor = UIColor.blue
-            cell.date.textColor = UIColor.white
-            cell.series.textColor = UIColor.white
-            cell.unit.textColor = UIColor.white
-            cell.price.textColor = UIColor.white
-            cell.amount.textColor = UIColor.white
+            cells.labdate.font = cells.labdate.font.withSize(13)
+            cells.labseries.font = cells.labseries.font.withSize(13)
+            cells.labunit.font = cells.labunit.font.withSize(13)
+            cells.labprice.font = cells.labprice.font.withSize(13)
+            cells.labamount.font = cells.labamount.font.withSize(13)
+            cells.labdate.text = "Date"
+            cells.labseries.text = "Classes/Series"
+            cells.labunit.text = "Unit"
+            cells.labprice.text = "Price"
+            cells.labamount.text = "Amount"
+            cells.backgroundColor = UIColor.blue
+            cells.labdate.textColor = UIColor.white
+            cells.labseries.textColor = UIColor.white
+            cells.labunit.textColor = UIColor.white
+            cells.labprice.textColor = UIColor.white
+            cells.labamount.textColor = UIColor.white
+
+
             
         }else if (indexPath.row > 0){
-            cell.date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row - 1].DATE!)
-            cell.series.text = array[indexPath.row - 1].SHARE_SERIES_NAME
-            cell.unit.text = formats.formatpricetocurrency(string1: String(format:"%3.2f", array[indexPath.row - 1].UNIT_PRICE!))
-            cell.price.text = formats.formatpricetocurrency(string1:String(format:"%3.2f", array[indexPath.row - 1].QUANTITY!))
-            cell.amount.text = formats.formatpricetocurrency(string1:String(format:"%3.2f", array[indexPath.row - 1].AMOUNT!))
-        
+            cells.labdate.font = cells.labdate.font.withSize(13)
+            cells.labseries.font = cells.labseries.font.withSize(13)
+            cells.labunit.font = cells.labunit.font.withSize(13)
+            cells.labprice.font = cells.labprice.font.withSize(13)
+            cells.labamount.font = cells.labamount.font.withSize(13)
+            cells.labdate.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row - 1].DATE!)
+            cells.labseries.text = array[indexPath.row - 1].SHARE_SERIES_NAME
+            cells.labunit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row - 1].UNIT_PRICE!))
+            cells.labprice.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].QUANTITY!))
+            cells.labamount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].AMOUNT!))
         }
-        return cell
+        return cells
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.array.count + 1)
@@ -134,27 +144,47 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
     func getdata(start: String, end: String, investorId: String, alertController : UIAlertController) {
         connect.getsubcription(investorID: investorId, stratdate: start, enddate: end, completionHandler: {(result) in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.array = result!
-                //            self.tableview.reloadData()
-                print("aaaaa" + String(self.array.count))
-                
-                var total_usd : Float = 0
-                var total_sgd :Float = 0
-                if(result?.count != 0){
-                    for item in result!{
-                        if(item.CURRENCY_ID == "USD"){
-                            total_usd = total_usd + item.AMOUNT!
-                        }else if(item.CURRENCY_ID == "SGD"){
-                            total_sgd = total_sgd + item.AMOUNT!
+                if((result?.count)!>0){
+                    self.array = result!
+                    //            self.tableview.reloadData()
+                    print("aaaaa" + String(self.array.count))
+                    
+                    var total_usd : Float = 0
+                    var total_sgd :Float = 0
+                    if(result?.count != 0){
+                        for item in result!{
+                            if(item.CURRENCY_ID == "USD"){
+                                total_usd = total_usd + item.AMOUNT!
+                            }else if(item.CURRENCY_ID == "SGD"){
+                                total_sgd = total_sgd + item.AMOUNT!
+                            }
                         }
+                        print(total_usd)
                     }
-                    print(total_usd)
+                    
+                    
+                    
+                    
+                    if(total_usd == 0){
+                        self.total_usd.text = "USD 0"
+                    }else{
+                        self.total_usd.text = "USD " + self.formats.formatpricetocurrency(string1: String(format:"%3." + self.investor.string(forKey: "PRICE_ROUNDING")! + "f", total_usd))
+                    }
+                    if(total_sgd == 0){
+                        self.total_sgd.text = "SGD 0"
+                    }else{
+                        self.total_sgd.text = "SGD " + self.formats.formatpricetocurrency(string1: String(format:"%3." + self.investor.string(forKey: "PRICE_ROUNDING")! + "f", total_sgd))
+                    }
+                    self.tableview.reloadData()
+                    alertController.dismiss(animated: true, completion: nil);
+                }else{
+                    self.array = result!
+                    self.total_usd.text = "USD 0"
+                    self.total_sgd.text = "SGD 0"
+                    self.tableview.reloadData()
+                    alertController.dismiss(animated: true, completion: nil);
                 }
                 
-                self.total_sgd.text = "SGD " + self.formats.formatpricetocurrency(string1: String(format:"%3.2f", total_sgd))
-                self.total_usd.text = "USD " + self.formats.formatpricetocurrency(string1: String(format:"%3.2f", total_usd))
-                self.tableview.reloadData()
-                alertController.dismiss(animated: true, completion: nil);
                 
                 
             }

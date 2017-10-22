@@ -10,6 +10,7 @@ pod 'SharkORM'
 pod 'SlideMenuControllerSwift'
 pod 'DatePickerDialog'
 pod 'PureLayout', '~> 2.0.5'
+pod 'DropDown'
 # Pods for IRSMobile
 
 end

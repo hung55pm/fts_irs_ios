@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 import SlideMenuControllerSwift
-
+import DropDown
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         var navigationBarAppearace = UINavigationBar.appearance()
-        
+        DropDown.startListeningToKeyboard()
         navigationBarAppearace.tintColor = UIColor.white
         navigationBarAppearace.barTintColor = UIColor.blue
         navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func createmenuleft() {
         
-        let mainViewController = MainViewController()
+        let mainViewController = AllTransactionViewController()
         let leftViewController = LeftViewController()
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
         let slideMenuController = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController)
