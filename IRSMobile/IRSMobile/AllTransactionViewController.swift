@@ -49,7 +49,6 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func bt_select(_ sender: UIButton) {
         chooseDropDown.show()
     }
-    var cells : AllTransactionTableViewCell!
     var array = [Model_AllTransaction]()
     let chooseDropDown = DropDown()
     let investor = UserDefaults()
@@ -57,10 +56,9 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
     let formats = Format()
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableview.register(AllTransactionTableViewCell.self, forCellReuseIdentifier: "alltran")
         tableview.dataSource = self
         tableview.delegate = self
-        tableview.estimatedRowHeight = 30
+        tableview.estimatedRowHeight = 100
         tableview.rowHeight = UITableViewAutomaticDimension
         setupChooseDropDown()
          let myColor = UIColor.orange
@@ -83,53 +81,65 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        cells = tableview.dequeueReusableCell(withIdentifier: "alltran", for: indexPath) as! AllTransactionTableViewCell
-        if(indexPath.row == 0){
-            
-            
-            cells.labdate.font = cells.labdate.font.withSize(13)
-            cells.labtran.font = cells.labdate.font.withSize(13)
-            cells.labseries.font = cells.labseries.font.withSize(13)
-            cells.labunit.font = cells.labunit.font.withSize(13)
-            cells.labunitbalace.font = cells.labunitbalace.font.withSize(13)
-            cells.labamount.font = cells.labamount.font.withSize(13)
-            cells.labdate.text = "Date"
-            cells.labtran.text = "Transaction"
-            cells.labseries.text = "Classes/Series"
-            cells.labunit.text = "Unit"
-            cells.labunitbalace.text = "Unit Balance"
-            cells.labamount.text = "Amount"
-            cells.backgroundColor = UIColor.blue
-            cells.labdate.textColor = UIColor.white
-            cells.labtran.textColor = UIColor.white
-            cells.labseries.textColor = UIColor.white
-            cells.labunit.textColor = UIColor.white
-            cells.labunitbalace.textColor = UIColor.white
-            cells.labamount.textColor = UIColor.white
-            
-            
-        }else if (indexPath.row > 0){
-            
-            cells.labdate.font = cells.labdate.font.withSize(13)
-            cells.labtran.font = cells.labdate.font.withSize(13)
-            cells.labseries.font = cells.labseries.font.withSize(13)
-            cells.labunit.font = cells.labunit.font.withSize(13)
-            cells.labunitbalace.font = cells.labunitbalace.font.withSize(13)
-            cells.labamount.font = cells.labamount.font.withSize(13)
-            
-            cells.labdate.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row - 1].DEALING_DATE!)
-            cells.labtran.text = array[indexPath.row - 1].TRAN_TYPE_NAME!
-            cells.labseries.text = array[indexPath.row - 1].SHARE_SERIES_NAME
-            cells.labunit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row - 1].UNIT_PRICE!))
-            cells.labunitbalace.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].QUANTITY!))
-            cells.labamount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].AMOUNT!))
-            
-        }
+       let cells = Bundle.main.loadNibNamed("AllTranTableViewCell", owner: self, options: nil)?.first as! AllTranTableViewCell
+        cells.txt_date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row ].DEALING_DATE!)
+        cells.txt_trantype.text = array[indexPath.row].TRAN_TYPE_NAME!
+        cells.txt_series.text = array[indexPath.row].SHARE_SERIES_NAME
+        cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row].UNIT_PRICE!))
+        cells.txt_unit_balance.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].QUANTITY!))
+        cells.txt_amount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].AMOUNT!))
+
+        
+//        if(indexPath.row == 0){
+//            
+//            
+//            cells.labdate.font = cells.labdate.font.withSize(13)
+//            cells.labtran.font = cells.labdate.font.withSize(13)
+//            cells.labseries.font = cells.labseries.font.withSize(13)
+//            cells.labunit.font = cells.labunit.font.withSize(13)
+//            cells.labunitbalace.font = cells.labunitbalace.font.withSize(13)
+//            cells.labamount.font = cells.labamount.font.withSize(13)
+//            cells.labdate.text = "Date"
+//            cells.labtran.text = "Transaction"
+//            cells.labseries.text = "Classes/Series"
+//            cells.labunit.text = "Unit"
+//            cells.labunitbalace.text = "Unit Balance"
+//            cells.labamount.text = "Amount"
+//            cells.backgroundColor = UIColor.blue
+//            cells.labdate.textColor = UIColor.white
+//            cells.labtran.textColor = UIColor.white
+//            cells.labseries.textColor = UIColor.white
+//            cells.labunit.textColor = UIColor.white
+//            cells.labunitbalace.textColor = UIColor.white
+//            cells.labamount.textColor = UIColor.white
+//            
+//            
+//        }else if (indexPath.row > 0){
+//            
+//            cells.labdate.font = cells.labdate.font.withSize(13)
+//            cells.labtran.font = cells.labdate.font.withSize(13)
+//            cells.labseries.font = cells.labseries.font.withSize(13)
+//            cells.labunit.font = cells.labunit.font.withSize(13)
+//            cells.labunitbalace.font = cells.labunitbalace.font.withSize(13)
+//            cells.labamount.font = cells.labamount.font.withSize(13)
+//            
+//            cells.labdate.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row - 1].DEALING_DATE!)
+//            cells.labtran.text = array[indexPath.row - 1].TRAN_TYPE_NAME!
+//            cells.labseries.text = array[indexPath.row - 1].SHARE_SERIES_NAME
+//            cells.labunit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row - 1].UNIT_PRICE!))
+//            cells.labunitbalace.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].QUANTITY!))
+//            cells.labamount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].AMOUNT!))
+//            
+//        }
 
         return cells
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 180.0;
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.array.count + 1)
+        return (self.array.count)
     }
     
     func setupChooseDropDown() {

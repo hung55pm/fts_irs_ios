@@ -44,7 +44,7 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var lbl_sgd: UILabel!
     
     @IBOutlet weak var tableview: UITableView!
-    var cells : RedemptionTableViewCell!
+    //var cells : RedemptionTableViewCell!
     
     var array = [Model_Redemption]()
     let connect = ConnectSv()
@@ -54,9 +54,9 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         self.tableview.dataSource = self
         self.tableview.delegate = self
-        tableview.estimatedRowHeight = 30
-        tableview.rowHeight = UITableViewAutomaticDimension
-        tableview.register(RedemptionTableViewCell.self, forCellReuseIdentifier: "redempcell")
+//        tableview.estimatedRowHeight = 30
+//        tableview.rowHeight = UITableViewAutomaticDimension
+        //tableview.register(RedemptionTableViewCell.self, forCellReuseIdentifier: "redempcell")
         txt_search.layer.cornerRadius = 7
         txt_from.text = formats.getfirstdayofmounth()
         txt_to.text = formats.getdaynow()
@@ -86,48 +86,59 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.array.count + 1)
+        return (self.array.count)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        cells = tableview.dequeueReusableCell(withIdentifier: "redempcell", for: indexPath) as! RedemptionTableViewCell
-        if(indexPath.row == 0){
-            
-            
-            cells.labdate.font = cells.labdate.font.withSize(13)
-            cells.labseries.font = cells.labseries.font.withSize(13)
-            cells.labunit.font = cells.labunit.font.withSize(13)
-            cells.labprice.font = cells.labprice.font.withSize(13)
-            cells.labamount.font = cells.labamount.font.withSize(13)
-            cells.labdate.text = "Date"
-            cells.labseries.text = "Classes/Series"
-            cells.labunit.text = "Unit"
-            cells.labprice.text = "Price"
-            cells.labamount.text = "Amount"
-            cells.backgroundColor = UIColor.blue
-            cells.labdate.textColor = UIColor.white
-            cells.labseries.textColor = UIColor.white
-            cells.labunit.textColor = UIColor.white
-            cells.labprice.textColor = UIColor.white
-            cells.labamount.textColor = UIColor.white
-            
-        }else if (indexPath.row > 0){
-            
-            cells.labdate.font = cells.labdate.font.withSize(13)
-            cells.labseries.font = cells.labseries.font.withSize(13)
-            cells.labunit.font = cells.labunit.font.withSize(13)
-            cells.labprice.font = cells.labprice.font.withSize(13)
-            cells.labamount.font = cells.labamount.font.withSize(13)
-            cells.labdate.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row - 1].DATE!)
-           cells.labseries.text = array[indexPath.row - 1].SHARE_SERIES_NAME
-            cells.labunit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row - 1].UNIT_PRICE!))
-            cells.labprice.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].QUANTITY!))
-            cells.labamount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].AMOUNT!))
-            
-        }
+         let cells = Bundle.main.loadNibNamed("RedemTableViewCell", owner: self, options: nil)?.first as! RedemTableViewCell
+        cells.txt_date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row].DATE!)
+        cells.txt_series.text = array[indexPath.row].SHARE_SERIES_NAME
+        cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row].UNIT_PRICE!))
+        cells.txt_price.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].QUANTITY!))
+        cells.txt_amount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].AMOUNT!))
+        
+        
+//        if(indexPath.row == 0){
+//            
+//            
+//            cells.labdate.font = cells.labdate.font.withSize(13)
+//            cells.labseries.font = cells.labseries.font.withSize(13)
+//            cells.labunit.font = cells.labunit.font.withSize(13)
+//            cells.labprice.font = cells.labprice.font.withSize(13)
+//            cells.labamount.font = cells.labamount.font.withSize(13)
+//            cells.labdate.text = "Date"
+//            cells.labseries.text = "Classes/Series"
+//            cells.labunit.text = "Unit"
+//            cells.labprice.text = "Price"
+//            cells.labamount.text = "Amount"
+//            cells.backgroundColor = UIColor.blue
+//            cells.labdate.textColor = UIColor.white
+//            cells.labseries.textColor = UIColor.white
+//            cells.labunit.textColor = UIColor.white
+//            cells.labprice.textColor = UIColor.white
+//            cells.labamount.textColor = UIColor.white
+//            
+//        }else if (indexPath.row > 0){
+//            
+//            cells.labdate.font = cells.labdate.font.withSize(13)
+//            cells.labseries.font = cells.labseries.font.withSize(13)
+//            cells.labunit.font = cells.labunit.font.withSize(13)
+//            cells.labprice.font = cells.labprice.font.withSize(13)
+//            cells.labamount.font = cells.labamount.font.withSize(13)
+//            cells.labdate.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row - 1].DATE!)
+//           cells.labseries.text = array[indexPath.row - 1].SHARE_SERIES_NAME
+//            cells.labunit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row - 1].UNIT_PRICE!))
+//            cells.labprice.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].QUANTITY!))
+//            cells.labamount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].AMOUNT!))
+//            
+//        }
         
         return cells
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 150.0;
+    }
+
     
     func datePickerTapped(txt : UITextField) {
         DatePickerDialog().show("DatePicker", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {

@@ -17,6 +17,16 @@
 		9801CAB51F7B8273001488E1 /* AllTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAB31F7B8273001488E1 /* AllTransactionViewController.swift */; };
 		9801CAB61F7B8273001488E1 /* AllTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9801CAB41F7B8273001488E1 /* AllTransactionViewController.xib */; };
 		9801CABA1F7B984B001488E1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAB91F7B984B001488E1 /* UIViewController.swift */; };
+		9822F1AE1FA01ECF00825133 /* SubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822F1AC1FA01ECF00825133 /* SubTableViewCell.swift */; };
+		9822F1AF1FA01ECF00825133 /* SubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9822F1AD1FA01ECF00825133 /* SubTableViewCell.xib */; };
+		9822F1B21FA01EEE00825133 /* RedemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822F1B01FA01EEE00825133 /* RedemTableViewCell.swift */; };
+		9822F1B31FA01EEE00825133 /* RedemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9822F1B11FA01EEE00825133 /* RedemTableViewCell.xib */; };
+		9822F1B61FA01F0000825133 /* AllTranTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822F1B41FA01F0000825133 /* AllTranTableViewCell.swift */; };
+		9822F1B71FA01F0000825133 /* AllTranTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9822F1B51FA01F0000825133 /* AllTranTableViewCell.xib */; };
+		9822F1BA1FA01F1500825133 /* PortTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822F1B81FA01F1500825133 /* PortTableViewCell.swift */; };
+		9822F1BB1FA01F1500825133 /* PortTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9822F1B91FA01F1500825133 /* PortTableViewCell.xib */; };
+		9822F1BE1FA01F2700825133 /* PortCreditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822F1BC1FA01F2700825133 /* PortCreditTableViewCell.swift */; };
+		9822F1BF1FA01F2700825133 /* PortCreditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9822F1BD1FA01F2700825133 /* PortCreditTableViewCell.xib */; };
 		984B3D511F852B1100ECA24D /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984B3D501F852B1100ECA24D /* Format.swift */; };
 		984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D741F6F830C00D0630E /* AppDelegate.swift */; };
 		984E1D771F6F830C00D0630E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D761F6F830C00D0630E /* ViewController.swift */; };
@@ -72,6 +82,16 @@
 		9801CAB31F7B8273001488E1 /* AllTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTransactionViewController.swift; sourceTree = "<group>"; };
 		9801CAB41F7B8273001488E1 /* AllTransactionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllTransactionViewController.xib; sourceTree = "<group>"; };
 		9801CAB91F7B984B001488E1 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		9822F1AC1FA01ECF00825133 /* SubTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTableViewCell.swift; sourceTree = "<group>"; };
+		9822F1AD1FA01ECF00825133 /* SubTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubTableViewCell.xib; sourceTree = "<group>"; };
+		9822F1B01FA01EEE00825133 /* RedemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemTableViewCell.swift; sourceTree = "<group>"; };
+		9822F1B11FA01EEE00825133 /* RedemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedemTableViewCell.xib; sourceTree = "<group>"; };
+		9822F1B41FA01F0000825133 /* AllTranTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTranTableViewCell.swift; sourceTree = "<group>"; };
+		9822F1B51FA01F0000825133 /* AllTranTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllTranTableViewCell.xib; sourceTree = "<group>"; };
+		9822F1B81FA01F1500825133 /* PortTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortTableViewCell.swift; sourceTree = "<group>"; };
+		9822F1B91FA01F1500825133 /* PortTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortTableViewCell.xib; sourceTree = "<group>"; };
+		9822F1BC1FA01F2700825133 /* PortCreditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortCreditTableViewCell.swift; sourceTree = "<group>"; };
+		9822F1BD1FA01F2700825133 /* PortCreditTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortCreditTableViewCell.xib; sourceTree = "<group>"; };
 		984B3D501F852B1100ECA24D /* Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		984E1D711F6F830B00D0630E /* IRSMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRSMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		984E1D741F6F830C00D0630E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +188,23 @@
 			name = Transaction;
 			sourceTree = "<group>";
 		};
+		9822F1A71FA01E3400825133 /* Tableviecellxib */ = {
+			isa = PBXGroup;
+			children = (
+				9822F1AC1FA01ECF00825133 /* SubTableViewCell.swift */,
+				9822F1AD1FA01ECF00825133 /* SubTableViewCell.xib */,
+				9822F1B01FA01EEE00825133 /* RedemTableViewCell.swift */,
+				9822F1B11FA01EEE00825133 /* RedemTableViewCell.xib */,
+				9822F1B41FA01F0000825133 /* AllTranTableViewCell.swift */,
+				9822F1B51FA01F0000825133 /* AllTranTableViewCell.xib */,
+				9822F1B81FA01F1500825133 /* PortTableViewCell.swift */,
+				9822F1B91FA01F1500825133 /* PortTableViewCell.xib */,
+				9822F1BC1FA01F2700825133 /* PortCreditTableViewCell.swift */,
+				9822F1BD1FA01F2700825133 /* PortCreditTableViewCell.xib */,
+			);
+			name = Tableviecellxib;
+			sourceTree = "<group>";
+		};
 		984B3D4F1F852A7700ECA24D /* Untils */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,8 +235,9 @@
 		984E1D731F6F830B00D0630E /* IRSMobile */ = {
 			isa = PBXGroup;
 			children = (
+				9822F1A71FA01E3400825133 /* Tableviecellxib */,
 				98969CBD1F966B11009F60A5 /* Views */,
-				98CB90E71F89B49900748A23 /* Tableviewcellxib */,
+				98CB90E71F89B49900748A23 /* Tableviewcellcode */,
 				984B3D4F1F852A7700ECA24D /* Untils */,
 				98E74B911F8281CD0038BA91 /* InvestorProfile */,
 				9801CAB21F7B8241001488E1 /* Transaction */,
@@ -262,7 +300,7 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		98CB90E71F89B49900748A23 /* Tableviewcellxib */ = {
+		98CB90E71F89B49900748A23 /* Tableviewcellcode */ = {
 			isa = PBXGroup;
 			children = (
 				98CB90E81F89B4E900748A23 /* SubcriptionTableViewCell.swift */,
@@ -271,7 +309,7 @@
 				989CB45B1F9C7CAE00286910 /* PortfolioTableViewCell.swift */,
 				989CB4611F9C96BC00286910 /* PortfolioDetailTableViewCell.swift */,
 			);
-			name = Tableviewcellxib;
+			name = Tableviewcellcode;
 			sourceTree = "<group>";
 		};
 		98E74B911F8281CD0038BA91 /* InvestorProfile */ = {
@@ -366,12 +404,17 @@
 				98E74B951F8281F30038BA91 /* InvestorInfomationViewController.xib in Resources */,
 				9801CAB11F7B81BD001488E1 /* LeftViewController.xib in Resources */,
 				9801CAAB1F7B8163001488E1 /* DataTableViewCell.xib in Resources */,
+				9822F1B31FA01EEE00825133 /* RedemTableViewCell.xib in Resources */,
 				98E74B8C1F8281A40038BA91 /* RedemptionViewController.xib in Resources */,
 				98E74BA11F8282420038BA91 /* ChangePasswordViewController.xib in Resources */,
+				9822F1BB1FA01F1500825133 /* PortTableViewCell.xib in Resources */,
 				984E1D821F6F830C00D0630E /* LaunchScreen.storyboard in Resources */,
+				9822F1B71FA01F0000825133 /* AllTranTableViewCell.xib in Resources */,
+				9822F1AF1FA01ECF00825133 /* SubTableViewCell.xib in Resources */,
 				984E1D911F6F848300D0630E /* MainViewController.xib in Resources */,
 				98E74B991F82820B0038BA91 /* BankAcountViewController.xib in Resources */,
 				984E1D7F1F6F830C00D0630E /* Assets.xcassets in Resources */,
+				9822F1BF1FA01F2700825133 /* PortCreditTableViewCell.xib in Resources */,
 				9801CAB61F7B8273001488E1 /* AllTransactionViewController.xib in Resources */,
 				984E1D7A1F6F830C00D0630E /* Main.storyboard in Resources */,
 				98E74B881F82818F0038BA91 /* SubcriptionViewController.xib in Resources */,
@@ -454,9 +497,11 @@
 				984B3D511F852B1100ECA24D /* Format.swift in Sources */,
 				98CB90EF1F89D24B00748A23 /* Model_Subcription.swift in Sources */,
 				9801CAA91F7B8163001488E1 /* BaseTableViewCell.swift in Sources */,
+				9822F1AE1FA01ECF00825133 /* SubTableViewCell.swift in Sources */,
 				989CB45A1F9C4C7100286910 /* Model_AllTransaction.swift in Sources */,
 				984E1D8C1F6F847100D0630E /* LoginViewController.swift in Sources */,
 				9801CAAC1F7B8163001488E1 /* String.swift in Sources */,
+				9822F1B21FA01EEE00825133 /* RedemTableViewCell.swift in Sources */,
 				98A2DD991F91A5A1005F03B5 /* RedemptionTableViewCell.swift in Sources */,
 				98CB90EA1F89B4E900748A23 /* SubcriptionTableViewCell.swift in Sources */,
 				98973FFF1F7A518300137751 /* Model_Invertor.swift in Sources */,
@@ -467,6 +512,7 @@
 				98F195C61F95E7AE00386AA5 /* ProfileView.swift in Sources */,
 				9801CAB01F7B81BD001488E1 /* LeftViewController.swift in Sources */,
 				98CB90F11F89D38B00748A23 /* Model_Redemption.swift in Sources */,
+				9822F1BA1FA01F1500825133 /* PortTableViewCell.swift in Sources */,
 				989CB4601F9C894000286910 /* Model_Portfolio_detail.swift in Sources */,
 				98CB90ED1F89CF5F00748A23 /* Constant.swift in Sources */,
 				989CB4581F9C489700286910 /* AllTransactionTableViewCell.swift in Sources */,
@@ -475,10 +521,12 @@
 				98E74B9C1F8282300038BA91 /* ContactInformationViewController.swift in Sources */,
 				98E74B981F82820B0038BA91 /* BankAcountViewController.swift in Sources */,
 				98E74B941F8281F30038BA91 /* InvestorInfomationViewController.swift in Sources */,
+				9822F1B61FA01F0000825133 /* AllTranTableViewCell.swift in Sources */,
 				98E74BA01F8282420038BA91 /* ChangePasswordViewController.swift in Sources */,
 				9801CABA1F7B984B001488E1 /* UIViewController.swift in Sources */,
 				9801CAB51F7B8273001488E1 /* AllTransactionViewController.swift in Sources */,
 				984E1D7D1F6F830C00D0630E /* IRSMobile.xcdatamodeld in Sources */,
+				9822F1BE1FA01F2700825133 /* PortCreditTableViewCell.swift in Sources */,
 				989CB45C1F9C7CAE00286910 /* PortfolioTableViewCell.swift in Sources */,
 				984E1D771F6F830C00D0630E /* ViewController.swift in Sources */,
 				984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */,
