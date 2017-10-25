@@ -147,6 +147,7 @@ class ConnectSv {
                     model.QUANTITY = dayData["QUANTITY"] as? Float
                     model.AMOUNT = dayData["AMOUNT"] as? Float
                     model.CURRENCY_ID = dayData["CURRENCY_ID"] as? String
+                    model.TRAN_TYPE_NAME = dayData["TRAN_TYPE_NAME"] as? String
                     array.append(model)
                 }
                 print(array)
@@ -196,6 +197,7 @@ class ConnectSv {
                     model.QUANTITY = dayData["QUANTITY"] as? Float
                     model.AMOUNT = dayData["AMOUNT"] as? Float
                     model.CURRENCY_ID = dayData["CURRENCY_ID"] as? String
+                    model.TRAN_TYPE_NAME = dayData["TRAN_TYPE_NAME"] as? String
                     array.append(model)
                 }
                 print(array)
@@ -228,7 +230,7 @@ class ConnectSv {
             }
             do {
                 let datatran = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary // get data trar ve khi data tra ve laf mot json object
-                
+                print(datatran)
                 let json = datatran?["SHAREHOLDER_MOVEMENT"] as! [[String:Any]]
                 if(json.count>0){
                     for daydata in json{

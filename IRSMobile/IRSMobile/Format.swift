@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import DatePickerDialog
 class Format{
     func formatdatetoddMMMyyyy(str: String) -> String {
         let dateFormatter = DateFormatter()
@@ -50,6 +51,7 @@ class Format{
     
     
     func formatpricetocurrency(string1 : String) -> String {
+        print(string1)
         var token = string1.components(separatedBy: ".")
         var str : String = ""
         for it in token{
@@ -83,7 +85,7 @@ class Format{
                 str = arrstr[item] + "," + str
             }
         }
-
+        print("aaaaa" + str)
         return str
     }
     func getfirstdayofmounth() -> String{
@@ -100,5 +102,9 @@ class Format{
         formatter.dateFormat = "dd-MMM-yy"
         return formatter.string(from: date)
     }
-
+    
+    
 }
+
+
+

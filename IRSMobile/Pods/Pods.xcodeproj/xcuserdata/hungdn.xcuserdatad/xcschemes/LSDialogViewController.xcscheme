@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '727E644416E41C40D6FC45E86580CD89'
-               BlueprintName = 'Toaster'
+               BlueprintIdentifier = 'AFFCE65ABDBBB8B79E157FBF525F73B8'
+               BlueprintName = 'LSDialogViewController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Toaster.framework'>
+               BuildableName = 'LSDialogViewController.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

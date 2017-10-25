@@ -27,6 +27,12 @@
 		9822F1BB1FA01F1500825133 /* PortTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9822F1B91FA01F1500825133 /* PortTableViewCell.xib */; };
 		9822F1BE1FA01F2700825133 /* PortCreditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822F1BC1FA01F2700825133 /* PortCreditTableViewCell.swift */; };
 		9822F1BF1FA01F2700825133 /* PortCreditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9822F1BD1FA01F2700825133 /* PortCreditTableViewCell.xib */; };
+		9825824A1FA0BAB3002F0873 /* DialogSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982582481FA0BAB3002F0873 /* DialogSubViewController.swift */; };
+		9825824B1FA0BAB3002F0873 /* DialogSubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 982582491FA0BAB3002F0873 /* DialogSubViewController.xib */; };
+		9825824E1FA0D875002F0873 /* DialogRedemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9825824C1FA0D875002F0873 /* DialogRedemViewController.swift */; };
+		9825824F1FA0D875002F0873 /* DialogRedemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9825824D1FA0D875002F0873 /* DialogRedemViewController.xib */; };
+		982582521FA0D88C002F0873 /* DialogAllTranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982582501FA0D88C002F0873 /* DialogAllTranViewController.swift */; };
+		982582531FA0D88C002F0873 /* DialogAllTranViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 982582511FA0D88C002F0873 /* DialogAllTranViewController.xib */; };
 		984B3D511F852B1100ECA24D /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984B3D501F852B1100ECA24D /* Format.swift */; };
 		984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D741F6F830C00D0630E /* AppDelegate.swift */; };
 		984E1D771F6F830C00D0630E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D761F6F830C00D0630E /* ViewController.swift */; };
@@ -92,6 +98,12 @@
 		9822F1B91FA01F1500825133 /* PortTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortTableViewCell.xib; sourceTree = "<group>"; };
 		9822F1BC1FA01F2700825133 /* PortCreditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortCreditTableViewCell.swift; sourceTree = "<group>"; };
 		9822F1BD1FA01F2700825133 /* PortCreditTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortCreditTableViewCell.xib; sourceTree = "<group>"; };
+		982582481FA0BAB3002F0873 /* DialogSubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogSubViewController.swift; sourceTree = "<group>"; };
+		982582491FA0BAB3002F0873 /* DialogSubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogSubViewController.xib; sourceTree = "<group>"; };
+		9825824C1FA0D875002F0873 /* DialogRedemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRedemViewController.swift; sourceTree = "<group>"; };
+		9825824D1FA0D875002F0873 /* DialogRedemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogRedemViewController.xib; sourceTree = "<group>"; };
+		982582501FA0D88C002F0873 /* DialogAllTranViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogAllTranViewController.swift; sourceTree = "<group>"; };
+		982582511FA0D88C002F0873 /* DialogAllTranViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogAllTranViewController.xib; sourceTree = "<group>"; };
 		984B3D501F852B1100ECA24D /* Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		984E1D711F6F830B00D0630E /* IRSMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRSMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		984E1D741F6F830C00D0630E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +217,19 @@
 			name = Tableviecellxib;
 			sourceTree = "<group>";
 		};
+		982582471FA0BA26002F0873 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				982582481FA0BAB3002F0873 /* DialogSubViewController.swift */,
+				982582491FA0BAB3002F0873 /* DialogSubViewController.xib */,
+				9825824C1FA0D875002F0873 /* DialogRedemViewController.swift */,
+				9825824D1FA0D875002F0873 /* DialogRedemViewController.xib */,
+				982582501FA0D88C002F0873 /* DialogAllTranViewController.swift */,
+				982582511FA0D88C002F0873 /* DialogAllTranViewController.xib */,
+			);
+			name = Dialog;
+			sourceTree = "<group>";
+		};
 		984B3D4F1F852A7700ECA24D /* Untils */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +260,7 @@
 		984E1D731F6F830B00D0630E /* IRSMobile */ = {
 			isa = PBXGroup;
 			children = (
+				982582471FA0BA26002F0873 /* Dialog */,
 				9822F1A71FA01E3400825133 /* Tableviecellxib */,
 				98969CBD1F966B11009F60A5 /* Views */,
 				98CB90E71F89B49900748A23 /* Tableviewcellcode */,
@@ -410,10 +436,13 @@
 				9822F1BB1FA01F1500825133 /* PortTableViewCell.xib in Resources */,
 				984E1D821F6F830C00D0630E /* LaunchScreen.storyboard in Resources */,
 				9822F1B71FA01F0000825133 /* AllTranTableViewCell.xib in Resources */,
+				982582531FA0D88C002F0873 /* DialogAllTranViewController.xib in Resources */,
 				9822F1AF1FA01ECF00825133 /* SubTableViewCell.xib in Resources */,
 				984E1D911F6F848300D0630E /* MainViewController.xib in Resources */,
+				9825824B1FA0BAB3002F0873 /* DialogSubViewController.xib in Resources */,
 				98E74B991F82820B0038BA91 /* BankAcountViewController.xib in Resources */,
 				984E1D7F1F6F830C00D0630E /* Assets.xcassets in Resources */,
+				9825824F1FA0D875002F0873 /* DialogRedemViewController.xib in Resources */,
 				9822F1BF1FA01F2700825133 /* PortCreditTableViewCell.xib in Resources */,
 				9801CAB61F7B8273001488E1 /* AllTransactionViewController.xib in Resources */,
 				984E1D7A1F6F830C00D0630E /* Main.storyboard in Resources */,
@@ -452,6 +481,7 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/DatePickerDialog/DatePickerDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/LSDialogViewController/LSDialogViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SharkORM/SharkORM.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
@@ -462,6 +492,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSDialogViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SharkORM.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
@@ -504,10 +535,12 @@
 				9822F1B21FA01EEE00825133 /* RedemTableViewCell.swift in Sources */,
 				98A2DD991F91A5A1005F03B5 /* RedemptionTableViewCell.swift in Sources */,
 				98CB90EA1F89B4E900748A23 /* SubcriptionTableViewCell.swift in Sources */,
+				9825824E1FA0D875002F0873 /* DialogRedemViewController.swift in Sources */,
 				98973FFF1F7A518300137751 /* Model_Invertor.swift in Sources */,
 				98E74BA41F829C370038BA91 /* LogoutViewController.swift in Sources */,
 				98973FFC1F7A503600137751 /* ConnectSv.swift in Sources */,
 				98E74B8F1F8281B60038BA91 /* PortfolioViewController.swift in Sources */,
+				982582521FA0D88C002F0873 /* DialogAllTranViewController.swift in Sources */,
 				98E74B871F82818F0038BA91 /* SubcriptionViewController.swift in Sources */,
 				98F195C61F95E7AE00386AA5 /* ProfileView.swift in Sources */,
 				9801CAB01F7B81BD001488E1 /* LeftViewController.swift in Sources */,
@@ -527,6 +560,7 @@
 				9801CAB51F7B8273001488E1 /* AllTransactionViewController.swift in Sources */,
 				984E1D7D1F6F830C00D0630E /* IRSMobile.xcdatamodeld in Sources */,
 				9822F1BE1FA01F2700825133 /* PortCreditTableViewCell.swift in Sources */,
+				9825824A1FA0BAB3002F0873 /* DialogSubViewController.swift in Sources */,
 				989CB45C1F9C7CAE00286910 /* PortfolioTableViewCell.swift in Sources */,
 				984E1D771F6F830C00D0630E /* ViewController.swift in Sources */,
 				984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */,

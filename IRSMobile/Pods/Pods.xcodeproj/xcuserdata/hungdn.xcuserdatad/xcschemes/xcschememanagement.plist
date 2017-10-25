@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LSDialogViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-IRSMobile.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,17 +52,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>084846C2D93FA3C14BDD3C8C136E9191</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>184A1650DC0B648BD756068E60BF2C59</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>197551BDD9E36335F1FF3C14BD4C7295</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>24F67A5C202A2889B30CE2A5D9B185E4</key>
+		<key>18EC5443D365797243D0D6A5597BC7B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,22 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E647EF7A31D97764DA9E89F9CA165C3</key>
+		<key>5A8C1480D0BB80F1B254D1532CBFF054</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>822D9B5316F1AAEDB4DEE47B27300C22</key>
+		<key>727E644416E41C40D6FC45E86580CD89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E43B3EF9C7EA92761166F95B9AB59DC5</key>
+		<key>AFFCE65ABDBBB8B79E157FBF525F73B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F33B4C0666E5A9361F425274CF9F0409</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8A8054FBEB57AC621ADB6764D663EE4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

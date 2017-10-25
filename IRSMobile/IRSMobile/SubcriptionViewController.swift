@@ -8,6 +8,7 @@
 
 import UIKit
 import DatePickerDialog
+import LSDialogViewController
 class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var bt_txt_search: UIButton!
@@ -87,6 +88,23 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print(indexPath.section)
+        let dialogViewController: DialogSubViewController = DialogSubViewController(nibName:"DialogSubViewController", bundle: nil)
+        dialogViewController.delegate = self
+        
+        dialogViewController.date = formats.formatdatetoddMMMyyyy(str: array[indexPath.section].DATE!)
+        dialogViewController.series = array[indexPath.row ].SHARE_SERIES_NAME
+        dialogViewController.tran = array[indexPath.row].TRAN_TYPE_NAME
+        dialogViewController.unit = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].UNIT_PRICE!))
+        dialogViewController.price = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].QUANTITY!))
+        dialogViewController.amount = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].AMOUNT!))
+    
+
+        self.presentDialogViewController(dialogViewController, animationPattern: .slideLeftRight, completion: { () -> Void in })
+        
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cells = Bundle.main.loadNibNamed("SubTableViewCell", owner: self, options: nil)?.first as! SubTableViewCell
@@ -202,3 +220,4 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
 }
+

@@ -8,6 +8,8 @@
 
 import UIKit
 import DatePickerDialog
+import LSDialogViewController
+
 class RedemptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var txt_to: UITextField!
@@ -88,6 +90,23 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.array.count)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dialogViewController: DialogRedemViewController = DialogRedemViewController(nibName:"DialogRedemViewController", bundle: nil)
+        dialogViewController.delegate = self
+        
+        dialogViewController.date = formats.formatdatetoddMMMyyyy(str: array[indexPath.row].DATE!)
+        dialogViewController.series = array[indexPath.row ].SHARE_SERIES_NAME
+        dialogViewController.tran = array[indexPath.row].TRAN_TYPE_NAME
+        dialogViewController.unit = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row].UNIT_PRICE!))
+        dialogViewController.price = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].QUANTITY!))
+        dialogViewController.amount = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].AMOUNT!))
+        
+        self.presentDialogViewController(dialogViewController, animationPattern: .slideLeftRight, completion: { () -> Void in })
+        
+
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cells = Bundle.main.loadNibNamed("RedemTableViewCell", owner: self, options: nil)?.first as! RedemTableViewCell
         cells.txt_date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row].DATE!)
@@ -141,7 +160,7 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
 
     
     func datePickerTapped(txt : UITextField) {
-        DatePickerDialog().show("DatePicker", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {
+        DatePickerDialog().show("DatePicker", doneButtonTitle: "Done", cancelButtonTitle: "Clear", datePickerMode: .date) {
             (date) -> Void in
             if let dt = date {
                 print(dt)

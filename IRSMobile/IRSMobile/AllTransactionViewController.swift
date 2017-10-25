@@ -26,22 +26,13 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
     
     @IBOutlet weak var tableview: UITableView!
     @IBAction func bt_search(_ sender: UIButton) {
-        let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
-        
-        let spinnerIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-        
-        spinnerIndicator.center = CGPoint(x: 135.0, y: 65.5)
-        spinnerIndicator.color = UIColor.black
-        spinnerIndicator.startAnimating()
-        
-        alertController.view.addSubview(spinnerIndicator)
-        self.present(alertController, animated: false, completion: nil)
         
         let getshareclass = investor.value(forKey: "SHARE_CLASS") as! [[String:Any]]
         if(chooseDropDown.indexForSelectedRow == 0){
-             getdata(shareClassID: getshareclass[chooseDropDown.indexForSelectedRow!]["SHARE_CLASS_ID"] as! String, investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
+            loaddata(shareclass: getshareclass[chooseDropDown.indexForSelectedRow!]["SHARE_CLASS_ID"] as! String)
         }else{
-             getdata(shareClassID: getshareclass[chooseDropDown.indexForSelectedRow! - 1]["SHARE_CLASS_ID"] as! String, investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
+            
+            loaddata(shareclass: getshareclass[chooseDropDown.indexForSelectedRow! - 1 ]["SHARE_CLASS_ID"] as! String)
         }
 
         print("index" + String(describing: chooseDropDown.indexForSelectedRow))
@@ -65,8 +56,9 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
         ol_select.layer.borderWidth = 0.5
         ol_select.layer.borderColor = myColor.cgColor
         ol_select.layer.cornerRadius = 7
-        
-
+  
+        let getshareclass = investor.value(forKey: "SHARE_CLASS") as! [[String:Any]]
+       loaddata(shareclass: getshareclass[chooseDropDown.indexForSelectedRow!]["SHARE_CLASS_ID"] as! String)
         
         
         // Do any additional setup after loading the view.
@@ -78,17 +70,69 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
         
         
     }
+    func loaddata(shareclass : String){
+        let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
+        
+        let spinnerIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        
+        spinnerIndicator.center = CGPoint(x: 135.0, y: 65.5)
+        spinnerIndicator.color = UIColor.black
+        spinnerIndicator.startAnimating()
+        
+        alertController.view.addSubview(spinnerIndicator)
+        self.present(alertController, animated: false, completion: nil)
+        getdata(shareClassID: shareclass, investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
+    }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dialogViewController: DialogAllTranViewController = DialogAllTranViewController(nibName:"DialogAllTranViewController", bundle: nil)
+        dialogViewController.delegate = self
+        
+        dialogViewController.date = formats.formatdatetoddMMMyyyy(str: array[indexPath.row].DEALING_DATE!)
+        
+        dialogViewController.tran = array[indexPath.row].TRAN_TYPE_NAME
+        
+        
+        dialogViewController.series = array[indexPath.row ].SHARE_SERIES_NAME
+        
+        
+        dialogViewController.unit = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].UNIT_PRICE!))
+        
+        
+        dialogViewController.unit_balance = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", Float(array[indexPath.row ].QUANTITY_BALANCE!)!))
+        
+        
+        dialogViewController.amount = array[indexPath.row].CURRENCY_ID! + " " + formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].AMOUNT!))
+        
+          dialogViewController.qty = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].QUANTITY!))
+        
+        
+        print(" qty " + array[indexPath.row ].QUANTITY_BALANCE!)
+        self.presentDialogViewController(dialogViewController, animationPattern: .slideLeftRight, completion: { () -> Void in })
+        
+
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cells = Bundle.main.loadNibNamed("AllTranTableViewCell", owner: self, options: nil)?.first as! AllTranTableViewCell
         cells.txt_date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row ].DEALING_DATE!)
         cells.txt_trantype.text = array[indexPath.row].TRAN_TYPE_NAME!
-        cells.txt_series.text = array[indexPath.row].SHARE_SERIES_NAME
-        cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row].UNIT_PRICE!))
+        cells.txt_series.text = array[indexPath.row].SHARE_SERIES_NAME! + " " + array[indexPath.row].CURRENCY_ID!
         cells.txt_unit_balance.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].QUANTITY!))
-        cells.txt_amount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].AMOUNT!))
+       
+        if((array[indexPath.row].TRAN_TYPE_NAME == "Conversion") ||  (array[indexPath.row].TRAN_TYPE_NAME == "Transfer-Out")
+            || (array[indexPath.row].TRAN_TYPE_NAME == "Redemption")){
+            cells.txt_amount.textColor = UIColor.red
+            cells.txt_unit.textColor = UIColor.red
+            cells.txt_unit.text = "(" + formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row].UNIT_PRICE!)) + ")"
+            cells.txt_amount.text = "(" + formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].AMOUNT!)) + ")"
 
+            
+        }else{
+            cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row].UNIT_PRICE!))
+             cells.txt_amount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].AMOUNT!))
+        }
         
 //        if(indexPath.row == 0){
 //            
