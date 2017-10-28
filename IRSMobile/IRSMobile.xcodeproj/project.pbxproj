@@ -73,6 +73,10 @@
 		98E74BA11F8282420038BA91 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98E74B9F1F8282420038BA91 /* ChangePasswordViewController.xib */; };
 		98E74BA41F829C370038BA91 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E74BA21F829C370038BA91 /* LogoutViewController.swift */; };
 		98E74BA51F829C370038BA91 /* LogoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98E74BA31F829C370038BA91 /* LogoutViewController.xib */; };
+		98F18EAA1FA4CE840075CAA0 /* DialogConvesionShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F18EA81FA4CE840075CAA0 /* DialogConvesionShareViewController.swift */; };
+		98F18EAB1FA4CE840075CAA0 /* DialogConvesionShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98F18EA91FA4CE840075CAA0 /* DialogConvesionShareViewController.xib */; };
+		98F18EAE1FA4E51D0075CAA0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F18EAC1FA4E51D0075CAA0 /* SplashViewController.swift */; };
+		98F18EAF1FA4E51D0075CAA0 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98F18EAD1FA4E51D0075CAA0 /* SplashViewController.xib */; };
 		98F195C61F95E7AE00386AA5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F195C51F95E7AE00386AA5 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +152,10 @@
 		98E74BA31F829C370038BA91 /* LogoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoutViewController.xib; sourceTree = "<group>"; };
 		98E74BA61F82AD8F0038BA91 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		98E74BA71F82AD8F0038BA91 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		98F18EA81FA4CE840075CAA0 /* DialogConvesionShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogConvesionShareViewController.swift; sourceTree = "<group>"; };
+		98F18EA91FA4CE840075CAA0 /* DialogConvesionShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogConvesionShareViewController.xib; sourceTree = "<group>"; };
+		98F18EAC1FA4E51D0075CAA0 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		98F18EAD1FA4E51D0075CAA0 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		98F195C51F95E7AE00386AA5 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C789DD3DC913C2D4D9CC5890 /* Pods-IRSMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRSMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRSMobile/Pods-IRSMobile.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +234,8 @@
 				9825824D1FA0D875002F0873 /* DialogRedemViewController.xib */,
 				982582501FA0D88C002F0873 /* DialogAllTranViewController.swift */,
 				982582511FA0D88C002F0873 /* DialogAllTranViewController.xib */,
+				98F18EA81FA4CE840075CAA0 /* DialogConvesionShareViewController.swift */,
+				98F18EA91FA4CE840075CAA0 /* DialogConvesionShareViewController.xib */,
 			);
 			name = Dialog;
 			sourceTree = "<group>";
@@ -293,6 +303,8 @@
 				9801CAAF1F7B81BD001488E1 /* LeftViewController.xib */,
 				98E74BA21F829C370038BA91 /* LogoutViewController.swift */,
 				98E74BA31F829C370038BA91 /* LogoutViewController.xib */,
+				98F18EAC1FA4E51D0075CAA0 /* SplashViewController.swift */,
+				98F18EAD1FA4E51D0075CAA0 /* SplashViewController.xib */,
 			);
 			name = Acounts;
 			sourceTree = "<group>";
@@ -424,6 +436,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				984E1D8D1F6F847100D0630E /* LoginViewController.xib in Resources */,
+				98F18EAF1FA4E51D0075CAA0 /* SplashViewController.xib in Resources */,
+				98F18EAB1FA4CE840075CAA0 /* DialogConvesionShareViewController.xib in Resources */,
 				98E74B901F8281B60038BA91 /* PortfolioViewController.xib in Resources */,
 				98E74BA51F829C370038BA91 /* LogoutViewController.xib in Resources */,
 				98E74B9D1F8282300038BA91 /* ContactInformationViewController.xib in Resources */,
@@ -527,6 +541,7 @@
 			files = (
 				984B3D511F852B1100ECA24D /* Format.swift in Sources */,
 				98CB90EF1F89D24B00748A23 /* Model_Subcription.swift in Sources */,
+				98F18EAA1FA4CE840075CAA0 /* DialogConvesionShareViewController.swift in Sources */,
 				9801CAA91F7B8163001488E1 /* BaseTableViewCell.swift in Sources */,
 				9822F1AE1FA01ECF00825133 /* SubTableViewCell.swift in Sources */,
 				989CB45A1F9C4C7100286910 /* Model_AllTransaction.swift in Sources */,
@@ -567,6 +582,7 @@
 				989CB4621F9C96BC00286910 /* PortfolioDetailTableViewCell.swift in Sources */,
 				989CB45E1F9C890300286910 /* Model_Portfolio.swift in Sources */,
 				984E1D901F6F848300D0630E /* MainViewController.swift in Sources */,
+				98F18EAE1FA4E51D0075CAA0 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

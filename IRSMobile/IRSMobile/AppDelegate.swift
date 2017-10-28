@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let userdefault = UserDefaults()
+        if(userdefault.value(forKey: "IS_CHECK_LOGIN") == nil){
+        userdefault.set(false, forKey: "IS_CHECK_LOGIN")
+        }
         var navigationBarAppearace = UINavigationBar.appearance()
         DropDown.startListeningToKeyboard()
         navigationBarAppearace.tintColor = UIColor.white
@@ -23,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         // Override point for customization after application launch
         window = UIWindow(frame: UIScreen.main.bounds)
-        let homeViewController = LoginViewController()
+        let homeViewController = SplashViewController()
         window!.rootViewController = homeViewController
         window!.makeKeyAndVisible()
         return true

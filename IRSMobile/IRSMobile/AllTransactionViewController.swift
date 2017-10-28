@@ -86,6 +86,39 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if(array[indexPath.row].TRAN_TYPE_ID == "CON"){
+            let dialogViewController: DialogConvesionShareViewController = DialogConvesionShareViewController(nibName:"DialogConvesionShareViewController", bundle: nil)
+            dialogViewController.delegate = self
+            let getconvesion = investor.value(forKey: "CONVERSION_SHARES") as! [[String:Any]]
+            for item in getconvesion{
+                var pkey : Float = item["PR_KEY"] as! Float
+                if(pkey == array[indexPath.row].PR_KEY){
+                    dialogViewController.date = formats.formatdatetoddMMMyyyy(str: item["DEALING_DATE"] as! String)
+                    dialogViewController.tran = array[indexPath.row].TRAN_TYPE_NAME!
+                    dialogViewController.point = formats.formatdatetoddMMMyyyy(str: array[indexPath.row].DEALING_DATE!)
+                    dialogViewController.from = item["FROM_SHARE_SERIES_NAME"] as! String
+                    dialogViewController.from_unit = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", item["FROM_UNIT_PRICE"] as! Float))
+                    dialogViewController.from_price = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", item["FROM_QUANTITY"] as! Float))
+                    dialogViewController.from_amount = formats.formatpricetocurrency(string1: String(format:"%3.2f", item["FROM_AMOUNT"] as! Float))
+                    dialogViewController.to =  item["TO_SHARE_SERIES_NAME"] as! String
+                        
+                    dialogViewController.to_unit = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", item["TO_UNIT_PRICE"] as! Float))
+                    dialogViewController.to_price = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", item["TO_QUANTITY"] as! Float))
+                    dialogViewController.to_amount = formats.formatpricetocurrency(string1: String(format:"%3.2f", item["TO_AMOUNT"] as! Float))
+                    
+                     self.presentDialogViewController(dialogViewController, animationPattern: .slideLeftRight, completion: { () -> Void in })
+                    
+                }
+                
+            }
+            
+
+
+            
+           
+            
+        }else{
         let dialogViewController: DialogAllTranViewController = DialogAllTranViewController(nibName:"DialogAllTranViewController", bundle: nil)
         dialogViewController.delegate = self
         
@@ -110,12 +143,17 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
         
         print(" qty " + array[indexPath.row ].QUANTITY_BALANCE!)
         self.presentDialogViewController(dialogViewController, animationPattern: .slideLeftRight, completion: { () -> Void in })
-        
+        }
 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
        let cells = Bundle.main.loadNibNamed("AllTranTableViewCell", owner: self, options: nil)?.first as! AllTranTableViewCell
+        
+        if(indexPath.row % 2 == 0){
+            cells.backgroundColor = UIColor(colorLiteralRed: 207/255, green: 207/255, blue: 207/255, alpha: 1)
+        }
         cells.txt_date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row ].DEALING_DATE!)
         cells.txt_trantype.text = array[indexPath.row].TRAN_TYPE_NAME!
         cells.txt_series.text = array[indexPath.row].SHARE_SERIES_NAME! + " " + array[indexPath.row].CURRENCY_ID!
@@ -227,10 +265,6 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 if((result?.count)!>0){
                     self.array = result!
-                    
-                    
-                    
-                    
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                 }else{

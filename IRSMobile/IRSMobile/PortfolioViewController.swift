@@ -98,6 +98,9 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(FLAG == false){
          let cells = Bundle.main.loadNibNamed("PortTableViewCell", owner: self, options: nil)?.first as! PortTableViewCell
+            if(indexPath.row % 2 == 0){
+                cells.backgroundColor = UIColor(colorLiteralRed: 207/255, green: 207/255, blue: 207/255, alpha: 1)
+            }
             cells.txt_series.text = array[indexPath.row].SERIES_CLASS
             cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].UNIT_PRICE!))
             cells.txt_price.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].QUANTITY!))
@@ -136,7 +139,11 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
             
             return cells
         }else{
-             let cell = Bundle.main.loadNibNamed("PortCreditTableViewCell", owner: self, options: nil)?.first as! PortCreditTableViewCell
+             let cell = Bundle.main.loadNibNamed("PortCreditTableViewCell", owner: self, options: nil)?.first as!
+            PortCreditTableViewCell
+            if(indexPath.row % 2 == 0){
+                cell.backgroundColor = UIColor(colorLiteralRed: 207/255, green: 207/255, blue: 207/255, alpha: 1)
+            }
             cell.txt_date.text = formats.formatdatetoddMMMyyyy(str: array_detail[indexPath.row].DEALING_DATE!)
             cell.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array_detail[indexPath.row].QUANTITY!))
             cell.txt_tran.text = array_detail[indexPath.row].TRAN_TYPE_NAME

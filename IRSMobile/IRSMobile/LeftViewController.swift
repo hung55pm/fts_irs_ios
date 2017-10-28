@@ -12,7 +12,7 @@ import SlideMenuControllerSwift
 
 
 class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
- 
+    let userdefault = UserDefaults()
     @IBOutlet weak var investor_name: UILabel!
     
     @IBOutlet weak var tableview: UITableView!
@@ -61,7 +61,13 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 self.slideMenuController()?.changeMainViewController(PortfolioViewController(), close: true)
                 break
             case 1:
-                self.slideMenuController()?.changeMainViewController(LogoutViewController(), close: true)
+                print(1)
+                let secondViewController:LoginViewController = LoginViewController()
+                
+                self.present(secondViewController, animated: true, completion: nil)
+                self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
+                
+                //self.dismiss(animated: false, completion: nil)
                 break
             default:
                 break
@@ -124,6 +130,8 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.changeViewController(section: indexPath.section, row: indexPath.row)
+        var cell = tableView.cellForRow(at: indexPath)!
+    
     }
     
     

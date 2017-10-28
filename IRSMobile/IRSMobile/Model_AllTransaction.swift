@@ -10,7 +10,7 @@ import Foundation
 
 class Model_AllTransaction: AnyObject {
     
-    var PR_KEY : String?
+    var PR_KEY : Float?
     var TRAN_TYPE_ID : String?
     var TRAN_TYPE_NAME : String?
     var DEALING_DATE : String?

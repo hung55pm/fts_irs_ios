@@ -13,14 +13,16 @@ import SlideMenuControllerSwift
 class LoginViewController: UIViewController {
     var ed_user,ed_pass: String?
     let connect = ConnectSv()
-    
+    let userdefault = UserDefaults()
     @IBOutlet weak var ed_username: UITextField!
     
+    @IBOutlet weak var remember: UISwitch!
     
     @IBOutlet weak var ed_password: UITextField!
     
     @IBOutlet weak var bt_login_out: UIButton!
     @IBAction func switch_remember(_ sender: UISwitch) {
+        
     }
     @IBAction func bt_login(_ sender: UIButton) {
         ed_user=ed_username.text
@@ -40,6 +42,12 @@ class LoginViewController: UIViewController {
                         
                         let appDelegate = UIApplication.shared.delegate as! AppDelegate
                         appDelegate.createmenuleft()
+                        if self.remember.isOn == true {
+                            self.userdefault.set(true, forKey: "IS_CHECK_LOGIN")
+                        } else {
+                            
+                            self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
+                        }
                     }
                     
                 }else if(result == 300){

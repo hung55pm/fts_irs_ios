@@ -8,14 +8,50 @@
 
 import Foundation
 import Toaster
+import SystemConfiguration
 class ConnectSv {
     let contant = Constant()
-       let userDefaults = UserDefaults.standard
-    func login(user : String , pass : String, completionHandler: @escaping (Int64?) -> () ){
-     
-        let urls = contant.HOST + "/api/Login/checkLogin?investorId=" + user + "&password=" + pass
+    let userDefaults = UserDefaults.standard
+    
+    class func isConnectedToNetwork() -> Bool {
         
-        var request = URLRequest(url : URL(string: urls)!)
+        var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
+            }
+        }
+        
+        var flags: SCNetworkReachabilityFlags = SCNetworkReachabilityFlags(rawValue: 0)
+        if SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) == false {
+            return false
+        }
+        
+        /* Only Working for WIFI
+         let isReachable = flags == .reachable
+         let needsConnection = flags == .connectionRequired
+         
+         return isReachable && !needsConnection
+         */
+        
+        // Working for Cellular and WIFI
+        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        let ret = (isReachable && !needsConnection)
+        
+        return ret
+        
+    }
+    
+    
+    func login(user : String , pass : String, completionHandler: @escaping (Int64?) -> () ){
+        
+        let urls = contant.HOST + "/api/Login/checkLogin?investorId=" + user + "&password=" + pass
+        let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        var request = URLRequest(url : URL(string: urlss!)!)
         
         request.httpMethod = "GET"// phuong thuc truyen
         
@@ -35,6 +71,9 @@ class ConnectSv {
             
             do {
                 let datalogin = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary // get data trar ve khi data tra ve laf mot json object
+                
+                print(datalogin?.count)
+                if((datalogin?.count) != 0){
                 let json = datalogin?["INVESTOR"] as! [[String:Any]]
                 let DM_ORGANIZATION = datalogin?["DM_ORGANIZATION"] as! [[String:Any]]
                 let SHARE_CLASS = datalogin?["SHARE_CLASS"] as! [[String:Any]]
@@ -43,7 +82,8 @@ class ConnectSv {
                     for data_organ in DM_ORGANIZATION{
                         self.userDefaults.set(data_organ["PRICE_ROUNDING"], forKey: "PRICE_ROUNDING")
                         self.userDefaults.set(data_organ["QUANTITY_ROUNDING"], forKey: "QUANTITY_ROUNDING")
-                        
+                        self.userDefaults.set(data_organ["IS_EQUALISATION"], forKey: "IS_EQUALISATION")
+                        self.userDefaults.set(data_organ["DATE_OF_INCORPORATION"], forKey: "DATE_OF_INCORPORATION")
                     }
                 }
                 if(SHARE_CLASS.count>0){
@@ -97,6 +137,9 @@ class ConnectSv {
                         
                     }
                 }
+                }else{
+                     completionHandler(300)
+                }
                 
                 
             } catch {
@@ -113,8 +156,8 @@ class ConnectSv {
     func getsubcription(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_Sucription]?) -> () ){
         var array = [Model_Sucription]()
         let urls = contant.HOST + "/api/Transaction/subscription?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
-        
-        var request = URLRequest(url : URL(string: urls)!)
+        let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        var request = URLRequest(url : URL(string: urlss!)!)
         
         request.httpMethod = "GET"// phuong thuc truyen
         
@@ -163,8 +206,8 @@ class ConnectSv {
     func getredemption(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_Redemption]?) -> () ){
         var array = [Model_Redemption]()
         let urls = contant.HOST + "/api/Transaction/redemption?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
-        
-        var request = URLRequest(url : URL(string: urls)!)
+        let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        var request = URLRequest(url : URL(string: urlss!)!)
         
         request.httpMethod = "GET"// phuong thuc truyen
         
@@ -214,8 +257,9 @@ class ConnectSv {
         var array = [Model_AllTransaction]()
         let urls = contant.HOST + "/api/Transaction/AllTransaction?investorId=" + investorID + "&shareClassID=" + shareClassID
         print("url" + urls);
+        let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         
-        var request = URLRequest(url : URL(string: urls)!)
+        var request = URLRequest(url : URL(string: urlss!)!)
         
         request.httpMethod = "GET"// phuong thuc truyen
         
@@ -232,12 +276,16 @@ class ConnectSv {
                 let datatran = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary // get data trar ve khi data tra ve laf mot json object
                 print(datatran)
                 let json = datatran?["SHAREHOLDER_MOVEMENT"] as! [[String:Any]]
+                if((datatran?.count)!>0){
+                    self.userDefaults.set(datatran?["CONVERSION_SHARES"], forKey: "CONVERSION_SHARES")
+                }
                 if(json.count>0){
                     for daydata in json{
                         let model = Model_AllTransaction()
-                        
+                        model.PR_KEY = daydata["PR_KEY"] as? Float
                         model.DEALING_DATE = daydata["DEALING_DATE"] as? String
                          model.TRAN_TYPE_NAME = daydata["TRAN_TYPE_NAME"] as? String
+                        model.TRAN_TYPE_ID = daydata["TRAN_TYPE_ID"] as? String
                         model.SHARE_SERIES_NAME = daydata["SHARE_SERIES_NAME"] as? String
                         model.UNIT_PRICE = daydata["UNIT_PRICE"] as? Float
                         model.QUANTITY = daydata["QUANTITY"] as? Float
@@ -272,8 +320,8 @@ class ConnectSv {
         var array = [Model_Portfolio]()
         let urls = contant.HOST + "/api/Transaction/Portfolio?investorId=" + investorID + "&date=" + date
         print("url" + urls);
-        
-        var request = URLRequest(url : URL(string: urls)!)
+        let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        var request = URLRequest(url : URL(string: urlss!)!)
         
         request.httpMethod = "GET"// phuong thuc truyen
         
