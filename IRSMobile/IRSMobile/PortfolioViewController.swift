@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import DatePickerDialog
+
 
 class PortfolioViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableview: UITableView!
@@ -14,15 +16,21 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var view_credit: UIView!
     
+    @IBAction func choose_date(_ sender: UITextField) {
+        
+        datePickerTapped(txt: txt_date)
+    }
+    @IBOutlet weak var txt_detail: UIButton!
     
     
     @IBAction func bt_detail(_ sender: UIButton) {
         if(FLAG == false){
             array_detail = [Model_Portfolio_detail]()
             FLAG=true
-            view_credit.isHidden = true
+            
+           
             var data_detail = investor.value(forKey: "MOVEMENT") as? [[String:Any]]
-            for pd in data_detail!{
+            for pd in (data_detail?.reversed())!{
                 let model = Model_Portfolio_detail()
                 model.DEALING_DATE = pd["DEALING_DATE"] as? String
                 model.TRAN_TYPE_NAME = pd["TRAN_TYPE_NAME"] as? String
@@ -32,11 +40,12 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
                 
                 array_detail.append(model)
                 self.tableview.reloadData()
+                
             }
+            txt_detail.setTitle("Back", for: .normal)
             
         }else{
-            FLAG = false
-            view_credit.isHidden = false
+        
             let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
             
             let spinnerIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
@@ -47,8 +56,10 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
             
             alertController.view.addSubview(spinnerIndicator)
             self.present(alertController, animated: false, completion: nil)
-            getdata(date: "2017-5-31", investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
+             let date = formats.formatdatetoMMddyyyy(str: txt_date.text!)
+            getdata(date: date, investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
             self.tableview.reloadData()
+            txt_detail.setTitle("Detail", for: .normal)
         }
         
     }
@@ -71,6 +82,12 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
         tableview.delegate = self
         tableview.estimatedRowHeight = 30
         tableview.rowHeight = UITableViewAutomaticDimension
+        let is_qualision = investor.integer(forKey: "IS_EQUALISATION")
+        if(is_qualision == 1){
+            view_credit.isHidden = false
+        }else{
+            view_credit.isHidden = true
+        }
         // Do any additional setup after loading the view.
 
         // Do any additional setup after loading the view.
@@ -92,7 +109,10 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
         
         alertController.view.addSubview(spinnerIndicator)
         self.present(alertController, animated: false, completion: nil)
-        getdata(date: "2017-5-31", investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
+        txt_date.text = formats.getdaynow()
+        let date = formats.formatdatetoMMddyyyy(str: formats.getdaynow())
+
+        getdata(date: date, investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -207,6 +227,17 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
         }else{
         return (self.array_detail.count)
         }
+    }
+    
+    func datePickerTapped(txt : UITextField) {
+        DatePickerDialog().show("Select date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {
+            (date) -> Void in
+            if let dt = date {
+                print(dt)
+                txt.text = self.formats.formatdatefromyyyyMMdd(str: String(describing: dt))
+            }
+        }
+
     }
     func getdata(date: String, investorId: String, alertController : UIAlertController) {
         connect.getportfolio(investorID: investorId, date : date, completionHandler: {(result) in

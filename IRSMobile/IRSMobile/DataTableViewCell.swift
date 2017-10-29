@@ -26,8 +26,17 @@ class DataTableViewCell : BaseTableViewCell {
     override func awakeFromNib() {
         self.dataText?.font = UIFont.systemFont(ofSize: 12)
         self.dataText?.textColor = UIColor.black
+        
+        
     }
- 
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Set background color
+        let view = UIView()
+        view.backgroundColor = UIColor.orange
+        selectedBackgroundView = view
+    }
     override class func height() -> CGFloat {
         return 80
     }
@@ -38,4 +47,6 @@ class DataTableViewCell : BaseTableViewCell {
             self.dataText.text = data.text
         }
     }
+    
+    
 }

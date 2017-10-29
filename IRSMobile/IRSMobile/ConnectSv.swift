@@ -153,6 +153,38 @@ class ConnectSv {
         
     }
     
+    func changpassword(investorId : String,oldpass:String, newpass: String,completionHandler: @escaping (Int) -> ()) {
+        let urls = contant.HOST + "/api/Investor/changePassword"
+        var request = URLRequest(url : URL(string: urls)!)
+        
+        request.httpMethod = "PUT"// phuong thuc truyen
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        let bodyData = "&investorId=" + investorId + "&oldPassword=" + oldpass + "& newPassword=" + newpass
+        
+        print("bodydata:  " + bodyData)
+        
+        request.httpBody = bodyData.data(using: String.Encoding.utf8);
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error != nil
+            {
+                print("error=\(String(describing: error))")
+                completionHandler(2)
+                return
+            }
+            
+            // You can print out response object
+                        let responseString = String(data: data!, encoding: .utf8)// get data tra ve dang string
+                       print("responseString = \(responseString)")
+                        var result:Int? = Int(responseString!)
+            completionHandler(result!)
+
+        }
+        task.resume()
+
+        
+    }
+    
     func getsubcription(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_Sucription]?) -> () ){
         var array = [Model_Sucription]()
         let urls = contant.HOST + "/api/Transaction/subscription?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
@@ -180,7 +212,7 @@ class ConnectSv {
                 completionHandler(array)
                 
             }else{
-                for dayData in json!{// get object trong jsonarray tra ve
+                for dayData in (json?.reversed())!{// get object trong jsonarray tra ve
                     print(dayData)
                     let model = Model_Sucription()
                     
@@ -280,7 +312,7 @@ class ConnectSv {
                     self.userDefaults.set(datatran?["CONVERSION_SHARES"], forKey: "CONVERSION_SHARES")
                 }
                 if(json.count>0){
-                    for daydata in json{
+                    for daydata in json.reversed(){
                         let model = Model_AllTransaction()
                         model.PR_KEY = daydata["PR_KEY"] as? Float
                         model.DEALING_DATE = daydata["DEALING_DATE"] as? String
@@ -341,7 +373,7 @@ class ConnectSv {
                 let MOVEMENT = dataport?["MOVEMENT"] as! [[String: Any]]
                  self.userDefaults.set(MOVEMENT, forKey: "MOVEMENT")
                 if(json.count>0){
-                    for daydata in json{
+                    for daydata in json.reversed(){
                         let model = Model_Portfolio()
                         
                 
@@ -353,6 +385,9 @@ class ConnectSv {
                         array.append(model)
                         
                     }
+                    
+                   
+                
                     
                     
                     completionHandler(array)

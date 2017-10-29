@@ -62,12 +62,13 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 break
             case 1:
                 print(1)
-                let secondViewController:LoginViewController = LoginViewController()
-                
-                self.present(secondViewController, animated: true, completion: nil)
+                self.slideMenuController()?.changeMainViewController(LoginViewController(), close: true)
+//                let secondViewController:LoginViewController = LoginViewController()
+//                
+//                self.present(secondViewController, animated: true, completion: nil)
                 self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
                 
-                //self.dismiss(animated: false, completion: nil)
+                self.dismiss(animated: true, completion: nil)
                 break
             default:
                 break
@@ -128,11 +129,20 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.changeViewController(section: indexPath.section, row: indexPath.row)
-        var cell = tableView.cellForRow(at: indexPath)!
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.red
+        cell?.selectedBackgroundView = backgroundView
+        
+    
     
     }
+    
+    
     
     
     

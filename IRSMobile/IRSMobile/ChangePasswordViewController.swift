@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Toaster
+
 
 class ChangePasswordViewController: UIViewController {
     
@@ -19,7 +21,25 @@ class ChangePasswordViewController: UIViewController {
     
     @IBOutlet weak var confirm_password: UITextField!
     
+    var connect = ConnectSv()
+    var userdefault = UserDefaults()
+    
     @IBAction func bt_confirm(_ sender: UIButton) {
+        
+        let oldpass = old_password.text
+        let newpass = new_password.text
+        let confirmpass = confirm_password.text
+        
+        if(oldpass! == "" || newpass! == "" || confirmpass! == ""){
+            Toast(text: "You must enter full enough info").show()
+        }else{
+            if(newpass != confirmpass){
+                Toast(text :"New Password and confirmation passwords are not matchers").show()
+            }else{
+                changpass(inves: userdefault.string(forKey: "INVESTOR_ID")!, oldpass: oldpass!, newpass: newpass!)
+            }
+        }
+        
         
     }
     @IBOutlet weak var bt_confirm: UIButton!
@@ -40,6 +60,19 @@ class ChangePasswordViewController: UIViewController {
         self.setNavigationBarItem(title: "Change Password")
         
     }
+    func changpass(inves: String, oldpass: String, newpass: String){
+        connect.changpassword(investorId: inves, oldpass: oldpass, newpass: newpass, completionHandler: {(result) in
+            if(result == 0){
+                Toast(text: "Change password succeed").show()
 
+            }else if(result == 1){
+                Toast(text: "InvestorID or Old Password wrong").show()
+            }else{
+                Toast(text: "failed to try again ..").show()
+            }
+            
+        })
+
+    }
 
 }

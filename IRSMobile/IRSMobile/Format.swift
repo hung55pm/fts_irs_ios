@@ -40,7 +40,7 @@ class Format{
         let tempLocale = dateFormatter.locale
         
         dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-        dateFormatter.dateFormat = "dd-MMM-yyyy"
+        dateFormatter.dateFormat = "dd-MMM-yy"
         let date = dateFormatter.date(from: str)!
         
         dateFormatter.dateFormat = "MM-dd-yyyy"

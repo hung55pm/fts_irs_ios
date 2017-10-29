@@ -161,7 +161,7 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func datePickerTapped(txt : UITextField) {
-        DatePickerDialog().show("DatePicker", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {
+        DatePickerDialog().show("Select date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {
             (date) -> Void in
             if let dt = date {
                 print(dt)
