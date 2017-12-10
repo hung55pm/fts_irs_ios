@@ -65,8 +65,8 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationBar(title: "All Transactions")
-        self.setNavigationBarItem(title: "All Transactions")
+        self.setNavigationBar(title: "Transactions Summary")
+        self.setNavigationBarItem(title: "Transactions Summary")
         
         
     }
@@ -85,7 +85,7 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if(array[indexPath.row].TRAN_TYPE_ID == "CON"){
             let dialogViewController: DialogConvesionShareViewController = DialogConvesionShareViewController(nibName:"DialogConvesionShareViewController", bundle: nil)
@@ -145,7 +145,7 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
         self.presentDialogViewController(dialogViewController, animationPattern: .slideLeftRight, completion: { () -> Void in })
         }
 
-    }
+    }*/
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -156,21 +156,37 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
         }
         cells.txt_date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row ].DEALING_DATE!)
         cells.txt_trantype.text = array[indexPath.row].TRAN_TYPE_NAME!
-        cells.txt_series.text = array[indexPath.row].SHARE_SERIES_NAME! + " " + array[indexPath.row].CURRENCY_ID!
-        cells.txt_unit_balance.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].QUANTITY!))
-       
-        if((array[indexPath.row].TRAN_TYPE_NAME == "Conversion") ||  (array[indexPath.row].TRAN_TYPE_NAME == "Transfer-Out")
-            || (array[indexPath.row].TRAN_TYPE_NAME == "Redemption")){
-            cells.txt_amount.textColor = UIColor.red
-            cells.txt_unit.textColor = UIColor.red
-            cells.txt_unit.text = "(" + formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row].UNIT_PRICE!)) + ")"
-            cells.txt_amount.text = "(" + formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].AMOUNT!)) + ")"
-
-            
+        cells.txt_series.text = array[indexPath.row].SHARE_SERIES_NAME!
+        
+        if(array[indexPath.row].AMOUNT! < 0 as Float){
+             cells.txt_amount.textColor = UIColor.red
+            cells.txt_amount.text = "(" + array[indexPath.row].CURRENCY_ID! + " " + formats.formatpricetocurrency(string1:String(format:"%3.2f", array[indexPath.row].AMOUNT! * -1)) + ")"
         }else{
-            cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row].UNIT_PRICE!))
-             cells.txt_amount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].AMOUNT!))
+             cells.txt_amount.text = array[indexPath.row].CURRENCY_ID! + " " + formats.formatpricetocurrency(string1:String(format:"%3.2f", array[indexPath.row].AMOUNT!))
+            
         }
+        
+        if(array[indexPath.row].QUANTITY! < 0 as Float){
+            cells.txt_unit.textColor = UIColor.red
+            cells.txt_unit.text = "(" + formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row].QUANTITY! * -1)) + ")"
+        }else{
+            cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row].QUANTITY!))
+        }
+    
+        if(array[indexPath.row].UNIT_PRICE! < 0 as Float){
+            cells.txt_price.textColor = UIColor.red
+            cells.txt_price.text = "(" + formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].UNIT_PRICE! * -1)) + ")"
+        }else{
+            cells.txt_price.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].UNIT_PRICE!))
+        }
+            cells.txt_unit_balance.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", Float(array[indexPath.row].QUANTITY_BALANCE!)!))
+        
+        print("hhhhhh " + array[indexPath.row].QUANTITY_BALANCE!);
+       
+        
+        
+           // cells.txt_price.text =
+        
         
 //        if(indexPath.row == 0){
 //            
@@ -213,12 +229,13 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
 //            cells.labamount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].AMOUNT!))
 //            
 //        }
-
+    
         return cells
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 180.0;
+        return 210.0;
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.array.count)

@@ -13,10 +13,7 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var bt_txt_search: UIButton!
     @IBOutlet weak var tableview: UITableView!
-    
-    @IBOutlet weak var total_usd: UILabel!
-    
-    @IBOutlet weak var total_sgd: UILabel!
+   
 
     @IBAction func txt_from(_ sender: UITextField) {
         datePickerTapped(txt: txt_txt)
@@ -58,7 +55,7 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableview.dataSource = self
         self.tableview.delegate = self
         tableview.register(SubcriptionTableViewCell.self, forCellReuseIdentifier: "sub")
-
+        
         bt_txt_search.layer.cornerRadius = 7
         
         txt_txt.text = formats.getfirstdayofmounth();
@@ -82,13 +79,13 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationBarItem(title: "Subscription")
-        self.setNavigationBar(title: "Subscription")
+        self.setNavigationBarItem(title: "Subscription Note")
+        self.setNavigationBar(title: "Subscription Note")
           self.tableview.reloadData()
         
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   /* func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         print(indexPath.section)
         let dialogViewController: DialogSubViewController = DialogSubViewController(nibName:"DialogSubViewController", bundle: nil)
@@ -97,14 +94,14 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
         dialogViewController.date = formats.formatdatetoddMMMyyyy(str: array[indexPath.section].DATE!)
         dialogViewController.series = array[indexPath.row ].SHARE_SERIES_NAME
         dialogViewController.tran = array[indexPath.row].TRAN_TYPE_NAME
-        dialogViewController.unit = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].UNIT_PRICE!))
-        dialogViewController.price = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].QUANTITY!))
-        dialogViewController.amount = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].AMOUNT!))
+        dialogViewController.unit = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].QUANTITY!))
+        dialogViewController.price = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].UNIT_PRICE!))
+        dialogViewController.amount = formats.formatpricetocurrency(string1:String(format:"%3.2f", array[indexPath.row ].AMOUNT!))
     
 
         self.presentDialogViewController(dialogViewController, animationPattern: .slideLeftRight, completion: { () -> Void in })
         
-    }
+    }*/
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cells = Bundle.main.loadNibNamed("SubTableViewCell", owner: self, options: nil)?.first as! SubTableViewCell
@@ -113,9 +110,29 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
         }
         cells.txtx_date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row ].DATE!)
         cells.txt_series.text = array[indexPath.row ].SHARE_SERIES_NAME
-        cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].UNIT_PRICE!))
-        cells.txt_price.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].QUANTITY!))
-        cells.txt_amount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].AMOUNT!))
+        
+        if(array[indexPath.row].QUANTITY! < 0 as Float){
+            cells.txt_unit.textColor = UIColor.red
+            cells.txt_unit.text = "(" + formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].QUANTITY! * -1)) + ")"
+        }else{
+            cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].QUANTITY!))
+        }
+        
+        if(array[indexPath.row].UNIT_PRICE! < 0 as Float){
+            cells.txt_price.textColor = UIColor.red
+            cells.txt_price.text = "(" + formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].UNIT_PRICE! * -1)) + ")"
+        }else{
+            cells.txt_price.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].UNIT_PRICE!))
+        }
+        
+        if(array[indexPath.row].AMOUNT! < 0 as Float){
+            cells.txt_amount.textColor = UIColor.red
+            cells.txt_amount.text = "(" + array[indexPath.row].CURRENCY_ID! + " " + formats.formatpricetocurrency(string1:String(format:"%3.2f", array[indexPath.row ].AMOUNT! * -1)) + ")"
+        }else{
+            cells.txt_amount.text = array[indexPath.row].CURRENCY_ID! + " " + formats.formatpricetocurrency(string1:String(format:"%3.2f", array[indexPath.row ].AMOUNT!))
+        }
+        
+        
         
 //        if(indexPath.row == 0){
 //            
@@ -177,38 +194,12 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
                     //            self.tableview.reloadData()
                     print("aaaaa" + String(self.array.count))
                     
-                    var total_usd : Float = 0
-                    var total_sgd :Float = 0
-                    if(result?.count != 0){
-                        for item in result!{
-                            if(item.CURRENCY_ID == "USD"){
-                                total_usd = total_usd + item.AMOUNT!
-                            }else if(item.CURRENCY_ID == "SGD"){
-                                total_sgd = total_sgd + item.AMOUNT!
-                            }
-                        }
-                        print(total_usd)
-                    }
                     
-                    
-                    
-                    
-                    if(total_usd == 0){
-                        self.total_usd.text = "USD 0"
-                    }else{
-                        self.total_usd.text = "USD " + self.formats.formatpricetocurrency(string1: String(format:"%3." + self.investor.string(forKey: "PRICE_ROUNDING")! + "f", total_usd))
-                    }
-                    if(total_sgd == 0){
-                        self.total_sgd.text = "SGD 0"
-                    }else{
-                        self.total_sgd.text = "SGD " + self.formats.formatpricetocurrency(string1: String(format:"%3." + self.investor.string(forKey: "PRICE_ROUNDING")! + "f", total_sgd))
-                    }
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                 }else{
                     self.array = result!
-                    self.total_usd.text = "USD 0"
-                    self.total_sgd.text = "SGD 0"
+                   
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                 }
@@ -221,6 +212,6 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
         })
 
     }
-
+    
 }
 

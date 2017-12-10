@@ -16,22 +16,33 @@ class LoginViewController: UIViewController {
     let userdefault = UserDefaults()
     @IBOutlet weak var ed_username: UITextField!
     
+    @IBAction func bt_general(_ sender: UIButton) {
+        let secondViewController:GeneralViewController = GeneralViewController()
+        
+        self.present(secondViewController, animated: true, completion: nil)
+    }
     @IBOutlet weak var remember: UISwitch!
     
     @IBOutlet weak var ed_password: UITextField!
     
     @IBOutlet weak var bt_login_out: UIButton!
     @IBAction func switch_remember(_ sender: UISwitch) {
+        if remember.isOn == true{
+            userdefault.set(true, forKey: "IS_CHECK_LOGIN")
+        }else{
+            userdefault.set(false, forKey: "IS_CHECK_LOGIN")
+        }
+        
         
     }
     @IBAction func bt_login(_ sender: UIButton) {
         ed_user=ed_username.text
         ed_pass=ed_password.text
+       
         
-        
-        //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        //        appDelegate.createmenuleft()
-        //UIApplication.shared.delegate?.window??.rootViewController = slideMenuController
+         //       let appDelegate = UIApplication.shared.delegate as! AppDelegate
+          //     appDelegate.createmenuleft()
+       // UIApplication.shared.delegate?.window??.rootViewController = slideMenuController
         
         if(ed_user=="" || ed_pass==""){
             Toast(text: "You must enter full enough information").show()
@@ -40,14 +51,24 @@ class LoginViewController: UIViewController {
                 if(result == 200){
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         
-                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                        appDelegate.createmenuleft()
-                        if self.remember.isOn == true {
-                            self.userdefault.set(true, forKey: "IS_CHECK_LOGIN")
-                        } else {
-                            
-                            self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
-                        }
+                        self.connect.getinfor(user: self.ed_user!, completionHandler: {(results) in
+                            if(results == 200){
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                                appDelegate.createmenuleft()
+                                if self.remember.isOn == true {
+                                    self.userdefault.set(true, forKey: "IS_CHECK_LOGIN")
+                                } else {
+                                    
+                                    self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
+                                }
+                                }
+                            }else{
+                                Toast(text: "get info error").show()
+                            }
+                        
+                        })
+                        
                     }
                     
                 }else if(result == 300){
@@ -66,9 +87,13 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         bt_login_out.layer.cornerRadius = 5
-        
+         remember.setOn(self.userdefault.value(forKey: "IS_CHECK_LOGIN") as! Bool, animated: true)
+        if((self.userdefault.value(forKey: "IS_CHECK_LOGIN") as! Bool)){
+            ed_username.text = userdefault.value(forKey: "USERNAME") as! String
+            ed_password.text = userdefault.value(forKey: "PASSWORD") as! String
+        }
         
         
         // Do any additional setup after loading the view.

@@ -21,17 +21,17 @@ class SplashViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: when) {
           
             self.indicator.stopAnimating()
-                if((self.userdefault.value(forKey: "IS_CHECK_LOGIN") as! Bool) == true && (self.userdefault.value(forKey: "INVESTOR_ID")as? String != nil)
+                /*if((self.userdefault.value(forKey: "IS_CHECK_LOGIN") as! Bool) == true && (self.userdefault.value(forKey: "INVESTOR_ID")as? String != nil)
                     ){
                     
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
                     appDelegate.createmenuleft()
                     
-                }else{
+                }else{*/
                     let secondViewController:LoginViewController = LoginViewController()
                     
                     self.present(secondViewController, animated: true, completion: nil)
-            }
+            //}
            
             
         }

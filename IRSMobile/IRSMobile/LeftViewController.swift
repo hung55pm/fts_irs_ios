@@ -16,15 +16,25 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
     @IBOutlet weak var investor_name: UILabel!
     
     @IBOutlet weak var tableview: UITableView!
-    
-    var menus = ["Investor profile", "Transaction History", ""]
+    var menutransum = ["Transaction Summary"]
+    var menus = ["","Investor profile", "Fund Information", "Subcription","Redemption",""]
     var menuinfo = ["Investor Information", "Contact Information", "Bank Account", "Change Password"]
-    var menutran = ["All Transactions", "Subscription", "Redemption"]
+    var menufund = ["Contact Information","Bank Account"]
+    var menusub = ["Subscription Order", "Confirmation of Cash Received", "Subscription Note"]
+    var menuremd = ["Redemption Order", " Redemption Note", "Confirmation of Cash Paid"]
     var menuorther = ["Portfolio", "Logout"]
     func changeViewController(section: Int, row: Int) {
         
         switch section {
         case 0:
+            switch row {
+            case 0:
+                self.slideMenuController()?.changeMainViewController(AllTransactionViewController(), close: true)
+                break
+            default:
+                break
+            }
+        case 1:
             switch row {
             case 0:
                 self.slideMenuController()?.changeMainViewController(InvestorInfomationViewController(), close: true)
@@ -41,21 +51,48 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
             default:
                 break
             }
-        case 1:
+        case 2:
             switch row {
             case 0:
-                self.slideMenuController()?.changeMainViewController(AllTransactionViewController(), close: true)
+                self.slideMenuController()?.changeMainViewController(FundContactViewController(), close: true)
                 break
             case 1:
-                self.slideMenuController()?.changeMainViewController(SubcriptionViewController(), close: true)
-                break
-            case 2:
-                self.slideMenuController()?.changeMainViewController(RedemptionViewController(), close: true)
+                self.slideMenuController()?.changeMainViewController(FunAcountBankViewController(), close: true)
                 break
             default:
                 break
             }
-        case 2:
+        case 3:
+            switch row {
+            case 0:
+                self.slideMenuController()?.changeMainViewController(SubOrderViewController(), close: true)
+                break
+            case 1:
+                self.slideMenuController()?.changeMainViewController(SubReciedViewController(), close: true)
+                break
+            case 2:
+                self.slideMenuController()?.changeMainViewController(SubcriptionViewController(), close: true)
+                break
+            default:
+                break
+            }
+        case 4:
+            switch row {
+            case 0:
+                self.slideMenuController()?.changeMainViewController(RedemOrderViewController(), close: true)
+                break
+            case 1:
+                self.slideMenuController()?.changeMainViewController(RedemptionViewController(), close: true)
+                break
+
+            case 2:
+                self.slideMenuController()?.changeMainViewController(RedemCashViewController(), close: true)
+                break
+                
+            default:
+                break
+            }
+        case 5:
             switch row {
             case 0:
                 self.slideMenuController()?.changeMainViewController(PortfolioViewController(), close: true)
@@ -63,9 +100,9 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
             case 1:
                 print(1)
                 self.slideMenuController()?.changeMainViewController(LoginViewController(), close: true)
-//                let secondViewController:LoginViewController = LoginViewController()
-//                
-//                self.present(secondViewController, animated: true, completion: nil)
+                //                let secondViewController:LoginViewController = LoginViewController()
+                //
+                //                self.present(secondViewController, animated: true, completion: nil)
                 self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
                 
                 self.dismiss(animated: true, completion: nil)
@@ -102,10 +139,16 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section==0){
-            return menuinfo.count
+            return menutransum.count
         }else if(section==1){
-            return menutran.count
+            return menuinfo.count
         }else if(section==2){
+            return menufund.count
+        }else if(section==3){
+            return menusub.count
+        }else if(section==4){
+            return menuremd.count
+        }else if(section==5){
             return menuorther.count
         }
         return 0
@@ -117,11 +160,17 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
         if(indexPath.section==0){
-            cell.setData(menuinfo[indexPath.row])
+            cell.setData(menutransum[indexPath.row])
         }else if(indexPath.section==1){
-            cell.setData(menutran[indexPath.row])
+            cell.setData(menuinfo[indexPath.row])
             
         }else if (indexPath.section==2){
+            cell.setData(menufund[indexPath.row])
+        }else if (indexPath.section==3){
+            cell.setData(menusub[indexPath.row])
+        }else if (indexPath.section==4){
+            cell.setData(menuremd[indexPath.row])
+        }else if (indexPath.section==5){
             cell.setData(menuorther[indexPath.row])
         }
         

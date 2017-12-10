@@ -41,9 +41,7 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
         getdata(start: start, end: end, InvestorID: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
     }
     
-    @IBOutlet weak var lbl_usd: UILabel!
-    
-    @IBOutlet weak var lbl_sgd: UILabel!
+
     
     @IBOutlet weak var tableview: UITableView!
     //var cells : RedemptionTableViewCell!
@@ -82,8 +80,8 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationBarItem(title: "Redemption")
-        self.setNavigationBar(title: "Redemption")
+        self.setNavigationBarItem(title: "Redemption Note")
+        self.setNavigationBar(title: "Redemption Note")
         self.tableview.reloadData()
         
     }
@@ -91,7 +89,7 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
         return (self.array.count)
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   /* func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dialogViewController: DialogRedemViewController = DialogRedemViewController(nibName:"DialogRedemViewController", bundle: nil)
         dialogViewController.delegate = self
         
@@ -105,7 +103,7 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
         self.presentDialogViewController(dialogViewController, animationPattern: .slideLeftRight, completion: { () -> Void in })
         
 
-    }
+    }*/
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cells = Bundle.main.loadNibNamed("RedemTableViewCell", owner: self, options: nil)?.first as! RedemTableViewCell
@@ -114,10 +112,27 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         cells.txt_date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row].DATE!)
         cells.txt_series.text = array[indexPath.row].SHARE_SERIES_NAME
-        cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row].UNIT_PRICE!))
-        cells.txt_price.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].QUANTITY!))
-        cells.txt_amount.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].AMOUNT!))
+    
+        if(array[indexPath.row].QUANTITY! < 0 as Float){
+            cells.txt_unit.textColor = UIColor.red
+            cells.txt_unit.text = "(" + formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].QUANTITY! * -1)) + ")"
+        }else{
+            cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].QUANTITY!))
+        }
         
+        if(array[indexPath.row].UNIT_PRICE! < 0 as Float){
+            cells.txt_price.textColor = UIColor.red
+            cells.txt_price.text = "(" + formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].UNIT_PRICE! * -1)) + ")"
+        }else{
+            cells.txt_price.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row ].UNIT_PRICE!))
+        }
+        
+        if(array[indexPath.row].AMOUNT! < 0 as Float){
+            cells.txt_amount.textColor = UIColor.red
+            cells.txt_amount.text = "(" + array[indexPath.row].CURRENCY_ID! + " " + formats.formatpricetocurrency(string1:String(format:"%3.2f", array[indexPath.row ].AMOUNT! * -1)) + ")"
+        }else{
+            cells.txt_amount.text = array[indexPath.row].CURRENCY_ID! + " " + formats.formatpricetocurrency(string1:String(format:"%3.2f", array[indexPath.row ].AMOUNT!))
+        }
         
 //        if(indexPath.row == 0){
 //            
@@ -188,17 +203,14 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
                         }
                     }
                     print(total_usd)
-                    
-                    self.lbl_sgd.text = "SGD " + self.formats.formatpricetocurrency(string1: String(format:"%3." + self.investor.string(forKey: "PRICE_ROUNDING")! + "f", total_sgd))
-                    self.lbl_usd.text = "USD " + self.formats.formatpricetocurrency(string1: String(format:"%3." + self.investor.string(forKey: "PRICE_ROUNDING")! + "f", total_usd))
+                   
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                     
                     
                 }else{
                     self.array = result!
-                    self.lbl_sgd.text = "SGD 0"
-                    self.lbl_usd.text = "USD 0"
+                    
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                     

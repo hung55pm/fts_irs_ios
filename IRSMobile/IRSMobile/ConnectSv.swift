@@ -46,13 +46,54 @@ class ConnectSv {
         
     }
     
-    
-    func login(user : String , pass : String, completionHandler: @escaping (Int64?) -> () ){
-        
-        let urls = contant.HOST + "/api/Login/checkLogin?investorId=" + user + "&password=" + pass
+    func login(user:String, pass: String,completionHandler: @escaping (Int64?) -> ()) -> () {
+       let urls = contant.HOST + "/token"
         let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         var request = URLRequest(url : URL(string: urlss!)!)
+        //request.addValue("Bearer " +, forHTTPHeaderField: "Authorization")
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")// truyền lên dạng urlencode
+        let bodyData = "UserName=" + user + "&Password=" + pass + "&Grant_Type=password"// dữ liệu kiểu form-data
         
+        request.httpBody = bodyData.data(using: String.Encoding.utf8);
+        request.httpMethod = "POST"// phuong thuc truyen
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error != nil
+            {
+                print("error=\(error)")
+                completionHandler(400)
+                return
+            }
+            
+            let responseString = String(data: data!, encoding: .utf8)// get data tra ve dang string
+            let json = try! JSONSerialization.jsonObject(with: data!, options: []) as? [String:Any]
+            //print("responseString = \(responseString!)")
+            if(json?["access_token"] == nil){
+                 completionHandler(400)
+            }else{
+                print(json?["access_token"])
+                self.userDefaults.set(json?["access_token"], forKey: "access_token")
+                self.userDefaults.set(user, forKey: "USERNAME")
+                self.userDefaults.set(pass, forKey: "PASSWORD")
+                completionHandler(200)
+            }
+            
+        }
+        task.resume()
+      
+    
+    }
+    
+    
+    func getinfor(user : String , completionHandler: @escaping (Int64?) -> () ){
+        
+        let urls = contant.HOST + "/api/Investor/getInfo?UserId=" + user
+        let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        var request = URLRequest(url : URL(string: urlss!)!)
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
         request.httpMethod = "GET"// phuong thuc truyen
         
         
@@ -84,6 +125,22 @@ class ConnectSv {
                         self.userDefaults.set(data_organ["QUANTITY_ROUNDING"], forKey: "QUANTITY_ROUNDING")
                         self.userDefaults.set(data_organ["IS_EQUALISATION"], forKey: "IS_EQUALISATION")
                         self.userDefaults.set(data_organ["DATE_OF_INCORPORATION"], forKey: "DATE_OF_INCORPORATION")
+                        
+                        self.userDefaults.set(data_organ["ORGANIZATION_ID"], forKey: "ORGANIZATION_ID")
+                        self.userDefaults.set(data_organ["ORGANIZATION_NAME"], forKey: "ORGANIZATION_NAME")
+                        self.userDefaults.set(data_organ["ADDRESS"], forKey: "ADDRESS")
+                        self.userDefaults.set(data_organ["FUND_EMAIL_ENOVESTOR"], forKey: "FUND_EMAIL_ENOVESTOR")
+                        self.userDefaults.set(data_organ["FUND_FAX"], forKey: "FUND_FAX")
+                        self.userDefaults.set(data_organ["FUND_TEL"], forKey: "FUND_TEL")
+                        
+                        
+                        self.userDefaults.set(data_organ["INTERMEDIATE_BANK"], forKey: "INTERMEDIATE_BANK")
+                        self.userDefaults.set(data_organ["BENEFICIARY_BANK"], forKey: "BENEFICIARY_BANK")
+                        self.userDefaults.set(data_organ["BENEFICIARY_BANK_BIC"], forKey: "BENEFICIARY_BANK_BIC")
+                         self.userDefaults.set(data_organ["BENEFICIARY_ACCOUNT_NUMBER"], forKey: "BENEFICIARY_ACCOUNT_NUMBER")
+                         self.userDefaults.set(data_organ["BENEFICIARY_ACCOUNT_NAME"], forKey: "BENEFICIARY_ACCOUNT_NAME")
+                        
+                        
                     }
                 }
                 if(SHARE_CLASS.count>0){
@@ -159,6 +216,8 @@ class ConnectSv {
         
         request.httpMethod = "PUT"// phuong thuc truyen
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
         let bodyData = "&investorId=" + investorId + "&oldPassword=" + oldpass + "& newPassword=" + newpass
         
         print("bodydata:  " + bodyData)
@@ -187,9 +246,11 @@ class ConnectSv {
     
     func getsubcription(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_Sucription]?) -> () ){
         var array = [Model_Sucription]()
-        let urls = contant.HOST + "/api/Transaction/subscription?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
+        let urls = contant.HOST + "/api/Transaction/subscriptionNote?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
         let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         var request = URLRequest(url : URL(string: urlss!)!)
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
         
         request.httpMethod = "GET"// phuong thuc truyen
         
@@ -235,11 +296,15 @@ class ConnectSv {
         
         
     }
-    func getredemption(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_Redemption]?) -> () ){
-        var array = [Model_Redemption]()
-        let urls = contant.HOST + "/api/Transaction/redemption?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
+
+    
+    func getsubcriptionRecived(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_sub_Cash]?) -> () ){
+        var array = [Model_sub_Cash]()
+        let urls = contant.HOST + "/api/Transaction/subscriptionCash?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
         let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         var request = URLRequest(url : URL(string: urlss!)!)
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
         
         request.httpMethod = "GET"// phuong thuc truyen
         
@@ -262,7 +327,111 @@ class ConnectSv {
                 completionHandler(array)
                 
             }else{
-                for dayData in json!{// get object trong jsonarray tra ve
+                for dayData in (json?.reversed())!{// get object trong jsonarray tra ve
+                    print(dayData)
+                    let model = Model_sub_Cash()
+                    
+                    model.DATE_RECEIVED = dayData["DATE_RECEIVED"] as? String
+                    model.SHARE_SERIES_NAME = dayData["SHARE_SERIES_NAME"] as? String
+                    model.DEALING_DATE = dayData["DEALING_DATE"] as? String
+                    model.AMOUNT = dayData["AMOUNT"] as? Float
+                    model.CURRENCY_ID = dayData["CURRENCY_ID"] as? String
+                    array.append(model)
+                }
+                print(array)
+                completionHandler(array)
+            }
+            //            let responseString = String(data: data!, encoding: .utf8)// get data tra ve dang string
+            //            print("responseString = \(responseString)")
+        }
+        task.resume()
+        
+        
+    }
+
+    func getsubcriptionOrder(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_sub_Order]?) -> () ){
+        var array = [Model_sub_Order]()
+        let urls = contant.HOST + "/api/Transaction/subscriptionOrder?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
+        let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        var request = URLRequest(url : URL(string: urlss!)!)
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
+        
+        request.httpMethod = "GET"// phuong thuc truyen
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error != nil
+            {
+                print("error=\(String(describing: error))")
+                completionHandler(array)
+                return
+            }
+            
+            // You can print out response object
+            print("response = \(String(describing: response))")
+            let json = try! JSONSerialization.jsonObject(with: data!, options: []) as? [[String:Any]]// get data tar ve dang jsonarray
+            
+            
+            if( (json?.count)! == 0){
+                completionHandler(array)
+                
+            }else{
+                for dayData in (json?.reversed())!{// get object trong jsonarray tra ve
+                    print(dayData)
+                    let model = Model_sub_Order()
+                    
+                    model.ORDER_DATE = dayData["ORDER_DATE"] as? String
+                    model.SHARE_SERIES_NAME = dayData["SHARE_SERIES_NAME"] as? String
+                    model.DEALING_DATE = dayData["DEALING_DATE"] as? String
+                    model.AMOUNT = dayData["AMOUNT"] as? Float
+                    model.CURRENCY_ID = dayData["CURRENCY_ID"] as? String
+                    model.TRAN_TYPE_NAME = dayData["TRAN_TYPE_NAME"] as? String
+                    array.append(model)
+                }
+                print(array)
+                completionHandler(array)
+            }
+            //            let responseString = String(data: data!, encoding: .utf8)// get data tra ve dang string
+            //            print("responseString = \(responseString)")
+        }
+        task.resume()
+        
+        
+    }
+
+    
+    
+    func getredemption(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_Redemption]?) -> () ){
+        var array = [Model_Redemption]()
+        let urls = contant.HOST + "/api/Transaction/redemptionNote?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
+        let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        var request = URLRequest(url : URL(string: urlss!)!)
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"// phuong thuc truyen
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error != nil
+            {
+                print("error=\(String(describing: error))")
+                completionHandler(array)
+                return
+            }
+            
+            // You can print out response object
+            print("response = \(String(describing: response))")
+            let json = try! JSONSerialization.jsonObject(with: data!, options: []) as? [[String:Any]]// get data tar ve dang jsonarray
+            
+            
+            if( (json?.count)! == 0){
+                completionHandler(array)
+                
+            }else{
+                for dayData in (json?.reversed())!{// get object trong jsonarray tra ve
                     print(dayData)
                     let model = Model_Redemption()
                     
@@ -285,6 +454,109 @@ class ConnectSv {
         
         
     }
+   
+    func getredemptionCash(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_rem_Cash]?) -> () ){
+        var array = [Model_rem_Cash]()
+        let urls = contant.HOST + "/api/Transaction/redemptionCash?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
+        let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        var request = URLRequest(url : URL(string: urlss!)!)
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"// phuong thuc truyen
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error != nil
+            {
+                print("error=\(String(describing: error))")
+                completionHandler(array)
+                return
+            }
+            
+            // You can print out response object
+            print("response = \(String(describing: response))")
+            let json = try! JSONSerialization.jsonObject(with: data!, options: []) as? [[String:Any]]// get data tar ve dang jsonarray
+            
+            
+            if( (json?.count)! == 0){
+                completionHandler(array)
+                
+            }else{
+                for dayData in (json?.reversed())!{// get object trong jsonarray tra ve
+                    print(dayData)
+                    let model = Model_rem_Cash()
+                    
+                    model.DATE_PAID = dayData["DATE_PAID"] as? String
+                    model.SHARE_SERIES_NAME = dayData["SHARE_SERIES_NAME"] as? String
+                    model.AMOUNT = dayData["AMOUNT"] as? Float
+                    model.CURRENCY_ID = dayData["CURRENCY_ID"] as? String
+                    model.DEALING_DATE = dayData["DEALING_DATE"] as? String
+                    array.append(model)
+                }
+                print(array)
+                completionHandler(array)
+            }
+            //            let responseString = String(data: data!, encoding: .utf8)// get data tra ve dang string
+            //            print("responseString = \(responseString)")
+        }
+        task.resume()
+        
+        
+    }
+    
+    func getredemptionOrder(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_rem_Order]?) -> () ){
+        var array = [Model_rem_Order]()
+        let urls = contant.HOST + "/api/Transaction/redemptionOrder?investorId=" + investorID + "&startDate=" + stratdate + "&endDate=" + enddate
+        let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        var request = URLRequest(url : URL(string: urlss!)!)
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"// phuong thuc truyen
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error != nil
+            {
+                print("error=\(String(describing: error))")
+                completionHandler(array)
+                return
+            }
+            
+            // You can print out response object
+            print("response = \(String(describing: response))")
+            let json = try! JSONSerialization.jsonObject(with: data!, options: []) as? [[String:Any]]// get data tar ve dang jsonarray
+            
+            
+            if( (json?.count)! == 0){
+                completionHandler(array)
+                
+            }else{
+                for dayData in (json?.reversed())!{// get object trong jsonarray tra ve
+                    print(dayData)
+                    let model = Model_rem_Order()
+                    
+                    model.ORDER_DATE = dayData["ORDER_DATE"] as? String
+                    model.SHARE_SERIES_NAME = dayData["SHARE_SERIES_NAME"] as? String
+                    model.DEALING_DATE = dayData["DEALING_DATE"] as? String
+                    model.AMOUNT = dayData["AMOUNT"] as? Float
+                    model.CURRENCY_ID = dayData["CURRENCY_ID"] as? String
+                    model.TRAN_TYPE_NAME = dayData["TRAN_TYPE_NAME"] as? String
+                    array.append(model)
+                }
+                print(array)
+                completionHandler(array)
+            }
+            //            let responseString = String(data: data!, encoding: .utf8)// get data tra ve dang string
+            //            print("responseString = \(responseString)")
+        }
+        task.resume()
+        
+        
+    }
+    
+    
     func getalltransaction(investorID: String, shareClassID: String , completionHandler: @escaping ([Model_AllTransaction]?) -> () ){
         var array = [Model_AllTransaction]()
         let urls = contant.HOST + "/api/Transaction/AllTransaction?investorId=" + investorID + "&shareClassID=" + shareClassID
@@ -292,7 +564,8 @@ class ConnectSv {
         let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         
         var request = URLRequest(url : URL(string: urlss!)!)
-        
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
         request.httpMethod = "GET"// phuong thuc truyen
         
         
@@ -354,7 +627,8 @@ class ConnectSv {
         print("url" + urls);
         let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         var request = URLRequest(url : URL(string: urlss!)!)
-        
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
         request.httpMethod = "GET"// phuong thuc truyen
         
         

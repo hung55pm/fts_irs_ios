@@ -10,18 +10,18 @@ import UIKit
 import CoreData
 import SlideMenuControllerSwift
 import DropDown
+import Toaster
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
         let userdefault = UserDefaults()
         if(userdefault.value(forKey: "IS_CHECK_LOGIN") == nil){
         userdefault.set(false, forKey: "IS_CHECK_LOGIN")
         }
-        var navigationBarAppearace = UINavigationBar.appearance()
+        let navigationBarAppearace = UINavigationBar.appearance()
         DropDown.startListeningToKeyboard()
         navigationBarAppearace.tintColor = UIColor.white
         navigationBarAppearace.barTintColor = UIColor.orange
@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let homeViewController = SplashViewController()
         window!.rootViewController = homeViewController
         window!.makeKeyAndVisible()
+        
         return true
     }
     
@@ -42,6 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let slideMenuController = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController)
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        // User tapped on screen, do whatever you want to do here.
+        Toast(text: "1").show()
+        return false
     }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

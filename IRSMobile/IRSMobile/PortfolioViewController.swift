@@ -14,7 +14,7 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var txt_date: UITextField!
     
-    @IBOutlet weak var view_credit: UIView!
+  
     
     @IBAction func choose_date(_ sender: UITextField) {
         
@@ -63,9 +63,7 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
     }
-    @IBOutlet weak var lbl_credit: UILabel!
-    @IBOutlet weak var lbl_total_usd: UILabel!
-    @IBOutlet weak var lbl_total_sgd: UILabel!
+  
     
     
     var FLAG : Bool = false
@@ -83,11 +81,7 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
         tableview.estimatedRowHeight = 30
         tableview.rowHeight = UITableViewAutomaticDimension
         let is_qualision = investor.integer(forKey: "IS_EQUALISATION")
-        if(is_qualision == 1){
-            view_credit.isHidden = false
-        }else{
-            view_credit.isHidden = true
-        }
+        
         // Do any additional setup after loading the view.
 
         // Do any additional setup after loading the view.
@@ -259,16 +253,13 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
                     }
                     print(total_usd)
                     
-                    self.lbl_credit.text = "SGD " + self.formats.formatpricetocurrency(string1: String(format:"%3." + self.investor.string(forKey: "PRICE_ROUNDING")! + "f", credit))
-                     self.lbl_total_sgd.text = "SGD " + self.formats.formatpricetocurrency(string1: String(format:"%3." + self.investor.string(forKey: "PRICE_ROUNDING")! + "f", total_sgd))
-                    self.lbl_total_usd.text = "USD " + self.formats.formatpricetocurrency(string1: String(format:"%3." + self.investor.string(forKey: "PRICE_ROUNDING")! + "f", total_usd))
+                   
                     self.array = result!
                     
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                 }else{
-                    self.lbl_total_sgd.text = "SGD 0"
-                    self.lbl_total_usd.text = "USD 0"
+                  
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                 }

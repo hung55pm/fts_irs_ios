@@ -17,6 +17,34 @@
 		9801CAB51F7B8273001488E1 /* AllTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAB31F7B8273001488E1 /* AllTransactionViewController.swift */; };
 		9801CAB61F7B8273001488E1 /* AllTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9801CAB41F7B8273001488E1 /* AllTransactionViewController.xib */; };
 		9801CABA1F7B984B001488E1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801CAB91F7B984B001488E1 /* UIViewController.swift */; };
+		98199F351FDAEE6A00689E1C /* Model_sub_Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98199F341FDAEE6A00689E1C /* Model_sub_Order.swift */; };
+		98199F371FDAEFCF00689E1C /* Model_sub_Cash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98199F361FDAEFCF00689E1C /* Model_sub_Cash.swift */; };
+		98199F391FDAF06100689E1C /* Model_rem_Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98199F381FDAF06000689E1C /* Model_rem_Order.swift */; };
+		98199F3B1FDAF10700689E1C /* Model_rem_Cash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98199F3A1FDAF10700689E1C /* Model_rem_Cash.swift */; };
+		9819BDFA1FD6DF5400113D80 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BDF81FD6DF5400113D80 /* ForgotPasswordViewController.swift */; };
+		9819BDFB1FD6DF5400113D80 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BDF91FD6DF5400113D80 /* ForgotPasswordViewController.xib */; };
+		9819BDFE1FD6DF8B00113D80 /* FAQsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BDFC1FD6DF8B00113D80 /* FAQsViewController.swift */; };
+		9819BDFF1FD6DF8B00113D80 /* FAQsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BDFD1FD6DF8B00113D80 /* FAQsViewController.xib */; };
+		9819BE021FD6E00C00113D80 /* DataProtectPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BE001FD6E00C00113D80 /* DataProtectPolicyViewController.swift */; };
+		9819BE031FD6E00C00113D80 /* DataProtectPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BE011FD6E00C00113D80 /* DataProtectPolicyViewController.xib */; };
+		9819BE061FD6E07000113D80 /* SecurityTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BE041FD6E07000113D80 /* SecurityTipsViewController.swift */; };
+		9819BE071FD6E07000113D80 /* SecurityTipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BE051FD6E07000113D80 /* SecurityTipsViewController.xib */; };
+		9819BE0A1FD6EF8600113D80 /* AboutCroweHorwathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BE081FD6EF8600113D80 /* AboutCroweHorwathViewController.swift */; };
+		9819BE0B1FD6EF8600113D80 /* AboutCroweHorwathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BE091FD6EF8600113D80 /* AboutCroweHorwathViewController.xib */; };
+		9819BE0E1FD706F800113D80 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BE0C1FD706F800113D80 /* GeneralViewController.swift */; };
+		9819BE0F1FD706F800113D80 /* GeneralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BE0D1FD706F800113D80 /* GeneralViewController.xib */; };
+		9819BE121FD71DC600113D80 /* FundContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BE101FD71DC600113D80 /* FundContactViewController.swift */; };
+		9819BE131FD71DC600113D80 /* FundContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BE111FD71DC600113D80 /* FundContactViewController.xib */; };
+		9819BE161FD71DDE00113D80 /* FunAcountBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BE141FD71DDE00113D80 /* FunAcountBankViewController.swift */; };
+		9819BE171FD71DDE00113D80 /* FunAcountBankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BE151FD71DDE00113D80 /* FunAcountBankViewController.xib */; };
+		9819BE1A1FD71F1F00113D80 /* SubOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BE181FD71F1F00113D80 /* SubOrderViewController.swift */; };
+		9819BE1B1FD71F1F00113D80 /* SubOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BE191FD71F1F00113D80 /* SubOrderViewController.xib */; };
+		9819BE1E1FD71F3700113D80 /* SubReciedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BE1C1FD71F3700113D80 /* SubReciedViewController.swift */; };
+		9819BE1F1FD71F3700113D80 /* SubReciedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BE1D1FD71F3700113D80 /* SubReciedViewController.xib */; };
+		9819BE221FD71F5700113D80 /* RedemOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BE201FD71F5700113D80 /* RedemOrderViewController.swift */; };
+		9819BE231FD71F5700113D80 /* RedemOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BE211FD71F5700113D80 /* RedemOrderViewController.xib */; };
+		9819BE261FD71F6D00113D80 /* RedemCashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BE241FD71F6D00113D80 /* RedemCashViewController.swift */; };
+		9819BE271FD71F6D00113D80 /* RedemCashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BE251FD71F6D00113D80 /* RedemCashViewController.xib */; };
 		9822F1AE1FA01ECF00825133 /* SubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822F1AC1FA01ECF00825133 /* SubTableViewCell.swift */; };
 		9822F1AF1FA01ECF00825133 /* SubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9822F1AD1FA01ECF00825133 /* SubTableViewCell.xib */; };
 		9822F1B21FA01EEE00825133 /* RedemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822F1B01FA01EEE00825133 /* RedemTableViewCell.swift */; };
@@ -44,6 +72,17 @@
 		984E1D8D1F6F847100D0630E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8B1F6F847100D0630E /* LoginViewController.xib */; };
 		984E1D901F6F848300D0630E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D8E1F6F848300D0630E /* MainViewController.swift */; };
 		984E1D911F6F848300D0630E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8F1F6F848300D0630E /* MainViewController.xib */; };
+		985F42901FDD5DCA00B4914C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F428F1FDD5DCA00B4914C /* Section.swift */; };
+		986CF6381FDC5470009E5050 /* SubReciedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986CF6361FDC5470009E5050 /* SubReciedTableViewCell.swift */; };
+		986CF6391FDC5470009E5050 /* SubReciedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 986CF6371FDC5470009E5050 /* SubReciedTableViewCell.xib */; };
+		986CF63C1FDC5483009E5050 /* SubOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986CF63A1FDC5483009E5050 /* SubOrderTableViewCell.swift */; };
+		986CF63D1FDC5483009E5050 /* SubOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 986CF63B1FDC5483009E5050 /* SubOrderTableViewCell.xib */; };
+		986CF6441FDC54AB009E5050 /* RemOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986CF6421FDC54AB009E5050 /* RemOrderTableViewCell.swift */; };
+		986CF6451FDC54AB009E5050 /* RemOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 986CF6431FDC54AB009E5050 /* RemOrderTableViewCell.xib */; };
+		986CF6481FDC6B9C009E5050 /* RemCashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986CF6461FDC6B9C009E5050 /* RemCashTableViewCell.swift */; };
+		986CF6491FDC6B9C009E5050 /* RemCashTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 986CF6471FDC6B9C009E5050 /* RemCashTableViewCell.xib */; };
+		986CF64B1FDC7971009E5050 /* Control_Until.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986CF64A1FDC7971009E5050 /* Control_Until.swift */; };
+		986CF64D1FDC7CB1009E5050 /* Model_total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986CF64C1FDC7CB1009E5050 /* Model_total.swift */; };
 		98973FFC1F7A503600137751 /* ConnectSv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98973FFB1F7A503600137751 /* ConnectSv.swift */; };
 		98973FFF1F7A518300137751 /* Model_Invertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98973FFE1F7A518300137751 /* Model_Invertor.swift */; };
 		989CB4581F9C489700286910 /* AllTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989CB4571F9C489700286910 /* AllTransactionTableViewCell.swift */; };
@@ -92,6 +131,34 @@
 		9801CAB31F7B8273001488E1 /* AllTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTransactionViewController.swift; sourceTree = "<group>"; };
 		9801CAB41F7B8273001488E1 /* AllTransactionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllTransactionViewController.xib; sourceTree = "<group>"; };
 		9801CAB91F7B984B001488E1 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		98199F341FDAEE6A00689E1C /* Model_sub_Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_sub_Order.swift; sourceTree = "<group>"; };
+		98199F361FDAEFCF00689E1C /* Model_sub_Cash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_sub_Cash.swift; sourceTree = "<group>"; };
+		98199F381FDAF06000689E1C /* Model_rem_Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_rem_Order.swift; sourceTree = "<group>"; };
+		98199F3A1FDAF10700689E1C /* Model_rem_Cash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_rem_Cash.swift; sourceTree = "<group>"; };
+		9819BDF81FD6DF5400113D80 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		9819BDF91FD6DF5400113D80 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		9819BDFC1FD6DF8B00113D80 /* FAQsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQsViewController.swift; sourceTree = "<group>"; };
+		9819BDFD1FD6DF8B00113D80 /* FAQsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQsViewController.xib; sourceTree = "<group>"; };
+		9819BE001FD6E00C00113D80 /* DataProtectPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProtectPolicyViewController.swift; sourceTree = "<group>"; };
+		9819BE011FD6E00C00113D80 /* DataProtectPolicyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataProtectPolicyViewController.xib; sourceTree = "<group>"; };
+		9819BE041FD6E07000113D80 /* SecurityTipsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityTipsViewController.swift; sourceTree = "<group>"; };
+		9819BE051FD6E07000113D80 /* SecurityTipsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecurityTipsViewController.xib; sourceTree = "<group>"; };
+		9819BE081FD6EF8600113D80 /* AboutCroweHorwathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutCroweHorwathViewController.swift; sourceTree = "<group>"; };
+		9819BE091FD6EF8600113D80 /* AboutCroweHorwathViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutCroweHorwathViewController.xib; sourceTree = "<group>"; };
+		9819BE0C1FD706F800113D80 /* GeneralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
+		9819BE0D1FD706F800113D80 /* GeneralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralViewController.xib; sourceTree = "<group>"; };
+		9819BE101FD71DC600113D80 /* FundContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundContactViewController.swift; sourceTree = "<group>"; };
+		9819BE111FD71DC600113D80 /* FundContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FundContactViewController.xib; sourceTree = "<group>"; };
+		9819BE141FD71DDE00113D80 /* FunAcountBankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunAcountBankViewController.swift; sourceTree = "<group>"; };
+		9819BE151FD71DDE00113D80 /* FunAcountBankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunAcountBankViewController.xib; sourceTree = "<group>"; };
+		9819BE181FD71F1F00113D80 /* SubOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubOrderViewController.swift; sourceTree = "<group>"; };
+		9819BE191FD71F1F00113D80 /* SubOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderViewController.xib; sourceTree = "<group>"; };
+		9819BE1C1FD71F3700113D80 /* SubReciedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubReciedViewController.swift; sourceTree = "<group>"; };
+		9819BE1D1FD71F3700113D80 /* SubReciedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubReciedViewController.xib; sourceTree = "<group>"; };
+		9819BE201FD71F5700113D80 /* RedemOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemOrderViewController.swift; sourceTree = "<group>"; };
+		9819BE211FD71F5700113D80 /* RedemOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedemOrderViewController.xib; sourceTree = "<group>"; };
+		9819BE241FD71F6D00113D80 /* RedemCashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemCashViewController.swift; sourceTree = "<group>"; };
+		9819BE251FD71F6D00113D80 /* RedemCashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedemCashViewController.xib; sourceTree = "<group>"; };
 		9822F1AC1FA01ECF00825133 /* SubTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTableViewCell.swift; sourceTree = "<group>"; };
 		9822F1AD1FA01ECF00825133 /* SubTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubTableViewCell.xib; sourceTree = "<group>"; };
 		9822F1B01FA01EEE00825133 /* RedemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemTableViewCell.swift; sourceTree = "<group>"; };
@@ -121,6 +188,17 @@
 		984E1D8B1F6F847100D0630E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		984E1D8E1F6F848300D0630E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		984E1D8F1F6F848300D0630E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		985F428F1FDD5DCA00B4914C /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		986CF6361FDC5470009E5050 /* SubReciedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubReciedTableViewCell.swift; sourceTree = "<group>"; };
+		986CF6371FDC5470009E5050 /* SubReciedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubReciedTableViewCell.xib; sourceTree = "<group>"; };
+		986CF63A1FDC5483009E5050 /* SubOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubOrderTableViewCell.swift; sourceTree = "<group>"; };
+		986CF63B1FDC5483009E5050 /* SubOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubOrderTableViewCell.xib; sourceTree = "<group>"; };
+		986CF6421FDC54AB009E5050 /* RemOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemOrderTableViewCell.swift; sourceTree = "<group>"; };
+		986CF6431FDC54AB009E5050 /* RemOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemOrderTableViewCell.xib; sourceTree = "<group>"; };
+		986CF6461FDC6B9C009E5050 /* RemCashTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemCashTableViewCell.swift; sourceTree = "<group>"; };
+		986CF6471FDC6B9C009E5050 /* RemCashTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemCashTableViewCell.xib; sourceTree = "<group>"; };
+		986CF64A1FDC7971009E5050 /* Control_Until.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control_Until.swift; sourceTree = "<group>"; };
+		986CF64C1FDC7CB1009E5050 /* Model_total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_total.swift; sourceTree = "<group>"; };
 		98973FFB1F7A503600137751 /* ConnectSv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectSv.swift; sourceTree = "<group>"; };
 		98973FFE1F7A518300137751 /* Model_Invertor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_Invertor.swift; sourceTree = "<group>"; };
 		989CB4571F9C489700286910 /* AllTransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTransactionTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,8 +282,35 @@
 				98E74B8A1F8281A40038BA91 /* RedemptionViewController.xib */,
 				98E74B8D1F8281B60038BA91 /* PortfolioViewController.swift */,
 				98E74B8E1F8281B60038BA91 /* PortfolioViewController.xib */,
+				9819BE181FD71F1F00113D80 /* SubOrderViewController.swift */,
+				9819BE191FD71F1F00113D80 /* SubOrderViewController.xib */,
+				9819BE1C1FD71F3700113D80 /* SubReciedViewController.swift */,
+				9819BE1D1FD71F3700113D80 /* SubReciedViewController.xib */,
+				9819BE201FD71F5700113D80 /* RedemOrderViewController.swift */,
+				9819BE211FD71F5700113D80 /* RedemOrderViewController.xib */,
+				9819BE241FD71F6D00113D80 /* RedemCashViewController.swift */,
+				9819BE251FD71F6D00113D80 /* RedemCashViewController.xib */,
 			);
 			name = Transaction;
+			sourceTree = "<group>";
+		};
+		9819BDF71FD6DEEA00113D80 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				9819BDF81FD6DF5400113D80 /* ForgotPasswordViewController.swift */,
+				9819BDF91FD6DF5400113D80 /* ForgotPasswordViewController.xib */,
+				9819BDFC1FD6DF8B00113D80 /* FAQsViewController.swift */,
+				9819BDFD1FD6DF8B00113D80 /* FAQsViewController.xib */,
+				9819BE001FD6E00C00113D80 /* DataProtectPolicyViewController.swift */,
+				9819BE011FD6E00C00113D80 /* DataProtectPolicyViewController.xib */,
+				9819BE041FD6E07000113D80 /* SecurityTipsViewController.swift */,
+				9819BE051FD6E07000113D80 /* SecurityTipsViewController.xib */,
+				9819BE081FD6EF8600113D80 /* AboutCroweHorwathViewController.swift */,
+				9819BE091FD6EF8600113D80 /* AboutCroweHorwathViewController.xib */,
+				9819BE0C1FD706F800113D80 /* GeneralViewController.swift */,
+				9819BE0D1FD706F800113D80 /* GeneralViewController.xib */,
+			);
+			name = General;
 			sourceTree = "<group>";
 		};
 		9822F1A71FA01E3400825133 /* Tableviecellxib */ = {
@@ -221,6 +326,14 @@
 				9822F1B91FA01F1500825133 /* PortTableViewCell.xib */,
 				9822F1BC1FA01F2700825133 /* PortCreditTableViewCell.swift */,
 				9822F1BD1FA01F2700825133 /* PortCreditTableViewCell.xib */,
+				986CF6361FDC5470009E5050 /* SubReciedTableViewCell.swift */,
+				986CF6371FDC5470009E5050 /* SubReciedTableViewCell.xib */,
+				986CF63A1FDC5483009E5050 /* SubOrderTableViewCell.swift */,
+				986CF63B1FDC5483009E5050 /* SubOrderTableViewCell.xib */,
+				986CF6421FDC54AB009E5050 /* RemOrderTableViewCell.swift */,
+				986CF6431FDC54AB009E5050 /* RemOrderTableViewCell.xib */,
+				986CF6461FDC6B9C009E5050 /* RemCashTableViewCell.swift */,
+				986CF6471FDC6B9C009E5050 /* RemCashTableViewCell.xib */,
 			);
 			name = Tableviecellxib;
 			sourceTree = "<group>";
@@ -245,6 +358,8 @@
 			children = (
 				984B3D501F852B1100ECA24D /* Format.swift */,
 				98CB90EC1F89CF5F00748A23 /* Constant.swift */,
+				986CF64A1FDC7971009E5050 /* Control_Until.swift */,
+				985F428F1FDD5DCA00B4914C /* Section.swift */,
 			);
 			name = Untils;
 			sourceTree = "<group>";
@@ -270,6 +385,7 @@
 		984E1D731F6F830B00D0630E /* IRSMobile */ = {
 			isa = PBXGroup;
 			children = (
+				9819BDF71FD6DEEA00113D80 /* General */,
 				982582471FA0BA26002F0873 /* Dialog */,
 				9822F1A71FA01E3400825133 /* Tableviecellxib */,
 				98969CBD1F966B11009F60A5 /* Views */,
@@ -334,6 +450,11 @@
 				989CB4591F9C4C7100286910 /* Model_AllTransaction.swift */,
 				989CB45D1F9C890300286910 /* Model_Portfolio.swift */,
 				989CB45F1F9C894000286910 /* Model_Portfolio_detail.swift */,
+				98199F341FDAEE6A00689E1C /* Model_sub_Order.swift */,
+				98199F361FDAEFCF00689E1C /* Model_sub_Cash.swift */,
+				98199F381FDAF06000689E1C /* Model_rem_Order.swift */,
+				98199F3A1FDAF10700689E1C /* Model_rem_Cash.swift */,
+				986CF64C1FDC7CB1009E5050 /* Model_total.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -361,6 +482,10 @@
 				98E74B9B1F8282300038BA91 /* ContactInformationViewController.xib */,
 				98E74B9E1F8282420038BA91 /* ChangePasswordViewController.swift */,
 				98E74B9F1F8282420038BA91 /* ChangePasswordViewController.xib */,
+				9819BE101FD71DC600113D80 /* FundContactViewController.swift */,
+				9819BE111FD71DC600113D80 /* FundContactViewController.xib */,
+				9819BE141FD71DDE00113D80 /* FunAcountBankViewController.swift */,
+				9819BE151FD71DDE00113D80 /* FunAcountBankViewController.xib */,
 			);
 			name = InvestorProfile;
 			sourceTree = "<group>";
@@ -436,24 +561,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				984E1D8D1F6F847100D0630E /* LoginViewController.xib in Resources */,
+				9819BE1B1FD71F1F00113D80 /* SubOrderViewController.xib in Resources */,
 				98F18EAF1FA4E51D0075CAA0 /* SplashViewController.xib in Resources */,
 				98F18EAB1FA4CE840075CAA0 /* DialogConvesionShareViewController.xib in Resources */,
+				9819BE131FD71DC600113D80 /* FundContactViewController.xib in Resources */,
+				986CF6491FDC6B9C009E5050 /* RemCashTableViewCell.xib in Resources */,
+				9819BE1F1FD71F3700113D80 /* SubReciedViewController.xib in Resources */,
 				98E74B901F8281B60038BA91 /* PortfolioViewController.xib in Resources */,
+				9819BE231FD71F5700113D80 /* RedemOrderViewController.xib in Resources */,
 				98E74BA51F829C370038BA91 /* LogoutViewController.xib in Resources */,
 				98E74B9D1F8282300038BA91 /* ContactInformationViewController.xib in Resources */,
 				98E74B951F8281F30038BA91 /* InvestorInfomationViewController.xib in Resources */,
+				986CF6451FDC54AB009E5050 /* RemOrderTableViewCell.xib in Resources */,
+				9819BE0F1FD706F800113D80 /* GeneralViewController.xib in Resources */,
 				9801CAB11F7B81BD001488E1 /* LeftViewController.xib in Resources */,
+				9819BE271FD71F6D00113D80 /* RedemCashViewController.xib in Resources */,
+				986CF6391FDC5470009E5050 /* SubReciedTableViewCell.xib in Resources */,
 				9801CAAB1F7B8163001488E1 /* DataTableViewCell.xib in Resources */,
+				9819BDFF1FD6DF8B00113D80 /* FAQsViewController.xib in Resources */,
 				9822F1B31FA01EEE00825133 /* RedemTableViewCell.xib in Resources */,
 				98E74B8C1F8281A40038BA91 /* RedemptionViewController.xib in Resources */,
+				986CF63D1FDC5483009E5050 /* SubOrderTableViewCell.xib in Resources */,
 				98E74BA11F8282420038BA91 /* ChangePasswordViewController.xib in Resources */,
+				9819BDFB1FD6DF5400113D80 /* ForgotPasswordViewController.xib in Resources */,
 				9822F1BB1FA01F1500825133 /* PortTableViewCell.xib in Resources */,
+				9819BE031FD6E00C00113D80 /* DataProtectPolicyViewController.xib in Resources */,
 				984E1D821F6F830C00D0630E /* LaunchScreen.storyboard in Resources */,
 				9822F1B71FA01F0000825133 /* AllTranTableViewCell.xib in Resources */,
+				9819BE0B1FD6EF8600113D80 /* AboutCroweHorwathViewController.xib in Resources */,
+				9819BE071FD6E07000113D80 /* SecurityTipsViewController.xib in Resources */,
 				982582531FA0D88C002F0873 /* DialogAllTranViewController.xib in Resources */,
 				9822F1AF1FA01ECF00825133 /* SubTableViewCell.xib in Resources */,
 				984E1D911F6F848300D0630E /* MainViewController.xib in Resources */,
 				9825824B1FA0BAB3002F0873 /* DialogSubViewController.xib in Resources */,
+				9819BE171FD71DDE00113D80 /* FunAcountBankViewController.xib in Resources */,
 				98E74B991F82820B0038BA91 /* BankAcountViewController.xib in Resources */,
 				984E1D7F1F6F830C00D0630E /* Assets.xcassets in Resources */,
 				9825824F1FA0D875002F0873 /* DialogRedemViewController.xib in Resources */,
@@ -539,15 +680,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9819BE021FD6E00C00113D80 /* DataProtectPolicyViewController.swift in Sources */,
 				984B3D511F852B1100ECA24D /* Format.swift in Sources */,
+				9819BE161FD71DDE00113D80 /* FunAcountBankViewController.swift in Sources */,
+				9819BDFE1FD6DF8B00113D80 /* FAQsViewController.swift in Sources */,
 				98CB90EF1F89D24B00748A23 /* Model_Subcription.swift in Sources */,
 				98F18EAA1FA4CE840075CAA0 /* DialogConvesionShareViewController.swift in Sources */,
 				9801CAA91F7B8163001488E1 /* BaseTableViewCell.swift in Sources */,
+				98199F371FDAEFCF00689E1C /* Model_sub_Cash.swift in Sources */,
 				9822F1AE1FA01ECF00825133 /* SubTableViewCell.swift in Sources */,
 				989CB45A1F9C4C7100286910 /* Model_AllTransaction.swift in Sources */,
+				98199F351FDAEE6A00689E1C /* Model_sub_Order.swift in Sources */,
 				984E1D8C1F6F847100D0630E /* LoginViewController.swift in Sources */,
 				9801CAAC1F7B8163001488E1 /* String.swift in Sources */,
 				9822F1B21FA01EEE00825133 /* RedemTableViewCell.swift in Sources */,
+				986CF6381FDC5470009E5050 /* SubReciedTableViewCell.swift in Sources */,
 				98A2DD991F91A5A1005F03B5 /* RedemptionTableViewCell.swift in Sources */,
 				98CB90EA1F89B4E900748A23 /* SubcriptionTableViewCell.swift in Sources */,
 				9825824E1FA0D875002F0873 /* DialogRedemViewController.swift in Sources */,
@@ -558,28 +705,45 @@
 				982582521FA0D88C002F0873 /* DialogAllTranViewController.swift in Sources */,
 				98E74B871F82818F0038BA91 /* SubcriptionViewController.swift in Sources */,
 				98F195C61F95E7AE00386AA5 /* ProfileView.swift in Sources */,
+				986CF6441FDC54AB009E5050 /* RemOrderTableViewCell.swift in Sources */,
 				9801CAB01F7B81BD001488E1 /* LeftViewController.swift in Sources */,
+				986CF6481FDC6B9C009E5050 /* RemCashTableViewCell.swift in Sources */,
 				98CB90F11F89D38B00748A23 /* Model_Redemption.swift in Sources */,
 				9822F1BA1FA01F1500825133 /* PortTableViewCell.swift in Sources */,
 				989CB4601F9C894000286910 /* Model_Portfolio_detail.swift in Sources */,
+				9819BE221FD71F5700113D80 /* RedemOrderViewController.swift in Sources */,
+				98199F3B1FDAF10700689E1C /* Model_rem_Cash.swift in Sources */,
 				98CB90ED1F89CF5F00748A23 /* Constant.swift in Sources */,
+				9819BE121FD71DC600113D80 /* FundContactViewController.swift in Sources */,
 				989CB4581F9C489700286910 /* AllTransactionTableViewCell.swift in Sources */,
 				98E74B8B1F8281A40038BA91 /* RedemptionViewController.swift in Sources */,
+				985F42901FDD5DCA00B4914C /* Section.swift in Sources */,
 				9801CAAA1F7B8163001488E1 /* DataTableViewCell.swift in Sources */,
 				98E74B9C1F8282300038BA91 /* ContactInformationViewController.swift in Sources */,
 				98E74B981F82820B0038BA91 /* BankAcountViewController.swift in Sources */,
 				98E74B941F8281F30038BA91 /* InvestorInfomationViewController.swift in Sources */,
 				9822F1B61FA01F0000825133 /* AllTranTableViewCell.swift in Sources */,
+				9819BE1E1FD71F3700113D80 /* SubReciedViewController.swift in Sources */,
 				98E74BA01F8282420038BA91 /* ChangePasswordViewController.swift in Sources */,
+				986CF64B1FDC7971009E5050 /* Control_Until.swift in Sources */,
 				9801CABA1F7B984B001488E1 /* UIViewController.swift in Sources */,
 				9801CAB51F7B8273001488E1 /* AllTransactionViewController.swift in Sources */,
+				9819BE061FD6E07000113D80 /* SecurityTipsViewController.swift in Sources */,
+				9819BE0E1FD706F800113D80 /* GeneralViewController.swift in Sources */,
 				984E1D7D1F6F830C00D0630E /* IRSMobile.xcdatamodeld in Sources */,
+				9819BE1A1FD71F1F00113D80 /* SubOrderViewController.swift in Sources */,
 				9822F1BE1FA01F2700825133 /* PortCreditTableViewCell.swift in Sources */,
+				98199F391FDAF06100689E1C /* Model_rem_Order.swift in Sources */,
 				9825824A1FA0BAB3002F0873 /* DialogSubViewController.swift in Sources */,
+				986CF63C1FDC5483009E5050 /* SubOrderTableViewCell.swift in Sources */,
+				9819BE0A1FD6EF8600113D80 /* AboutCroweHorwathViewController.swift in Sources */,
 				989CB45C1F9C7CAE00286910 /* PortfolioTableViewCell.swift in Sources */,
 				984E1D771F6F830C00D0630E /* ViewController.swift in Sources */,
 				984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */,
 				989CB4621F9C96BC00286910 /* PortfolioDetailTableViewCell.swift in Sources */,
+				9819BE261FD71F6D00113D80 /* RedemCashViewController.swift in Sources */,
+				9819BDFA1FD6DF5400113D80 /* ForgotPasswordViewController.swift in Sources */,
+				986CF64D1FDC7CB1009E5050 /* Model_total.swift in Sources */,
 				989CB45E1F9C890300286910 /* Model_Portfolio.swift in Sources */,
 				984E1D901F6F848300D0630E /* MainViewController.swift in Sources */,
 				98F18EAE1FA4E51D0075CAA0 /* SplashViewController.swift in Sources */,

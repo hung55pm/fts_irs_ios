@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataProtectPolicyViewController" customModule="IRSMobile" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aHm-sY-Kdd">
+                    <rect key="frame" x="10" y="70" width="355" height="597"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <mutableString key="text">
+Effective Date: [•]
+
+This Mobile Data Protection Policy ("Policy") describes how Crowe Horwath Singapore collects, processes, uses and discloses information through your use of Crowe Horwath enoVestor mobile app (the "App").
+
+This Policy does not apply to our collection of data through our websites other than those web pages accessed directly by the App.
+
+Purposes for the Collection and Use of Your Personal Data
+
+The following personal information may be collected through your use of the App:
+
+• Your name, date of birth, gender and nationality
+• Your national identity card number, passport number with expiry date 
+• Your contact information such as address, phone number, fax and email 
+• Your bank account details
+
+The following non-personal information may be collected through your use of the App:
+
+• Date and time when the App accesses our server 
+• Information that has been downloaded to the App 
+• The version of the App that you are using
+
+Your personal data is processed by us to give effect to your requested commercial transaction, including the following:
+
+• Authenticate you on the App so that you can access your account via the App
+
+• To provide our fund administration services
+
+• To maintain contact with you
+
+• To respond to your request or for the purpose for which it was provided to us as stated at the time of collection
+
+• For general management and reporting purposes such as dissemination of statements
+
+
+Disclosure of Personal Data
+
+We respect the confidentiality of the personal data you have provided to us. Your personal data provided to us is processed by Crowe Horwath Singapore and its affiliates (in or outside of Singapore) in order to meet the purposes for which you have submitted the information. 
+
+By submitting personal data to us, you are providing explicit consent to trans-border transmission of such data as described in this Policy. We will ensure that any transfer of personal data to a territory outside of Singapore will be in accordance with the Singapore's Personal Data Protection Act 2012 ("PDPA") so as to ensure a standard of protection to personal data so transferred that is comparable to the protection under the PDPA.
+
+We do not disclose personal data to third parties except when required by law, when we have your consent or deemed consent or in cases where we have engaged the third party such as data intermediaries or subcontractors specifically to assist with the operation of the App. Any such third parties whom we engage will be bound contractually to keep all information confidential.
+
+Access and Update to Personal Data
+
+Subject to certain exceptions, you have the right to access, update, correct or delete your personal information collected through the App. You can access and/or change information in connection with your account by logging on to your account via the App or by sending an email to enoVestorCare@crowehorwath.com.sg.
+
+
+Administration and Management of Personal Data
+
+We have put in place reasonable security arrangements to ensure that your personal data is adequately protected and secured. Appropriate physical, electronic and procedural safeguards have been taken to prevent any unauthorised access, collection, use, disclosure, copying, modification, leakage, loss, damage and/or alteration of your personal data. However, we cannot assume responsibility for any unauthorised use of your personal data by third parties which are wholly attributable to factors beyond our control.
+
+We have also put in place measures such that your personal data in our possession or under our control is destroyed and/or anonymised as soon as it is reasonable to assume that (i) the purpose for which that personal data was collected is no longer being served by the retention of such personal data; and (ii) retention is no longer necessary for any other legal or business purposes.
+
+Changes to this Policy
+
+As part of our efforts to ensure that we properly manage, process and protect your personal data, we will undertake a continuous review of our policies, procedures and processes. We reserve the right to amend the terms of this Policy at our absolute discretion. We encourage you to periodically review this page for the latest information on our data protection practices.
+
+This Policy is effective as of effective date listed above and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. Your continued use of the App after we post any modifications to the Policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Policy. 
+
+If you have concerns or further queries about how we are handling your personal data, you may contact us at the following address, attention to The Data Protection Officer:
+
+Crowe Horwath First Trust
+8 Shenton Way
+#05-01 AXA Tower
+Singapore 068811
+
+Email Address: dataprotection@crowehorwath.com.sg
+
+
+</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aHm-sY-Kdd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="55c-bc-QuJ"/>
+                <constraint firstAttribute="bottom" secondItem="aHm-sY-Kdd" secondAttribute="bottom" id="Ttd-CP-QFJ"/>
+                <constraint firstItem="aHm-sY-Kdd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="hAF-L5-DlN"/>
+                <constraint firstAttribute="trailing" secondItem="aHm-sY-Kdd" secondAttribute="trailing" constant="10" id="pMb-ee-JII"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
