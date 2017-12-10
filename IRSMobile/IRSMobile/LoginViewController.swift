@@ -14,6 +14,10 @@ class LoginViewController: UIViewController {
     var ed_user,ed_pass: String?
     let connect = ConnectSv()
     let userdefault = UserDefaults()
+    
+    @IBOutlet weak var txt_genner: UIButton!
+    
+    
     @IBOutlet weak var ed_username: UITextField!
     
     @IBAction func bt_general(_ sender: UIButton) {
@@ -65,6 +69,7 @@ class LoginViewController: UIViewController {
                                 }
                             }else{
                                 Toast(text: "get info error").show()
+                                
                             }
                         
                         })
@@ -87,9 +92,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+      
+        txt_genner.setTitleColor( UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
         bt_login_out.layer.cornerRadius = 5
-         remember.setOn(self.userdefault.value(forKey: "IS_CHECK_LOGIN") as! Bool, animated: true)
+        bt_login_out.setTitleColor( UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1), for: .normal)
+        remember.setOn(self.userdefault.value(forKey: "IS_CHECK_LOGIN") as! Bool, animated: true)
         if((self.userdefault.value(forKey: "IS_CHECK_LOGIN") as! Bool)){
             ed_username.text = userdefault.value(forKey: "USERNAME") as! String
             ed_password.text = userdefault.value(forKey: "PASSWORD") as! String

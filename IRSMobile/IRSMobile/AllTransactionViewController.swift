@@ -56,7 +56,7 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
         ol_select.layer.borderWidth = 0.5
         ol_select.layer.borderColor = myColor.cgColor
         ol_select.layer.cornerRadius = 7
-  
+        ol_select.setTitleColor( UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
         let getshareclass = investor.value(forKey: "SHARE_CLASS") as! [[String:Any]]
        loaddata(shareclass: getshareclass[chooseDropDown.indexForSelectedRow!]["SHARE_CLASS_ID"] as! String)
         

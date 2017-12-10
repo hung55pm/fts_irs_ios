@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IRSMobile/LeftViewController.swift"
-            timestampString = "530937107.238586"
+            timestampString = "534603971.82445"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "viewDidLayoutSubviews()"
             landmarkType = "7">
          </BreakpointContent>

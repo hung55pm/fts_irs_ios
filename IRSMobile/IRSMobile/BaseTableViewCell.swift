@@ -21,6 +21,8 @@ open class BaseTableViewCell : UITableViewCell {
     }
     
     open override func awakeFromNib() {
+        
+    
     }
     
     open func setup() {

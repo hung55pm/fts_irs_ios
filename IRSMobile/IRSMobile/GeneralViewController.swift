@@ -10,6 +10,16 @@ import UIKit
 
 class GeneralViewController: UIViewController {
 
+    @IBOutlet weak var txt_forgot: UIButton!
+    @IBOutlet weak var txt_faqs: UIButton!
+    
+    @IBOutlet weak var txt_data: UIButton!
+    
+    @IBOutlet weak var txt_security: UIButton!
+    
+    @IBOutlet weak var txt_about: UIButton!
+    
+    
     
     @IBAction func bt_forgot(_ sender: Any) {
         let secondfogot: ForgotPasswordViewController = ForgotPasswordViewController()
@@ -50,6 +60,13 @@ class GeneralViewController: UIViewController {
         navItem.leftBarButtonItem = item2
         navBar.setItems([navItem], animated: false);
 
+        
+        
+        txt_data.setTitleColor(UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
+        txt_faqs.setTitleColor(UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
+        txt_about.setTitleColor(UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
+        txt_forgot.setTitleColor(UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
+        txt_security.setTitleColor(UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
         // Do any additional setup after loading the view.
     }
     func finshview() {

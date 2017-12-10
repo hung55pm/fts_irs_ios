@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeneralViewController" customModule="IRSMobile" customModuleProvider="target">
             <connections>
+                <outlet property="txt_about" destination="hjl-Kz-5Ya" id="CQz-Zv-301"/>
+                <outlet property="txt_data" destination="ot3-Fx-R98" id="mk5-lT-WNe"/>
+                <outlet property="txt_faqs" destination="zJt-oo-Rax" id="roU-Yn-ZFH"/>
+                <outlet property="txt_forgot" destination="EEc-A4-eAa" id="swF-GT-8mK"/>
+                <outlet property="txt_security" destination="iF8-fA-An2" id="w1f-Hn-Q3i"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

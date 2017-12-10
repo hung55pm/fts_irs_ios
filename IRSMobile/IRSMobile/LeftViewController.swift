@@ -11,7 +11,7 @@ import UIKit
 import SlideMenuControllerSwift
 
 
-class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
+class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,ExpandableHeaderViewDelegate{
     let userdefault = UserDefaults()
     @IBOutlet weak var investor_name: UILabel!
     
@@ -21,19 +21,44 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
     var menuinfo = ["Investor Information", "Contact Information", "Bank Account", "Change Password"]
     var menufund = ["Contact Information","Bank Account"]
     var menusub = ["Subscription Order", "Confirmation of Cash Received", "Subscription Note"]
-    var menuremd = ["Redemption Order", " Redemption Note", "Confirmation of Cash Paid"]
+    var menuremd = ["Redemption Order", "Redemption Note", "Confirmation of Cash Paid"]
     var menuorther = ["Portfolio", "Logout"]
+    
+    var sections = [
+        Section(genre: "Transaction Summary",
+                movies: [],
+                expanded: false),
+        Section(genre: "Investor profile",
+                movies: ["Investor Information", "Contact Information", "Bank Account", "Change Password"],
+                expanded: false),
+        Section(genre: "Fund Information",
+                movies: ["Contact Information","Bank Account"],
+                expanded: false),
+        Section(genre: "Subcription",
+                movies: ["Subscription Order", "Confirmation of Cash Received", "Subscription Note"],
+                expanded: false),
+        Section(genre: "Redemption",
+                movies: ["Redemption Order", " Redemption Note", "Confirmation of Cash Paid"],
+                expanded: false),
+        Section(genre: "Portfolio",
+                movies: [],
+                expanded: false),
+        Section(genre: "Logout",
+                movies: [],
+                expanded: false)
+    ]
+    
     func changeViewController(section: Int, row: Int) {
         
         switch section {
         case 0:
-            switch row {
-            case 0:
+            //switch row {
+           // case 0:
                 self.slideMenuController()?.changeMainViewController(AllTransactionViewController(), close: true)
                 break
-            default:
-                break
-            }
+            //default:
+            //    break
+           // }
         case 1:
             switch row {
             case 0:
@@ -93,28 +118,35 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 break
             }
         case 5:
-            switch row {
-            case 0:
+           // switch row {
+           // case 0:
                 self.slideMenuController()?.changeMainViewController(PortfolioViewController(), close: true)
                 break
-            case 1:
-                print(1)
-                self.slideMenuController()?.changeMainViewController(LoginViewController(), close: true)
+            //case 1:
+             //   print(1)
+                //self.slideMenuController()?.changeMainViewController(LoginViewController(), close: true)
                 //                let secondViewController:LoginViewController = LoginViewController()
                 //
                 //                self.present(secondViewController, animated: true, completion: nil)
-                self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
+                //self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
                 
-                self.dismiss(animated: true, completion: nil)
-                break
-            default:
-                break
-            }
-           
-            
+               // self.dismiss(animated: true, completion: nil)
+                //break
+           // default:
+               // break
+        //    }
+        case 6:
+            self.slideMenuController()?.changeMainViewController(LoginViewController(), close: true)
+        //                let secondViewController:LoginViewController = LoginViewController()
+        //
+        //                self.present(secondViewController, animated: true, completion: nil)
+            self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
+        
+            self.dismiss(animated: true, completion: nil)
+            break
         default: break
         }
-        
+    
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -137,7 +169,7 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
         print("ssssssssssssss" + investor.string(forKey: "INVESTOR_NAME")!)
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   /* func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section==0){
             return menutransum.count
         }else if(section==1){
@@ -206,6 +238,76 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
         if self.tableview == scrollView {
             
         }
+    }*/
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sections[section].movies.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if (sections[indexPath.section].expanded) {
+            return 44
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+       
+        let header = ExpandableHeaderView()
+        header.customInit(title: sections[section].genre, section: section, delegate: self)
+        
+        if(section == 0){
+        let borderTop = UIView(frame: CGRect(x:0, y:0, width: tableView.bounds.size.width, height: 0.5))
+        borderTop.backgroundColor = UIColor.self.init(red: 5/255, green: 16/255, blue: 28/255, alpha: 1.0)
+        header.addSubview(borderTop)
+        }
+        let borderBottom = UIView(frame: CGRect(x:0, y:43, width: tableView.bounds.size.width, height: 0.5))
+        borderBottom.backgroundColor = UIColor.self.init(red: 5/255, green: 16/255, blue: 28/255, alpha: 1.0)
+        header.addSubview(borderBottom)
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
+        cell.textLabel?.text = sections[indexPath.section].movies[indexPath.row]
+        return cell
+    }
+    
+    func toggleSection(header: ExpandableHeaderView, section: Int) {
+        sections[section].expanded = !sections[section].expanded
+        
+        if(section==0 || section==5 || section==6){
+           
+            self.changeViewController(section: section, row: 0)
+            
+        }
+        tableview.beginUpdates()
+        for i in 0 ..< sections[section].movies.count {
+           
+                tableview.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
+        
+            
+        }
+        tableview.endUpdates()
+    }
+   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.changeViewController(section: indexPath.section, row: indexPath.row)
+        
+        
+    }
+    
     
 }

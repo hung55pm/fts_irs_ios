@@ -12,16 +12,21 @@ import SlideMenuControllerSwift
 import DropDown
 import Toaster
 @UIApplicationMain
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UILabel.appearance().defaultColor = UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1)
+         UITextView.appearance().defaultColor = UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1)
         let userdefault = UserDefaults()
         if(userdefault.value(forKey: "IS_CHECK_LOGIN") == nil){
         userdefault.set(false, forKey: "IS_CHECK_LOGIN")
         }
         let navigationBarAppearace = UINavigationBar.appearance()
+        
         DropDown.startListeningToKeyboard()
         navigationBarAppearace.tintColor = UIColor.white
         navigationBarAppearace.barTintColor = UIColor.orange
@@ -31,7 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let homeViewController = SplashViewController()
         window!.rootViewController = homeViewController
         window!.makeKeyAndVisible()
-        
+        ToastView.appearance().textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        DropDown.appearance().textColor = UIColor(red: 6/275, green: 48/255, blue: 105/255, alpha: 1)
         return true
     }
     
@@ -119,5 +125,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+extension UILabel{
+    var defaultColor: UIColor? {
+        get { return self.textColor }
+        set { self.textColor = newValue }
+    }
+}
+extension UITextView{
+    var defaultColor: UIColor? {
+        get { return self.textColor }
+        set { self.textColor = newValue }
+    }
 }
 

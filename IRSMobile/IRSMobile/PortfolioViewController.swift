@@ -82,6 +82,7 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
         tableview.rowHeight = UITableViewAutomaticDimension
         let is_qualision = investor.integer(forKey: "IS_EQUALISATION")
         
+        txt_detail.setTitleColor( UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
         // Do any additional setup after loading the view.
 
         // Do any additional setup after loading the view.
