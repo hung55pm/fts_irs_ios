@@ -25,14 +25,14 @@
                     <rect key="frame" x="0.0" y="173" width="375" height="494"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm1-bm-2GU">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm1-bm-2GU">
                     <rect key="frame" x="16" y="65" width="205" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xw-Ug-Nor">
-                    <rect key="frame" x="35" y="97" width="324" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xw-Ug-Nor">
+                    <rect key="frame" x="20" y="97" width="339" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                 <constraint firstAttribute="trailing" secondItem="Cm1-bm-2GU" secondAttribute="trailing" constant="154" id="rhX-9U-ZB2"/>
                 <constraint firstItem="Cm1-bm-2GU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="uNG-6W-06e"/>
                 <constraint firstAttribute="trailing" secondItem="UBA-Ij-eUE" secondAttribute="trailing" id="vL9-cD-6cg"/>
-                <constraint firstItem="0xw-Ug-Nor" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="xGA-YJ-le4"/>
+                <constraint firstItem="0xw-Ug-Nor" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="xGA-YJ-le4"/>
                 <constraint firstItem="0xw-Ug-Nor" firstAttribute="top" secondItem="Cm1-bm-2GU" secondAttribute="bottom" constant="8" id="xPf-sa-ZcD"/>
             </constraints>
             <point key="canvasLocation" x="32.5" y="101.5"/>

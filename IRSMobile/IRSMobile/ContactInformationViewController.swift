@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Toaster
+
 class ContactInformationViewController: UIViewController {
     
     @IBOutlet weak var mail_address: UITextField!
@@ -17,16 +19,43 @@ class ContactInformationViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var bt_update: UIButton!
     
+    
+    let connect = ConnectSv()
+    let userdefault = UserDefaults()
     @IBAction func bt_update_contact(_ sender: UIButton) {
+        var inves = userdefault.value(forKey: "INVESTOR_ID") as! String
+        var mail_add = mail_address.text
+        var tel = phone.text
+        var faxci = fax.text
+        var emails = email.text
+        
+        connect.updateContact(investorId: inves, maillingAddress: mail_add!, tel: tel!, Facsimile: faxci!, email: emails!, completionHandler: {(result) in
+        
+            if(result == 0){
+                Toast(text: "Update contact succeed").show()
+                self.userdefault.set(mail_add, forKey: "MAILLING_ADDRESS")
+                 self.userdefault.set(tel, forKey: "TEL")
+                 self.userdefault.set(faxci, forKey: "FACSIMILE")
+                 self.userdefault.set(emails, forKey: "EMAIL")
+               
+                
+            }else if(result == 1){
+                Toast(text: "An error occurred. Please try again").show()
+            }else{
+                Toast(text: "Failed to try again ..").show()
+            }
+        
+        })
+        
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let investor = UserDefaults()
-        mail_address.text = investor.string(forKey: "MAILLING_ADDRESS")
-        phone.text = investor.string(forKey: "TEL")
-        fax.text = investor.string(forKey: "FACSIMILE")
-        email.text = investor.string(forKey: "EMAIL")
+        mail_address.text = userdefault.string(forKey: "MAILLING_ADDRESS")
+        phone.text = userdefault.string(forKey: "TEL")
+        fax.text = userdefault.string(forKey: "FACSIMILE")
+        email.text = userdefault.string(forKey: "EMAIL")
         bt_update.layer.cornerRadius = 5
         
         // Do any additional setup after loading the view.

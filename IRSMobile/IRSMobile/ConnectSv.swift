@@ -69,7 +69,7 @@ class ConnectSv {
             
             let responseString = String(data: data!, encoding: .utf8)// get data tra ve dang string
             let json = try! JSONSerialization.jsonObject(with: data!, options: []) as? [String:Any]
-            //print("responseString = \(responseString!)")
+            print("responseString = \(responseString!)")
             if(json?["access_token"] == nil){
                  completionHandler(400)
             }else{
@@ -214,12 +214,12 @@ class ConnectSv {
         let urls = contant.HOST + "/api/Investor/changePassword"
         var request = URLRequest(url : URL(string: urls)!)
         
-        request.httpMethod = "PUT"// phuong thuc truyen
+     
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         let access_token = userDefaults.value(forKey: "access_token") as! String
         request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
-        let bodyData = "&investorId=" + investorId + "&oldPassword=" + oldpass + "& newPassword=" + newpass
-        
+        let bodyData = "userID=" + investorId + "&oldPassword=" + oldpass + "&newPassword=" + newpass
+        request.httpMethod = "PUT"// phuong thuc truyen
         print("bodydata:  " + bodyData)
         
         request.httpBody = bodyData.data(using: String.Encoding.utf8);
@@ -243,6 +243,40 @@ class ConnectSv {
 
         
     }
+
+    func updateContact(investorId : String,maillingAddress:String, tel: String,Facsimile:String, email: String,completionHandler: @escaping (Int) -> ()) {
+        let urls = contant.HOST + "/api/Investor/UpdateContact"
+        var request = URLRequest(url : URL(string: urls)!)
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
+        let bodyData = "investorId=" + investorId + "&maillingAddress=" + maillingAddress + "&tel=" + tel + "&Facsimile=" + Facsimile + "&email=" + email
+        request.httpMethod = "PUT"// phuong thuc truyen
+        print("bodydata:  " + bodyData)
+        
+        request.httpBody = bodyData.data(using: String.Encoding.utf8);
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error != nil
+            {
+                print("error=\(String(describing: error))")
+                completionHandler(2)
+                return
+            }
+            
+            // You can print out response object
+            let responseString = String(data: data!, encoding: .utf8)// get data tra ve dang string
+            print("responseString = \(responseString)")
+            var result:Int? = Int(responseString!)
+            completionHandler(result!)
+            
+        }
+        task.resume()
+        
+        
+    }
+
+    
     
     func getsubcription(investorID: String, stratdate: String, enddate: String, completionHandler: @escaping ([Model_Sucription]?) -> () ){
         var array = [Model_Sucription]()

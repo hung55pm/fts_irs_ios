@@ -45,10 +45,10 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var bt_confirm: UIButton!
     
     
-
+    let investor = UserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let investor = UserDefaults()
+       
         investor_name.text = investor.string(forKey: "INVESTOR_NAME")
         bt_confirm.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
@@ -64,6 +64,7 @@ class ChangePasswordViewController: UIViewController {
         connect.changpassword(investorId: inves, oldpass: oldpass, newpass: newpass, completionHandler: {(result) in
             if(result == 0){
                 Toast(text: "Change password succeed").show()
+                self.investor.set(newpass, forKey: "PASSWORD")
 
             }else if(result == 1){
                 Toast(text: "InvestorID or Old Password wrong").show()

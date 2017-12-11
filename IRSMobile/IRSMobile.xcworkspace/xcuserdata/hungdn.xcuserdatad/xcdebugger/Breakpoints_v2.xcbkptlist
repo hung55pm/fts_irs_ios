@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IRSMobile/ConnectSv.swift"
-            timestampString = "534435738.676053"
+            timestampString = "534699435.860203"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "383"
-            endingLineNumber = "383"
+            startingLineNumber = "417"
+            endingLineNumber = "417"
             landmarkName = "getsubcriptionOrder(investorID:stratdate:enddate:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -144,22 +144,6 @@
             startingLineNumber = "116"
             endingLineNumber = "116"
             landmarkName = "getinfor(user:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IRSMobile/ConnectSv.swift"
-            timestampString = "534435738.676053"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
-            landmarkName = "changpassword(investorId:oldpass:newpass:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -240,6 +224,22 @@
             startingLineNumber = "16"
             endingLineNumber = "16"
             landmarkName = "gettotalrem(arr:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IRSMobile/PortTableViewCell.swift"
+            timestampString = "534703239.271643"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
