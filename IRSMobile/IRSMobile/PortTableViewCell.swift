@@ -21,6 +21,8 @@ class PortTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        print("hung" + String(lines(label: txt_series)))
         // Initialization code
     }
 
@@ -28,6 +30,12 @@ class PortTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    func lines(label: UILabel) -> Int {
+        let textSize = CGSize(width: CGFloat(label.frame.size.width), height: CGFloat(MAXFLOAT))
+        let rHeight: Int = lroundf(Float(label.sizeThatFits(textSize).height))
+        let charSize: Int = lroundf(Float(label.font.pointSize))
+        return rHeight / charSize
     }
     
 }

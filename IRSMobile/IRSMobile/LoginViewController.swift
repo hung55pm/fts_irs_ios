@@ -89,10 +89,11 @@ class LoginViewController: UIViewController {
         }
         
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
+        //var time = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         txt_genner.setTitleColor( UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
         bt_login_out.layer.cornerRadius = 5
         bt_login_out.setTitleColor( UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1), for: .normal)
@@ -103,14 +104,20 @@ class LoginViewController: UIViewController {
         }
         
         
+    
         // Do any additional setup after loading the view.
     }
     
+    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("111111")
+    }
+
     
     /*
      // MARK: - Navigation

@@ -12,6 +12,7 @@ import DropDown
 import DatePickerDialog
 class AllTransactionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
     @IBOutlet weak var ol_from: UITextField!
     @IBAction func bt_from(_ sender: UITextField) {
     }
@@ -70,7 +71,8 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
         
         
     }
-    func loaddata(shareclass : String){
+    
+        func loaddata(shareclass : String){
         let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
         
         let spinnerIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
@@ -268,6 +270,11 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
         chooseDropDown.width = 140
        
     }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
+
     func datePickerTapped(txt : UITextField) {
         DatePickerDialog().show("Select date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {
             (date) -> Void in

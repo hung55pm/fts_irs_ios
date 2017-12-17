@@ -140,7 +140,7 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
         //                let secondViewController:LoginViewController = LoginViewController()
         //
         //                self.present(secondViewController, animated: true, completion: nil)
-            self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
+            //self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
         
             self.dismiss(animated: true, completion: nil)
             break

@@ -715,6 +715,66 @@ class ConnectSv {
         
         
     }
-
+    func getportfolioCredit(investorID: String, date: String , completionHandler: @escaping ([Model_Portfolio_detail]?) -> () ){
+        var array = [Model_Portfolio_detail]()
+        let urls = contant.HOST + "/api/Transaction/Portfolio?investorId=" + investorID + "&date=" + date
+        print("url" + urls);
+        let urlss = urls.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        var request = URLRequest(url : URL(string: urlss!)!)
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"// phuong thuc truyen
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error != nil
+            {
+                print("error=\(String(describing: error))")
+                completionHandler(array)
+                return
+            }
+            do {
+                let dataport = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary // get data trar ve khi data tra ve laf mot json object
+                
+                let json = dataport?["BALANCE"] as! [[String:Any]]
+                let MOVEMENT = dataport?["MOVEMENT"] as! [[String: Any]]
+                self.userDefaults.set(MOVEMENT, forKey: "MOVEMENT")
+                if(json.count>0){
+                    for daydata in MOVEMENT.reversed(){
+                        let model = Model_Portfolio_detail()
+                        
+                        
+                        model.DEALING_DATE = daydata["DEALING_DATE"] as? String
+                        model.TRAN_TYPE_NAME = daydata["TRAN_TYPE_NAME"] as? String
+                        model.QUANTITY = daydata["QUANTITY"] as? Float
+                        model.MARKET_VALUE = daydata["MARKET_VALUE"] as? Float
+                        model.CURRENCY_ID = daydata["CURRENCY_ID"] as? String
+                        model.EQUALISATION_CONTIGENT = daydata["EQUALISATION_CONTIGENT"]as? Float
+                        array.append(model)
+                        
+                    }
+                    
+                    
+                    
+                    
+                    
+                    completionHandler(array)
+                }else{
+                    completionHandler(array)
+                }
+                
+            }catch{
+                completionHandler(array)
+                print(error)
+            }
+            
+            
+            
+        }
+        task.resume()
+        
+        
+    }
     
 }
