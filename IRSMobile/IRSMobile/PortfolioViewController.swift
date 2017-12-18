@@ -75,7 +75,8 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
     let connect = ConnectSv()
     let formats = Format()
     let investor = UserDefaults()
-
+    let control_until = Control_until()
+    var arrayView = [UIView]()
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -280,20 +281,40 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
 
     }
     func getdata(date: String, investorId: String, alertController : UIAlertController) {
+        if(self.arrayView.count > 0){
+            for i in 0..<self.arrayView.count{
+                let v = self.arrayView[i].viewWithTag(i)
+                v?.removeFromSuperview()
+                
+            }
+        }
         connect.getportfolio(investorID: investorId, date : date, completionHandler: {(result) in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 var credit: Float = 0
                 if((result?.count)!>0){
+                   // self.arrayView.removeAll()
                     var data_detail = self.investor.value(forKey: "MOVEMENT") as? [[String:Any]]
                     for pd in data_detail!{
                         credit = credit + (pd["EQUALISATION_CONTIGENT"] as! Float)
                     }
                     self.array = result!
+                     var arrayview = self.control_until.gettotalportfolio(arr: self.array)
+                    for i in 0..<arrayview.count{
+                        var total = 0 as Float
+                        for j in 0..<self.array.count{
+                            if(arrayview[i].curent == self.array[j].CURRENCY_ID){
+                                total = total + self.array[j].MARKET_VALUE!
+                            }
+                        }
+                        arrayview[i].total = total
+                    }
                     
+                    self.addview(array: arrayview)
+                    
+
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                 }else{
-                  
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                 }
@@ -307,9 +328,15 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     func getdatacredit(date: String, investorId: String, alertController : UIAlertController) {
+        if(self.arrayView.count > 0){
+            for i in 0..<self.arrayView.count{
+                let v = self.arrayView[i].viewWithTag(i)
+                v?.removeFromSuperview()
+                
+            }
+        }
         connect.getportfolioCredit(investorID: investorId, date : date, completionHandler: {(result) in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-               
                 if((result?.count)!>0){
                     
                     self.array_detail = result!
@@ -321,13 +348,55 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
                     self.tableview.reloadData()
                     alertController.dismiss(animated: true, completion: nil);
                 }
-               
+                                
+
                 
                 
             }
             
             
         })
+        
+    }
+    func addview(array : [Model_total]) {
+        arrayView.removeAll()
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        var arrayLable = [UILabel]()
+        var arrayLable1 = [UILabel]()
+        
+        for i in 0..<array.count{
+            let a =  UILabel()
+            let b = UILabel()
+            arrayLable.append(b)
+            arrayLable1.append(a)
+            let v = UIView()
+            v.tag = i
+            arrayView.append(v)
+            
+        }
+        
+        for i in 0..<array.count{
+            
+            arrayView[i].backgroundColor = UIColor(red: 242/255, green: 151/255, blue: 55/255, alpha: 1)
+            
+            arrayView[i].frame = CGRect(x: 0, y: (screenHeight - CGFloat(50*(i + 1))), width: screenWidth, height: CGFloat(50))
+            
+            
+            arrayLable[i].text = "Total"
+            arrayLable1[i].text = array[i].curent_display! + " " + formats.formatpricetocurrency(string1:String(format:"%3.2f", array[i].total!))
+            arrayLable1[i].textAlignment = .right
+            arrayLable[i].frame = CGRect(x: 5, y: (5*(i + 1)) , width: 80, height: 40)
+            arrayLable1[i].frame = CGRect(x: 90, y: (5*(i + 1)), width: Int(screenWidth - 100), height: 40)
+            
+            arrayView[i].addSubview(arrayLable[i])
+            arrayView[i].addSubview(arrayLable1[i])
+            self.view.addSubview(arrayView[i])
+            
+            
+            
+        }
         
     }
 

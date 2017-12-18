@@ -55,6 +55,7 @@ class RedemCashViewController: UIViewController, UITableViewDelegate, UITableVie
     let connect = ConnectSv()
     let formats = Format()
     let control_until = Control_until()
+    var arrayView = [UIView]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableview.dataSource = self
@@ -181,6 +182,13 @@ class RedemCashViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     func getdata(start: String, end: String, investorId: String, alertController : UIAlertController) {
+        if(self.arrayView.count > 0){
+            for i in 0..<self.arrayView.count{
+                let v = self.arrayView[i].viewWithTag(i)
+                v?.removeFromSuperview()
+                
+            }
+        }
         connect.getredemptionCash(investorID: investorId, stratdate: start, enddate: end, completionHandler: {(result) in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 if((result?.count)!>0){
@@ -217,18 +225,20 @@ class RedemCashViewController: UIViewController, UITableViewDelegate, UITableVie
 
     }
     func addview(array : [Model_total]) {
+          arrayView.removeAll()
         let screenSize = UIScreen.main.bounds
         let screenWidth = screenSize.width
         let screenHeight = screenSize.height
         var arrayLable = [UILabel]()
         var arrayLable1 = [UILabel]()
-        var arrayView = [UIView]()
+        
         for i in 0..<array.count{
             let a =  UILabel()
             let b = UILabel()
             arrayLable.append(b)
             arrayLable1.append(a)
             let v = UIView()
+             v.tag = i
             arrayView.append(v)
             
         }

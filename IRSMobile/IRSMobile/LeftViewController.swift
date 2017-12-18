@@ -16,13 +16,6 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
     @IBOutlet weak var investor_name: UILabel!
     
     @IBOutlet weak var tableview: UITableView!
-    var menutransum = ["Transaction Summary"]
-    var menus = ["","Investor profile", "Fund Information", "Subcription","Redemption",""]
-    var menuinfo = ["Investor Information", "Contact Information", "Bank Account", "Change Password"]
-    var menufund = ["Contact Information","Bank Account"]
-    var menusub = ["Subscription Order", "Confirmation of Cash Received", "Subscription Note"]
-    var menuremd = ["Redemption Order", "Redemption Note", "Confirmation of Cash Paid"]
-    var menuorther = ["Portfolio", "Logout"]
     
     var sections = [
         Section(genre: "Transaction Summary",
@@ -38,7 +31,7 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 movies: ["Subscription Order", "Confirmation of Cash Received", "Subscription Note"],
                 expanded: false),
         Section(genre: "Redemption",
-                movies: ["Redemption Order", " Redemption Note", "Confirmation of Cash Paid"],
+                movies: ["Redemption Order", "Redemption Note", "Confirmation of Cash Paid"],
                 expanded: false),
         Section(genre: "Portfolio",
                 movies: [],
@@ -52,13 +45,9 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         switch section {
         case 0:
-            //switch row {
-           // case 0:
                 self.slideMenuController()?.changeMainViewController(AllTransactionViewController(), close: true)
                 break
-            //default:
-            //    break
-           // }
+        
         case 1:
             switch row {
             case 0:
@@ -118,29 +107,10 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 break
             }
         case 5:
-           // switch row {
-           // case 0:
                 self.slideMenuController()?.changeMainViewController(PortfolioViewController(), close: true)
                 break
-            //case 1:
-             //   print(1)
-                //self.slideMenuController()?.changeMainViewController(LoginViewController(), close: true)
-                //                let secondViewController:LoginViewController = LoginViewController()
-                //
-                //                self.present(secondViewController, animated: true, completion: nil)
-                //self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
-                
-               // self.dismiss(animated: true, completion: nil)
-                //break
-           // default:
-               // break
-        //    }
-        case 6:
+                    case 6:
             self.slideMenuController()?.changeMainViewController(LoginViewController(), close: true)
-        //                let secondViewController:LoginViewController = LoginViewController()
-        //
-        //                self.present(secondViewController, animated: true, completion: nil)
-            //self.userdefault.set(false, forKey: "IS_CHECK_LOGIN")
         
             self.dismiss(animated: true, completion: nil)
             break
@@ -169,76 +139,6 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
         print("ssssssssssssss" + investor.string(forKey: "INVESTOR_NAME")!)
     }
     
-   /* func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(section==0){
-            return menutransum.count
-        }else if(section==1){
-            return menuinfo.count
-        }else if(section==2){
-            return menufund.count
-        }else if(section==3){
-            return menusub.count
-        }else if(section==4){
-            return menuremd.count
-        }else if(section==5){
-            return menuorther.count
-        }
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-        
-        let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
-        if(indexPath.section==0){
-            cell.setData(menutransum[indexPath.row])
-        }else if(indexPath.section==1){
-            cell.setData(menuinfo[indexPath.row])
-            
-        }else if (indexPath.section==2){
-            cell.setData(menufund[indexPath.row])
-        }else if (indexPath.section==3){
-            cell.setData(menusub[indexPath.row])
-        }else if (indexPath.section==4){
-            cell.setData(menuremd[indexPath.row])
-        }else if (indexPath.section==5){
-            cell.setData(menuorther[indexPath.row])
-        }
-        
-        return cell
-        
-    }
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.changeViewController(section: indexPath.section, row: indexPath.row)
-        let cell = tableView.cellForRow(at: indexPath)
-        
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.red
-        cell?.selectedBackgroundView = backgroundView
-        
-    
-    
-    }
-    
-    
-    
-    
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return menus.count
-    }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return menus[section]
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if self.tableview == scrollView {
-            
-        }
-    }*/
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }

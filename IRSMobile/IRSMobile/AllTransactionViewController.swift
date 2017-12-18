@@ -271,9 +271,6 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
        
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-    }
 
     func datePickerTapped(txt : UITextField) {
         DatePickerDialog().show("Select date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date) {

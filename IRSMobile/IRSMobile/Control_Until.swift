@@ -176,6 +176,7 @@ class Control_until{
         }
         return arrtotal
     }
+    
     var counter = 30
     func countdowtimmer() {
         var time = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
