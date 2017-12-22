@@ -85,6 +85,37 @@ class ConnectSv {
       
     
     }
+    func getopt(completionHandler: @escaping (String) -> ()) {
+        let urls = contant.HOST + "/api/OTP/GetOTP"
+        var request = URLRequest(url : URL(string: urls)!)
+        
+        
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        let access_token = userDefaults.value(forKey: "access_token") as! String
+        request.addValue("Bearer " + access_token, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"// phuong thuc truyen
+    
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error != nil
+            {
+                print("error=\(String(describing: error))")
+                completionHandler("fail")
+                return
+            }
+            
+            // You can print out response object
+            let responseString = String(data: data!, encoding: .utf8)// get data tra ve dang string
+            print("responseString = \(responseString)")
+           // var result:Int? = Int(responseString!)
+            completionHandler(responseString!)
+            
+        }
+        task.resume()
+        
+        
+    }
+
     
     
     func getinfor(user : String , completionHandler: @escaping (Int64?) -> () ){

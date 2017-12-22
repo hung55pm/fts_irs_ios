@@ -9,7 +9,7 @@
 import UIKit
 
 import Toaster
-
+import LSDialogViewController
 class ContactInformationViewController: UIViewController {
     
     @IBOutlet weak var mail_address: UITextField!
@@ -66,6 +66,9 @@ class ContactInformationViewController: UIViewController {
         self.setNavigationBarItem(title: "Contact Information")
          self.setNavigationBar(title: "Contact Information")
         
+    }
+    func dismissDialog() {
+        self.dismissDialogViewController(LSAnimationPattern.fadeInOut)
     }
 
 }

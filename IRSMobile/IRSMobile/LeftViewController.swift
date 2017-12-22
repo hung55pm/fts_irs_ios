@@ -109,9 +109,8 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
         case 5:
                 self.slideMenuController()?.changeMainViewController(PortfolioViewController(), close: true)
                 break
-                    case 6:
+        case 6:
             self.slideMenuController()?.changeMainViewController(LoginViewController(), close: true)
-        
             self.dismiss(animated: true, completion: nil)
             break
         default: break

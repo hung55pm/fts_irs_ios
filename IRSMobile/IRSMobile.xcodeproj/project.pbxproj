@@ -72,6 +72,12 @@
 		984E1D8D1F6F847100D0630E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8B1F6F847100D0630E /* LoginViewController.xib */; };
 		984E1D901F6F848300D0630E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E1D8E1F6F848300D0630E /* MainViewController.swift */; };
 		984E1D911F6F848300D0630E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984E1D8F1F6F848300D0630E /* MainViewController.xib */; };
+		98544C991FE9838B00F2892B /* DialogOTPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98544C971FE9838B00F2892B /* DialogOTPLoginViewController.swift */; };
+		98544C9A1FE9838B00F2892B /* DialogOTPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98544C981FE9838B00F2892B /* DialogOTPLoginViewController.xib */; };
+		98544C9D1FE99AAC00F2892B /* DialogOTPChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98544C9B1FE99AAC00F2892B /* DialogOTPChangePassViewController.swift */; };
+		98544C9E1FE99AAC00F2892B /* DialogOTPChangePassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98544C9C1FE99AAC00F2892B /* DialogOTPChangePassViewController.xib */; };
+		98544CA11FE99B1F00F2892B /* DialogOTPUpdateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98544C9F1FE99B1F00F2892B /* DialogOTPUpdateContactViewController.swift */; };
+		98544CA21FE99B1F00F2892B /* DialogOTPUpdateContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98544CA01FE99B1F00F2892B /* DialogOTPUpdateContactViewController.xib */; };
 		985F42901FDD5DCA00B4914C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F428F1FDD5DCA00B4914C /* Section.swift */; };
 		985F42921FDD601B00B4914C /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F42911FDD601B00B4914C /* ExpandableHeaderView.swift */; };
 		986CF6381FDC5470009E5050 /* SubReciedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986CF6361FDC5470009E5050 /* SubReciedTableViewCell.swift */; };
@@ -190,6 +196,12 @@
 		984E1D8B1F6F847100D0630E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		984E1D8E1F6F848300D0630E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		984E1D8F1F6F848300D0630E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		98544C971FE9838B00F2892B /* DialogOTPLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogOTPLoginViewController.swift; sourceTree = "<group>"; };
+		98544C981FE9838B00F2892B /* DialogOTPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogOTPLoginViewController.xib; sourceTree = "<group>"; };
+		98544C9B1FE99AAC00F2892B /* DialogOTPChangePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogOTPChangePassViewController.swift; sourceTree = "<group>"; };
+		98544C9C1FE99AAC00F2892B /* DialogOTPChangePassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogOTPChangePassViewController.xib; sourceTree = "<group>"; };
+		98544C9F1FE99B1F00F2892B /* DialogOTPUpdateContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogOTPUpdateContactViewController.swift; sourceTree = "<group>"; };
+		98544CA01FE99B1F00F2892B /* DialogOTPUpdateContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogOTPUpdateContactViewController.xib; sourceTree = "<group>"; };
 		985F428F1FDD5DCA00B4914C /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		985F42911FDD601B00B4914C /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		986CF6361FDC5470009E5050 /* SubReciedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubReciedTableViewCell.swift; sourceTree = "<group>"; };
@@ -345,6 +357,10 @@
 		982582471FA0BA26002F0873 /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
+				98544C9F1FE99B1F00F2892B /* DialogOTPUpdateContactViewController.swift */,
+				98544CA01FE99B1F00F2892B /* DialogOTPUpdateContactViewController.xib */,
+				98544C9B1FE99AAC00F2892B /* DialogOTPChangePassViewController.swift */,
+				98544C9C1FE99AAC00F2892B /* DialogOTPChangePassViewController.xib */,
 				982582481FA0BAB3002F0873 /* DialogSubViewController.swift */,
 				982582491FA0BAB3002F0873 /* DialogSubViewController.xib */,
 				9825824C1FA0D875002F0873 /* DialogRedemViewController.swift */,
@@ -353,6 +369,8 @@
 				982582511FA0D88C002F0873 /* DialogAllTranViewController.xib */,
 				98F18EA81FA4CE840075CAA0 /* DialogConvesionShareViewController.swift */,
 				98F18EA91FA4CE840075CAA0 /* DialogConvesionShareViewController.xib */,
+				98544C971FE9838B00F2892B /* DialogOTPLoginViewController.swift */,
+				98544C981FE9838B00F2892B /* DialogOTPLoginViewController.xib */,
 			);
 			name = Dialog;
 			sourceTree = "<group>";
@@ -572,9 +590,11 @@
 				98F18EAB1FA4CE840075CAA0 /* DialogConvesionShareViewController.xib in Resources */,
 				9819BE131FD71DC600113D80 /* FundContactViewController.xib in Resources */,
 				986CF6491FDC6B9C009E5050 /* RemCashTableViewCell.xib in Resources */,
+				98544C9A1FE9838B00F2892B /* DialogOTPLoginViewController.xib in Resources */,
 				9819BE1F1FD71F3700113D80 /* SubReciedViewController.xib in Resources */,
 				98E74B901F8281B60038BA91 /* PortfolioViewController.xib in Resources */,
 				9819BE231FD71F5700113D80 /* RedemOrderViewController.xib in Resources */,
+				98544CA21FE99B1F00F2892B /* DialogOTPUpdateContactViewController.xib in Resources */,
 				98E74BA51F829C370038BA91 /* LogoutViewController.xib in Resources */,
 				98E74B9D1F8282300038BA91 /* ContactInformationViewController.xib in Resources */,
 				98E74B951F8281F30038BA91 /* InvestorInfomationViewController.xib in Resources */,
@@ -594,6 +614,7 @@
 				9819BE031FD6E00C00113D80 /* DataProtectPolicyViewController.xib in Resources */,
 				984E1D821F6F830C00D0630E /* LaunchScreen.storyboard in Resources */,
 				9822F1B71FA01F0000825133 /* AllTranTableViewCell.xib in Resources */,
+				98544C9E1FE99AAC00F2892B /* DialogOTPChangePassViewController.xib in Resources */,
 				9819BE0B1FD6EF8600113D80 /* AboutCroweHorwathViewController.xib in Resources */,
 				9819BE071FD6E07000113D80 /* SecurityTipsViewController.xib in Resources */,
 				982582531FA0D88C002F0873 /* DialogAllTranViewController.xib in Resources */,
@@ -700,6 +721,7 @@
 				984E1D8C1F6F847100D0630E /* LoginViewController.swift in Sources */,
 				9801CAAC1F7B8163001488E1 /* String.swift in Sources */,
 				9822F1B21FA01EEE00825133 /* RedemTableViewCell.swift in Sources */,
+				98544CA11FE99B1F00F2892B /* DialogOTPUpdateContactViewController.swift in Sources */,
 				986CF6381FDC5470009E5050 /* SubReciedTableViewCell.swift in Sources */,
 				98A2DD991F91A5A1005F03B5 /* RedemptionTableViewCell.swift in Sources */,
 				98CB90EA1F89B4E900748A23 /* SubcriptionTableViewCell.swift in Sources */,
@@ -744,6 +766,7 @@
 				986CF63C1FDC5483009E5050 /* SubOrderTableViewCell.swift in Sources */,
 				9819BE0A1FD6EF8600113D80 /* AboutCroweHorwathViewController.swift in Sources */,
 				989CB45C1F9C7CAE00286910 /* PortfolioTableViewCell.swift in Sources */,
+				98544C991FE9838B00F2892B /* DialogOTPLoginViewController.swift in Sources */,
 				984E1D771F6F830C00D0630E /* ViewController.swift in Sources */,
 				984E1D751F6F830C00D0630E /* AppDelegate.swift in Sources */,
 				989CB4621F9C96BC00286910 /* PortfolioDetailTableViewCell.swift in Sources */,
@@ -752,6 +775,7 @@
 				9819BE261FD71F6D00113D80 /* RedemCashViewController.swift in Sources */,
 				9819BDFA1FD6DF5400113D80 /* ForgotPasswordViewController.swift in Sources */,
 				986CF64D1FDC7CB1009E5050 /* Model_total.swift in Sources */,
+				98544C9D1FE99AAC00F2892B /* DialogOTPChangePassViewController.swift in Sources */,
 				989CB45E1F9C890300286910 /* Model_Portfolio.swift in Sources */,
 				984E1D901F6F848300D0630E /* MainViewController.swift in Sources */,
 				98F18EAE1FA4E51D0075CAA0 /* SplashViewController.swift in Sources */,

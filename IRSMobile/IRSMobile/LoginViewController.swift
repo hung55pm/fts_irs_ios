@@ -9,7 +9,7 @@
 import UIKit
 import Toaster
 import SlideMenuControllerSwift
-
+import LSDialogViewController
 class LoginViewController: UIViewController {
     var ed_user,ed_pass: String?
     let connect = ConnectSv()
@@ -58,8 +58,20 @@ class LoginViewController: UIViewController {
                         self.connect.getinfor(user: self.ed_user!, completionHandler: {(results) in
                             if(results == 200){
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                                appDelegate.createmenuleft()
+                                    
+                                    self.connect.getopt(completionHandler: {(otp) in
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                        if(otp == "fail"){
+                                            Toast(text: "Get OTP fail").show()
+                                        }else{
+                                            self.userdefault.set(otp, forKey: "OTP")
+                                        let dialogViewController: DialogOTPLoginViewController = DialogOTPLoginViewController(nibName:"DialogOTPLoginViewController", bundle: nil)
+                                        dialogViewController.delegate = self
+                                        self.presentDialogViewController(dialogViewController, animationPattern: .slideLeftRight, completion: { () -> Void in })
+                                        }
+                                        }
+                                    })
+                                   
                                 if self.remember.isOn == true {
                                     self.userdefault.set(true, forKey: "IS_CHECK_LOGIN")
                                 } else {
@@ -89,7 +101,9 @@ class LoginViewController: UIViewController {
         }
         
     }
-
+    func dismissDialog() {
+        self.dismissDialogViewController(LSAnimationPattern.fadeInOut)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
