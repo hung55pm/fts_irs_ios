@@ -18,14 +18,14 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
     @IBOutlet weak var tableview: UITableView!
     
     var sections = [
-        Section(genre: "Transaction Summary",
-                movies: [],
-                expanded: false),
-        Section(genre: "Investor profile",
+                Section(genre: "Investor profile",
                 movies: ["Investor Information", "Contact Information", "Bank Account", "Change Password"],
                 expanded: false),
         Section(genre: "Fund Information",
                 movies: ["Contact Information","Bank Account"],
+                expanded: false),
+        Section(genre: "Transaction Summary",
+                movies: [],
                 expanded: false),
         Section(genre: "Subcription",
                 movies: ["Subscription Order", "Confirmation of Cash Received", "Subscription Note"],
@@ -44,11 +44,11 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func changeViewController(section: Int, row: Int) {
         
         switch section {
-        case 0:
+        case 2:
                 self.slideMenuController()?.changeMainViewController(AllTransactionViewController(), close: true)
                 break
         
-        case 1:
+        case 0:
             switch row {
             case 0:
                 self.slideMenuController()?.changeMainViewController(InvestorInfomationViewController(), close: true)
@@ -65,7 +65,7 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
             default:
                 break
             }
-        case 2:
+        case 1:
             switch row {
             case 0:
                 self.slideMenuController()?.changeMainViewController(FundContactViewController(), close: true)
@@ -187,7 +187,7 @@ class LeftViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func toggleSection(header: ExpandableHeaderView, section: Int) {
         sections[section].expanded = !sections[section].expanded
         
-        if(section==0 || section==5 || section==6){
+        if(section==2 || section==5 || section==6){
            
             self.changeViewController(section: section, row: 0)
             

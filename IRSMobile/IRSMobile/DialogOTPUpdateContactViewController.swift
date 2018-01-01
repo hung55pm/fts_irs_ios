@@ -8,7 +8,7 @@
 
 import UIKit
 import LSDialogViewController
-
+import Toaster
 class DialogOTPUpdateContactViewController: UIViewController {
 var delegate: ContactInformationViewController?
     var seconds = 60
@@ -20,12 +20,37 @@ var delegate: ContactInformationViewController?
     @IBOutlet weak var txt_noti: UILabel!
     
     @IBOutlet weak var txt_bt_confirm: UIButton!
-    
+    let connect = ConnectSv()
+    var inves : String = ""
+    var mail_add : String = ""
+    var tel: String = ""
+    var faxci:String = ""
+    var emails: String = ""
     @IBAction func bt_confirm(_ sender: Any) {
         let otp = ed_otp.text
         if(otp == userdefault.value(forKey: "OTP") as! String){
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.createmenuleft()
+            connect.updateContact(investorId: inves, maillingAddress: mail_add, tel: tel, Facsimile: faxci, email: emails, completionHandler: {(result) in
+                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                if(result == 0){
+                    Toast(text: "Update contact succeed").show()
+                    self.userdefault.set(self.mail_add, forKey: "MAILLING_ADDRESS")
+                    self.userdefault.set(self.tel, forKey: "TEL")
+                    self.userdefault.set(self.faxci, forKey: "FACSIMILE")
+                    self.userdefault.set(self.emails, forKey: "EMAIL")
+                    
+                    
+                }else if(result == 1){
+                    Toast(text: "An error occurred. Please try again").show()
+                    
+                }else{
+                    Toast(text: "Failed to try again ..").show()
+                    
+                }
+                    
+                    self.timer.invalidate()
+                    self.delegate?.dismissDialog()
+                }
+            })
         }else if(otp == ""){
             txt_noti.isHidden = false
             txt_noti.text = "You have not entered the code otp"
@@ -55,6 +80,10 @@ var delegate: ContactInformationViewController?
             
         }
     }
+    func dissmisdialog() {
+        timer.invalidate()
+        self.delegate?.dismissDialog()
+    }
     let userdefault = UserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,19 +94,9 @@ var delegate: ContactInformationViewController?
     }
 
     override func viewDidDisappear(_ animated: Bool) {
-        timer.invalidate()
+        finsh()
         print("disable")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

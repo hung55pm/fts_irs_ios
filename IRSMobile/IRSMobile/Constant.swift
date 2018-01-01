@@ -10,5 +10,6 @@ import Foundation
 class Constant{
     init() {
     }
-    public let HOST : String = "http://117.0.38.37:8259"
+    //public let HOST : String = "http://117.0.38.37:8259"
+    public let HOST : String = "http://119.17.212.23:8081"
 }

@@ -9,7 +9,7 @@
 import UIKit
 import Toaster
 
-
+import LSDialogViewController
 class ChangePasswordViewController: UIViewController {
     
     
@@ -36,7 +36,28 @@ class ChangePasswordViewController: UIViewController {
             if(newpass != confirmpass){
                 Toast(text :"New Password and confirmation passwords are not matchers").show()
             }else{
-                changpass(inves: userdefault.string(forKey: "INVESTOR_ID")!, oldpass: oldpass!, newpass: newpass!)
+               // changpass(inves: userdefault.string(forKey: "INVESTOR_ID")!, oldpass: oldpass!, newpass: newpass!)
+                
+                
+                connect.getopt(completionHandler: {(otp) in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        if(otp == "fail"){
+                            Toast(text: "Get OTP fail").show()
+                        }else{
+                            
+                            self.userdefault.set(otp, forKey: "OTP")
+                            let dialogViewController: DialogOTPChangePassViewController = DialogOTPChangePassViewController(nibName:"DialogOTPChangePassViewController", bundle: nil)
+                            dialogViewController.delegate = self
+                            dialogViewController.newpass = self.new_password.text!
+                            dialogViewController.inves = self.userdefault.value(forKey: "INVESTOR_ID") as! String
+                            dialogViewController.oldpass = self.old_password.text!
+                            self.presentDialogViewController(dialogViewController, animationPattern: .slideLeftRight, completion: { () -> Void in })
+                        }
+                        
+                        
+                    }
+                })
+
             }
         }
         
@@ -60,20 +81,9 @@ class ChangePasswordViewController: UIViewController {
         self.setNavigationBarItem(title: "Change Password")
         
     }
-    func changpass(inves: String, oldpass: String, newpass: String){
-        connect.changpassword(investorId: inves, oldpass: oldpass, newpass: newpass, completionHandler: {(result) in
-            if(result == 0){
-                Toast(text: "Change password succeed").show()
-                self.investor.set(newpass, forKey: "PASSWORD")
-
-            }else if(result == 1){
-                Toast(text: "InvestorID or Old Password wrong").show()
-            }else{
-                Toast(text: "failed to try again ..").show()
-            }
-            
-        })
-
+    func dismissDialog() {
+        self.dismissDialogViewController(LSAnimationPattern.fadeInOut)
     }
+
 
 }
