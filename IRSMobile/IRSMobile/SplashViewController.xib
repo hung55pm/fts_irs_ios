@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,34 +17,27 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PM5-WI-TON">
-                    <rect key="frame" x="128" y="227" width="118" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="tNV-YG-Deq"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PM5-WI-TON">
+                    <rect key="frame" x="102" y="220" width="116" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-Qy-IWy">
-                    <rect key="frame" x="177" y="273" width="20" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="20" id="QFv-L4-RaX"/>
-                        <constraint firstAttribute="height" constant="20" id="zA2-ak-drB"/>
-                    </constraints>
+                    <rect key="frame" x="150" y="266" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="1OJ-Qy-IWy" firstAttribute="top" secondItem="PM5-WI-TON" secondAttribute="bottom" constant="25" id="7Wk-CQ-CLn"/>
-                <constraint firstItem="PM5-WI-TON" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="128" id="BVB-kH-JTz"/>
-                <constraint firstAttribute="trailing" secondItem="PM5-WI-TON" secondAttribute="trailing" constant="129" id="D0W-RG-jAP"/>
-                <constraint firstItem="1OJ-Qy-IWy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="177" id="VbI-w2-nfd"/>
-                <constraint firstAttribute="trailing" secondItem="1OJ-Qy-IWy" secondAttribute="trailing" constant="178" id="feH-Us-OCJ"/>
-                <constraint firstItem="PM5-WI-TON" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="227" id="qMz-gW-O6J"/>
+                <constraint firstItem="1OJ-Qy-IWy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="150" id="Tg1-xi-Qx4"/>
+                <constraint firstAttribute="trailing" secondItem="PM5-WI-TON" secondAttribute="trailing" constant="102" id="ZsJ-7s-dt1"/>
+                <constraint firstAttribute="trailing" secondItem="1OJ-Qy-IWy" secondAttribute="trailing" constant="150" id="c8l-ij-DnV"/>
+                <constraint firstItem="PM5-WI-TON" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="102" id="htC-5d-mln"/>
+                <constraint firstItem="1OJ-Qy-IWy" firstAttribute="top" secondItem="PM5-WI-TON" secondAttribute="bottom" constant="12" id="jpE-gk-5Rg"/>
+                <constraint firstItem="PM5-WI-TON" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="220" id="mwm-g4-40e"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="133.5"/>
         </view>
