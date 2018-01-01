@@ -99,6 +99,8 @@
 		989CB4601F9C894000286910 /* Model_Portfolio_detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989CB45F1F9C894000286910 /* Model_Portfolio_detail.swift */; };
 		989CB4621F9C96BC00286910 /* PortfolioDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989CB4611F9C96BC00286910 /* PortfolioDetailTableViewCell.swift */; };
 		98A0B82C1FE023F800B99174 /* CountdowTimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A0B82B1FE023F800B99174 /* CountdowTimmer.swift */; };
+		98A28C931FFA272700CDAD90 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A28C921FFA272700CDAD90 /* main.swift */; };
+		98A28C951FFA275200CDAD90 /* TimerApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A28C941FFA275200CDAD90 /* TimerApplication.swift */; };
 		98A2DD991F91A5A1005F03B5 /* RedemptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A2DD981F91A5A1005F03B5 /* RedemptionTableViewCell.swift */; };
 		98CB90EA1F89B4E900748A23 /* SubcriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB90E81F89B4E900748A23 /* SubcriptionTableViewCell.swift */; };
 		98CB90ED1F89CF5F00748A23 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB90EC1F89CF5F00748A23 /* Constant.swift */; };
@@ -223,6 +225,8 @@
 		989CB45F1F9C894000286910 /* Model_Portfolio_detail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_Portfolio_detail.swift; sourceTree = "<group>"; };
 		989CB4611F9C96BC00286910 /* PortfolioDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioDetailTableViewCell.swift; sourceTree = "<group>"; };
 		98A0B82B1FE023F800B99174 /* CountdowTimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdowTimmer.swift; sourceTree = "<group>"; };
+		98A28C921FFA272700CDAD90 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		98A28C941FFA275200CDAD90 /* TimerApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerApplication.swift; sourceTree = "<group>"; };
 		98A2DD981F91A5A1005F03B5 /* RedemptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemptionTableViewCell.swift; sourceTree = "<group>"; };
 		98CB90E81F89B4E900748A23 /* SubcriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubcriptionTableViewCell.swift; sourceTree = "<group>"; };
 		98CB90EC1F89CF5F00748A23 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -428,6 +432,8 @@
 				984E1D801F6F830C00D0630E /* LaunchScreen.storyboard */,
 				984E1D831F6F830C00D0630E /* Info.plist */,
 				984E1D7B1F6F830C00D0630E /* IRSMobile.xcdatamodeld */,
+				98A28C921FFA272700CDAD90 /* main.swift */,
+				98A28C941FFA275200CDAD90 /* TimerApplication.swift */,
 			);
 			path = IRSMobile;
 			sourceTree = "<group>";
@@ -712,6 +718,7 @@
 				9819BE161FD71DDE00113D80 /* FunAcountBankViewController.swift in Sources */,
 				9819BDFE1FD6DF8B00113D80 /* FAQsViewController.swift in Sources */,
 				98CB90EF1F89D24B00748A23 /* Model_Subcription.swift in Sources */,
+				98A28C931FFA272700CDAD90 /* main.swift in Sources */,
 				98F18EAA1FA4CE840075CAA0 /* DialogConvesionShareViewController.swift in Sources */,
 				9801CAA91F7B8163001488E1 /* BaseTableViewCell.swift in Sources */,
 				98199F371FDAEFCF00689E1C /* Model_sub_Cash.swift in Sources */,
@@ -764,6 +771,7 @@
 				98199F391FDAF06100689E1C /* Model_rem_Order.swift in Sources */,
 				9825824A1FA0BAB3002F0873 /* DialogSubViewController.swift in Sources */,
 				986CF63C1FDC5483009E5050 /* SubOrderTableViewCell.swift in Sources */,
+				98A28C951FFA275200CDAD90 /* TimerApplication.swift in Sources */,
 				9819BE0A1FD6EF8600113D80 /* AboutCroweHorwathViewController.swift in Sources */,
 				989CB45C1F9C7CAE00286910 /* PortfolioTableViewCell.swift in Sources */,
 				98544C991FE9838B00F2892B /* DialogOTPLoginViewController.swift in Sources */,

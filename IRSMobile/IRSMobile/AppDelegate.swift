@@ -11,7 +11,7 @@ import CoreData
 import SlideMenuControllerSwift
 import DropDown
 import Toaster
-@UIApplicationMain
+//@UIApplicationMain
 
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
