@@ -29,6 +29,16 @@ class BankAcountViewController: UIViewController {
         acount_name.text = investor.string(forKey: "ACCOUNT_NAME")
         acount_number.text = investor.string(forKey: "ACCOUNT_NUMBER")
         // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        ben_bank.resignFirstResponder()
+        bank_address.resignFirstResponder()
+        bank_swift.resignFirstResponder()
+        acount_name.resignFirstResponder()
+        acount_number.resignFirstResponder()
     }
 
     override func viewWillAppear(_ animated: Bool) {

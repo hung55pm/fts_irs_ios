@@ -82,6 +82,15 @@ class ContactInformationViewController: UIViewController {
         bt_update.layer.cornerRadius = 5
         
         // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        mail_address.resignFirstResponder()
+        phone.resignFirstResponder()
+        fax.resignFirstResponder()
+        email.resignFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {

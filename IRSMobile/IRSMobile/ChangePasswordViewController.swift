@@ -73,6 +73,15 @@ class ChangePasswordViewController: UIViewController {
         investor_name.text = investor.string(forKey: "INVESTOR_NAME")
         bt_confirm.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        investor_name.resignFirstResponder()
+        old_password.resignFirstResponder()
+        new_password.resignFirstResponder()
+        confirm_password.resignFirstResponder()
     }
 
     override func viewWillAppear(_ animated: Bool) {

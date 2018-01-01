@@ -61,6 +61,13 @@ var delegate: LoginViewController?
         runTimer()
 
        
+   
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        ed_otp.resignFirstResponder()
     }
 
     override func viewDidDisappear(_ animated: Bool) {

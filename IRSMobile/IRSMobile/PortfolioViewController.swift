@@ -92,6 +92,13 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
         // Do any additional setup after loading the view.
 
         // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        txt_date.resignFirstResponder()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

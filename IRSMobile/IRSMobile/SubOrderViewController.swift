@@ -79,6 +79,13 @@ class SubOrderViewController: UIViewController, UITableViewDelegate, UITableView
 
         getdata(start: formats.getfirstdayofmounth(), end: formats.getdaynow(), investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
         // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        txt_txt.resignFirstResponder()
+        tf_to.resignFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {

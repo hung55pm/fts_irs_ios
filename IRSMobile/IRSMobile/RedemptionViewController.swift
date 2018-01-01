@@ -76,6 +76,13 @@ class RedemptionViewController: UIViewController, UITableViewDelegate, UITableVi
         let end = formats.formatdatetoMMddyyyy(str: formats.getdaynow())
         getdata(start: start, end: end, InvestorID: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        txt_to.resignFirstResponder()
+        txt_from.resignFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {

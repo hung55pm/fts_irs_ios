@@ -89,8 +89,13 @@ var delegate: ContactInformationViewController?
         super.viewDidLoad()
         txt_bt_confirm.layer.cornerRadius = 5
         runTimer()
-
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
        
+    }
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        ed_otp.resignFirstResponder()
+     
     }
 
     override func viewDidDisappear(_ animated: Bool) {

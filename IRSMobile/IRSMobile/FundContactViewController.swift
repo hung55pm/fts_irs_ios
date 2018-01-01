@@ -37,6 +37,17 @@ class FundContactViewController: UIViewController {
         txt_phone.text = investor.value(forKey: "FUND_TEL") as! String
 
         // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        txt_fax.resignFirstResponder()
+        txt_email.resignFirstResponder()
+        txt_phone.resignFirstResponder()
+        txt_fundid.resignFirstResponder()
+        txt_address.resignFirstResponder()
+        txt_fundname.resignFirstResponder()
     }
 
     override func viewWillAppear(_ animated: Bool) {

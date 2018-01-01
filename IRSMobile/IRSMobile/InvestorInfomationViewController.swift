@@ -43,6 +43,19 @@ class InvestorInfomationViewController: UIViewController {
         adress_register.numberOfLines = 0
         adress_register.text = investor.string(forKey: "REGISTERED_ADDRESS")
         // Do any additional setup after loading the view.
+    
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        name.resignFirstResponder()
+         date_of_co.resignFirstResponder()
+         gender.resignFirstResponder()
+         passport_number.resignFirstResponder()
+         passport_expridate.resignFirstResponder()
+         counttry.resignFirstResponder()
+         adress_register.resignFirstResponder()
     }
 
     override func viewWillAppear(_ animated: Bool) {

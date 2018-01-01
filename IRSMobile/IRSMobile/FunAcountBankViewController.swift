@@ -27,6 +27,16 @@ class FunAcountBankViewController: UIViewController {
         txt_ben_acount_name.text = ben_bank.value(forKey: "BENEFICIARY_ACCOUNT_NAME") as! String
         ben_acount_number.text = ben_bank.value(forKey: "BENEFICIARY_ACCOUNT_NUMBER") as! String
         // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        txt_ben_bank.resignFirstResponder()
+        txt_ben_bank_bic.resignFirstResponder()
+        txt_intermediary.resignFirstResponder()
+        txt_ben_acount_name.resignFirstResponder()
+        ben_acount_number.resignFirstResponder()
     }
 
     override func viewWillAppear(_ animated: Bool) {

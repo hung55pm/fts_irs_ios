@@ -106,7 +106,8 @@ class LoginViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
         //var time = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         txt_genner.setTitleColor( UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
         bt_login_out.layer.cornerRadius = 5
@@ -122,7 +123,10 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        ed_username.resignFirstResponder()
+        ed_password.resignFirstResponder()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
