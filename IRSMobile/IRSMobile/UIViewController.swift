@@ -23,20 +23,23 @@ extension UIViewController {
    
     }
     func setNavigationBar(title : String) {
-        var image = UIImage(named: "ic_menu_black_24dp")
+        
+        let image = UIImage(named: "ic_menu_black_24dp")
         let screenSize: CGRect = UIScreen.main.bounds
-        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 60))
+        //let navBar = NavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 60))
+         let navBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: screenSize.width, height: 60))
+       
         let navItem = UINavigationItem(title: title)
+        navBar.setTitleVerticalPositionAdjustment(CGFloat(7), for: UIBarMetrics.default)
         let doneItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.plain, target: nil, action: #selector(done))
         navItem.leftBarButtonItem = doneItem
         navBar.setItems([navItem], animated: false)
-
-
         self.view.addSubview(navBar)
+        
     }
-    
     func done() {
         self.slideMenuController()?.openLeft()
     }
+
 
 }

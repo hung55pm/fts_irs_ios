@@ -252,7 +252,7 @@ class RedemCashViewController: UIViewController, UITableViewDelegate, UITableVie
         
         for i in 0..<array.count{
             
-            arrayView[i].backgroundColor = UIColor(red: 242/255, green: 151/255, blue: 55/255, alpha: 1)
+            arrayView[i].backgroundColor = .orange
             
             arrayView[i].frame = CGRect(x: 0, y: (screenHeight - CGFloat(50*(i + 1))), width: screenWidth, height: CGFloat(50))
           
