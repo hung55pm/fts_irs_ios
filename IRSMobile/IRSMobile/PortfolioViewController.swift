@@ -37,6 +37,7 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
             alertController.view.addSubview(spinnerIndicator)
             self.present(alertController, animated: false, completion: nil)
             let date = formats.formatdatetoMMddyyyy(str: txt_date.text!)
+            array_detail=[]
             getdatacredit(date: date, investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
             
             
@@ -56,6 +57,7 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
             alertController.view.addSubview(spinnerIndicator)
             self.present(alertController, animated: false, completion: nil)
              let date = formats.formatdatetoMMddyyyy(str: txt_date.text!)
+            array=[]
             getdata(date: date, investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
             txt_detail.setTitle("Detail", for: .normal)
            
@@ -134,37 +136,6 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
             cells.txt_unit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row ].UNIT_PRICE!))
             cells.txt_price.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].QUANTITY!))
             cells.txt_market_value.text = array[indexPath.row].CURRENCY_ID! + " " + formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row].MARKET_VALUE!))
-//        if(indexPath.row == 0){
-//            
-//            
-//            cells.labseries.font = cells.labseries.font.withSize(13)
-//            cells.labunit.font = cells.labunit.font.withSize(13)
-//            cells.labprice.font = cells.labprice.font.withSize(13)
-//            cells.labmaketvalue.font = cells.labmaketvalue.font.withSize(13)
-//
-//            cells.labseries.text = "Classes/Series"
-//            cells.labunit.text = "Outstanding Unit"
-//            cells.labprice.text = "Price"
-//            cells.labmaketvalue.text = "Market value"
-//            cells.backgroundColor = UIColor.blue
-//
-//            cells.labseries.textColor = UIColor.white
-//            cells.labunit.textColor = UIColor.white
-//            cells.labprice.textColor = UIColor.white
-//            cells.labmaketvalue.textColor = UIColor.white
-//            
-//        }else if (indexPath.row > 0){
-//            
-//            cells.labseries.font = cells.labseries.font.withSize(13)
-//            cells.labunit.font = cells.labunit.font.withSize(13)
-//            cells.labprice.font = cells.labprice.font.withSize(13)
-//            cells.labmaketvalue.font = cells.labmaketvalue.font.withSize(13)
-//            cells.labseries.text = array[indexPath.row - 1].SERIES_CLASS
-//            cells.labunit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array[indexPath.row - 1].UNIT_PRICE!))
-//            cells.labprice.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].QUANTITY!))
-//            cells.labmaketvalue.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array[indexPath.row - 1].MARKET_VALUE!))
-//            
-//            }
                         return cells
         }else{
              let cell = Bundle.main.loadNibNamed("PortCreditTableViewCell", owner: self, options: nil)?.first as!
@@ -177,42 +148,6 @@ class PortfolioViewController: UIViewController, UITableViewDataSource, UITableV
             cell.txt_tran.text = array_detail[indexPath.row].TRAN_TYPE_NAME
             cell.txt_credit.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array_detail[indexPath.row].EQUALISATION_CONTIGENT!))
             cell.txt_maket_value.text = array_detail[indexPath.row].CURRENCY_ID! + " " + formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array_detail[indexPath.row].MARKET_VALUE!))
-//            if(indexPath.row == 0){
-//                
-//                
-//                cell.labdate.font = cells.labseries.font.withSize(13)
-//                cell.labunit.font = cells.labunit.font.withSize(13)
-//                cell.labtran.font = cells.labprice.font.withSize(13)
-//                cell.labcredit.font = cells.labprice.font.withSize(13)
-//                cell.labmaketvalue.font = cells.labmaketvalue.font.withSize(13)
-//                
-//                cell.labdate.text = "Date"
-//                cell.labunit.text = "Unit"
-//                cell.labtran.text = "Transaction"
-//                cell.labcredit.text = "Equalisation Credit"
-//                cell.labmaketvalue.text = "Market value"
-//                cell.backgroundColor = UIColor.blue
-//                
-//                cell.labdate.textColor = UIColor.white
-//                cell.labunit.textColor = UIColor.white
-//                cell.labtran.textColor = UIColor.white
-//                cell.labcredit.textColor = UIColor.white
-//                cell.labmaketvalue.textColor = UIColor.white
-//                
-//            }else if (indexPath.row > 0){
-//                
-//                cell.labdate.font = cells.labseries.font.withSize(13)
-//                cell.labunit.font = cells.labunit.font.withSize(13)
-//                cell.labtran.font = cells.labprice.font.withSize(13)
-//                cell.labcredit.font = cells.labprice.font.withSize(13)
-//                cell.labmaketvalue.font = cells.labmaketvalue.font.withSize(13)
-//                cell.labdate.text = formats.formatdatetoddMMMyyyy(str: array_detail[indexPath.row - 1].DEALING_DATE!)
-//                cell.labunit.text = formats.formatpricetocurrency(string1: String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array_detail[indexPath.row - 1].QUANTITY!))
-//                cell.labtran.text = array_detail[indexPath.row - 1].TRAN_TYPE_NAME
-//                cell.labcredit.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "QUANTITY_ROUNDING")! + "f", array_detail[indexPath.row - 1].EQUALISATION_CONTIGENT!))
-//                cell.labmaketvalue.text = formats.formatpricetocurrency(string1:String(format:"%3." + investor.string(forKey: "PRICE_ROUNDING")! + "f", array_detail[indexPath.row - 1].MARKET_VALUE!))
-//                
-//            }
             
             return cell
 

@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UIApplication.shared.statusBarView?.backgroundColor = .red
         UILabel.appearance().defaultColor = UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1)
          UITextView.appearance().defaultColor = UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1)
         let userdefault = UserDefaults()
