@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17D47" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -128,13 +128,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_right" highlightedImage="arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="GAb-cK-YZK">
-                        <rect key="frame" x="301" y="78" width="14" height="23"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="23" id="Vc0-nh-tDe"/>
-                            <constraint firstAttribute="width" constant="14" id="cnc-ub-XpO"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIz-yk-bJk">
                         <rect key="frame" x="13" y="117" width="110" height="21"/>
                         <constraints>
@@ -168,11 +161,9 @@
                 <constraints>
                     <constraint firstItem="DIz-yk-bJk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="2AQ-cb-J7h"/>
                     <constraint firstItem="PHP-fZ-HXb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="2AT-2U-TFm"/>
-                    <constraint firstItem="GAb-cK-YZK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="78" id="3Fi-uI-ZnK"/>
                     <constraint firstItem="sDf-sD-cKM" firstAttribute="top" secondItem="PUf-wm-BUc" secondAttribute="bottom" constant="5" id="55i-EZ-WVl"/>
                     <constraint firstItem="m3x-Ba-Oqm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="8ko-eD-8Wc"/>
                     <constraint firstItem="PUf-wm-BUc" firstAttribute="leading" secondItem="ru1-f6-xUB" secondAttribute="trailing" constant="5" id="BvF-hb-bgf"/>
-                    <constraint firstAttribute="trailing" secondItem="GAb-cK-YZK" secondAttribute="trailing" constant="5" id="D7I-TV-Ibo"/>
                     <constraint firstItem="pq4-ji-aBg" firstAttribute="top" secondItem="Juy-zQ-c8a" secondAttribute="bottom" constant="5" id="FIj-91-cKU"/>
                     <constraint firstItem="XZA-qr-hua" firstAttribute="top" secondItem="iQN-ji-XeC" secondAttribute="bottom" constant="5" id="H0O-E3-L0u"/>
                     <constraint firstItem="vlr-8Z-VFz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="HlA-KY-T6e"/>
@@ -211,7 +202,4 @@
             <point key="canvasLocation" x="50" y="109.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="arrow_right" width="30" height="30"/>
-    </resources>
 </document>

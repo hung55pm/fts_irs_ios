@@ -14,7 +14,6 @@ class LoginViewController: UIViewController {
     var ed_user,ed_pass: String?
     let connect = ConnectSv()
     let userdefault = UserDefaults()
-    
     @IBOutlet weak var txt_genner: UIButton!
     
     
@@ -115,13 +114,17 @@ class LoginViewController: UIViewController {
         remember.setOn(self.userdefault.value(forKey: "IS_CHECK_LOGIN") as! Bool, animated: true)
         if((self.userdefault.value(forKey: "IS_CHECK_LOGIN") as! Bool)){
             ed_username.text = userdefault.value(forKey: "USERNAME") as! String
-            ed_password.text = userdefault.value(forKey: "PASSWORD") as! String
+            //ed_password.text = userdefault.value(forKey: "PASSWORD") as! String
         }
         
+       txt_genner.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightBold)
         
     
         // Do any additional setup after loading the view.
     }
+    
+    
+
     
     func dismissKeyboard (_ sender: UITapGestureRecognizer) {
         ed_username.resignFirstResponder()
@@ -132,9 +135,7 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("111111")
-    }
+
 
     
     /*

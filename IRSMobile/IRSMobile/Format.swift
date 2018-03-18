@@ -90,6 +90,9 @@ class Format{
     }
     func getfirstdayofmounth() -> String{
         let dateFormatter = DateFormatter()
+        let tempLocale = dateFormatter.locale
+        
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") 
         let date = Date()
         let comp: DateComponents = Calendar.current.dateComponents([.year, .month], from: date)
         let startOfMonth = Calendar.current.date(from: comp)!
@@ -98,9 +101,12 @@ class Format{
     }
     func getdaynow() -> String{
         let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MMM-yy"
-        return formatter.string(from: date)
+        let dateFormatter = DateFormatter()
+        let tempLocale = dateFormatter.locale
+        
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "dd-MMM-yy"
+        return dateFormatter.string(from: date)
     }
     
     

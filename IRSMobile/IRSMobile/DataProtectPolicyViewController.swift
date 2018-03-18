@@ -18,7 +18,7 @@ class DataProtectPolicyViewController: UIViewController {
         let navItem = UINavigationItem(title: "Data Protection Policy");
         let btn2 = UIButton(type: .custom)
         btn2.setImage(UIImage(named: "arrow_left"), for: .normal)
-        btn2.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        btn2.frame = CGRect(x: 0, y: 20, width: 30, height: 30)
         btn2.addTarget(self, action: "finshview", for: .touchUpInside)
         let item2 = UIBarButtonItem(customView: btn2)
         navItem.leftBarButtonItem = item2

@@ -18,3 +18,4 @@ UIApplicationMain(
     NSStringFromClass(TimerApplication.self),
     NSStringFromClass(AppDelegate.self)
 )
+

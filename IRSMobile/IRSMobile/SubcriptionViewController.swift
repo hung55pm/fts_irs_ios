@@ -113,7 +113,8 @@ class SubcriptionViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cells = Bundle.main.loadNibNamed("SubTableViewCell", owner: self, options: nil)?.first as! SubTableViewCell
         if(indexPath.row % 2 == 0){
-            cells.backgroundColor = UIColor(colorLiteralRed: 207/255, green: 207/255, blue: 207/255, alpha: 1)
+            cells.backgroundColor = Constant.Colors.backgroung_row
+        
         }
         cells.txtx_date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row ].DATE!)
         cells.txt_series.text = array[indexPath.row ].SHARE_SERIES_NAME

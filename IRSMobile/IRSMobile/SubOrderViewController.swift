@@ -76,8 +76,9 @@ class SubOrderViewController: UIViewController, UITableViewDelegate, UITableView
         alertController.view.addSubview(spinnerIndicator)
         self.present(alertController, animated: false, completion: nil)
         
+        print("gsgsgsg",formats.getfirstdayofmounth());
 
-        getdata(start: formats.getfirstdayofmounth(), end: formats.getdaynow(), investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
+        getdata(start: formats.formatdatetoMMddyyyy(str: txt_txt.text!), end: formats.formatdatetoMMddyyyy(str: tf_to.text!), investorId: investor.string(forKey: "INVESTOR_ID")!, alertController: alertController)
         // Do any additional setup after loading the view.
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(tapGesture)
@@ -117,7 +118,8 @@ class SubOrderViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cells = Bundle.main.loadNibNamed("SubOrderTableViewCell", owner: self, options: nil)?.first as! SubOrderTableViewCell
         if(indexPath.row % 2 == 0){
-            cells.backgroundColor = UIColor(colorLiteralRed: 207/255, green: 207/255, blue: 207/255, alpha: 1)
+         
+            cells.backgroundColor = Constant.Colors.backgroung_row
         }
         cells.txt_dealing_date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row ].DEALING_DATE!)
         cells.txt_series.text = array[indexPath.row ].SHARE_SERIES_NAME

@@ -154,7 +154,7 @@ class AllTransactionViewController: UIViewController, UITableViewDataSource, UIT
        let cells = Bundle.main.loadNibNamed("AllTranTableViewCell", owner: self, options: nil)?.first as! AllTranTableViewCell
         
         if(indexPath.row % 2 == 0){
-            cells.backgroundColor = UIColor(colorLiteralRed: 207/255, green: 207/255, blue: 207/255, alpha: 1)
+                cells.backgroundColor = Constant.Colors.backgroung_row
         }
         cells.txt_date.text = formats.formatdatetoddMMMyyyy(str: array[indexPath.row ].DEALING_DATE!)
         cells.txt_trantype.text = array[indexPath.row].TRAN_TYPE_NAME!

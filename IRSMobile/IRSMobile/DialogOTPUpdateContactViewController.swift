@@ -11,7 +11,7 @@ import LSDialogViewController
 import Toaster
 class DialogOTPUpdateContactViewController: UIViewController {
 var delegate: ContactInformationViewController?
-    var seconds = 60
+    var seconds = 180
     var timer = Timer()
     @IBOutlet weak var txt_countdow: UILabel!
     

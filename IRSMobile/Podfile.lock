@@ -10,7 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 0.9.1)
-  - DatePickerDialog
+  - DatePickerDialog (~> 2.0)
   - DropDown
   - LSDialogViewController (~> 0.1.9)
   - PureLayout (~> 2.0.5)
@@ -28,6 +28,6 @@ SPEC CHECKSUMS:
   SlideMenuControllerSwift: 16001e1fd9963fd089fa6c91dbe18d4c148f0ce9
   Toaster: f13031c636ef065281bc11857be9a16c7659e04f
 
-PODFILE CHECKSUM: 4017bb8b5ba709140989c6b4a028a5b8d9a3bca9
+PODFILE CHECKSUM: e85fe64a1146c92cf1e048813b3cefee6ee7fe8d
 
 COCOAPODS: 1.3.1

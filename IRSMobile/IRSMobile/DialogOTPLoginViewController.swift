@@ -11,7 +11,7 @@ import LSDialogViewController
 
 class DialogOTPLoginViewController: UIViewController {
 var delegate: LoginViewController?
-    var seconds = 60
+    var seconds = 180
     var timer = Timer()
     @IBOutlet weak var txt_countdow: UILabel!
     

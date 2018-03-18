@@ -52,6 +52,7 @@ class GeneralViewController: UIViewController {
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 60))
         self.view.addSubview(navBar);
         let navItem = UINavigationItem(title: "General information");
+        navBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         let btn2 = UIButton(type: .custom)
         btn2.setImage(UIImage(named: "arrow_left"), for: .normal)
         btn2.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
