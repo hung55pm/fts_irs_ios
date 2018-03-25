@@ -15,11 +15,11 @@ class AllTranTableViewCell: UITableViewCell {
     @IBOutlet weak var txt_trantype: UILabel!
     
     @IBOutlet weak var txt_series: UILabel!
-    @IBOutlet weak var txt_amount: UILabel!
+
     @IBOutlet weak var txt_unit: UILabel!
     @IBOutlet weak var txt_unit_balance: UILabel!
     
-    @IBOutlet weak var txt_price: UILabel!
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()

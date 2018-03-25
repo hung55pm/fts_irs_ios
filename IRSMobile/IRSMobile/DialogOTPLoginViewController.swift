@@ -66,6 +66,12 @@ var delegate: LoginViewController?
         self.view.addGestureRecognizer(tapGesture)
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        txt_countdow.textColor =  UIColor.red
+    }
+
+    
     func dismissKeyboard (_ sender: UITapGestureRecognizer) {
         ed_otp.resignFirstResponder()
     }

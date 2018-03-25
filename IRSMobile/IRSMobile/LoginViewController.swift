@@ -25,8 +25,20 @@ class LoginViewController: UIViewController {
         self.present(secondViewController, animated: true, completion: nil)
     }
     @IBOutlet weak var remember: UISwitch!
-    
+     let contant = Constant()
+    @IBAction func bt_action_main_form(_ sender: Any) {
+        
+        let url = URL(string: contant.HOST + "/Download/NewUserRegistrationForm.doc")!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            //If you want handle the completion block than
+            UIApplication.shared.open(url, options: [:], completionHandler: { (success) in
+                print("Open url : \(success)")
+            })
+        }
+    }
     @IBOutlet weak var ed_password: UITextField!
+    @IBOutlet weak var bt_main_form: UIButton!
     
     @IBOutlet weak var bt_login_out: UIButton!
     @IBAction func switch_remember(_ sender: UISwitch) {
@@ -109,6 +121,7 @@ class LoginViewController: UIViewController {
         self.view.addGestureRecognizer(tapGesture)
         //var time = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         txt_genner.setTitleColor( UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
+        bt_main_form.setTitleColor( UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
         bt_login_out.layer.cornerRadius = 5
         bt_login_out.setTitleColor( UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1), for: .normal)
         remember.setOn(self.userdefault.value(forKey: "IS_CHECK_LOGIN") as! Bool, animated: true)
