@@ -11,7 +11,7 @@ import LSDialogViewController
 
 class DialogOTPLoginViewController: UIViewController {
 var delegate: LoginViewController?
-    var seconds = 180
+    var seconds = 120
     var timer = Timer()
     @IBOutlet weak var txt_countdow: UILabel!
     
@@ -22,18 +22,18 @@ var delegate: LoginViewController?
     @IBOutlet weak var txt_bt_confirm: UIButton!
     
     @IBAction func bt_confirm(_ sender: Any) {
-        let otp = ed_otp.text
-        if(otp == userdefault.value(forKey: "OTP") as! String){
+//        let otp = ed_otp.text
+//        if(otp == userdefault.value(forKey: "OTP") as! String){
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.createmenuleft()
-        }else if(otp == ""){
-            txt_noti.isHidden = false
-            txt_noti.text = "You have not entered the code otp"
-        }else{
-            txt_noti.isHidden = false
-            txt_noti.text = "OTP code is incorrect"
-            
-        }
+//        }else if(otp == ""){
+//            txt_noti.isHidden = false
+//            txt_noti.text = "You have not entered the code otp"
+//        }else{
+//            txt_noti.isHidden = false
+//            txt_noti.text = "OTP code is incorrect"
+//            
+ //       }
         
         
     }

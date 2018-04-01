@@ -11,7 +11,7 @@ import LSDialogViewController
 import Toaster
 class DialogOTPUpdateContactViewController: UIViewController {
 var delegate: ContactInformationViewController?
-    var seconds = 180
+    var seconds = 120
     var timer = Timer()
     @IBOutlet weak var txt_countdow: UILabel!
     
@@ -26,6 +26,7 @@ var delegate: ContactInformationViewController?
     var tel: String = ""
     var faxci:String = ""
     var emails: String = ""
+    var resgiter_address : String = ""
     @IBAction func bt_confirm(_ sender: Any) {
         let otp = ed_otp.text
         if(otp == userdefault.value(forKey: "OTP") as! String){

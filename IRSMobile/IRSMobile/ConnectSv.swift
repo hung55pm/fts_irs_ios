@@ -62,14 +62,16 @@ class ConnectSv {
             
             if error != nil
             {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 completionHandler(400)
                 return
             }
             
             let responseString = String(data: data!, encoding: .utf8)// get data tra ve dang string
             let json = try! JSONSerialization.jsonObject(with: data!, options: []) as? [String:Any]
-            print("responseString = \(responseString!)")
+            let error_des = json?["error_description"]
+            //print("responseString = \(error_des!)")
+            if(json?["error_description"]==nil){
             if(json?["access_token"] == nil){
                  completionHandler(400)
             }else{
@@ -78,15 +80,19 @@ class ConnectSv {
                 self.userDefaults.set(user, forKey: "USERNAME")
                 self.userDefaults.set(pass, forKey: "PASSWORD")
                 completionHandler(200)
+                }
+            }else{
+                completionHandler(500)
+                self.userDefaults.set(error_des, forKey: "error_description");
             }
-            
+        
         }
         task.resume()
       
     
     }
-    func getopt(completionHandler: @escaping (String) -> ()) {
-        let urls = contant.HOST + "/api/OTP/GetOTP"
+    func getopt(userID: String,completionHandler: @escaping (String) -> ()) {
+        let urls = contant.HOST + "/api/OTP/SendOTP?UserId=" + userID
         var request = URLRequest(url : URL(string: urls)!)
         
         

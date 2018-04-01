@@ -106,6 +106,8 @@
 		98CB90ED1F89CF5F00748A23 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB90EC1F89CF5F00748A23 /* Constant.swift */; };
 		98CB90EF1F89D24B00748A23 /* Model_Subcription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB90EE1F89D24B00748A23 /* Model_Subcription.swift */; };
 		98CB90F11F89D38B00748A23 /* Model_Redemption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CB90F01F89D38B00748A23 /* Model_Redemption.swift */; };
+		98E4B7E0206D35B1001121FC /* TermandConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4B7DE206D35B1001121FC /* TermandConditionViewController.swift */; };
+		98E4B7E1206D35B1001121FC /* TermandConditionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98E4B7DF206D35B1001121FC /* TermandConditionViewController.xib */; };
 		98E74B871F82818F0038BA91 /* SubcriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E74B851F82818F0038BA91 /* SubcriptionViewController.swift */; };
 		98E74B881F82818F0038BA91 /* SubcriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98E74B861F82818F0038BA91 /* SubcriptionViewController.xib */; };
 		98E74B8B1F8281A40038BA91 /* RedemptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E74B891F8281A40038BA91 /* RedemptionViewController.swift */; };
@@ -232,6 +234,8 @@
 		98CB90EC1F89CF5F00748A23 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		98CB90EE1F89D24B00748A23 /* Model_Subcription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_Subcription.swift; sourceTree = "<group>"; };
 		98CB90F01F89D38B00748A23 /* Model_Redemption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_Redemption.swift; sourceTree = "<group>"; };
+		98E4B7DE206D35B1001121FC /* TermandConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermandConditionViewController.swift; sourceTree = "<group>"; };
+		98E4B7DF206D35B1001121FC /* TermandConditionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermandConditionViewController.xib; sourceTree = "<group>"; };
 		98E74B851F82818F0038BA91 /* SubcriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubcriptionViewController.swift; sourceTree = "<group>"; };
 		98E74B861F82818F0038BA91 /* SubcriptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubcriptionViewController.xib; sourceTree = "<group>"; };
 		98E74B891F8281A40038BA91 /* RedemptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedemptionViewController.swift; sourceTree = "<group>"; };
@@ -329,6 +333,8 @@
 				9819BE091FD6EF8600113D80 /* AboutCroweHorwathViewController.xib */,
 				9819BE0C1FD706F800113D80 /* GeneralViewController.swift */,
 				9819BE0D1FD706F800113D80 /* GeneralViewController.xib */,
+				98E4B7DE206D35B1001121FC /* TermandConditionViewController.swift */,
+				98E4B7DF206D35B1001121FC /* TermandConditionViewController.xib */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -633,6 +639,7 @@
 				984E1D7F1F6F830C00D0630E /* Assets.xcassets in Resources */,
 				9825824F1FA0D875002F0873 /* DialogRedemViewController.xib in Resources */,
 				9822F1BF1FA01F2700825133 /* PortCreditTableViewCell.xib in Resources */,
+				98E4B7E1206D35B1001121FC /* TermandConditionViewController.xib in Resources */,
 				9801CAB61F7B8273001488E1 /* AllTransactionViewController.xib in Resources */,
 				984E1D7A1F6F830C00D0630E /* Main.storyboard in Resources */,
 				98E74B881F82818F0038BA91 /* SubcriptionViewController.xib in Resources */,
@@ -770,6 +777,7 @@
 				9819BE1A1FD71F1F00113D80 /* SubOrderViewController.swift in Sources */,
 				9822F1BE1FA01F2700825133 /* PortCreditTableViewCell.swift in Sources */,
 				98199F391FDAF06100689E1C /* Model_rem_Order.swift in Sources */,
+				98E4B7E0206D35B1001121FC /* TermandConditionViewController.swift in Sources */,
 				9825824A1FA0BAB3002F0873 /* DialogSubViewController.swift in Sources */,
 				986CF63C1FDC5483009E5050 /* SubOrderTableViewCell.swift in Sources */,
 				98A28C951FFA275200CDAD90 /* TimerApplication.swift in Sources */,

@@ -12,7 +12,6 @@ class InvestorInfomationViewController: UIViewController {
 
     @IBOutlet weak var name: UITextField!
     
-    @IBOutlet weak var adress_register: UILabel!
   
     
     @IBOutlet weak var date_of_co: UITextField!
@@ -36,12 +35,10 @@ class InvestorInfomationViewController: UIViewController {
          passport_number.text = investor.string(forKey: "PASSPORT_ID")
          passport_expridate.text = format.formatdatetoddMMMyyyy(str: investor.string(forKey: "EXPIRY_DATE")!)
         counttry.text = investor.string(forKey: "NATIONALITY_ID")
-        adress_register.layer.borderWidth = 1
-        let colormy = UIColor.black
-        adress_register.layer.borderColor = colormy.cgColor
-        adress_register.layer.cornerRadius = 3
-        adress_register.numberOfLines = 0
-        adress_register.text = investor.string(forKey: "REGISTERED_ADDRESS")
+    
+    
+    
+//        adress_register.text = investor.string(forKey: "REGISTERED_ADDRESS")
         // Do any additional setup after loading the view.
     
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
@@ -55,7 +52,7 @@ class InvestorInfomationViewController: UIViewController {
          passport_number.resignFirstResponder()
          passport_expridate.resignFirstResponder()
          counttry.resignFirstResponder()
-         adress_register.resignFirstResponder()
+    
     }
 
     override func viewWillAppear(_ animated: Bool) {

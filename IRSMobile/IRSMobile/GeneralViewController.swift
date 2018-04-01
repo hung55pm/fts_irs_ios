@@ -10,6 +10,7 @@ import UIKit
 
 class GeneralViewController: UIViewController {
 
+    @IBOutlet weak var txt_term: UIButton!
     @IBOutlet weak var txt_forgot: UIButton!
     @IBOutlet weak var txt_faqs: UIButton!
     
@@ -20,6 +21,10 @@ class GeneralViewController: UIViewController {
     @IBOutlet weak var txt_about: UIButton!
     
     
+    @IBAction func bt_term(_ sender: Any) {
+        let secondfogot: TermandConditionViewController = TermandConditionViewController()
+        self.present(secondfogot, animated: true, completion: nil)
+    }
     
     @IBAction func bt_forgot(_ sender: Any) {
         let secondfogot: ForgotPasswordViewController = ForgotPasswordViewController()
@@ -62,7 +67,7 @@ class GeneralViewController: UIViewController {
         navBar.setItems([navItem], animated: false);
 
         
-        
+        txt_term.setTitleColor(UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
         txt_data.setTitleColor(UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
         txt_faqs.setTitleColor(UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)
         txt_about.setTitleColor(UIColor(red: 7/255, green: 48/255, blue: 105/255, alpha: 1), for: .normal)

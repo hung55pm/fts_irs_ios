@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
                             if(results == 200){
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                                     
-                                    self.connect.getopt(completionHandler: {(otp) in
+                                    self.connect.getopt(userID: self.ed_user!,completionHandler: {(otp) in
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                                         if(otp == "fail"){
                                             Toast(text: "Get OTP fail").show()
@@ -101,6 +101,9 @@ class LoginViewController: UIViewController {
                     
                 }else if(result == 300){
                     Toast(text: "wrong account or password").show()
+                }else if(result == 500){
+                    
+                    Toast(text: self.userdefault.value(forKey: "error_description") as? String).show()
                 }else{
                     Toast(text: "login fail").show()
                 }

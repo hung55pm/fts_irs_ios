@@ -38,8 +38,8 @@ class ChangePasswordViewController: UIViewController {
             }else{
                // changpass(inves: userdefault.string(forKey: "INVESTOR_ID")!, oldpass: oldpass!, newpass: newpass!)
                 
-                
-                connect.getopt(completionHandler: {(otp) in
+                 let userID = userdefault.value(forKey: "USERNAME") as! String
+                connect.getopt(userID: userID, completionHandler: {(otp) in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         if(otp == "fail"){
                             Toast(text: "Get OTP fail").show()

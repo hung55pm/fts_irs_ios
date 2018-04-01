@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "58209C8D529BDCA217E7A392A0F8BC6019BB5524",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "58209C8D529BDCA217E7A392A0F8BC6019BB5524" : 9223372036854775807,
+    "9AB0F8FEC11675A1E80AC3B50CCB602DE0EC95A5" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0C184F15-F94A-4A84-838E-B020F8F7064F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "58209C8D529BDCA217E7A392A0F8BC6019BB5524" : "fts_irs_ios\/",
+    "9AB0F8FEC11675A1E80AC3B50CCB602DE0EC95A5" : "Tai_lieu\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "IRSMobile",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "IRSMobile\/IRSMobile.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ngochung\/fts_irs_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "58209C8D529BDCA217E7A392A0F8BC6019BB5524"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ngochung\/Tai_lieu.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9AB0F8FEC11675A1E80AC3B50CCB602DE0EC95A5"
+    }
+  ]
+}

@@ -1,36 +1,39 @@
 //
-//  FAQsViewController.swift
+//  TermandConditionViewController.swift
 //  IRSMobile
 //
-//  Created by hungdn on 12/5/17.
-//  Copyright © 2017 Doan Ngoc Hung. All rights reserved.
+//  Created by hungdn on 3/29/18.
+//  Copyright © 2018 Doan Ngoc Hung. All rights reserved.
 //
 
 import UIKit
 
-class FAQsViewController: UIViewController {
+class TermandConditionViewController: UIViewController {
+    
+    
+    @IBOutlet weak var txt_view: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let screenWidth =  UIScreen.main.bounds.width
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 60))
         self.view.addSubview(navBar);
-        let navItem = UINavigationItem(title: "Crowe Horwath enoVestor Mobile FAQ");
+        let navItem = UINavigationItem(title: "Terms and Conditions");
         let btn2 = UIButton(type: .custom)
         btn2.setImage(UIImage(named: "arrow_left"), for: .normal)
-        btn2.frame = CGRect(x: 0, y: 20, width: 30, height: 30)
+        btn2.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         btn2.addTarget(self, action: "finshview", for: .touchUpInside)
         let item2 = UIBarButtonItem(customView: btn2)
         navItem.leftBarButtonItem = item2
         navBar.setItems([navItem], animated: false);
+        
         // Do any additional setup after loading the view.
     }
     func finshview() {
         self.dismiss(animated: true, completion: nil)
         
     }
-
-    override func didReceiveMemoryWarning() {
+        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

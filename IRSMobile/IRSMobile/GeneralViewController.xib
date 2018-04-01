@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17D102" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,6 +16,7 @@
                 <outlet property="txt_faqs" destination="zJt-oo-Rax" id="roU-Yn-ZFH"/>
                 <outlet property="txt_forgot" destination="EEc-A4-eAa" id="swF-GT-8mK"/>
                 <outlet property="txt_security" destination="iF8-fA-An2" id="w1f-Hn-Q3i"/>
+                <outlet property="txt_term" destination="4M3-Hx-0Ld" id="26T-xc-U1n"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,23 +38,34 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJt-oo-Rax">
-                    <rect key="frame" x="20" y="115" width="53" height="30"/>
+                    <rect key="frame" x="20" y="115" width="278" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Y6M-KN-VEI"/>
                     </constraints>
-                    <state key="normal" title="2. FAQs">
+                    <state key="normal" title="2. Crowe Horwath enoVestor Mobile FAQ">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="bt_faqs:" destination="-1" eventType="touchUpInside" id="629-eM-lPE"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF8-fA-An2">
-                    <rect key="frame" x="20" y="185" width="107" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4M3-Hx-0Ld">
+                    <rect key="frame" x="20" y="150" width="167" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="U8G-CI-gKf"/>
+                        <constraint firstAttribute="height" constant="30" id="1E6-C3-UfX"/>
                     </constraints>
-                    <state key="normal" title="4. Security Tips">
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="3. Terms and Conditions"/>
+                    <connections>
+                        <action selector="bt_term:" destination="-1" eventType="touchUpInside" id="Rg8-1a-sMA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF8-fA-An2">
+                    <rect key="frame" x="20" y="220" width="107" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="iGW-dQ-hXX"/>
+                    </constraints>
+                    <state key="normal" title="5. Security Tips">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -61,11 +73,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjl-Kz-5Ya">
-                    <rect key="frame" x="20" y="220" width="168" height="30"/>
+                    <rect key="frame" x="20" y="255" width="168" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="gNI-lg-JHU"/>
+                        <constraint firstAttribute="height" constant="30" id="P6y-GK-nYc"/>
                     </constraints>
-                    <state key="normal" title="5. About Crowe Horwath">
+                    <state key="normal" title="6. About Crowe Horwath">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -73,11 +85,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-Fx-R98">
-                    <rect key="frame" x="20" y="150" width="169" height="30"/>
+                    <rect key="frame" x="20" y="185" width="169" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="uBl-wI-c1T"/>
+                        <constraint firstAttribute="height" constant="30" id="PIZ-Yj-Lhe"/>
                     </constraints>
-                    <state key="normal" title="3. Data Protection Policy">
+                    <state key="normal" title="4. Data Protection Policy">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -87,20 +99,21 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="hjl-Kz-5Ya" firstAttribute="top" secondItem="iF8-fA-An2" secondAttribute="bottom" constant="5" id="6AG-qQ-PVM"/>
-                <constraint firstItem="ot3-Fx-R98" firstAttribute="top" secondItem="zJt-oo-Rax" secondAttribute="bottom" constant="5" id="8Sn-Jj-QJL"/>
+                <constraint firstItem="iF8-fA-An2" firstAttribute="top" secondItem="ot3-Fx-R98" secondAttribute="bottom" constant="5" id="0px-81-S4W"/>
+                <constraint firstItem="iF8-fA-An2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="3lK-BC-lVD"/>
+                <constraint firstItem="ot3-Fx-R98" firstAttribute="top" secondItem="4M3-Hx-0Ld" secondAttribute="bottom" constant="5" id="4Ud-nq-LC9"/>
+                <constraint firstItem="4M3-Hx-0Ld" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Awc-DK-wp2"/>
+                <constraint firstItem="hjl-Kz-5Ya" firstAttribute="top" secondItem="iF8-fA-An2" secondAttribute="bottom" constant="5" id="CYB-6p-1F2"/>
                 <constraint firstItem="EEc-A4-eAa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="GuA-nJ-hvF"/>
-                <constraint firstItem="hjl-Kz-5Ya" firstAttribute="top" secondItem="iF8-fA-An2" secondAttribute="bottom" constant="5" id="IbV-Ob-pTC"/>
                 <constraint firstItem="zJt-oo-Rax" firstAttribute="top" secondItem="EEc-A4-eAa" secondAttribute="bottom" constant="5" id="Leh-uu-Oje"/>
-                <constraint firstItem="iF8-fA-An2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Lwg-ef-wHh"/>
-                <constraint firstItem="iF8-fA-An2" firstAttribute="top" secondItem="ot3-Fx-R98" secondAttribute="bottom" constant="5" id="P9S-mV-F2E"/>
                 <constraint firstItem="zJt-oo-Rax" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="RFo-06-OOz"/>
-                <constraint firstItem="ot3-Fx-R98" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Sum-yl-SrD"/>
-                <constraint firstItem="iF8-fA-An2" firstAttribute="top" secondItem="ot3-Fx-R98" secondAttribute="bottom" constant="5" id="Z4b-rq-9fn"/>
+                <constraint firstItem="hjl-Kz-5Ya" firstAttribute="top" secondItem="iF8-fA-An2" secondAttribute="bottom" constant="5" id="V8A-tb-WIL"/>
+                <constraint firstItem="ot3-Fx-R98" firstAttribute="top" secondItem="4M3-Hx-0Ld" secondAttribute="bottom" constant="5" id="e8l-ez-MBJ"/>
                 <constraint firstItem="EEc-A4-eAa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="kRJ-Pp-3X9"/>
-                <constraint firstItem="ot3-Fx-R98" firstAttribute="top" secondItem="zJt-oo-Rax" secondAttribute="bottom" constant="5" id="sIM-EP-uE7"/>
+                <constraint firstItem="ot3-Fx-R98" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="lS7-VH-6RJ"/>
+                <constraint firstItem="4M3-Hx-0Ld" firstAttribute="top" secondItem="zJt-oo-Rax" secondAttribute="bottom" constant="5" id="q0T-be-H0L"/>
                 <constraint firstItem="zJt-oo-Rax" firstAttribute="top" secondItem="EEc-A4-eAa" secondAttribute="bottom" constant="5" id="uOv-p1-qQJ"/>
-                <constraint firstItem="hjl-Kz-5Ya" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="xZG-0H-haW"/>
+                <constraint firstItem="hjl-Kz-5Ya" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="yk1-qn-NgC"/>
             </constraints>
         </view>
     </objects>

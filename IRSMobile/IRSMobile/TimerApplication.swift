@@ -39,6 +39,8 @@ class TimerApplication: UIApplication {
                 rootViewController is FAQsViewController ||
                 rootViewController is ForgotPasswordViewController ||
                 rootViewController is AboutCroweHorwathViewController ||
+                rootViewController is TermandConditionViewController ||
+                rootViewController is SplashViewController ||
                 rootViewController is GeneralViewController){
                 print("logout11111")
             }else{
