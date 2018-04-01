@@ -25,7 +25,8 @@ class ContactInformationViewController: UIViewController {
     let userdefault = UserDefaults()
     @IBAction func bt_update_contact(_ sender: UIButton) {
         
-        connect.getopt(completionHandler: {(otp) in
+        let userID = userdefault.value(forKey: "USERNAME") as! String
+        connect.getopt(userID: userID, completionHandler: {(otp) in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 if(otp == "fail"){
                     Toast(text: "Get OTP fail").show()
